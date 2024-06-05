@@ -1,0 +1,19 @@
+#pts-home {
+  font-size: 3.5rem;
+  width: 50%;
+  text-shadow: 1px 1px 10px rgb(205, 205, 205);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  height: 5rem;
+}
+
+#auth {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 60px;
+  width: 50%;
+  height: 5rem;
+  padding-right: 60px;
+}

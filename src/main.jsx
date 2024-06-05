@@ -6,6 +6,9 @@ import App from './App.jsx';
 import '@/css/0/reset.css';
 import '@/css/init.css';
 import '@/css/main.css';
+import '@/css/wellcome.css';
+import '@/css/home.css';
+import '@/css/comp-nav.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

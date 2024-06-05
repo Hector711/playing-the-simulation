@@ -3,12 +3,20 @@
   line-height: 1.5;
   font-weight: 400;
 
+  --width: 1200px;
+  --border-m: 10px;
+
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0c0c0c;
+}
+@font-face {
+  font-family: 'palo';
+  src: url(/src/css/fonts/Palo\ Compressed\ Extrabold.otf);
 }
 * {
   /* border: 1px solid ; */
+  /* padding: 10px !important */
 }
 .tasks {
   border: 3px solid #555454;
@@ -18,7 +26,6 @@
 }
 #nav-end {
   display: flex;
-
   position: absolute;
   right: 0.7rem;
   gap: 10px

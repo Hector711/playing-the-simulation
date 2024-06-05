@@ -1,41 +1,32 @@
-import React, { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
-export default function Navbar() {
+function Navbar() {
   const { isAuthenticated, logout, user } = useAuth();
 
   const isActive = ({ isActive }) =>
-    isActive ? 'active-link' : 'inactive-link';
+    isActive ? "active-link" : "inactive-link";
   if (isAuthenticated) {
   }
   return (
     <nav>
-      <NavLink to='/' className={isActive}>
-        <h2>Home</h2>
-      </NavLink>
-      <NavLink to='/Tasks' className={isActive}>
-        <h2>Tasks</h2>
-      </NavLink>
-      <NavLink to='/add-task' className={isActive}>
-        <h2>New Task</h2>
-      </NavLink>
+      <div id="nav">
+        <NavLink to="/home" className={isActive}>
+          <h1>Playing The Simulation</h1>
+        </NavLink>
+        <NavLink to="/" className={isActive}>
+          <h2>Miembros</h2>
+        </NavLink>
+        <NavLink to="/" className={isActive}>
+          <h2>Eventos</h2>
+        </NavLink>
 
-      <div id='nav-end'>
-        {!isAuthenticated ? (
-          <>
-            <NavLink to='/login'>
-              <h2>Iniciar Sesión</h2>
-            </NavLink>
-            <NavLink to='/register'>
-              <h2>Registrarse</h2>
-            </NavLink>
-          </>
-        ) : (
+        <div id="nav-end">
           <>
             <h2>Profile</h2>
             <NavLink
-              to='/'
+              to="/"
               onClick={() => {
                 logout();
               }}
@@ -43,8 +34,10 @@ export default function Navbar() {
               <h2>Cerrar Sesión</h2>
             </NavLink>
           </>
-        )}
+        </div>
       </div>
     </nav>
   );
 }
+
+export default Navbar;

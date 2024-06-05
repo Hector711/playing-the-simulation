@@ -1,0 +1,25 @@
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-bottom: 3px solid #dc2323;
+  display: flex;
+  justify-content: center;
+  height: 70px;
+}
+
+#nav {
+  display: flex;
+  padding: 0.5rem;
+  gap: 2rem;
+  border-radius: 5px;
+  align-items: center;
+  max-width: var(--width);
+  width: 100%;
+  /* border: 3px solid #b62828; */
+  h1 {
+    font-size: 1.8rem;
+
+  }
+}
+

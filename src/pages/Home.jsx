@@ -5,13 +5,7 @@ import AsideLeft from "@/pages/components/AsideLeft";
 export default function Home() {
   return (
     <div id="home-content">
-      <header>
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
-        recusandae ea vitae officia amet doloribus officiis quasi beatae
-        accusamus, praesentium esse.
-      </header>
-      <AsideLeft />
+      <AsideLeft /> 
       <main>
         <section id="new-post">
           <input type="text" placeholder="Title" />

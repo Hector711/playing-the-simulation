@@ -1,12 +1,10 @@
 import React from "react";
 
-export default function AsideButton({children}) {
+export default function AsideButton({ children }) {
   return (
-    <button id='aside-button' >
+    <button id="aside-button">
       <img className="icon" alt="" />
-      <h2>
-      {children}
-      </h2>
+      <h2>{children}</h2>
     </button>
   );
 }

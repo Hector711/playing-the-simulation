@@ -4,11 +4,28 @@ import App from './App.jsx';
 
 // ESTILOS CSS
 import '@/css/0/reset.css';
+import '@/css/elements.css';
 import '@/css/init.css';
-import '@/css/main.css';
-import '@/css/wellcome-page.css';
-import '@/css/home-page.css';
+import '@/css/page-wellcome.css';
+import '@/css/page-home.css';
 import '@/css/comp-nav.css';
+import '@/css/comp-aside-left.css';
+
+// TYPOGRAFÍAS
+
+// 'Comfortaa Variable'
+// Supports weights 300-700
+import '@fontsource-variable/comfortaa';
+
+// 'Figtree Variable'
+// Supports weights 300-900
+import '@fontsource-variable/figtree';
+
+// 'Tenor Sans'
+import '@fontsource/tenor-sans';
+
+// Supports weights 100-900
+import '@fontsource-variable/onest';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

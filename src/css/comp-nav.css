@@ -8,20 +8,23 @@ nav {
   box-shadow: 1px 1px 10px 0 var(--color-orange-0);
   background-color: var(--color-blue-1);
 }
+nav, nav * {
+  /* border: 0.5px solid; */
+}
 
-#nav {
+#nav-container {
   display: flex;
   padding-block: 0.5rem;
   align-items: stretch;
-  border-radius: 5px;
+
   align-items: center;
   width: 1200px;
-  /* border: 3px solid #b62828; */
   h1 {
     font-size: 28px;
     text-wrap: nowrap;
     height: 100%;
     width: var(--left-aside) !important;
+
   }
   
 }
@@ -29,6 +32,14 @@ nav {
   gap: 2rem;
   display: flex;
   width: 100%;
+  color: var(--color-orange-0);
+  h2 {
+    height: 100%;
+    display: flex;  
+    align-items:center;
+    padding-top: 6px;
+
+  }
 }
 #nav-right {
   width: 40%;

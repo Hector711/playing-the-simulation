@@ -12,6 +12,11 @@
     "format": ""
   },
   "dependencies": {
+    "@fontsource-variable/comfortaa": "^5.0.20",
+    "@fontsource-variable/figtree": "^5.0.21",
+    "@fontsource-variable/onest": "^5.0.4",
+    "@fontsource/poppins": "^5.0.14",
+    "@fontsource/tenor-sans": "^5.0.20",
     "axios": "^1.6.8",
     "js-cookie": "^3.0.5",
     "react": "^18.2.0",

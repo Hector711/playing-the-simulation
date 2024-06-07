@@ -1,24 +1,3 @@
-#home-content {
-  display: grid;
-  grid-template-areas:
-    "level level level"
-    "left main right"
-    "left main right";
-  grid-template-columns: var(--left-aside) 1fr 250px;
-  gap: var(--gap-l);
-  height: 700px;
-  justify-content: center;
-  margin-inline: auto;
-  max-width: var(--width);
-  width: 100%;
-  margin-top: 100px;
-}
-header {
-  grid-area: level;
-  border: 1px solid;
-  height: 40px;
-}
-
 #left-aside {
   grid-area: left;
   display: flex;
@@ -80,53 +59,4 @@ header {
     border-radius: var(--border-m);
     padding: 10px;
   }
-}
-
-main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-m);
-  #new-post {
-    background-color: var(--color-blue-1);
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-s);
-  }
-}
-
-#right {
-  border-radius: var(--border-m);
-  grid-area: right;
-  background-color: var(--);
-  h1 {
-    font-size: 2rem;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-section,
-span {
-  border-radius: var(--border-m);
-  border: 1px solid var(--color-orange-0);
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  background-color: #909ca9;
-  border-radius: 50%;
-}
-
-#aside-button {
-  gap: var(--gap-m);
-  padding: 8px;
-  display: flex;
-  border-radius: var(--border-m);
-}
-
-#profile-link:hover {
-  text-decoration: underline;
 }

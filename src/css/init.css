@@ -1,89 +1,48 @@
-html {
-  font-family: "Onest Variable", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+:root {
+  font-family: 
+    'Onest Variable',
+    'Figtree Variable',
+/* 'Comfortaa Variable', */
+    Inter, 
+    system-ui, 
+    Avenir, 
+    Helvetica, 
+    Arial, 
     sans-serif;
-  letter-spacing: -0.0025rem;
-}
-body {
-  position: relative;
-  margin: 0;
-  min-width: 320px;
-  height: max-content;
-}
-/* titulo principal */
-h1 {
-  font-family: "palo";
-  color: white;
-  
-}
-/* Navbar, sidebar, etc */
-h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-/*  */
-h3 {
-  font-size: 1.1rem;
-  font-weight: 300;
-  font-weight: 600;
-}
-/* titulos de post */
-h4 {
-  font-weight: 800;
-}
 
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-  text-wrap: pretty;
-  word-wrap: break-word;
-  padding-inline: auto;
-}
+  --width: 1200px;
+  --border-m: 10px;
+  --left-aside: 230px;
+  --right-aside: 270px;
 
-ol,
-ul {
-  list-style: none;
-}
+  --gap-s: 10px;
+  --gap-m: 13px;
+  --gap-l: 30px;
 
-a {
-  color: #ffffff;
-  text-decoration: inherit;
-}
+  --color-white-0: #e8e8e8de;
+  --color-white-1: #cbcbcbde;
 
-a:hover {
-  color: #9e9ea0;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--color-blue-1);
-  transition: border-color 0.25s;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: var(--color-orange-0);
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  --color-black-0: #101010;
+  --color-black-1: ;
 
 
+  --color-blue-1: #1a1f22;
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  --color-orange-0: #F6921B;
+  --color-orange-1: #f6941bbe;
+
+  color-scheme: light dark;
+  color: var(--color-white-0);
+  background-color: var(--color-black-0);
 }
 
-section {
-  background-color: var(--color-blue-1);
+* {
+  /* border: 1px solid ; */
+  /* padding: 10px !important */
 }
-
+.tasks {
+  border: 3px solid #555454;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 5px;
+}

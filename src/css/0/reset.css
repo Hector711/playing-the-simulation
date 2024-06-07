@@ -7,6 +7,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* PTS Typography */
 @font-face {
   font-family: 'palo';
   src: url(/src/css/fonts/Palo\ Compressed\ Extrabold.otf);

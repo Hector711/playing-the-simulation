@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import AsideButton from "@/pages/components/AsideButton";
 import { useAuth } from "@/context/AuthContext";
 import Avatar from "./Avatar";
+import GoalsButton from "./GoalsButton";
 
 function AsideLeft() {
   const { logout } = useAuth();
@@ -19,11 +20,11 @@ function AsideLeft() {
           <h5>Full Stack Web Developer</h5>
           <p>Nivel 4: Funcionario</p>
         </div>
+        <hr />
+        <GoalsButton> Objetivos</GoalsButton>
       </header>
       <section id='profile-links'>
         <AsideButton> Notificaciones</AsideButton>
-        <AsideButton> Mis objetivos</AsideButton>
-        <AsideButton> Fianza</AsideButton>
         <AsideButton> Mensajes</AsideButton>
         <AsideButton> Guardados</AsideButton>
       </section>

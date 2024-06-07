@@ -1,0 +1,8 @@
+footer#home {
+  background-color: var(--color-blue-1);
+  box-shadow: top 1px 1px 1px 1px var(--color-orange-0);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 6rem;
+};

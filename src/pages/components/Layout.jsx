@@ -8,6 +8,7 @@ export default function Layout() {
     <>
       <Navbar />
       <Outlet />
+      <footer id='home'></footer>
     </>
   );
 }

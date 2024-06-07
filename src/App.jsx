@@ -28,6 +28,7 @@ function App() {
 
             <Route element={<ProtectedRoute />}>
               <Route element={<Layout />}>
+                {/* ASIDE-LEFT */}
                 <Route path="/home" element={<Home />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/notifications" element={<Notifications />} />
@@ -35,6 +36,9 @@ function App() {
                 <Route path="/goals" element={<Goals />} />
                 <Route path="/deposit" element={<Deposit />} />
                 <Route path="/saved" element={<Saved />} />
+                {/* ASIDE-LEFT */}
+                {/*  */}
+                {/*  */}
 
                 <Route path="/tasks" element={<Tasks />} />
                 <Route path="/add-task" element={<TaskForm />} />

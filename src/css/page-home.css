@@ -5,12 +5,14 @@
     "left main right";
   grid-template-columns: var(--left-aside) 1fr var(--right-aside);
   gap: var(--gap-l);
-  height: 700px;
+  height: max-content;
   justify-content: center;
   margin-inline: auto;
   max-width: var(--width);
   width: 100%;
   margin-top: 100px;
+  margin-bottom: 150px;
+  /* border: 1px solid; */
 }
 
 main {

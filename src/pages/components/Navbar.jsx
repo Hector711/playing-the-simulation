@@ -14,7 +14,8 @@ function Navbar() {
           <NavLinkButton to="/">Classroom</NavLinkButton>
           <NavLinkButton to="/">Miembros</NavLinkButton>
           <NavLinkButton to="/">Eventos</NavLinkButton>
-          <NavLinkButton to="/">Biblioteca</NavLinkButton>
+          <NavLinkButton to="/">Aportaciones</NavLinkButton>
+          <NavLinkButton to="/">Guía</NavLinkButton>
           <NavLinkButton to="/">Buscar</NavLinkButton>
         </div>
       </div>

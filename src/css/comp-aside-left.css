@@ -5,7 +5,7 @@
   gap: var(--gap-s);
 }
 header#profile {
-  height: 230px;
+  height: max-content;
   border-radius: var(--border-m);
   background-color: var(--color-blue-1);
   align-items: center;
@@ -35,7 +35,6 @@ header#profile {
     background-color: #26262651;
   }
   hr {
-    border: 0.5px solid var(--color-white-0);
     width: 100%;
   }
   #profile-info {
@@ -48,6 +47,27 @@ header#profile {
     width: 100%;
     /* border: 1px solid ; */
   }
+  .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #909ca9;
+  }
+  #goals-button {
+    display: flex;
+    padding: 10px 16px;
+    background-color: var(--color-orange-0);
+    width: 100%;
+    gap: var(--gap-m);
+    align-items: center;
+    color: var(--color-blue-1);
+    h2 {
+      font-weight: 700;
+      text-align: center;
+      width: 100%;
+      font-size: 1.3rem !important;
+    }
+  }
 }
 section#profile-links {
   display: flex;
@@ -55,8 +75,8 @@ section#profile-links {
   gap: var(--gap-s);
   .icon {
     width: 30px;
-    height: 30px;
     background-color: #909ca9;
+    height: 30px;
     border-radius: 50%;
   }
   .aside-button {
@@ -69,7 +89,7 @@ section#profile-links {
   }
 }
 footer {
-  
+
   #logout {
     border: 1px solid rgb(109, 109, 109);
     display: flex;

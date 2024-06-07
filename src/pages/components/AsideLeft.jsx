@@ -1,31 +1,35 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "react-router-dom";
 import AsideButton from "@/pages/components/AsideButton";
 import { useAuth } from "@/context/AuthContext";
-import Avatar from './Avatar';
+import Avatar from "./Avatar";
 
 function AsideLeft() {
   const { logout } = useAuth();
   return (
     <aside id="aside-left">
-        <section id="profile">
-          <NavLink to="/profile" id="profile-link">
-            <img id="cover" alt="" />
-            <Avatar size='profile'/>
-            <h4>Héctor Guerra</h4>
-          </NavLink>
-          <hr />
-          <div id="profile-info">
-            <h5>Full Stack Web Developer</h5>
-            <p>Nivel 4: Funcionario</p>
-          </div>
-        </section>
+      <header id="profile">
+        <NavLink to="/profile" id="profile-link">
+          <img id="cover" alt="" />
+          <Avatar size="profile" />
+          <h4>Héctor Guerra</h4>
+        </NavLink>
+        <hr />
+        <div id="profile-info">
+          <h5>Full Stack Web Developer</h5>
+          <p>Nivel 4: Funcionario</p>
+        </div>
+      </header>
+      <section id='profile-links'>
         <AsideButton> Notificaciones</AsideButton>
         <AsideButton> Mis objetivos</AsideButton>
         <AsideButton> Fianza</AsideButton>
         <AsideButton> Mensajes</AsideButton>
         <AsideButton> Guardados</AsideButton>
-        <NavLink id='logout'
+      </section>
+      <footer>
+        <NavLink
+          id="logout"
           to="/"
           onClick={() => {
             logout();
@@ -33,8 +37,9 @@ function AsideLeft() {
         >
           <h4>Cerrar Sesión</h4>
         </NavLink>
-      </aside>
-  )
+      </footer>
+    </aside>
+  );
 }
 
-export default AsideLeft
+export default AsideLeft;

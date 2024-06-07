@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export default function AsideButton({ children }) {
+export default function AsideButton({ children, to }) {
   return (
-    <button id="aside-button">
+    <NavLink className="aside-button">
       <img className="icon" alt="" />
       <h2>{children}</h2>
-    </button>
+    </NavLink>
   );
 }

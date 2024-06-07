@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function WelcomePage() {
+export default function Welcome() {
   return (
 
       <div className="flex justify-center items-center w-[100%] h-[100vh] p-[100px]">

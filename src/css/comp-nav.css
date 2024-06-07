@@ -2,24 +2,36 @@ nav {
   position: absolute;
   top: 0;
   width: 100%;
-  border-bottom: 3px solid #dc2323;
   display: flex;
   justify-content: center;
   height: 70px;
+  box-shadow: 1px 1px 10px 0 var(--color-orange-0);
+  background-color: var(--color-blue-1);
 }
 
 #nav {
   display: flex;
-  padding: 0.5rem;
-  gap: 2rem;
+  padding-block: 0.5rem;
+  align-items: stretch;
   border-radius: 5px;
   align-items: center;
-  max-width: var(--width);
-  width: 100%;
+  width: 1200px;
   /* border: 3px solid #b62828; */
   h1 {
-    font-size: 1.8rem;
-
+    font-size: 28px;
+    text-wrap: nowrap;
+    height: 100%;
+    width: var(--left-aside) !important;
   }
+  
 }
-
+#nav-left {
+  gap: 2rem;
+  display: flex;
+  width: 100%;
+}
+#nav-right {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+}

@@ -9,22 +9,27 @@ body {
   margin: 0;
   min-width: 320px;
   height: max-content;
-  padding-top: 80px;
 }
+/* titulo principal */
 h1 {
   font-family: "palo";
   color: white;
-  line-height: 1;
+  
 }
+/* Navbar, sidebar, etc */
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
 }
-
+/*  */
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 300;
   font-weight: 600;
+}
+/* titulos de post */
+h4 {
+  font-weight: 800;
 }
 
 p {
@@ -56,13 +61,13 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-blue-1);
   transition: border-color 0.25s;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--color-orange-0);
 }
 
 button:focus,
@@ -76,5 +81,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+section {
+  background-color: var(--color-blue-1);
 }
 

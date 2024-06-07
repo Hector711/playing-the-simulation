@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 
-function RegisterPage() {
+export default function Register() {
   const {
     register,
     handleSubmit,
@@ -61,5 +61,3 @@ function RegisterPage() {
     </div>
   );
 }
-
-export default RegisterPage;

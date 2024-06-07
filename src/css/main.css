@@ -5,15 +5,27 @@
 
   --width: 1200px;
   --border-m: 10px;
+  --left-aside: 230px;
+
+  --gap-s: 10px;
+  --gap-m: 20px;
+  --gap-l: 30px;
+
+  --color-white-0: #dbdbdbde;
+
+  --color-black-0: #101010;
+  --color-black-1: ;
+
+  --color-blue-1: #1a1f22;
+
+  --color-orange-0: #F6921B;
+  --color-orange-1: #f6941bbe;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0c0c0c;
+  color: var(--color-white-0);
+  background-color: var(--color-black-0);
 }
-@font-face {
-  font-family: 'palo';
-  src: url(/src/css/fonts/Palo\ Compressed\ Extrabold.otf);
-}
+
 * {
   /* border: 1px solid ; */
   /* padding: 10px !important */
@@ -23,10 +35,4 @@
   border-radius: 5px;
   margin: 3px;
   padding: 5px;
-}
-#nav-end {
-  display: flex;
-  position: absolute;
-  right: 0.7rem;
-  gap: 10px
 }

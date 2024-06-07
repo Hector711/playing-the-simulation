@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { useAuth } from '../context/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '@/context/AuthContext';
 
-function LoginPage() {
+export default function Login() {
   const {
     register,
     handleSubmit,
@@ -16,7 +16,7 @@ function LoginPage() {
   });
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/tasks');
+      navigate('/home');
     }
   }, [isAuthenticated]);
 
@@ -51,5 +51,3 @@ function LoginPage() {
     </div>
   );
 }
-
-export default LoginPage;

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useTasks } from '../context/TaskContext';
 import { useNavigate } from 'react-router-dom';
+import { useTasks } from '@/context/TaskContext';
 
-export default function TaskFormPage() {
+export default function TaskForm() {
   const { register, handleSubmit, setValue } = useForm();
   const { createTask } = useTasks();
   const navigate = useNavigate();

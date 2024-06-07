@@ -1,11 +1,13 @@
-#left-aside {
+#aside-left {
   grid-area: left;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-m);
-
-  #profile-section {
+  gap: var(--gap-s);
+  
+  #profile {
     height: 230px;
+    border-radius: var(--border-m);
+    background-color: var(--color-blue-1);
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -28,13 +30,7 @@
         height: 70px;
         background-color: var(--color-orange-0);
       }
-      #avatar {
-        width: 70px;
-        height: 70px;
-        background-color: #bbc9e5;
-        border-radius: 50%;
-        z-index: 2;
-      }
+      
     }
     hr {
       border: 0.5px solid var(--color-white-0);

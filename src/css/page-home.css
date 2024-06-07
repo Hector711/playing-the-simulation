@@ -27,16 +27,7 @@ main {
   }
 }
 
-#right {
-  border-radius: var(--border-m);
-  grid-area: right;
-  background-color: var(--);
-  h1 {
-    font-size: 2rem;
-    width: 100%;
-    text-align: center;
-  }
-}
+
 
 .icon {
   width: 30px;
@@ -55,3 +46,4 @@ main {
 #profile-link:hover {
   text-decoration: underline;
 }
+

@@ -1,0 +1,45 @@
+article.post {
+  background-color: var(--color-blue-1);
+  border-radius: var(--border-m);
+  padding: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+section#timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+}
+
+#avatar {
+  background-color: #bbc9e5;
+  border-radius: 50%;
+  z-index: 2;
+}
+#avatar.news {
+  width: 40px;
+  height: 40px;
+}
+#avatar.timeline {
+  width: 50px;
+  height: 50px;
+}
+#avatar.profile {
+  width: 70px;
+  height: 70px;
+}
+#avatar.large {
+}
+
+.post-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}

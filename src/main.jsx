@@ -9,7 +9,9 @@ import '@/css/init.css';
 import '@/css/page-wellcome.css';
 import '@/css/page-home.css';
 import '@/css/comp-nav.css';
+import '@/css/comp-post.css';
 import '@/css/comp-aside-left.css';
+import '@/css/comp-aside-right.css';
 
 // TYPOGRAFÍAS
 

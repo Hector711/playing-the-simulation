@@ -2,16 +2,16 @@ import React from 'react';
 import { NavLink } from "react-router-dom";
 import AsideButton from "@/pages/components/AsideButton";
 import { useAuth } from "@/context/AuthContext";
-
+import Avatar from './Avatar';
 
 function AsideLeft() {
   const { logout } = useAuth();
   return (
-    <aside id="left-aside">
-        <section id="profile-section">
+    <aside id="aside-left">
+        <section id="profile">
           <NavLink to="/profile" id="profile-link">
             <img id="cover" alt="" />
-            <img id="avatar" alt="" />
+            <Avatar size='profile'/>
             <h4>Héctor Guerra</h4>
           </NavLink>
           <hr />

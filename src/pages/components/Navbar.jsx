@@ -15,6 +15,7 @@ function Navbar() {
           <NavLinkButton to="/">Miembros</NavLinkButton>
           <NavLinkButton to="/">Eventos</NavLinkButton>
           <NavLinkButton to="/">Biblioteca</NavLinkButton>
+          <NavLinkButton to="/">Buscar</NavLinkButton>
         </div>
       </div>
     </nav>

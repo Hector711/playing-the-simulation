@@ -12,10 +12,9 @@ function Navbar() {
             <h1>Playing The Simulation</h1>
           </NavLink>
           <NavLinkButton to="/">Classroom</NavLinkButton>
-          <NavLinkButton to="/">Miembros</NavLinkButton>
+          <NavLinkButton to="/">Comunidad</NavLinkButton>
           <NavLinkButton to="/">Eventos</NavLinkButton>
-          <NavLinkButton to="/">Aportaciones</NavLinkButton>
-          <NavLinkButton to="/">Guía</NavLinkButton>
+          <NavLinkButton to="/">La Oficina</NavLinkButton>
           <NavLinkButton to="/">Buscar</NavLinkButton>
         </div>
       </div>

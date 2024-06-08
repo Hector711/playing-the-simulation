@@ -5,6 +5,21 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/comfortaa':
+    specifier: ^5.0.20
+    version: 5.0.20
+  '@fontsource-variable/figtree':
+    specifier: ^5.0.21
+    version: 5.0.21
+  '@fontsource-variable/onest':
+    specifier: ^5.0.4
+    version: 5.0.4
+  '@fontsource/poppins':
+    specifier: ^5.0.14
+    version: 5.0.14
+  '@fontsource/tenor-sans':
+    specifier: ^5.0.20
+    version: 5.0.20
   axios:
     specifier: ^1.6.8
     version: 1.7.2
@@ -541,6 +556,26 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@fontsource-variable/comfortaa@5.0.20:
+    resolution: {integrity: sha512-TCSgmEMi490eZ7/1N/UknmqmyNj8u4gdvwwg8sJLuythfeYuJjYi+4l2lEczcDmzfETuO2zdN+im+XieOEQqgA==}
+    dev: false
+
+  /@fontsource-variable/figtree@5.0.21:
+    resolution: {integrity: sha512-mK+pngVOnN5pxSVTSnCq2ml6xZEwnlVRLMjY/uImvf2Z4+Vvc7djPyFBOdR58ini3OAt8ajK2rm1QCJHI+pwXA==}
+    dev: false
+
+  /@fontsource-variable/onest@5.0.4:
+    resolution: {integrity: sha512-AgdtsALwfkuLuL3dMCCX/ag27ho7yMKNIrkX5AKYKsPDm5u6mrTZ0LcO9jtMI7Z4ant7Huf9c2QtPdK3az/mow==}
+    dev: false
+
+  /@fontsource/poppins@5.0.14:
+    resolution: {integrity: sha512-nmM1zpPo3Uh4JcGAVSQuWaZNYh2FbbwWhZ5t6hRaynmJaNTBW85d3nEh9zMmzI0HX7X5xqQVdRHeDatKpOGsnA==}
+    dev: false
+
+  /@fontsource/tenor-sans@5.0.20:
+    resolution: {integrity: sha512-XTlh3JOPD7CyMt+ctkilVr8Y+JNQrow1d9TTcqK3W/Cg9Fp12Cmt/nEhAk8m8CCjXKROnEMn6Eja9gmcMm7CJw==}
+    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}

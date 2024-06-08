@@ -21,14 +21,14 @@ function AsideLeft() {
           <p>Nivel 4: Funcionario</p>
         </div>
         <hr />
-        <GoalsButton> Objetivos</GoalsButton>
+        <GoalsButton>Planificación</GoalsButton>
       </header>
       <section id='profile-links'>
         <AsideButton> Notificaciones</AsideButton>
         <AsideButton> Mensajes</AsideButton>
         <AsideButton> Guardados</AsideButton>
       </section>
-      <footer>
+      <footer id='logout'>
         <NavLink
           id="logout"
           to="/"

@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-s);
+  height: 85vh;
+  position: relative;
 }
 header#profile {
   height: max-content;
@@ -55,7 +57,7 @@ header#profile {
   }
   #goals-button {
     display: flex;
-    padding: 10px 16px;
+    padding: 8px ;
     background-color: var(--color-orange-0);
     width: 100%;
     gap: var(--gap-m);
@@ -88,10 +90,12 @@ section#profile-links {
     background-color: var(--color-blue-1);
   }
 }
-footer {
-
+footer#logout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   #logout {
-    border: 1px solid rgb(109, 109, 109);
+    border: 0.5px solid var(--color-white-2);
     display: flex;
     justify-content: center;
     border-radius: var(--border-m);

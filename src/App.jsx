@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Welcome from "@/pages/Welcome";
+import Wellcome from "@/pages/Wellcome";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
 import Home from "@/pages/Home";
@@ -22,7 +22,7 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Welcome />} />
+            <Route path="/" element={<Wellcome />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 

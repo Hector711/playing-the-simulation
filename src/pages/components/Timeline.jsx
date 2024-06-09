@@ -13,6 +13,8 @@ export default function Timeline() {
         user="Héctor Guerra"
         size="timeline"
         url=""
+        type='La Oficina'
+
       />
       <Post
         title="Bajada de ritmo en la comunidad"
@@ -23,6 +25,7 @@ export default function Timeline() {
         user="Héctor Guerra"
         size="timeline"
         url=""
+        type='Win'
       />
       <Post
         title="Bajada de ritmo en la comunidad"
@@ -33,6 +36,8 @@ export default function Timeline() {
         user="Héctor Guerra"
         size="timeline"
         url=""
+        type='Anuncio'
+
       />
       <Post
         title="Bajada de ritmo en la comunidad"

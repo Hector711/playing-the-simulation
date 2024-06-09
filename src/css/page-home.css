@@ -21,7 +21,7 @@ main {
   flex-direction: column;
   gap: var(--gap-m);
   #new-post {
-    background-color: var(--color-blue-1);
+    background-color: var(--blue-1);
     padding: 10px;
     display: flex;
     flex-direction: column;

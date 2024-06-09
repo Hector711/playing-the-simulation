@@ -32,7 +32,7 @@ body {
   height: max-content;
 }
 #root { 
-  border: 0px solid #0000ff00 !important;
+  border: 0px solid transparent !important;
 }
 body {
   display: flex;

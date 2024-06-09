@@ -1,28 +1,60 @@
 article.post {
-  background-color: var(--color-blue-1);
+  background-color: var(--blue-1);
   border-radius: var(--border-m);
   padding: 19px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 
+  div#nav {
+    display: flex;
+    gap: var(--gap-s);
+    align-items: center;
+    #post-type {
+      border: 1px solid var(--white-2);
+      padding: 5px 15px;
+      border-radius: var(--border-s);
+    }
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  
+  }
   section {
     display: flex;
     flex-direction: column;
     gap: 8px;
   }
+
+  footer{
+    display: flex;
+    justify-content: space-between;
+    button {
+      display: flex;
+      gap: 8px;
+      font-size: 0.9rem;
+      align-items: center;
+    }
+    .post-icons{
+      color: var(--orange-0);
+      width: 25px;
+      height: 25px;
+    }
+  }
 }
+
+
 section#timeline {
   display: flex;
   flex-direction: column;
   gap: var(--gap-m);
 }
 
-#avatar {
-  background-color: #bbc9e5;
-  border-radius: 50%;
-  z-index: 2;
-}
+
+
 #avatar.news {
   width: 40px;
   height: 40px;
@@ -38,8 +70,8 @@ section#timeline {
 #avatar.large {
 }
 
-.post-user {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+#avatar {
+  background-color: #bbc9e5;
+  border-radius: 50%;
+  z-index: 2;
 }

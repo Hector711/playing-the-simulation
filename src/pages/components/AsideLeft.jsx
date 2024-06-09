@@ -4,6 +4,10 @@ import AsideButton from "@/pages/components/AsideButton";
 import { useAuth } from "@/context/AuthContext";
 import Avatar from "./Avatar";
 import GoalsButton from "./GoalsButton";
+import IconNotifications from "@/icons/IconNotifications";
+import IconMessages from "@/icons/IconMessages";
+import IconSave from "@/icons/IconSave";
+import IconGoals from "../../icons/IconGoals";
 
 function AsideLeft() {
   const { logout } = useAuth();
@@ -21,14 +25,23 @@ function AsideLeft() {
           <p>Nivel 4: Funcionario</p>
         </div>
         <hr />
-        <GoalsButton>Planificación</GoalsButton>
+        <NavLink id="goals-link"  to="/goals">
+          <IconGoals />
+          <h2>Planificación</h2>
+        </NavLink>
       </header>
-      <section id='profile-links'>
-        <AsideButton> Notificaciones</AsideButton>
-        <AsideButton> Mensajes</AsideButton>
-        <AsideButton> Guardados</AsideButton>
+      <section id="profile-links">
+        <NavLink className="aside-link">
+          <IconNotifications className='aside-icons'/> <h2>Notificaciones</h2>
+        </NavLink>
+        <NavLink className="aside-link">
+          <IconSave className='aside-icons'/> <h2>Guardados</h2>
+        </NavLink>
+        <NavLink className="aside-link">
+          <IconMessages className='aside-icons'/> <h2>Mensajes</h2>
+        </NavLink>
       </section>
-      <footer id='logout'>
+      <footer id="logout">
         <NavLink
           id="logout"
           to="/"

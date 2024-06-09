@@ -9,7 +9,7 @@
 header#profile {
   height: max-content;
   border-radius: var(--border-m);
-  background-color: var(--color-blue-1);
+  background-color: var(--blue-1);
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -29,7 +29,7 @@ header#profile {
       z-index: 0;
       width: 100%;
       height: 70px;
-      background-color: var(--color-orange-0);
+      background-color: var(--orange-0);
     }
   }
   #profile-link:hover {
@@ -49,45 +49,44 @@ header#profile {
     width: 100%;
     /* border: 1px solid ; */
   }
-  .icon {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #909ca9;
-  }
-  #goals-button {
+  
+  #goals-link {
+
     display: flex;
-    padding: 8px ;
-    background-color: var(--color-orange-0);
-    width: 100%;
-    gap: var(--gap-m);
     align-items: center;
-    color: var(--color-blue-1);
+
+    gap: 10px;
+    padding: 10px 14px;
+    background-color: var(--orange-0);
+    width: 100%;
+    color: var(--blue-1);
     h2 {
       font-weight: 700;
       text-align: center;
-      width: 100%;
+
       font-size: 1.3rem !important;
     }
   }
+}
+.aside-icons {
+  width: 30px;
+  height: 30px;
+}
+#goals-icon {
+  width: 35px;
+  height: 35px;
 }
 section#profile-links {
   display: flex;
   flex-direction: column;
   gap: var(--gap-s);
-  .icon {
-    width: 30px;
-    background-color: #909ca9;
-    height: 30px;
-    border-radius: 50%;
-  }
-  .aside-button {
+  .aside-link {
     gap: var(--gap-m);
     padding: 10px 16px;
     align-items: center;
     display: flex;
     border-radius: var(--border-m);
-    background-color: var(--color-blue-1);
+    background-color: var(--blue-1);
   }
 }
 footer#logout {
@@ -95,7 +94,7 @@ footer#logout {
   bottom: 0;
   width: 100%;
   #logout {
-    border: 0.5px solid var(--color-white-2);
+    border: 0.5px solid var(--white-2);
     display: flex;
     justify-content: center;
     border-radius: var(--border-m);

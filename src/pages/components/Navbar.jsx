@@ -5,7 +5,7 @@ import NavLinkButton from "./NavLinkButton";
 
 function Navbar() {
   return (
-    <nav>
+    <nav id='nav'>
       <div id="nav-container">
         <div id="nav-left">
           <NavLink to="/home">

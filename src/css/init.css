@@ -1,4 +1,3 @@
-
 :root {
   font-family: 
     'Onest Variable',
@@ -12,7 +11,10 @@
     sans-serif;
 
   --width: 1200px;
+
+  --border-s: 5px;
   --border-m: 10px;
+  
   --left-aside: 230px;
   --right-aside: 280px;
 
@@ -20,22 +22,22 @@
   --gap-m: 17px;
   --gap-l: 30px;
 
-  --color-white-0: #e8e8e8de;
-  --color-white-1: #cbcbcbde;
-  --color-white-2: #909090de;
+  --white-0: #e8e8e8de;
+  --white-1: #cbcbcbde;
+  --white-2: #909090de;
 
-  --color-black-0: #101010;
-  --color-black-1: ;
+  --black-0: #101010;
+  --black-1: #303030;
 
+  --blue-0: #111822;
+  --blue-1: #1a1e23;
 
-  --color-blue-1: #:;
-
-  --color-orange-0: #F6921B;
-  --color-orange-1: #f6941bbe;
+  --orange-0: #F6921B;
+  --orange-1: #f6941bbe;
 
   color-scheme: light dark;
-  color: var(--color-white-0);
-  background-color: var(--color-black-0);
+  color: var(--white-0);
+  background-color: var(--black-0);
 }
 
 * {

@@ -21,32 +21,32 @@ export default function Login() {
   }, [isAuthenticated]);
 
   return (
-    <div>
-      <h1>Iniciar Sesión</h1>
+    <div className='login'>
+      <h3>Iniciar Sesión</h3>
       {signinErrors.map((error, i) => (
-        <div className='bg-red-500 p-2' key={i}>
+        <div className='errors' key={i}>
           {error}
         </div>
       ))}
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className='login'>
         <input
           type='email'
           {...register('email', { required: true })}
           placeholder='Email'
         />
-        {errors.email && <p className='text-red-500'>Email is required</p>}
+        {errors.email && <p className='errors show'>Email is required</p>}
         <input
           type='password'
           {...register('password', { required: true })}
           placeholder='Password'
         />
         {errors.password && (
-          <p className='text-red-500'>Password is required</p>
+          <p  className='errors show'>Password is required</p>
         )}
         <button type='submit'>Iniciar Sesión</button>
       </form>
-      <p>
-        Don't have an account? <Link to='/register'>Sign Up</Link>
+      <p className='register'>
+        ¿Quieres unirte? &nbsp;<a href="https://www.skool.com/playing-the-simulation-7538/about" id='join-link'>Clicka aqui</a>
       </p>
     </div>
   );

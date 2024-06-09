@@ -1,18 +1,110 @@
-#pts-home {
-  font-size: 3.5rem;
-  width: 50%;
-  text-shadow: 1px 1px 10px rgb(205, 205, 205);
-  display: flex;
-  line-height: 2;
-  height: 5rem;
+:root {
+  --height-text-wellcome: 3rem;
+  --pad-s: 10px;
+  --pad-m: 20px;
+  --red-0: #961616;
+  transition: all 0.5s ease-in-out;
 }
-
-#auth {
+* {
+  /* border: 1px solid; */
+}
+div#wellcome-body {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 98vh;
+  padding-inline: 7%;
+}
+header.wellcome {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 4px rgb(205, 205, 205);
+    line-height: 1;
+    height: var(--height-text-wellcome);
+  }
+}
+section.wellcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 60px;
   width: 50%;
-  height: 5rem;
-  padding-right: 60px;
+  height: 100%;
+}
+div.login {
+  h3 {
+    font-size: 1.5rem;
+    height: var(--height-text-wellcome);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    width: 100%;
+    padding: var(--pad-m);
+  }
+  div.errors {
+    padding: var(--pad-s) var(--pad-s);
+    background-color: var(--red-0);
+    border-radius: var(--border-s);
+    margin: var(--pad-s) var(--pad-m);
+  }
+  form.login {
+    background-color: var(--blue-1);
+    padding: var(--pad-m);
+    width: 350px;
+    height: max-content;
+    border-radius: var(--border-m);
+
+    input {
+      padding: var(--pad-s);
+    }
+  }
+  p.register {
+    display: flex;
+    justify-content: center;
+    padding: var(--pad-s);
+  }
+  p.errors {
+    padding-inline: var(--pad-s);
+    background-color: var(--red-0);
+    border-radius: var(--border-s);
+    height: 23px;
+  }
+  #join-link {
+    text-decoration: underline;
+  }
+}
+
+@keyframes error-fade-p {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 23px;
+  }
+}
+p.errors {
+  animation: error-fade-p 0.5s ease-out;
+}
+
+
+@keyframes error-fade-div {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 40px;
+  }
+}
+div.errors {
+  animation: error-fade-div 0.5s ease-in-out;
 }

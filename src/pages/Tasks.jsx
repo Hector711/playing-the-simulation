@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useTasks } from '@/context/TaskContext';
-import TaskCard from '@/pages/components/TaskCard';
+import TaskCard from '@/components/TaskCard';
 
 export default function Tasks() {
   const { tasks, getTasks } = useTasks();

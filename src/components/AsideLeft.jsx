@@ -1,15 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import AsideButton from "@/pages/components/AsideButton";
 import { useAuth } from "@/context/AuthContext";
-import Avatar from "./Avatar";
-import GoalsButton from "./GoalsButton";
+import Avatar from "@/components/Avatar";
 import IconNotifications from "@/icons/IconNotifications";
 import IconMessages from "@/icons/IconMessages";
 import IconSave from "@/icons/IconSave";
-import IconGoals from "../../icons/IconGoals";
+import IconGoals from "@/icons/IconGoals";
 
-function AsideLeft() {
+export default function AsideLeft() {
   const { logout } = useAuth();
   return (
     <aside id="aside-left">
@@ -31,13 +29,13 @@ function AsideLeft() {
         </NavLink>
       </header>
       <section id="profile-links">
-        <NavLink className="aside-link">
+        <NavLink className="aside-link" to="/notifications">
           <IconNotifications className='aside-icons'/> <h2>Notificaciones</h2>
         </NavLink>
-        <NavLink className="aside-link">
+        <NavLink className="aside-link" to="/saved">
           <IconSave className='aside-icons'/> <h2>Guardados</h2>
         </NavLink>
-        <NavLink className="aside-link">
+        <NavLink className="aside-link" to="/messages">
           <IconMessages className='aside-icons'/> <h2>Mensajes</h2>
         </NavLink>
       </section>
@@ -55,5 +53,3 @@ function AsideLeft() {
     </aside>
   );
 }
-
-export default AsideLeft;

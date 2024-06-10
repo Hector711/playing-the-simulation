@@ -1,0 +1,121 @@
+div#layout {
+  display: grid;
+  grid-template-areas:
+    "left main right"
+    "left main right";
+    grid-template-columns: var(--left-aside) 1fr var(--right-aside);
+    
+  gap: var(--gap-l);
+  height: max-content;
+  justify-content: center;
+  margin-inline: auto;
+  max-width: var(--width);
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  /* border: 1px solid; */
+}
+
+#aside-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  height: 85vh;
+  position: relative;
+}
+header#profile {
+  height: max-content;
+  border-radius: var(--border-m);
+  background-color: var(--blue-1);
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  #profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    gap: var(--gap-s);
+    padding-top: 35px;
+    #cover {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 70px;
+      background-color: var(--orange-0);
+    }
+  }
+  #profile-link:hover {
+    text-decoration: underline;
+    background-color: #26262651;
+  }
+  hr {
+    width: 100%;
+  }
+  #profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-s);
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid ; */
+  }
+  
+  #goals-link {
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    padding: 10px 14px;
+    background-color: var(--orange-0);
+    width: 100%;
+    color: var(--blue-1);
+    h2 {
+      font-weight: 700;
+      text-align: center;
+
+      font-size: 1.3rem !important;
+    }
+  }
+}
+.aside-icons {
+  width: 30px;
+  height: 30px;
+}
+#goals-icon {
+  width: 35px;
+  height: 35px;
+}
+section#profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  .aside-link {
+    gap: var(--gap-m);
+    padding: 10px 16px;
+    align-items: center;
+    display: flex;
+    border-radius: var(--border-m);
+    background-color: var(--blue-1);
+  }
+}
+footer#logout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  #logout {
+    border: 0.5px solid var(--white-2);
+    display: flex;
+    justify-content: center;
+    border-radius: var(--border-m);
+    padding: 10px;
+  }
+}

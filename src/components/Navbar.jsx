@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import NavLinkButton from "./NavLinkButton";
+import NavLinkButton from "@/components/NavLinkButton";
 
 function Navbar() {
   return (
@@ -11,7 +11,7 @@ function Navbar() {
           <NavLink to="/home">
             <h1>Playing The Simulation</h1>
           </NavLink>
-          <NavLinkButton to="/">Classroom</NavLinkButton>
+          <NavLinkButton to="/classroom">Classroom</NavLinkButton>
           <NavLinkButton to="/">Comunidad</NavLinkButton>
           <NavLinkButton to="/">Eventos</NavLinkButton>
           <NavLinkButton to="/">La Oficina</NavLinkButton>

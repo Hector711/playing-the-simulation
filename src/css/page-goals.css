@@ -1,0 +1,19 @@
+main#goals {
+  /* border: 1px solid; */
+}
+main#goals {
+  width: 100%;
+  height: 100%;
+  grid-column: main / span 2;
+  *{
+    /* border: 1px solid; */
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  div#ruta {
+    background-color: var(--blue-1);
+    padding: 20px;
+    border-radius: var(--border-l);
+  }
+}

@@ -6,13 +6,16 @@ import App from './App.jsx';
 import '@/css/0/reset.css';
 import '@/css/elements.css';
 import '@/css/init.css';
+import '@/css/layout-nav.css';
+import '@/css/layout-aside.css';
 import '@/css/page-wellcome.css';
 import '@/css/page-home.css';
-import '@/css/comp-nav.css';
+import '@/css/page-goals.css';
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
 import '@/css/comp-aside-left.css';
 import '@/css/comp-aside-right.css';
+import '@/css/comp-new-post.css';
 
 // TYPOGRAFÍAS
 

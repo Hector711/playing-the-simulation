@@ -8,15 +8,10 @@ nav#nav {
   box-shadow: 1px 1px 5px 0px var(--orange-1);
   background-color: var(--blue-1);
 }
-nav, nav * {
-  /* border: 0.5px solid; */
-}
 
 #nav-container {
   display: flex;
   padding-block: 0.5rem;
-  align-items: stretch;
-
   align-items: center;
   width: 1200px;
   h1 {
@@ -24,9 +19,7 @@ nav, nav * {
     text-wrap: nowrap;
     height: 100%;
     width: var(--left-aside) !important;
-
-  }
-  
+  } 
 }
 #nav-left {
   gap: 2rem;

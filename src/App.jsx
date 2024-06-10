@@ -8,13 +8,12 @@ import Notifications from "@/pages/Notifications";
 import Messages from "@/pages/Messages";
 import Goals from "@/pages/Goals";
 import Saved from "@/pages/Saved";
-import Deposit from "@/pages/Deposit";
-import Tasks from "@/pages/Tasks";
-import TaskForm from "@/pages/TaskForm";
 import { AuthProvider } from "@/context/AuthContext";
 import ProtectedRoute from "@/ProtectedRoute";
 import { TaskProvider } from "@/context/TaskContext";
-import Layout from "@/pages/components/Layout";
+import NavLayout from "@/layouts/NavLayout";
+import AsideLayout from "@/layouts/AsideLayout";
+import Classroom from "@/pages/Classroom";
 
 function App() {
   return (
@@ -23,26 +22,19 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Wellcome />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
 
             <Route element={<ProtectedRoute />}>
-              <Route element={<Layout />}>
-                {/* ASIDE-LEFT */}
-                <Route path="/home" element={<Home />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path="/notifications" element={<Notifications />} />
-                <Route path="/messages" element={<Messages />} />
-                <Route path="/goals" element={<Goals />} />
-                <Route path="/deposit" element={<Deposit />} />
-                <Route path="/saved" element={<Saved />} />
-                {/* ASIDE-LEFT */}
-                {/*  */}
-                {/*  */}
-
-                <Route path="/tasks" element={<Tasks />} />
-                <Route path="/add-task" element={<TaskForm />} />
-                <Route path="/tasks/:id" element={<Login />} />
+              <Route element={<NavLayout />}>
+                <Route element={<AsideLayout />}>
+                  <Route path="/home" element={<Home />} />
+                  <Route path="/profile" element={<Profile />} />
+                  <Route path="/goals" element={<Goals />} />
+                  <Route path="/notifications" element={<Notifications />} />
+                  <Route path="/messages" element={<Messages />} />
+                  <Route path="/saved" element={<Saved />} />
+                </Route>
+                <Route path="/classroom" element={<Classroom />} />
+                <Route path="/classroom" element={<Classroom />} />
               </Route>
             </Route>
           </Routes>

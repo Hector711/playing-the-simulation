@@ -16,7 +16,7 @@ h1 {
 }
 /* Navbar, sidebar, etc */
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -61,7 +61,7 @@ button {
   transition: border-color 0.25s;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin-inline: 5px;
+  /* margin-inline: 5px; */
   /* border-color: var(--orange-0); */
 }
 button:hover {
@@ -79,4 +79,9 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-radius: var(--border-m);
+  input {
+    padding: 10px;
+    border-radius: var(--border-s);
+  }
 }

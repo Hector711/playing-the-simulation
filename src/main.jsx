@@ -16,6 +16,7 @@ import '@/css/comp-post.css';
 import '@/css/comp-aside-left.css';
 import '@/css/comp-aside-right.css';
 import '@/css/comp-new-post.css';
+import '@/css/comp-dnd-kit.css';
 
 // TYPOGRAFÍAS
 

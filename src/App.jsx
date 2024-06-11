@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Wellcome from "@/pages/Wellcome";
-import Login from "@/pages/Login";
-import Register from "@/pages/Register";
 import Home from "@/pages/Home";
 import Profile from "@/pages/Profile";
 import Notifications from "@/pages/Notifications";
@@ -20,24 +18,25 @@ function App() {
     <AuthProvider>
       <TaskProvider>
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Wellcome />} />
+            <Routes>
+              <Route path="/" element={<Wellcome />} />
 
-            <Route element={<ProtectedRoute />}>
-              <Route element={<NavLayout />}>
-                <Route element={<AsideLayout />}>
-                  <Route path="/home" element={<Home />} />
-                  <Route path="/profile" element={<Profile />} />
-                  <Route path="/goals" element={<Goals />} />
-                  <Route path="/notifications" element={<Notifications />} />
-                  <Route path="/messages" element={<Messages />} />
-                  <Route path="/saved" element={<Saved />} />
+              <Route element={<ProtectedRoute />}>
+                <Route element={<NavLayout />}>
+                  <Route element={<AsideLayout />}>
+                    <Route path="/home" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+
+                    <Route path="/goals" element={<Goals />} />
+
+                    <Route path="/notifications" element={<Notifications />} />
+                    <Route path="/messages" element={<Messages />} />
+                    <Route path="/saved" element={<Saved />} />
+                  </Route>
+                  <Route path="/classroom" element={<Classroom />} />
                 </Route>
-                <Route path="/classroom" element={<Classroom />} />
-                <Route path="/classroom" element={<Classroom />} />
               </Route>
-            </Route>
-          </Routes>
+            </Routes>
         </BrowserRouter>
       </TaskProvider>
     </AuthProvider>

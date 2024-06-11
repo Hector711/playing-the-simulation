@@ -4,6 +4,13 @@ import Post from "@/components/Post";
 export default function Timeline() {
   return (
     <section id='timeline'>
+      <header>
+        <button>Comunidad</button>
+        <hr />
+        <button>Siguiendo</button>
+        <hr />
+        <button>Lo más popular</button>
+      </header>
       <Post
         title="Bajada de ritmo en la comunidad"
         description="Buenas chavales, no se si vosotros lo habéis notado, pero

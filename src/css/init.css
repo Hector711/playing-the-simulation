@@ -13,19 +13,24 @@
   --width: 1200px;
 
   --border-s: 5px;
-  --border-m: 10px;
+  --border-m: 8px;
   --border-l: 30px;
   
   --left-aside: 230px;
   --right-aside: 280px;
 
-  --gap-s: 10px;
-  --gap-m: 17px;
-  --gap-l: 30px;
+  --gap-s: 8px;
+  --gap-m: 10px;
+  --gap-l: 15px;
+
+  --pad-s: 5px;
+  --pad-m: 10px;
+  --pad-l: 15px;
 
   --white-0: #e8e8e8de;
   --white-1: #cbcbcbde;
   --white-2: #909090de;
+  --white-3: #565656de;
 
   --black-0: #101010;
   --black-1: #303030;

@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <main id='home'>
         <NewPost />
-        <hr />
+        <hr className="home"/>
         <Timeline />
       </main>
       <AsideRight />

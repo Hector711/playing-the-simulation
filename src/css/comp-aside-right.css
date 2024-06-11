@@ -6,13 +6,14 @@
   box-shadow: 1px 3px 5px 0px var(--orange-1);
   
   h2#news {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-block: 5px;
     color: var(--orange-0);
     width: 100%;
     text-align: center;
     font-weight: 700;
-    font-family: 'Figtree Variable';
+    font-family: 'heading', 'Figtree Variable';
+    letter-spacing: 2px;
     
   }
   section#news {

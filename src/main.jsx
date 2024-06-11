@@ -6,11 +6,14 @@ import App from './App.jsx';
 import '@/css/0/reset.css';
 import '@/css/elements.css';
 import '@/css/init.css';
+// Layout
 import '@/css/layout-nav.css';
-import '@/css/layout-aside.css';
+import '@/css/layout-profile.css';
+// Profile Pages
 import '@/css/page-wellcome.css';
 import '@/css/page-home.css';
 import '@/css/page-goals.css';
+// Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
 import '@/css/comp-aside-left.css';
@@ -19,13 +22,10 @@ import '@/css/comp-new-post.css';
 import '@/css/comp-dnd-kit.css';
 
 // TYPOGRAFÍAS
-
-// 'Comfortaa Variable'
-// Supports weights 300-700
+// 'Comfortaa Variable' : Supports weights 300-700
 import '@fontsource-variable/comfortaa';
 
-// 'Figtree Variable'
-// Supports weights 300-900
+// 'Figtree Variable': Supports weights 300-900
 import '@fontsource-variable/figtree';
 
 // 'Tenor Sans'

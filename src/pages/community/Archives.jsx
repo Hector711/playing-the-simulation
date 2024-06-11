@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Biblioteca() {
+export default function Archives() {
   return (
     <div>Biblioteca</div>
   )

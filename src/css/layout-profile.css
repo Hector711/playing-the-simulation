@@ -1,10 +1,10 @@
 div#layout {
   display: grid;
   grid-template-areas:
-    "left main right"
-    "left main right";
-    grid-template-columns: var(--left-aside) 1fr var(--right-aside);
-    
+    'left main right'
+    'left main right';
+  grid-template-columns: var(--left-aside) 1fr var(--right-aside);
+
   gap: var(--gap-l);
   height: max-content;
   justify-content: center;
@@ -67,9 +67,8 @@ header#profile {
     width: 100%;
     /* border: 1px solid ; */
   }
-  
-  #goals-link {
 
+  #goals-link {
     display: flex;
     align-items: center;
 

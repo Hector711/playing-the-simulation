@@ -1,13 +1,12 @@
 :root {
-  font-family: 
+  font-family:
     'Onest Variable',
     'Figtree Variable',
-/* 'Comfortaa Variable', */
-    Inter, 
-    system-ui, 
-    Avenir, 
-    Helvetica, 
-    Arial, 
+    /* 'Comfortaa Variable', */ Inter,
+    system-ui,
+    Avenir,
+    Helvetica,
+    Arial,
     sans-serif;
 
   --width: 1200px;
@@ -15,7 +14,7 @@
   --border-s: 5px;
   --border-m: 8px;
   --border-l: 30px;
-  
+
   --left-aside: 230px;
   --right-aside: 280px;
 
@@ -38,7 +37,7 @@
   --blue-0: #111822;
   --blue-1: #1a1e23;
 
-  --orange-0: #F6921B;
+  --orange-0: #f6921b;
   --orange-1: #f6941bbe;
 
   color-scheme: light dark;

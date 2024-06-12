@@ -1,33 +1,33 @@
-import React, { useState } from "react";
-import Close from "@/icons/Close";
+import React, { useState } from 'react';
+import Close from '@/icons/Close';
 
 export default function NewPost() {
   const [state, setState] = useState(false);
 
   const toggleNewPostForm = () => {
-    setState((prevState) => !prevState);
+    setState(prevState => !prevState);
   };
   return (
-    <div id="new-post" className={state ? "expanded" : "collapsed"}>
+    <div id='new-post' className={state ? 'expanded' : 'collapsed'}>
       {!state ? (
         <button
           onClick={toggleNewPostForm}
-          id="open"
-          className={state ? "expanded" : "collapsed"}
+          id='open'
+          className={state ? 'expanded' : 'collapsed'}
         >
           Nuevo Post
         </button>
       ) : (
         <>
-          <div id="header" className={state ? "expanded" : "collapsed"}>
+          <div id='header' className={state ? 'expanded' : 'collapsed'}>
             <h2>New Post</h2>
-            <button onClick={toggleNewPostForm} id="close">
+            <button onClick={toggleNewPostForm} id='close'>
               <Close />
             </button>
           </div>
           <form>
-            <input type="text" placeholder="Title" id="title" />
-            <input type="text" placeholder="Write Something" id="description" />
+            <input type='text' placeholder='Title' id='title' />
+            <input type='text' placeholder='Write Something' id='description' />
           </form>
         </>
       )}

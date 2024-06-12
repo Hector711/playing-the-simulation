@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function CommunityLayout() {
-  return (
-    <div>CommunityLayout</div>
-  )
+  return <div>CommunityLayout</div>;
 }

@@ -94,7 +94,6 @@ p.errors {
   animation: error-fade-p 0.5s ease-out;
 }
 
-
 @keyframes error-fade-div {
   from {
     opacity: 0;

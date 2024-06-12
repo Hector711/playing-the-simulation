@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function Archives() {
-  return (
-    <div>Biblioteca</div>
-  )
+  return <div>Biblioteca</div>;
 }

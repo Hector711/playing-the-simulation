@@ -1,20 +1,20 @@
-import React, { useState } from "react";
-import { DndContext } from "@dnd-kit/core";
+import React, { useState } from 'react';
+import { DndContext } from '@dnd-kit/core';
 
-import Droppable from "@/components/dnd-kit/Droppable";
-import Draggable from "@/components/dnd-kit/Draggable";
+import Droppable from '@/components/dnd-kit/Droppable';
+import Draggable from '@/components/dnd-kit/Draggable';
 
 export default function Goals() {
   const [isDropped, setIsDropped] = useState(false);
   const draggableMarkup = <Draggable>Drag me</Draggable>;
   return (
     <DndContext onDragEnd={handleDragEnd}>
-      <main id="goals">
+      <main id='goals'>
         <h2>Planificación</h2>
         <h4>Objetivo:</h4>
-        <div id="ruta">
+        <div id='ruta'>
           Ruta
-          <Droppable>{isDropped ? draggableMarkup : "Drop here"}</Droppable>
+          <Droppable>{isDropped ? draggableMarkup : 'Drop here'}</Droppable>
         </div>
         <Draggable />
         {!isDropped ? draggableMarkup : null}
@@ -28,7 +28,7 @@ export default function Goals() {
     </DndContext>
   );
   function handleDragEnd(event) {
-    if (event.over && event.over.id === "droppable") {
+    if (event.over && event.over.id === 'droppable') {
       setIsDropped(true);
     }
   }

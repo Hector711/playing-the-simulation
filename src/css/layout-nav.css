@@ -19,7 +19,7 @@ nav#nav {
     text-wrap: nowrap;
     height: 100%;
     width: var(--left-aside) !important;
-  } 
+  }
 }
 #nav-left {
   gap: 2rem;
@@ -28,10 +28,9 @@ nav#nav {
   color: var(--orange-0);
   h2 {
     height: 100%;
-    display: flex;  
-    align-items:center;
+    display: flex;
+    align-items: center;
     padding-top: 6px;
-
   }
 }
 #nav-right {

@@ -16,12 +16,11 @@ article.post {
       border-radius: var(--border-s);
     }
   }
-  
+
   header {
     display: flex;
     align-items: center;
     gap: 15px;
-  
   }
   section {
     display: flex;
@@ -29,7 +28,7 @@ article.post {
     gap: 8px;
   }
 
-  footer{
+  footer {
     display: flex;
     justify-content: space-between;
     button {
@@ -38,7 +37,7 @@ article.post {
       font-size: 0.9rem;
       align-items: center;
     }
-    .post-icons{
+    .post-icons {
       color: var(--orange-0);
       width: 25px;
       height: 25px;
@@ -46,14 +45,11 @@ article.post {
   }
 }
 
-
 section#timeline {
   display: flex;
   flex-direction: column;
   gap: var(--gap-m);
 }
-
-
 
 #avatar.news {
   width: 40px;

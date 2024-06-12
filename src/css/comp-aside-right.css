@@ -4,7 +4,7 @@
   border-radius: var(--border-m);
   /* border: 1px solid var(--white-1); */
   box-shadow: 1px 3px 5px 0px var(--orange-1);
-  
+
   h2#news {
     font-size: 1.5rem;
     margin-block: 5px;
@@ -14,7 +14,6 @@
     font-weight: 700;
     font-family: 'heading', 'Figtree Variable';
     letter-spacing: 2px;
-    
   }
   section#news {
     display: flex;
@@ -22,5 +21,4 @@
     gap: var(--gap-m);
     margin-top: var(--gap-m);
   }
-
 }

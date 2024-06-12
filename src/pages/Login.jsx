@@ -40,13 +40,17 @@ export default function Login() {
           {...register('password', { required: true })}
           placeholder='Password'
         />
-        {errors.password && (
-          <p  className='errors show'>Password is required</p>
-        )}
+        {errors.password && <p className='errors show'>Password is required</p>}
         <button type='submit'>Iniciar Sesión</button>
       </form>
       <p className='register'>
-        ¿Quieres unirte? &nbsp;<a href="https://www.skool.com/playing-the-simulation-7538/about" id='join-link'>Clicka aqui</a>
+        ¿Quieres unirte? &nbsp;
+        <a
+          href='https://www.skool.com/playing-the-simulation-7538/about'
+          id='join-link'
+        >
+          Clicka aqui
+        </a>
       </p>
     </div>
   );

@@ -10,7 +10,7 @@ export default function TaskForm() {
 
   const onSubmit = handleSubmit(data => {
     createTask(data);
-    navigate('/tasks')
+    navigate('/tasks');
   });
   return (
     <>

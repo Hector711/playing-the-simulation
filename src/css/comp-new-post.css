@@ -9,11 +9,7 @@ div#new-post {
   padding: 10px;
   background-color: var(--blue-1);
   border-radius: var(--border-m);
-  overflow: hidden;
-
-  * {
-    /* border: 1px solid ; */
-  }
+  /* overflow: hidden; */
   button#open {
     background-color: var(--black-0);
     padding: 10px;
@@ -23,7 +19,6 @@ div#new-post {
   div#header {
     display: flex;
     justify-content: space-between;
-
     h2 {
       display: flex;
       justify-content: center;
@@ -41,7 +36,6 @@ div#new-post {
 div#new-post {
   transition: height 0.5s ease-in-out;
 }
-
 div#header,
 button#open {
   transition: opacity 0.8s ease-in-out;
@@ -59,11 +53,60 @@ div#header.collapsed {
 
 /* EXPANDIDO */
 div#new-post.expanded {
-  height: 175px;
+  height: max-content;
 }
 button#open.expanded {
   opacity: 0;
 }
 div#header.expanded {
   opacity: 1;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  border-radius: var(--border-m);
+  grid-template-areas: 
+    "title title title"
+    "description description description"
+    "options selects selects"
+    "empty empty send";
+    grid-template-columns: 150px 1fr 1fr;
+    grid-template-rows: max-content max-content max-content ;
+  input {
+    padding: 10px;
+    border-radius: var(--border-s);
+  }
+  input#title {
+    grid-area: title;
+  }
+  input#description {
+    grid-area: description;
+  } 
+  div#options {
+    grid-area: options;
+    display: flex;
+  }
+  div#selects {
+    grid-area: selects;
+    display: flex;
+    gap: var(--gap-m);
+    .selects#category{
+      width: 70%;
+    }
+    .selects#label{
+      width: 100%;
+    }
+  }
+  button {
+    grid-area: send;
+  }
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  #gif {
+    width: 30px;
+    height: 30px;
+  }
 }

@@ -28,7 +28,7 @@ export default function NewPost() {
 
   const category = [
     { value: 'win', label: '🏆 WIN' },
-    { value: 'aportacion', label: '👔 Aportación' },
+    { value: 'biblioteca', label: '👔 Biblioteca' },
     { value: 'pitch', label: '🛗 Pitch Deck' },
     { value: 'afterwork', label: '🍺 Afterwork' }
   ];

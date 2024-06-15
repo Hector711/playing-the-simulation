@@ -1,8 +1,4 @@
-main#home {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  gap: var(--gap-s);
+
   hr.home {
     border: 0.9px solid var(--white-3);
     margin-top: 10px;
@@ -24,4 +20,4 @@ main#home {
       height: 100%;
     }
   }
-}
+

@@ -10,12 +10,12 @@
 
 /* PTS Typography */
 @font-face {
-  font-family: 'palo';
+  font-family: 'Palo';
   src: url(/src/css/fonts/Palo\ Compressed\ Extrabold.otf);
 }
 /* PTS Typography */
 @font-face {
-  font-family: 'heading';
+  font-family: 'Heading';
   src: url(/src/css/fonts/Heading\ Now\ Trial\ 95\ Medium.ttf);
 }
 

@@ -6,7 +6,9 @@ export default function NavLayout() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div id='layout'>
+        <Outlet />
+      </div>
       <footer id='home'></footer>
     </>
   );

@@ -10,7 +10,6 @@ import Home from '@/pages/Home';
 // Layouts
 import NavLayout from '@/layouts/NavLayout';
 import ProfileLayout from '@/layouts/ProfileLayout';
-import CommunityLayout from '@/layouts/CommunityLayout';
 // Profile Pages
 import Profile from '@/pages/profile/Profile';
 import Notifications from '@/pages/profile/Notifications';
@@ -20,8 +19,9 @@ import Saved from '@/pages/profile/Saved';
 //  Community Pages
 import Classroom from '@/pages/community/Classroom';
 import Community from '@/pages/community/Community';
+import Members from '@/pages/community/Members';
 import Archives from '@/pages/community/Archives';
-import Search from '@/pages/community/Search';
+import Events from '@/pages/community/Events';
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
             <Route path='/' element={<Wellcome />} />
             <Route element={<ProtectedRoute />}>
               <Route element={<NavLayout />}>
-                {/* Profile Pages*/}
+                {/* Profile Pages */}
                 <Route element={<ProfileLayout />}>
                   <Route path='/home' element={<Home />} />
                   <Route path='/profile' element={<Profile />} />
@@ -42,12 +42,11 @@ function App() {
                   <Route path='/saved' element={<Saved />} />
                 </Route>
                 {/* Community Pages */}
-                <Route element={<CommunityLayout />}>
                   <Route path='/classroom' element={<Classroom />} />
-                  <Route path='/community' element={<Community />} />
+                  <Route path='/members' element={<Members />} />
+                  <Route path='/events' element={<Events />} />
                   <Route path='/archives' element={<Archives />} />
-                  <Route path='/search' element={<Search />} />
-                </Route>
+                  <Route path='/community' element={<Community />} />
               </Route>
             </Route>
           </Routes>

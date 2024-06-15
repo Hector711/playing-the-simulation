@@ -11,10 +11,12 @@ function Navbar() {
             <h1>Playing The Simulation</h1>
           </NavLink>
           <NavLinkButton to='/classroom'>Classroom</NavLinkButton>
-          <NavLinkButton to='/community'>Comunidad</NavLinkButton>
-          <NavLinkButton to='/'>Eventos</NavLinkButton>
+          <NavLinkButton to='/members'>Miembros</NavLinkButton>
+          <NavLinkButton to='/events'>Eventos</NavLinkButton>
           <NavLinkButton to='/archives'>Biblioteca</NavLinkButton>
-          <NavLinkButton to='/search'>Buscar</NavLinkButton>
+        </div>
+        <div id='nav-right'>
+          <NavLinkButton to='/community'>Manifiesto Comunidad</NavLinkButton>
         </div>
       </div>
     </nav>

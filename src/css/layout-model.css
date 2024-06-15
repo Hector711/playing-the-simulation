@@ -1,0 +1,38 @@
+div#layout {
+  display: grid;
+  grid-template-areas:
+    'left main right'
+    'left main right';
+  grid-template-columns: var(--left-aside) 1fr var(--right-aside);
+  gap: var(--gap-l);
+  height: max-content;
+  justify-content: center;
+  margin-inline: auto;
+  max-width: var(--width);
+  width: 100%;
+  margin-top: 90px;
+  margin-bottom: 150px;
+}
+
+aside.aside-left {
+  grid-area: left;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+  height: 85vh;
+  position: relative;
+}
+
+main#home {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-s);
+}
+
+main.two-col {
+  grid-area: main;
+  grid-column: main / span 2;
+  /* border: 1px solid; */
+  padding-left: var(--pad-m);
+}

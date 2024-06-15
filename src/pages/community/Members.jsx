@@ -1,0 +1,346 @@
+import React from 'react';
+import ModelAsideLeft from '@/layouts/ModelAsideLeft';
+import { NavLink } from 'react-router-dom';
+import ModelMainPro from '@/layouts/ModelMainPro';
+const members = [
+  {
+    id: 1,
+    fullName: 'Alice Johnson',
+    job: 'Software Engineer',
+    about: 'Passionate about developing scalable web applications.',
+    img: 'https://via.placeholder.com/150',
+    location: 'San Francisco, CA',
+    username: 'alice_j',
+    url: '/profile/alice_j',
+  },
+  {
+    id: 2,
+    fullName: 'Bob Smith',
+    job: 'Product Manager',
+    about: 'Experienced in managing cross-functional teams.',
+    img: 'https://via.placeholder.com/150',
+    location: 'New York, NY',
+    username: 'bob_smith',
+    url: '/profile/bob_smith',
+  },
+  {
+    id: 3,
+    fullName: 'Carlos Martínez',
+    job: 'UX Designer',
+    about: 'Designing user-friendly interfaces for over 5 years.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Austin, TX',
+    username: 'carlos_m',
+    url: '/profile/carlos_m',
+  },
+  {
+    id: 4,
+    fullName: 'Diana Lee',
+    job: 'Data Scientist',
+    about: 'Specializes in machine learning and AI.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Boston, MA',
+    username: 'diana_lee',
+    url: '/profile/diana_lee',
+  },
+  {
+    id: 5,
+    fullName: 'Ethan Brown',
+    job: 'DevOps Engineer',
+    about: 'Ensuring smooth deployment and operations.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Seattle, WA',
+    username: 'ethan_b',
+    url: '/profile/ethan_b',
+  },
+  {
+    id: 6,
+    fullName: 'Fiona Clark',
+    job: 'Marketing Specialist',
+    about: 'Creating impactful marketing strategies.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Chicago, IL',
+    username: 'fiona_clark',
+    url: '/profile/fiona_clark',
+  },
+  {
+    id: 7,
+    fullName: 'George Lewis',
+    job: 'Sales Manager',
+    about: 'Leading the sales team to success.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Houston, TX',
+    username: 'george_lewis',
+    url: '/profile/george_lewis',
+  },
+  {
+    id: 8,
+    fullName: 'Hannah Walker',
+    job: 'Graphic Designer',
+    about: 'Crafting visually appealing designs.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Los Angeles, CA',
+    username: 'hannah_w',
+    url: '/profile/hannah_w',
+  },
+  {
+    id: 9,
+    fullName: 'Ian Wilson',
+    job: 'Full Stack Developer',
+    about: 'Building end-to-end web solutions.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Denver, CO',
+    username: 'ian_wilson',
+    url: '/profile/ian_wilson',
+  },
+  {
+    id: 10,
+    fullName: 'Jessica Miller',
+    job: 'Content Writer',
+    about: 'Creating engaging content for various platforms.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Miami, FL',
+    username: 'jessica_m',
+    url: '/profile/jessica_m',
+  },
+  {
+    id: 11,
+    fullName: 'Kevin Anderson',
+    job: 'QA Engineer',
+    about: 'Ensuring product quality and reliability.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Atlanta, GA',
+    username: 'kevin_a',
+    url: '/profile/kevin_a',
+  },
+  {
+    id: 12,
+    fullName: 'Laura Jackson',
+    job: 'Business Analyst',
+    about: 'Analyzing business processes for optimization.',
+    img: 'https://via.placeholder.com/150',
+    location: 'San Diego, CA',
+    username: 'laura_j',
+    url: '/profile/laura_j',
+  },
+  {
+    id: 13,
+    fullName: 'Michael Green',
+    job: 'Network Engineer',
+    about: 'Designing and managing network infrastructures.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Phoenix, AZ',
+    username: 'michael_g',
+    url: '/profile/michael_g',
+  },
+  {
+    id: 14,
+    fullName: 'Natalie Edwards',
+    job: 'HR Specialist',
+    about: 'Fostering a positive workplace environment.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Philadelphia, PA',
+    username: 'natalie_e',
+    url: '/profile/natalie_e',
+  },
+  {
+    id: 15,
+    fullName: 'Oscar Perez',
+    job: 'IT Support',
+    about: 'Providing technical support and solutions.',
+    img: 'https://via.placeholder.com/150',
+    location: 'San Antonio, TX',
+    username: 'oscar_p',
+    url: '/profile/oscar_p',
+  },
+  {
+    id: 16,
+    fullName: 'Paula Roberts',
+    job: 'Project Manager',
+    about: 'Managing projects from conception to completion.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Dallas, TX',
+    username: 'paula_r',
+    url: '/profile/paula_r',
+  },
+  {
+    id: 17,
+    fullName: 'Quinn Davis',
+    job: 'SEO Specialist',
+    about: 'Improving website visibility and search rankings.',
+    img: 'https://via.placeholder.com/150',
+    location: 'San Jose, CA',
+    username: 'quinn_d',
+    url: '/profile/quinn_d',
+  },
+  {
+    id: 18,
+    fullName: 'Rachel Thomas',
+    job: 'Social Media Manager',
+    about: 'Managing and growing social media presence.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Jacksonville, FL',
+    username: 'rachel_t',
+    url: '/profile/rachel_t',
+  },
+  {
+    id: 19,
+    fullName: 'Steven Walker',
+    job: 'Web Developer',
+    about: 'Creating responsive and interactive websites.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Fort Worth, TX',
+    username: 'steven_w',
+    url: '/profile/steven_w',
+  },
+  {
+    id: 20,
+    fullName: 'Tina Brown',
+    job: 'Customer Support',
+    about: 'Providing excellent customer service.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Columbus, OH',
+    username: 'tina_b',
+    url: '/profile/tina_b',
+  },
+  {
+    id: 21,
+    fullName: 'Uma Patel',
+    job: 'Mobile Developer',
+    about: 'Developing user-friendly mobile applications.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Charlotte, NC',
+    username: 'uma_p',
+    url: '/profile/uma_p',
+  },
+  {
+    id: 22,
+    fullName: 'Victor Kim',
+    job: 'Cybersecurity Analyst',
+    about: 'Protecting systems from cyber threats.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Indianapolis, IN',
+    username: 'victor_k',
+    url: '/profile/victor_k',
+  },
+  {
+    id: 23,
+    fullName: 'Wendy Chen',
+    job: 'AI Researcher',
+    about: 'Conducting research in artificial intelligence.',
+    img: 'https://via.placeholder.com/150',
+    location: 'San Francisco, CA',
+    username: 'wendy_c',
+    url: '/profile/wendy_c',
+  },
+  {
+    id: 24,
+    fullName: 'Xavier Lee',
+    job: 'Blockchain Developer',
+    about: 'Building decentralized applications on the blockchain.',
+    img: 'https://via.placeholder.com/150',
+    location: 'San Jose, CA',
+    username: 'xavier_l',
+    url: '/profile/xavier_l',
+  },
+  {
+    id: 25,
+    fullName: 'Yara Morgan',
+    job: 'Operations Manager',
+    about: 'Optimizing company operations and processes.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Las Vegas, NV',
+    username: 'yara_m',
+    url: '/profile/yara_m',
+  },
+  {
+    id: 26,
+    fullName: 'Zachary Turner',
+    job: 'Financial Analyst',
+    about: 'Analyzing financial data to inform business decisions.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Baltimore, MD',
+    username: 'zachary_t',
+    url: '/profile/zachary_t',
+  },
+  {
+    id: 27,
+    fullName: 'Amanda Young',
+    job: 'Technical Writer',
+    about: 'Creating clear and concise technical documentation.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Milwaukee, WI',
+    username: 'amanda_y',
+    url: '/profile/amanda_y',
+  },
+  {
+    id: 28,
+    fullName: 'Brandon Evans',
+    job: 'Machine Learning Engineer',
+    about: 'Developing and deploying machine learning models.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Portland, OR',
+    username: 'brandon_e',
+    url: '/profile/brandon_e',
+  },
+  {
+    id: 29,
+    fullName: 'Catherine Harris',
+    job: 'Cloud Architect',
+    about: 'Designing scalable cloud solutions.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Louisville, KY',
+    username: 'catherine_h',
+    url: '/profile/catherine_h',
+  },
+  {
+    id: 30,
+    fullName: 'David Martinez',
+    job: 'System Administrator',
+    about: 'Managing and maintaining IT systems.',
+    img: 'https://via.placeholder.com/150',
+    location: 'Oklahoma City, OK',
+    username: 'david_m',
+    url: '/profile/david_m',
+  },
+];
+
+export default function Members() {
+  return (
+    <>
+      <ModelAsideLeft id='members' titlePage='Miembros'>
+        <h2>Niveles</h2>
+      </ModelAsideLeft>
+      <ModelMainPro>
+        <h2>Members</h2>
+        {members.map(contact => (
+          <MemberCard key={contact.id} {...contact} />
+        ))}
+      </ModelMainPro>
+    </>
+  );
+}
+
+function MemberCard({
+  fullName,
+  job,
+  about,
+  img,
+  id,
+  location,
+  username,
+  url,
+}) {
+  return (
+    <article kay={id}>
+      <NavLink to={url}>
+        <img src={img} alt={fullName} />
+        <h3>{fullName}</h3>
+        <p>{username}</p>
+      </NavLink>
+      <span>{job}</span>
+      <span>{location}</span>
+      <p>{about}</p>
+    </article>
+  );
+}

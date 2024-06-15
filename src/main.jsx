@@ -9,10 +9,13 @@ import '@/css/init.css';
 // Layout
 import '@/css/layout-nav.css';
 import '@/css/layout-profile.css';
+import '@/css/layout-model.css';
 // Profile Pages
 import '@/css/page-wellcome.css';
 import '@/css/page-home.css';
 import '@/css/page-goals.css';
+// Profile Pages
+import '@/css/page-classroom.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';

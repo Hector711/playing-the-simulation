@@ -9,26 +9,42 @@ body {
   margin: 0;
   min-width: 320px;
 }
-/* titulo principal */
+/* TITULOS PRINCIPAL */
 h1 {
   font-family: 'palo';
   color: white;
 }
-/* Navbar, sidebar, etc */
+/* NAVBAR LINKS */
 h2 {
   font-size: 1.2rem;
   font-weight: 500;
 }
-
-/*  */
-h3 {
-  font-size: 1.1rem;
-  font-weight: 300;
-  font-weight: 600;
+/* TITULO DE PAGINAS y ASIDES */
+h2.impact {
+  font-family: 'Heading';
+  text-align: center;
+  padding: 5px;
+  text-transform: uppercase;
+  color: var(--orange-0);
 }
-/* titulos de post */
+/* TITULO DE PERFILES */
+h2.profile{
+
+}
+
+/* TITULOS DE SECCIÓN */
+h3.section-page {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-block: 6px;
+}
+/* TITULOS DE POST Y CURSOS */
 h4 {
+  font-size: 1.2rem;
   font-weight: 800;
+}
+
+h5{
 }
 
 p {
@@ -74,5 +90,3 @@ button:focus-visible {
 hr {
   border: 0.5px solid var(--white-2);
 }
-
-

@@ -7,12 +7,16 @@ nav#nav {
   height: 70px;
   box-shadow: 1px 1px 5px 0px var(--orange-1);
   background-color: var(--blue-1);
+  * {
+    /* border: 1px solid red; */
+  }
 }
 
 #nav-container {
   display: flex;
   padding-block: 0.5rem;
   align-items: center;
+  justify-content: space-between;
   width: 1200px;
   h1 {
     font-size: 28px;
@@ -20,12 +24,6 @@ nav#nav {
     height: 100%;
     width: var(--left-aside) !important;
   }
-}
-#nav-left {
-  gap: 2rem;
-  display: flex;
-  width: 100%;
-  color: var(--orange-0);
   h2 {
     height: 100%;
     display: flex;
@@ -33,8 +31,24 @@ nav#nav {
     padding-top: 6px;
   }
 }
-#nav-right {
-  width: 40%;
+
+
+#nav-left {
+  gap: 2rem;
   display: flex;
-  gap: 10px;
+  color: var(--orange-0);
+}
+#nav-right {
+  gap: 2rem;
+  display: flex;
+  color: var(--orange-0);
+
+  h2{ 
+    border: 1px solid var(--white-3);
+    width: var(--right-aside);
+    padding: var(--pad-s);
+    border-radius: var(--border-s);
+    display: flex;
+    justify-content: center;
+  }
 }

@@ -1,0 +1,60 @@
+aside#classroom {
+  border: 1px solid var(--white-3);
+  height: max-content;
+  background-color: var(--blue-1);
+  border-radius: var(--border-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+  padding-bottom: 20px;
+
+  * {
+    /* border: 1px solid rgb(255, 255, 255) ; */
+  }
+  h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-block: 10px;
+    width: 100%;
+  }
+  a {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+main#classroom {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-m);
+  hr {
+    margin-top: 10px
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m);
+  }
+
+  #cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gap-l);
+  }
+  div.classroom-card {
+    border: 1px solid var(--white-3);
+    border-radius: var(--border-m);
+    overflow: hidden;
+    background-color: var(--blue-1);
+    h4 {
+      text-wrap: nowrap;
+    }
+    h4,
+    p {
+      padding: var(--pad-s);
+    }
+  }
+}

@@ -29,6 +29,16 @@ nav#nav {
     display: flex;
     align-items: center;
     padding-top: 6px;
+    padding-inline: 7px;
+
+  }
+  .active-link {
+    border-bottom: 2px solid var(--orange-0);
+    border-radius: 5px;
+    /* width: 100px; */
+    /* display: flex;
+    justify-content: center; */
+    box-shadow: 0px 5px 5px -5px var(--orange-0);  
   }
 }
 

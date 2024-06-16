@@ -1,24 +1,11 @@
-aside#classroom {
-  border: 1px solid var(--white-3);
+aside.community {
+  border: 0.5px solid var(--white-3);
   height: max-content;
   background-color: var(--blue-1);
   border-radius: var(--border-m);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-m);
-  padding-bottom: 20px;
-
-  * {
-    /* border: 1px solid rgb(255, 255, 255) ; */
-  }
-  h2 {
-    font-size: 1.25rem;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    margin-block: 10px;
-    width: 100%;
-  }
+  gap: var(--gap-s);
   a {
     text-transform: uppercase;
     text-align: center;

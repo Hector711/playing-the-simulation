@@ -18,13 +18,14 @@ h1 {
 h2 {
   font-size: 1.2rem;
 }
-/* TITULO DE PAGINAS y ASIDES */
+/* TITULO DE ASIDES */
 h2.impact {
+  font-size: 1.1rem !important;
   font-family: 'Heading';
   text-align: center;
-  padding: 5px;
   text-transform: uppercase;
-  color: var(--orange-0);
+  color: var(--white-2);
+  padding: var(--pad-m);
 }
 /* TITULO DE PERFILES */
 h2.profile {

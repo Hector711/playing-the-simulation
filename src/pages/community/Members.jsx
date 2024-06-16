@@ -4,13 +4,37 @@ import { NavLink } from 'react-router-dom';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import Work from '@/icons/Work';
 import Location from '@/icons/Location';
-// import Select from 'react-select';
+import Select from 'react-select';
 import Business from '@/icons/Business';
 
-export default function Members() {
+export default function Members(props) {
+  const filter = [
+    { value: 'speciality', label: 'Especialidad' },
+    { value: 'level', label: 'Nivel' },
+  ];
   return (
     <>
-      <ModelAsideLeft id='members'>
+      <ModelAsideLeft id='members' className='community'>
+        <h2 className='impact'>Filtrado</h2>
+        <hr />
+        <div id='filter'>
+          <Select
+            {...props}
+            styles={{
+              singleValue: (base) => ({
+                ...base,
+                color: 'white', // Cambia 'orange' por el color que desees
+              })
+            }}
+            options={filter}
+            id='category'
+            placeholder='Categoría'
+            className="react-select-container"
+            classNamePrefix="react-select"
+          />
+          
+        </div>
+        <hr />
         <button>Final Boss</button>
         <button>Admins</button>
         <button>Ventas</button>
@@ -51,7 +75,11 @@ function MemberCard({
     <article kay={id} className='member'>
       <header>
         <NavLink to={url}>
-          <img src={img} alt={fullName} />
+          {business.length > 0 ? (
+            <img src={img} alt={fullName} className='entrepeneur' />
+          ) : (
+            <img src={img} alt={fullName} />
+          )}
         </NavLink>
         <NavLink to={url} className='user'>
           <div>

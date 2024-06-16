@@ -137,9 +137,10 @@ export default function Classroom() {
     acc[card.level] = acc[card.level] ? [...acc[card.level], card] : [card];
     return acc;
   }, {});
+  
   return (
     <>
-      <ModelAsideLeft id='classroom'>
+      <ModelAsideLeft id='classroom' className='community' title='Filtrado'>
         <NavLink>Todo el contenido</NavLink>
         <hr />
         <button>Introducción</button>

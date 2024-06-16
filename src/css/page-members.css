@@ -1,15 +1,55 @@
 aside#members {
-  border: 1px solid red;
+  * {
+    /* border: 1px solid; */
+  }
+
+  div#filter {
+    display: flex;
+    gap: var(--gap-s);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .react-select {
+  }
+  .react-select-container {
+    width: 100%;
+  }
+  /* conjunto de todo  */
+  .react-select__control {
+    border: transparent;
+    background-color: var(--blue-1);  
+    text-align: center;
+  }
+
+  /* contenedor de los valores */
+  .react-select__value-container {
+
+  }
+  /* flecha */
+  .react-select__indicators {
+    
+  }
+  .react-select__menu {
+
+    background-color: var(--white-3);
+  }
+  .react-select__menu-list {
+
+    background-color: var(--blue-0);
+  }
+  .react-select__option:hover {
+    background-color: var(--blue-1);
+  }
+
 }
 
-main#members {
-  /* border: 1px solid green; */
-}
 div#members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1em;
 }
+
 article.member {
   display: flex;
   flex-direction: column;
@@ -27,6 +67,10 @@ article.member {
       border-radius: 50%;
       width: 70px;
       height: 70px;
+      background-color: var(--blue-0);
+    }
+    img.entrepeneur {
+      border: 4px solid var(--orange-0);
     }
     .user {
       div {
@@ -66,7 +110,7 @@ article.member {
       flex-direction: column;
     }
     p {
-      margin: 3px;
+      margin-block: 5px;
     }
   }
 }

@@ -11,10 +11,13 @@ div#members-grid {
   grid-gap: 1em;
 }
 article.member {
+  display: flex;
+  flex-direction: column;
   background-color: var(--blue-1);
   border-radius: var(--border-m);
   padding: var(--pad-m);
   border: 0.5px solid var(--white-3);
+  gap: var(--gap-s);
   header {
     display: flex;
     gap: 20px;
@@ -39,21 +42,40 @@ article.member {
       }
     }
   }
+  * {
+    /* border: 1px solid ; */
+  }
   section {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+
     padding: 10px 0 0 0;
+    display: flex;
+    align-items: flex-start;
+    div#left {
+      width: 50%;
+    }
     p {
       display: flex;
       align-items: center;
       font-size: 0.9rem;
-      line-height: 1.5;
       gap: var(--gap-s);
-      .profile-icons {
-        width: 25px;
-        height: 25px;
+    }  
+      div#business {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
       }
+    p {
+      margin: 3px
     }
+
   }
+}
+
+.profile-icons {
+  width: 22px;
+  height: 22px;
+}
+.business-icon {
+  color: var(--orange-0);
 }

@@ -139,7 +139,7 @@ export default function Classroom() {
   }, {});
   return (
     <>
-      <ModelAsideLeft id='classroom' titlePage='Classroom'>
+      <ModelAsideLeft id='classroom' >
         <NavLink>Todo el contenido</NavLink>
         <hr />
         <button>Introducción</button>

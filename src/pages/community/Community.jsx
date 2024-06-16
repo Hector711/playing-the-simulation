@@ -23,3 +23,15 @@ export default function Community() {
 // Level 7 (2.015 pts) - Emprendedor: "Técnicas de Elusión Fiscal"
 // Level 8 (8.015 pts) - Dueño de Holding: "Global project."
 // Level 9 (33.015 pts) - Simulation Creator: "Secret"
+
+
+
+// Level 1 (0 pts) 
+// Level 2 (5 pts)
+// Level 3 (20 pts)
+// Level 4 (65 pts)
+// Level 5 (155 pts)
+// Level 6 (515 pts)
+// Level 7 (2.015 pts)
+// Level 8 (8.015 pts)
+// Level 9 (33.015 pts)

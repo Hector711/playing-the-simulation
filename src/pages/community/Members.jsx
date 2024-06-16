@@ -21,18 +21,17 @@ export default function Members(props) {
           <Select
             {...props}
             styles={{
-              singleValue: (base) => ({
+              singleValue: base => ({
                 ...base,
                 color: 'white', // Cambia 'orange' por el color que desees
-              })
+              }),
             }}
             options={filter}
             id='category'
             placeholder='Categoría'
-            className="react-select-container"
-            classNamePrefix="react-select"
+            className='react-select-container'
+            classNamePrefix='react-select'
           />
-          
         </div>
         <hr />
         <button>Final Boss</button>
@@ -49,9 +48,11 @@ export default function Members(props) {
       </ModelAsideLeft>
       <ModelMainPro id='members'>
         <div id='members-grid'>
-          {members.map(contact => (
-            <MemberCard key={contact.id} {...contact} />
-          ))}
+          {members
+            .sort((a, b) => a.fullName.localeCompare(b.fullName))
+            .map(contact => (
+              <MemberCard key={contact.id} {...contact} />
+            ))}
         </div>
       </ModelMainPro>
     </>

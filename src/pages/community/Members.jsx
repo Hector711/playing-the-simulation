@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import { NavLink } from 'react-router-dom';
 import ModelMainPro from '@/layouts/ModelMainPro';
@@ -8,10 +8,55 @@ import Select from 'react-select';
 import Business from '@/icons/Business';
 
 export default function Members(props) {
-  const filter = [
-    { value: 'speciality', label: 'Especialidad' },
-    { value: 'level', label: 'Nivel' },
+  const [selectedValue, setSelectedValue] = useState('speciality');
+  const [toggleShow, setToggleShow] = useState(false);
+  const [filter, setFilter] = useState(null);
+  const [allMembers, setAllMembers] = useState(true);
+  const [specialityFilterShow, setSpecialityFilterShow] = useState(false);
+  const [levelFilterShow, setLevelFilterShow] = useState(false);
+  const handleSelectChange = option => {
+    setSelectedValue(option.value);
+  };
+  useEffect(() => {
+    if (selectedValue === 'level') {
+      setToggleShow(true);
+    } else {
+      setToggleShow(false);
+    }
+  }, [selectedValue]);
+  // Filtrar nivel
+  const handleLevelFilterChange = event => {
+    const valueFilter = event.target.value;
+    const numericValue = Number(valueFilter);
+    setFilter(numericValue);
+  };
+  // Filtrar especialidad
+  const handleSpecialityFilterChange = event => {
+    const valueFilter = event.target.value;
+    setFilter(valueFilter);
+  };
+  // Filtrar
+  useEffect(() => {
+    if (typeof filter === 'number') {
+      setLevelFilterShow(true);
+      setSpecialityFilterShow(false);
+      setAllMembers(false)
+    } else if (typeof filter === 'string') {
+      setLevelFilterShow(false);
+      setSpecialityFilterShow(true);
+      setAllMembers(false)
+    } else {
+      setAllMembers(true);
+      setLevelFilterShow(false);
+      setSpecialityFilterShow(false);
+    }
+  }, [filter]);
+
+  const selectFilter = [
+    { value: 'speciality', label: 'Por especialidad' },
+    { value: 'level', label: 'Por nivel' },
   ];
+
   return (
     <>
       <ModelAsideLeft id='members' className='community'>
@@ -23,36 +68,111 @@ export default function Members(props) {
             styles={{
               singleValue: base => ({
                 ...base,
-                color: 'white', // Cambia 'orange' por el color que desees
+                color: 'white',
               }),
             }}
-            options={filter}
+            options={selectFilter}
             id='category'
             placeholder='Categoría'
             className='react-select-container'
             classNamePrefix='react-select'
+            value={selectedValue}
+            onChange={handleSelectChange}
           />
         </div>
         <hr />
-        <button>Final Boss</button>
-        <button>Admins</button>
-        <button>Ventas</button>
-        <button>SEO</button>
-        <button>Arquitectura</button>
-        <button>Diseño</button>
-        <button>Programación</button>
-        <button>Marketing</button>
-        <button>IA</button>
-        <button>Fiscalidad</button>
-        <button>Empresario</button>
+        <div className='filter-buttons'>
+          {toggleShow ? (
+            <>
+              <button value='1' onClick={handleLevelFilterChange}>
+                Nivel 1
+              </button>
+              <button value='2' onClick={handleLevelFilterChange}>
+                Nivel 2
+              </button>
+              <button value='3' onClick={handleLevelFilterChange}>
+                Nivel 3
+              </button>
+              <button value='4' onClick={handleLevelFilterChange}>
+                Nivel 4
+              </button>
+              <button value='5' onClick={handleLevelFilterChange}>
+                Nivel 5
+              </button>
+              <button value='6' onClick={handleLevelFilterChange}>
+                Nivel 6
+              </button>
+              <button value='7' onClick={handleLevelFilterChange}>
+                Nivel 7
+              </button>
+              <button value='8' onClick={handleLevelFilterChange}>
+                Nivel 8
+              </button>
+              <button value='9' onClick={handleLevelFilterChange}>
+                Nivel 9
+              </button>
+              <button value='10' onClick={handleLevelFilterChange}>
+                Nivel 10: Final Boss
+              </button>
+              
+            </>
+          ) : (
+            <>
+              <button value='Admin' onClick={handleSpecialityFilterChange}>
+                Administradores
+              </button>
+              <button value='Ventas' onClick={handleSpecialityFilterChange}>
+                Ventas
+              </button>
+              <button value='SEO' onClick={handleSpecialityFilterChange}>
+                SEO
+              </button>
+              <button
+                value='Arquitectura'
+                onClick={handleSpecialityFilterChange}
+              >
+                Arquitectura
+              </button>
+              <button value='Diseño' onClick={handleSpecialityFilterChange}>
+                Diseño
+              </button>
+              <button
+                value='Programación'
+                onClick={handleSpecialityFilterChange}
+              >
+                Programación
+              </button>
+              <button value='Marketing' onClick={handleSpecialityFilterChange}>
+                Marketing
+              </button>
+              <button value='IA' onClick={handleSpecialityFilterChange}>
+                IA
+              </button>
+              <button value='Fiscalidad' onClick={handleSpecialityFilterChange}>
+                Fiscalidad
+              </button>
+            </>
+          )}
+        </div>
       </ModelAsideLeft>
       <ModelMainPro id='members'>
+        <h3 className='section-page'>Todos los miembros</h3>
+        <hr />
         <div id='members-grid'>
-          {members
-            .sort((a, b) => a.fullName.localeCompare(b.fullName))
-            .map(contact => (
-              <MemberCard key={contact.id} {...contact} />
-            ))}
+          {allMembers &&
+            members
+              .sort((a, b) => a.fullName.localeCompare(b.fullName))
+              .map(contact => <MemberCard key={contact.id} {...contact} />)}
+          {specialityFilterShow &&
+            members
+              .filter(contact => contact.area === filter)
+              .sort((a, b) => a.fullName.localeCompare(b.fullName))
+              .map(contact => <MemberCard key={contact.id} {...contact} />)}
+          {levelFilterShow &&
+            members
+              .filter(contact => contact.level === filter)
+              .sort((a, b) => a.fullName.localeCompare(b.fullName))
+              .map(contact => <MemberCard key={contact.id} {...contact} />)}
         </div>
       </ModelMainPro>
     </>
@@ -244,8 +364,8 @@ const members = [
   {
     id: 9,
     fullName: 'Marcos Ruiz',
-    job: 'Empresario',
-    area: 'Empresario',
+    job: 'Seller ',
+    area: 'Ventas',
     about:
       'Fundador y CEO de varias startups exitosas en el sector tecnológico.',
     img: 'https://via.placeholder.com/150',
@@ -364,8 +484,8 @@ const members = [
   {
     id: 17,
     fullName: 'Hugo Sánchez',
-    job: 'Empresario',
-    area: 'Empresario',
+    job: 'Closer de ventas',
+    area: 'Ventas',
     about:
       'Fundador y CEO de varias startups exitosas en el ámbito tecnológico.',
     img: 'https://via.placeholder.com/150',
@@ -482,15 +602,15 @@ const members = [
   },
   {
     id: 25,
-    fullName: 'Antonio García',
-    job: 'Analista de Datos',
-    area: 'Analítica',
+    fullName: 'Héctor Guerra',
+    job: 'Desarrollador Frontend',
+    area: 'Programación',
     about:
       'Análisis estadístico y modelado de datos para la generación de informes estratégicos.',
     img: 'https://via.placeholder.com/150',
     business: [],
     location: 'Madrid, España',
-    username: 'antonio_g',
+    username: 'hector-guerra',
     url: '/perfil/antonio_g',
     points: 2015,
     level: 7,
@@ -573,9 +693,9 @@ const members = [
 
   {
     id: 34,
-    fullName: 'Carlos',
-    job: 'Diseñador UX/UI',
-    area: 'Final Boss',
+    fullName: 'Carlos Adams',
+    job: 'Diseñador',
+    area: 'Admin',
     about:
       'Diseño de interfaces centradas en la experiencia del usuario y la estética.',
     img: 'https://via.placeholder.com/150',
@@ -584,13 +704,13 @@ const members = [
       'Racks Labs',
       'Ergonomics',
       'Playing The Simulation',
-      'Disrup3',
+      'DISRUP3',
     ],
     location: 'Andorra, Andorra',
-    username: 'andres_m',
+    username: 'carlos-adams',
     url: '/perfil/andres_m',
     points: 515,
-    level: 6,
+    level: 10,
   },
   {
     id: 35,

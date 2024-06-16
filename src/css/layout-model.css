@@ -21,6 +21,21 @@ aside.aside-left {
   gap: var(--gap-s);
   height: 85vh;
   position: relative;
+
+  /* COMMUNITY LAYOUT */
+  div.filter-buttons {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.8rem;
+    align-items: center;
+    gap: var(--gap-s);
+    button{
+      font-weight: 600;
+      max-width: 90%;
+      width: 100%;
+      padding-inline: 30px ;
+    }
+  }
 }
 
 main#home {
@@ -35,4 +50,7 @@ main.two-col {
   grid-column: main / span 2;
   /* border: 1px solid; */
   padding-left: var(--pad-m);
+
+
+  
 }

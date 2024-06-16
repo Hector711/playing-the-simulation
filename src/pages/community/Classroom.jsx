@@ -2,6 +2,7 @@ import React from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import { NavLink } from 'react-router-dom';
 import ModelMainPro from '@/layouts/ModelMainPro';
+
 const cards = [
   {
     title: 'Introducción a Playing the Simulation',
@@ -137,23 +138,33 @@ export default function Classroom() {
     acc[card.level] = acc[card.level] ? [...acc[card.level], card] : [card];
     return acc;
   }, {});
-  
+
+  const scrollToSection = (event) => {
+    const value = event.target.value
+    // Asegúrate de que el elemento exista para evitar errores
+    const section = document.getElementById(value);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <>
       <ModelAsideLeft id='classroom' className='community' title='Filtrado'>
-        <NavLink>Todo el contenido</NavLink>
         <hr />
-        <button>Introducción</button>
-        <button>Bonus</button>
-        <button>Negocio</button>
-        <button>Desbloqueables</button>
+        <div className='filter-buttons'>
+          <button value='Introducción' onClick={scrollToSection}>Introducción</button>
+          <button value='Bonus' onClick={scrollToSection}>Bonus</button>
+          <button value='De 0 a 10k' onClick={scrollToSection}>De 0 a 10k</button>
+          <button value='Desbloqueables' onClick={scrollToSection}>Desbloqueables</button>
+        </div>
       </ModelAsideLeft>
       <ModelMainPro id='classroom' pageTitle='Classroom'>
         <h3 className='section-page'>Todo el contenido</h3>
         {Object.entries(groupedByLevel).map(([level, cards]) => (
           <>
             <hr />
-            <section key={level}>
+            <section key={level} id={level}>
               <h4>{level}</h4>
               <div id='cards-grid'>
                 {cards.map((card, index) => (

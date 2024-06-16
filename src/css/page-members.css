@@ -2,23 +2,24 @@ aside#members {
   * {
     /* border: 1px solid; */
   }
-
+  /* overflow: hidden; */
   div#filter {
     display: flex;
     gap: var(--gap-s);
     align-items: center;
     justify-content: center;
   }
+  
 
-  .react-select {
-  }
-  .react-select-container {
-    width: 100%;
-  }
-  /* conjunto de todo  */
-  .react-select__control {
-    border: transparent;
-    background-color: var(--blue-1);  
+    .react-select {
+    }
+    .react-select-container {
+      width: 100%;
+    }
+    /* conjunto de todo  */
+    .react-select__control {
+      border: transparent;
+      background-color: var(--blue-1);  
     text-align: center;
   }
 
@@ -28,7 +29,6 @@ aside#members {
   }
   /* flecha */
   .react-select__indicators {
-    
   }
   .react-select__menu {
 
@@ -42,6 +42,15 @@ aside#members {
     background-color: var(--blue-1);
   }
 
+}
+main#members {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-l);
+
+  hr {
+    margin-block: 5px;
+  }
 }
 
 div#members-grid {
@@ -65,8 +74,8 @@ article.member {
     padding-bottom: 10px;
     img {
       border-radius: 50%;
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       background-color: var(--blue-0);
     }
     img.entrepeneur {

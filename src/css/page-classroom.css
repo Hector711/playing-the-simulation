@@ -30,7 +30,7 @@ main#classroom {
   flex-direction: column;
   gap: var(--gap-m);
   hr {
-    margin-top: 10px
+    margin-top: 10px;
   }
 
   section {

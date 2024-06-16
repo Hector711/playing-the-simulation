@@ -1,23 +1,21 @@
+hr.home {
+  border: 0.9px solid var(--white-3);
+  margin-top: 10px;
+}
+section#timeline {
+  header {
+    display: flex;
+    justify-content: space-between;
 
-  hr.home {
-    border: 0.9px solid var(--white-3);
-    margin-top: 10px;
-  }
-  section#timeline {
-    header {
+    button {
+      padding: var(--pad-s) 35px;
+      /* border: 0.6px solid var(--white-3) ; */
+      width: 100%;
       display: flex;
-      justify-content: space-between;
-
-      button {
-        padding: var(--pad-s) 35px;
-        /* border: 0.6px solid var(--white-3) ; */
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-    }
-    hr {
-      height: 100%;
+      justify-content: center;
     }
   }
-
+  hr {
+    height: 100%;
+  }
+}

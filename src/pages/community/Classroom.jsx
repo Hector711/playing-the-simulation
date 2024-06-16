@@ -38,7 +38,8 @@ const cards = [
   },
   {
     title: 'Presentacion Escrita',
-    description: 'Presentate ante la comunidad escribiendo un post hablando sobre ti',
+    description:
+      'Presentate ante la comunidad escribiendo un post hablando sobre ti',
     img: 'https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/5abfe61d8a5948d19117015e21c45dbbdd9e9970f03845bfa3918f70bd7f3f99',
     level: 'Bonus',
   },

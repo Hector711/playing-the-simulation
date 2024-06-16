@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function ModelMainPro({children, id}) {
-  return <main className='two-col' id={id}>
-    {children}
-    </main>;
-
+export default function ModelMainPro({ children, id }) {
+  return (
+    <main className='two-col' id={id}>
+      {children}
+    </main>
+  );
 }

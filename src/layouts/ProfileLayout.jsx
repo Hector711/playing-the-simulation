@@ -21,7 +21,7 @@ export default function ProfileLayout() {
 function AsideProfile() {
   const { logout } = useAuth();
   return (
-    <ModelAsideLeft >
+    <ModelAsideLeft>
       <header id='profile'>
         <NavLink to='/profile' id='profile-link'>
           <img id='cover' alt='' />

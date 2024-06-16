@@ -4,13 +4,11 @@ aside#members {
 
 main#members {
   /* border: 1px solid green; */
-
 }
-div#members-grid{
+div#members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1em;
-
 }
 article.member {
   background-color: var(--blue-1);
@@ -22,12 +20,12 @@ article.member {
     gap: 20px;
     align-items: center;
     padding-bottom: 10px;
-    img{
+    img {
       border-radius: 50%;
       width: 70px;
       height: 70px;
     }
-    .user{
+    .user {
       div {
         display: flex;
         justify-content: center;

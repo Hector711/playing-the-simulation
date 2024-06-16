@@ -17,7 +17,6 @@ h1 {
 /* NAVBAR LINKS */
 h2 {
   font-size: 1.2rem;
-
 }
 /* TITULO DE PAGINAS y ASIDES */
 h2.impact {
@@ -28,9 +27,9 @@ h2.impact {
   color: var(--orange-0);
 }
 /* TITULO DE PERFILES */
-h2.profile{
-   font-weight: 600;
-   /* color: var(--white-0); */
+h2.profile {
+  font-weight: 600;
+  /* color: var(--white-0); */
 }
 
 /* TITULOS DE SECCIÓN */
@@ -45,7 +44,7 @@ h4 {
   font-weight: 800;
 }
 
-h5{
+h5 {
 }
 
 p {

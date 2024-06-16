@@ -42,11 +42,11 @@ function App() {
                   <Route path='/saved' element={<Saved />} />
                 </Route>
                 {/* Community Pages */}
-                  <Route path='/classroom' element={<Classroom />} />
-                  <Route path='/members' element={<Members />} />
-                  <Route path='/events' element={<Events />} />
-                  <Route path='/archives' element={<Archives />} />
-                  <Route path='/community' element={<Community />} />
+                <Route path='/classroom' element={<Classroom />} />
+                <Route path='/members' element={<Members />} />
+                <Route path='/events' element={<Events />} />
+                <Route path='/archives' element={<Archives />} />
+                <Route path='/community' element={<Community />} />
               </Route>
             </Route>
           </Routes>

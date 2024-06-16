@@ -66,13 +66,13 @@ form {
   display: grid;
   gap: 10px;
   border-radius: var(--border-m);
-  grid-template-areas: 
-    "title title title"
-    "description description description"
-    "options selects selects"
-    "empty empty send";
-    grid-template-columns: 150px 1fr 1fr;
-    grid-template-rows: max-content max-content max-content ;
+  grid-template-areas:
+    'title title title'
+    'description description description'
+    'options selects selects'
+    'empty empty send';
+  grid-template-columns: 150px 1fr 1fr;
+  grid-template-rows: max-content max-content max-content;
   input {
     padding: 10px;
     border-radius: var(--border-s);
@@ -82,7 +82,7 @@ form {
   }
   input#description {
     grid-area: description;
-  } 
+  }
   div#options {
     grid-area: options;
     display: flex;
@@ -91,10 +91,10 @@ form {
     grid-area: selects;
     display: flex;
     gap: var(--gap-m);
-    .selects#category{
+    .selects#category {
       width: 70%;
     }
-    .selects#label{
+    .selects#label {
       width: 100%;
     }
   }

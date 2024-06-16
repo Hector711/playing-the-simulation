@@ -9,14 +9,14 @@ export default function Goals() {
   return (
     <ModelMainPro>
       <h2>Planificación</h2>
-      <LineRoute title='Salud'/>
-      <LineRoute title='Profesional'/>
-      <LineRoute title='Social'/>
+      <LineRoute title='Salud' />
+      <LineRoute title='Profesional' />
+      <LineRoute title='Social' />
     </ModelMainPro>
   );
 }
 
-function LineRoute({title}) {
+function LineRoute({ title }) {
   return (
     <>
       <h3>{title}</h3>
@@ -40,5 +40,3 @@ function LineRoute({title}) {
     </>
   );
 }
-
-

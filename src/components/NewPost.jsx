@@ -6,8 +6,6 @@ import Gif from '@/icons/Gif';
 
 import Select from 'react-select';
 
-
-
 export default function NewPost() {
   const [state, setState] = useState(true);
 
@@ -16,7 +14,7 @@ export default function NewPost() {
   };
 
   const colourStyles = {
-    control: styles => ({ ...styles, backgroundColor: '#1a1e23'}),
+    control: styles => ({ ...styles, backgroundColor: '#1a1e23' }),
     option: styles => ({
       ...styles,
       backgroundColor: '#1a1e23',
@@ -30,7 +28,7 @@ export default function NewPost() {
     { value: 'win', label: '🏆 WIN' },
     { value: 'biblioteca', label: '👔 Biblioteca' },
     { value: 'pitch', label: '🛗 Pitch Deck' },
-    { value: 'afterwork', label: '🍺 Afterwork' }
+    { value: 'afterwork', label: '🍺 Afterwork' },
   ];
 
   const labels = [

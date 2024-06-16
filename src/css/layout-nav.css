@@ -32,7 +32,6 @@ nav#nav {
   }
 }
 
-
 #nav-left {
   gap: 2rem;
   display: flex;
@@ -43,7 +42,7 @@ nav#nav {
   display: flex;
   color: var(--orange-0);
 
-  h2{ 
+  h2 {
     border: 1px solid var(--white-3);
     width: var(--right-aside);
     padding: var(--pad-s);

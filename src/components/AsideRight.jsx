@@ -6,7 +6,9 @@ export default function AsideRight() {
   return (
     <ModelAsideRight>
       <header>
-        <h2 id='news' className='impact'>Noticias</h2>
+        <h2 id='news' className='impact'>
+          Noticias
+        </h2>
         <hr />
       </header>
       <section id='news'>

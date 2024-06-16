@@ -2,6 +2,9 @@ import React from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import { NavLink } from 'react-router-dom';
 import ModelMainPro from '@/layouts/ModelMainPro';
+import Work from '@/icons/Work';
+import Location from '@/icons/Location';
+
 const members = [
   {
     id: 1,
@@ -12,6 +15,9 @@ const members = [
     location: 'San Francisco, CA',
     username: 'alice_j',
     url: '/profile/alice_j',
+    points: 50,
+    level: 4,
+    levelDescription: 'CryptoBro: Técnicas de Ahorro Básicas',
   },
   {
     id: 2,
@@ -22,6 +28,9 @@ const members = [
     location: 'New York, NY',
     username: 'bob_smith',
     url: '/profile/bob_smith',
+    points: 200,
+    level: 6,
+    levelDescription: 'Hustler marronero: Enciclopedia 0.19% (Legacy)',
   },
   {
     id: 3,
@@ -32,6 +41,9 @@ const members = [
     location: 'Austin, TX',
     username: 'carlos_m',
     url: '/profile/carlos_m',
+    points: 20,
+    level: 3,
+    levelDescription: 'Mileurista: Herramientas para dejar el mileurismo',
   },
   {
     id: 4,
@@ -42,6 +54,9 @@ const members = [
     location: 'Boston, MA',
     username: 'diana_lee',
     url: '/profile/diana_lee',
+    points: 8_000,
+    level: 8,
+    levelDescription: 'Dueño de Holding: Global project.',
   },
   {
     id: 5,
@@ -52,6 +67,9 @@ const members = [
     location: 'Seattle, WA',
     username: 'ethan_b',
     url: '/profile/ethan_b',
+    points: 5,
+    level: 2,
+    levelDescription: 'Funcionario: Manual del Viajero',
   },
   {
     id: 6,
@@ -62,6 +80,9 @@ const members = [
     location: 'Chicago, IL',
     username: 'fiona_clark',
     url: '/profile/fiona_clark',
+    points: 515,
+    level: 6,
+    levelDescription: 'Hustler marronero: Enciclopedia 0.19% (Legacy)',
   },
   {
     id: 7,
@@ -72,6 +93,9 @@ const members = [
     location: 'Houston, TX',
     username: 'george_lewis',
     url: '/profile/george_lewis',
+    points: 0,
+    level: 1,
+    levelDescription: 'NiNi: Introducción a la comunidad',
   },
   {
     id: 8,
@@ -82,6 +106,9 @@ const members = [
     location: 'Los Angeles, CA',
     username: 'hannah_w',
     url: '/profile/hannah_w',
+    points: 65,
+    level: 4,
+    levelDescription: 'CryptoBro: Técnicas de Ahorro Básicas',
   },
   {
     id: 9,
@@ -92,6 +119,9 @@ const members = [
     location: 'Denver, CO',
     username: 'ian_wilson',
     url: '/profile/ian_wilson',
+    points: 2_015,
+    level: 7,
+    levelDescription: 'Emprendedor: Técnicas de Elusión Fiscal',
   },
   {
     id: 10,
@@ -102,6 +132,9 @@ const members = [
     location: 'Miami, FL',
     username: 'jessica_m',
     url: '/profile/jessica_m',
+    points: 8_015,
+    level: 8,
+    levelDescription: 'Dueño de Holding: Global project.',
   },
   {
     id: 11,
@@ -112,6 +145,9 @@ const members = [
     location: 'Atlanta, GA',
     username: 'kevin_a',
     url: '/profile/kevin_a',
+    points: 155,
+    level: 5,
+    levelDescription: 'CEO de bio INSTAGRAM: Instagram Packing',
   },
   {
     id: 12,
@@ -122,6 +158,9 @@ const members = [
     location: 'San Diego, CA',
     username: 'laura_j',
     url: '/profile/laura_j',
+    points: 3_000,
+    level: 7,
+    levelDescription: 'Emprendedor: Técnicas de Elusión Fiscal',
   },
   {
     id: 13,
@@ -132,6 +171,9 @@ const members = [
     location: 'Phoenix, AZ',
     username: 'michael_g',
     url: '/profile/michael_g',
+    points: 20,
+    level: 3,
+    levelDescription: 'Mileurista: Herramientas para dejar el mileurismo',
   },
   {
     id: 14,
@@ -142,6 +184,9 @@ const members = [
     location: 'Philadelphia, PA',
     username: 'natalie_e',
     url: '/profile/natalie_e',
+    points: 1_000,
+    level: 6,
+    levelDescription: 'Hustler marronero: Enciclopedia 0.19% (Legacy)',
   },
   {
     id: 15,
@@ -152,6 +197,9 @@ const members = [
     location: 'San Antonio, TX',
     username: 'oscar_p',
     url: '/profile/oscar_p',
+    points: 0,
+    level: 1,
+    levelDescription: 'NiNi: Introducción a la comunidad',
   },
   {
     id: 16,
@@ -162,6 +210,9 @@ const members = [
     location: 'Dallas, TX',
     username: 'paula_r',
     url: '/profile/paula_r',
+    points: 6_000,
+    level: 7,
+    levelDescription: 'Emprendedor: Técnicas de Elusión Fiscal',
   },
   {
     id: 17,
@@ -172,6 +223,9 @@ const members = [
     location: 'San Jose, CA',
     username: 'quinn_d',
     url: '/profile/quinn_d',
+    points: 155,
+    level: 5,
+    levelDescription: 'CEO de bio INSTAGRAM: Instagram Packing',
   },
   {
     id: 18,
@@ -182,6 +236,9 @@ const members = [
     location: 'Jacksonville, FL',
     username: 'rachel_t',
     url: '/profile/rachel_t',
+    points: 20,
+    level: 3,
+    levelDescription: 'Mileurista: Herramientas para dejar el mileurismo',
   },
   {
     id: 19,
@@ -192,6 +249,9 @@ const members = [
     location: 'Fort Worth, TX',
     username: 'steven_w',
     url: '/profile/steven_w',
+    points: 2_015,
+    level: 7,
+    levelDescription: 'Emprendedor: Técnicas de Elusión Fiscal',
   },
   {
     id: 20,
@@ -202,6 +262,9 @@ const members = [
     location: 'Columbus, OH',
     username: 'tina_b',
     url: '/profile/tina_b',
+    points: 65,
+    level: 4,
+    levelDescription: 'CryptoBro: Técnicas de Ahorro Básicas',
   },
   {
     id: 21,
@@ -212,6 +275,9 @@ const members = [
     location: 'Charlotte, NC',
     username: 'uma_p',
     url: '/profile/uma_p',
+    points: 8_000,
+    level: 8,
+    levelDescription: 'Dueño de Holding: Global project.',
   },
   {
     id: 22,
@@ -222,6 +288,9 @@ const members = [
     location: 'Indianapolis, IN',
     username: 'victor_k',
     url: '/profile/victor_k',
+    points: 1_500,
+    level: 6,
+    levelDescription: 'Hustler marronero: Enciclopedia 0.19% (Legacy)',
   },
   {
     id: 23,
@@ -232,6 +301,9 @@ const members = [
     location: 'San Francisco, CA',
     username: 'wendy_c',
     url: '/profile/wendy_c',
+    points: 8_015,
+    level: 8,
+    levelDescription: 'Dueño de Holding: Global project.',
   },
   {
     id: 24,
@@ -242,6 +314,9 @@ const members = [
     location: 'San Jose, CA',
     username: 'xavier_l',
     url: '/profile/xavier_l',
+    points: 33_015,
+    level: 9,
+    levelDescription: 'Simulation Creator: Secret',
   },
   {
     id: 25,
@@ -252,6 +327,9 @@ const members = [
     location: 'Las Vegas, NV',
     username: 'yara_m',
     url: '/profile/yara_m',
+    points: 515,
+    level: 6,
+    levelDescription: 'Hustler marronero: Enciclopedia 0.19% (Legacy)',
   },
   {
     id: 26,
@@ -262,6 +340,9 @@ const members = [
     location: 'Baltimore, MD',
     username: 'zachary_t',
     url: '/profile/zachary_t',
+    points: 100,
+    level: 4,
+    levelDescription: 'CryptoBro: Técnicas de Ahorro Básicas',
   },
   {
     id: 27,
@@ -272,6 +353,9 @@ const members = [
     location: 'Milwaukee, WI',
     username: 'amanda_y',
     url: '/profile/amanda_y',
+    points: 155,
+    level: 5,
+    levelDescription: 'CEO de bio INSTAGRAM: Instagram Packing',
   },
   {
     id: 28,
@@ -282,6 +366,9 @@ const members = [
     location: 'Portland, OR',
     username: 'brandon_e',
     url: '/profile/brandon_e',
+    points: 4_000,
+    level: 7,
+    levelDescription: 'Emprendedor: Técnicas de Elusión Fiscal',
   },
   {
     id: 29,
@@ -292,6 +379,9 @@ const members = [
     location: 'Louisville, KY',
     username: 'catherine_h',
     url: '/profile/catherine_h',
+    points: 65,
+    level: 4,
+    levelDescription: 'CryptoBro: Técnicas de Ahorro Básicas',
   },
   {
     id: 30,
@@ -302,6 +392,9 @@ const members = [
     location: 'Oklahoma City, OK',
     username: 'david_m',
     url: '/profile/david_m',
+    points: 1_500,
+    level: 6,
+    levelDescription: 'Hustler marronero: Enciclopedia 0.19% (Legacy)',
   },
 ];
 
@@ -309,13 +402,19 @@ export default function Members() {
   return (
     <>
       <ModelAsideLeft id='members' titlePage='Miembros'>
-        <h2>Niveles</h2>
+        <button>Final Boss</button>
+        <button>Administradores</button>
+        <button>Programadores</button>
+        <button>Marketers</button>
+        <button>Especialistas de IA</button>
+        <button></button>
       </ModelAsideLeft>
-      <ModelMainPro>
-        <h2>Members</h2>
-        {members.map(contact => (
-          <MemberCard key={contact.id} {...contact} />
-        ))}
+      <ModelMainPro id='members'>
+        <div id='members-grid'>
+          {members.map(contact => (
+            <MemberCard key={contact.id} {...contact} />
+          ))}
+        </div>
       </ModelMainPro>
     </>
   );
@@ -329,18 +428,36 @@ function MemberCard({
   id,
   location,
   username,
+  level,
+  points,
   url,
 }) {
   return (
-    <article kay={id}>
-      <NavLink to={url}>
-        <img src={img} alt={fullName} />
-        <h3>{fullName}</h3>
-        <p>{username}</p>
-      </NavLink>
-      <span>{job}</span>
-      <span>{location}</span>
-      <p>{about}</p>
+    <article kay={id} className='member'>
+      <header>
+        <NavLink to={url}>
+          <img src={img} alt={fullName} />
+        </NavLink>
+        <NavLink to={url} className='user'>
+          <div>
+            <h2 className='profile'>{fullName}</h2>
+            <span>&#8226; @{username}</span>
+          </div>
+          <b>Nivel {level}</b>
+          <span> &#8226; {points} puntos</span>
+        </NavLink>
+      </header>
+      <section>
+        <p>
+          <Location />
+          {location}
+        </p>
+        <p>
+          <Work />
+          {job}
+        </p>
+        <p>{about}</p>
+      </section>
     </article>
   );
 }

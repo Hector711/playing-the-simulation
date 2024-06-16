@@ -45,7 +45,7 @@ main#classroom {
     gap: var(--gap-l);
   }
   div.classroom-card {
-    border: 1px solid var(--white-3);
+    border: 0.5px solid var(--white-3);
     border-radius: var(--border-m);
     overflow: hidden;
     background-color: var(--blue-1);

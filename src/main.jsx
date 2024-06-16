@@ -14,8 +14,9 @@ import '@/css/layout-model.css';
 import '@/css/page-wellcome.css';
 import '@/css/page-home.css';
 import '@/css/page-goals.css';
-// Profile Pages
+// Community Pages
 import '@/css/page-classroom.css';
+import '@/css/page-members.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';

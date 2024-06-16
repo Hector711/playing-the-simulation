@@ -24,9 +24,7 @@ export default function Community() {
 // Level 8 (8.015 pts) - Dueño de Holding: "Global project."
 // Level 9 (33.015 pts) - Simulation Creator: "Secret"
 
-
-
-// Level 1 (0 pts) 
+// Level 1 (0 pts)
 // Level 2 (5 pts)
 // Level 3 (20 pts)
 // Level 4 (65 pts)

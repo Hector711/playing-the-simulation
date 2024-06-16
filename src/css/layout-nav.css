@@ -30,7 +30,6 @@ nav#nav {
     align-items: center;
     padding-top: 6px;
     padding-inline: 7px;
-
   }
   .active-link {
     border-bottom: 2px solid var(--orange-0);
@@ -38,7 +37,7 @@ nav#nav {
     /* width: 100px; */
     /* display: flex;
     justify-content: center; */
-    box-shadow: 0px 5px 5px -5px var(--orange-0);  
+    box-shadow: 0px 5px 5px -5px var(--orange-0);
   }
 }
 

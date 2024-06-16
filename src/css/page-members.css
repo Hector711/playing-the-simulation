@@ -59,16 +59,15 @@ article.member {
       align-items: center;
       font-size: 0.9rem;
       gap: var(--gap-s);
-    }  
-      div#business {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-      }
-    p {
-      margin: 3px
     }
-
+    div#business {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    p {
+      margin: 3px;
+    }
   }
 }
 

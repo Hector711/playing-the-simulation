@@ -35,6 +35,10 @@ aside.aside-left {
       width: 100%;
       padding-inline: 30px ;
     }
+    button:hover {
+      background-color: var(--blue-1);
+      border-color: var(--white-1);
+    }
   }
 }
 
@@ -51,6 +55,4 @@ main.two-col {
   /* border: 1px solid; */
   padding-left: var(--pad-m);
 
-
-  
 }

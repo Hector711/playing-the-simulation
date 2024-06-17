@@ -3,6 +3,72 @@ import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import { NavLink } from 'react-router-dom';
 import ModelMainPro from '@/layouts/ModelMainPro';
 
+
+
+export default function Classroom() {
+  const groupedByLevel = cards.reduce((acc, card) => {
+    acc[card.level] = acc[card.level] ? [...acc[card.level], card] : [card];
+    return acc;
+  }, {});
+
+  const scrollToSection = (event) => {
+    const value = event.target.value
+    // Asegúrate de que el elemento exista para evitar errores
+    const section = document.getElementById(value);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  return (
+    <>
+      <ModelAsideLeft id='classroom' className='community' title='Secciones'>
+        <div className='filter-buttons'>
+          <button value='Introducción' onClick={scrollToSection}>Introducción</button>
+          <button value='Bonus' onClick={scrollToSection}>Bonus</button>
+          <button value='De 0 a 10k' onClick={scrollToSection}>De 0 a 10k</button>
+          <button value='Desbloqueables' onClick={scrollToSection}>Desbloqueables</button>
+        </div>
+      </ModelAsideLeft>
+      <ModelMainPro id='classroom' pageTitle='Classroom'>
+        <h3 className='section-page'>Todo el contenido</h3>
+        {Object.entries(groupedByLevel).map(([level, cards]) => (
+          <>
+            <hr />
+            <section key={level} id={level}>
+              <h4>{level}</h4>
+              <div id='cards-grid'>
+                {cards.map((card, index) => (
+                  <ClassroomCard
+                    key={index}
+                    title={card.title}
+                    description={card.description}
+                    img={card.img}
+                  />
+                ))}
+              </div>
+            </section>
+          </>
+        ))}
+      </ModelMainPro>
+    </>
+  );
+}
+
+function ClassroomLink() {
+  return <button>Ver Clase</button>;
+}
+
+function ClassroomCard({ title, description, img }) {
+  return (
+    <div className='classroom-card'>
+      <img src={img} />
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
+  );
+}
+
 const cards = [
   {
     title: 'Introducción a Playing the Simulation',
@@ -132,68 +198,3 @@ const cards = [
   //   level: 2,
   // },
 ];
-
-export default function Classroom() {
-  const groupedByLevel = cards.reduce((acc, card) => {
-    acc[card.level] = acc[card.level] ? [...acc[card.level], card] : [card];
-    return acc;
-  }, {});
-
-  const scrollToSection = (event) => {
-    const value = event.target.value
-    // Asegúrate de que el elemento exista para evitar errores
-    const section = document.getElementById(value);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  return (
-    <>
-      <ModelAsideLeft id='classroom' className='community' title='Filtrado'>
-        <hr />
-        <div className='filter-buttons'>
-          <button value='Introducción' onClick={scrollToSection}>Introducción</button>
-          <button value='Bonus' onClick={scrollToSection}>Bonus</button>
-          <button value='De 0 a 10k' onClick={scrollToSection}>De 0 a 10k</button>
-          <button value='Desbloqueables' onClick={scrollToSection}>Desbloqueables</button>
-        </div>
-      </ModelAsideLeft>
-      <ModelMainPro id='classroom' pageTitle='Classroom'>
-        <h3 className='section-page'>Todo el contenido</h3>
-        {Object.entries(groupedByLevel).map(([level, cards]) => (
-          <>
-            <hr />
-            <section key={level} id={level}>
-              <h4>{level}</h4>
-              <div id='cards-grid'>
-                {cards.map((card, index) => (
-                  <ClassroomCard
-                    key={index}
-                    title={card.title}
-                    description={card.description}
-                    img={card.img}
-                  />
-                ))}
-              </div>
-            </section>
-          </>
-        ))}
-      </ModelMainPro>
-    </>
-  );
-}
-
-function ClassroomLink() {
-  return <button>Ver Clase</button>;
-}
-
-function ClassroomCard({ title, description, img }) {
-  return (
-    <div className='classroom-card'>
-      <img src={img} />
-      <h4>{title}</h4>
-      <p>{description}</p>
-    </div>
-  );
-}

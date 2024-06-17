@@ -21,7 +21,7 @@ import Classroom from '@/pages/community/Classroom';
 import Community from '@/pages/community/Community';
 import Members from '@/pages/community/Members';
 import Archives from '@/pages/community/Archives';
-import Events from '@/pages/community/Events';
+import Calendar from '@/pages/community/Calendar';
 
 function App() {
   return (
@@ -44,7 +44,7 @@ function App() {
                 {/* Community Pages */}
                 <Route path='/classroom' element={<Classroom />} />
                 <Route path='/members' element={<Members />} />
-                <Route path='/events' element={<Events />} />
+                <Route path='/calendar' element={<Calendar />} />
                 <Route path='/archives' element={<Archives />} />
                 <Route path='/community' element={<Community />} />
               </Route>

@@ -57,26 +57,29 @@ export default function Members(props) {
     { value: 'level', label: 'Por nivel' },
   ];
 
+  const colourStyles = {
+    control: styles => ({ ...styles, backgroundColor: '#1a1e23' }),
+    option: styles => ({
+      ...styles,
+      backgroundColor: '#1a1e23',
+      ':active': { ...styles[':active'], backgroundColor: '#565656de' },
+    }),
+    multiValue: styles => ({ ...styles, backgroundColor: '#f6921b' }),
+    multiValueLabel: styles => ({ ...styles, color: '#111822' }),
+  };
+
   return (
     <>
-      <ModelAsideLeft id='members' className='community'>
-        <h2 className='impact'>Filtrado</h2>
-        <hr />
-        <div id='filter'>
+      <ModelAsideLeft id='members' className='community' title='Filtro'>
+        <div className='select-filter'>
           <Select
             {...props}
-            styles={{
-              singleValue: base => ({
-                ...base,
-                color: 'white',
-              }),
-            }}
+            styles={colourStyles}
             options={selectFilter}
             id='category'
             placeholder='Categoría'
             className='react-select-container'
             classNamePrefix='react-select'
-            value={selectedValue}
             onChange={handleSelectChange}
           />
         </div>

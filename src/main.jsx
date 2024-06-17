@@ -17,13 +17,14 @@ import '@/css/page-goals.css';
 // Community Pages
 import '@/css/page-classroom.css';
 import '@/css/page-members.css';
+import '@/css/page-calendar.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
-import '@/css/comp-aside-left.css';
 import '@/css/comp-aside-right.css';
 import '@/css/comp-new-post.css';
 import '@/css/comp-dnd-kit.css';
+import '@/css/comp-select-filter.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

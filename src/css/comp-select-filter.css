@@ -1,0 +1,36 @@
+div.select-filter {
+  display: flex;
+  gap: var(--gap-s);
+  align-items: center;
+  justify-content: center;
+  .react-select {
+  }
+  .react-select-container {
+    width: 100%;
+  }
+  /* conjunto de todo  */
+  .react-select__control {
+    border: transparent;
+    background-color: var(--blue-1);  
+    text-align: center;
+}
+
+/* contenedor de los valores */
+.react-select__value-container {
+
+}
+/* flecha */
+.react-select__indicators {
+}
+.react-select__menu {
+
+  background-color: var(--white-3);
+}
+.react-select__menu-list {
+
+  background-color: var(--blue-0);
+}
+.react-select__option:hover {
+  background-color: var(--blue-1);
+}
+}

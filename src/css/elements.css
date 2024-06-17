@@ -80,15 +80,11 @@ button {
   justify-content: center;
   text-wrap: nowrap;
 }
-button:hover{
+button.submit:hover{
   box-shadow: 3px 2px 5px 1px var(--black-0);
-  background-color: var(--blue-1);
 }
 
-/* button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
+
 hr {
   border: 0.5px solid var(--white-2);
 }

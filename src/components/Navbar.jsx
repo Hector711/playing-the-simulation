@@ -12,7 +12,7 @@ function Navbar() {
           </NavLink>
           <NavLinkButton to='/classroom'>Classroom</NavLinkButton>
           <NavLinkButton to='/members'>Miembros</NavLinkButton>
-          <NavLinkButton to='/events'>Eventos</NavLinkButton>
+          <NavLinkButton to='/calendar'>Calendario</NavLinkButton>
           <NavLinkButton to='/archives'>Biblioteca</NavLinkButton>
         </div>
         <div id='nav-right'>

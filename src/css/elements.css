@@ -78,6 +78,7 @@ button {
   transition: border-color 0.25s;
   cursor: pointer;
   justify-content: center;
+  text-wrap: nowrap;
 }
 button:hover{
   box-shadow: 3px 2px 5px 1px var(--black-0);
@@ -90,4 +91,9 @@ button:focus-visible {
 } */
 hr {
   border: 0.5px solid var(--white-2);
+}
+
+button.submit {
+  background-color: var(--white-1);
+  color: var(--black-0);
 }

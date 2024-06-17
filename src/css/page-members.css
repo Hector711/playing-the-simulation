@@ -9,6 +9,9 @@ aside#members {
     align-items: center;
     justify-content: center;
   }
+  span.pts {
+    color: var(--white-2)
+  }
   
 
     .react-select {
@@ -76,7 +79,10 @@ article.member {
       border-radius: 50%;
       width: 60px;
       height: 60px;
-      background-color: var(--blue-0);
+      background-color: var(--white-2);
+    }
+    img.employee{
+      border: 4px solid var(--blue-0);
     }
     img.entrepeneur {
       border: 4px solid var(--orange-0);

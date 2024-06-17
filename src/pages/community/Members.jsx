@@ -40,11 +40,11 @@ export default function Members(props) {
     if (typeof filter === 'number') {
       setLevelFilterShow(true);
       setSpecialityFilterShow(false);
-      setAllMembers(false)
+      setAllMembers(false);
     } else if (typeof filter === 'string') {
       setLevelFilterShow(false);
       setSpecialityFilterShow(true);
-      setAllMembers(false)
+      setAllMembers(false);
     } else {
       setAllMembers(true);
       setLevelFilterShow(false);
@@ -85,36 +85,36 @@ export default function Members(props) {
           {toggleShow ? (
             <>
               <button value='1' onClick={handleLevelFilterChange}>
-                Nivel 1
+                Nvl 1 <span className='pts'>&nbsp;&#8226;&nbsp;0 pts</span>
               </button>
               <button value='2' onClick={handleLevelFilterChange}>
-                Nivel 2
+                Nvl 2 <span className='pts'>&nbsp;&#8226;&nbsp;5 pts</span>
               </button>
               <button value='3' onClick={handleLevelFilterChange}>
-                Nivel 3
+                Nvl 3 <span className='pts'>&nbsp;&#8226;&nbsp;20 pts</span>
               </button>
               <button value='4' onClick={handleLevelFilterChange}>
-                Nivel 4
+                Nvl 4 <span className='pts'>&nbsp;&#8226;&nbsp;65 pts</span>
               </button>
               <button value='5' onClick={handleLevelFilterChange}>
-                Nivel 5
+                Nvl 5 <span className='pts'>&nbsp;&#8226;&nbsp;155 pts</span>
               </button>
               <button value='6' onClick={handleLevelFilterChange}>
-                Nivel 6
+                Nvl 6 <span className='pts'>&nbsp;&#8226;&nbsp;515 pts</span>
               </button>
               <button value='7' onClick={handleLevelFilterChange}>
-                Nivel 7
+                Nvl 7 <span className='pts'>&nbsp;&#8226;&nbsp;2.015 pts</span>
               </button>
               <button value='8' onClick={handleLevelFilterChange}>
-                Nivel 8
+                Nvl 8 <span className='pts'>&nbsp;&#8226;&nbsp;8.015 pts</span>
               </button>
               <button value='9' onClick={handleLevelFilterChange}>
-                Nivel 9
+                Nvl 9 <span className='pts'>&nbsp;&#8226;&nbsp;33.015 pts</span>
               </button>
               <button value='10' onClick={handleLevelFilterChange}>
-                Nivel 10: Final Boss
+                Final Boss
+                <span className='pts'>&nbsp;&#8226;&nbsp;1M pts</span>
               </button>
-              
             </>
           ) : (
             <>
@@ -197,9 +197,13 @@ function MemberCard({
       <header>
         <NavLink to={url}>
           {business.length > 0 ? (
-            <img src={img} alt={fullName} className='entrepeneur' />
+            <img 
+            // src={img} alt={fullName} 
+            className='entrepeneur' />
           ) : (
-            <img src={img} alt={fullName} />
+            <img className='employee'
+            // src={img} alt={fullName}
+             />
           )}
         </NavLink>
         <NavLink to={url} className='user'>

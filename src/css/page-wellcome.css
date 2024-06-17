@@ -54,9 +54,13 @@ div.login {
     margin: var(--pad-s) var(--pad-m);
   }
   form.login {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
     background-color: var(--blue-1);
     padding: var(--pad-m);
-    width: 350px;
+    width: 300px;
+    max-width: 500px;
     height: max-content;
     border-radius: var(--border-m);
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import Login from '@/pages/Login';
 
 export default function Welcome() {

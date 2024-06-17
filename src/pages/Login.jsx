@@ -41,7 +41,7 @@ export default function Login() {
           placeholder='Password'
         />
         {errors.password && <p className='errors show'>Password is required</p>}
-        <button type='submit'>Iniciar Sesión</button>
+        <button type='submit' className='submit'>Iniciar Sesión</button>
       </form>
       <p className='register'>
         ¿Quieres unirte? &nbsp;

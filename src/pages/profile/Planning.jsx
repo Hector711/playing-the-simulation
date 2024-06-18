@@ -21,6 +21,7 @@ export default function Planning() {
 
   return (
     <ModelMainPro title='Planificación'>
+
       <LineRoute title='Salud' />
       <LineRoute title='Profesional' />
       <LineRoute title='Social' />

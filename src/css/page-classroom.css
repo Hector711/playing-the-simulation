@@ -5,7 +5,7 @@ aside.community {
   border-radius: var(--border-m);
   display: flex;
   flex-direction: column;
-  gap: var(--gap-s);
+  /* gap: var(--gap-s); */
   a {
     text-transform: uppercase;
     text-align: center;
@@ -15,14 +15,11 @@ main#classroom {
   display: flex;
   flex-direction: column;
   gap: var(--gap-l);
-  hr {
-    margin-block: 5px;
-  }
-
   section {
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
+    margin-block: var(--gap-l);
   }
 
   #cards-grid {

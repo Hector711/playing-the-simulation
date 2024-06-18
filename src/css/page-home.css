@@ -19,3 +19,10 @@ section#timeline {
     height: 100%;
   }
 }
+
+aside#news {
+  h2{
+    color: var(--orange-0) !important;
+  }
+
+}

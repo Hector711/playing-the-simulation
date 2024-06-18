@@ -30,11 +30,10 @@ export default function Classroom() {
           <button value='Desbloqueables' onClick={scrollToSection}>Desbloqueables</button>
         </div>
       </ModelAsideLeft>
-      <ModelMainPro id='classroom' pageTitle='Classroom'>
-        <h3 className='section-page'>Todo el contenido</h3>
+      <ModelMainPro id='classroom' pageTitle='Classroom' title='Todo el contenido '>
+        {/* <h3 className='section-page'>Todo el contenido</h3> */}
         {Object.entries(groupedByLevel).map(([level, cards]) => (
           <>
-            <hr />
             <section key={level} id={level}>
               <h4>{level}</h4>
               <div id='cards-grid'>

@@ -22,14 +22,12 @@ h2 {
 h2.impact {
   font-size: 1.1rem !important;
   font-family: 'Heading';
-  text-align: center;
   text-transform: uppercase;
   color: var(--white-2);
-  padding: var(--pad-m);
 }
 h2.impact.home{
   display: flex;
-  padding: 20px 0 !important;
+  /* padding: 20px 0 !important; */
 }
 /* TITULO DE PERFILES */
 h2.profile {
@@ -38,11 +36,11 @@ h2.profile {
 }
 
 /* TITULOS DE SECCIÓN */
-h3.section-page {
+/* h3.section-page {
   font-size: 1.4rem;
   font-weight: 600;
   padding-block: 6px;
-}
+} */
 /* TITULOS DE POST Y CURSOS */
 h4 {
   font-size: 1.2rem;

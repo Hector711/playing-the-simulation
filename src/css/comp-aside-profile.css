@@ -43,7 +43,6 @@ header#profile {
     gap: var(--gap-s);
     height: 70px;
     width: 100%;
-    /* border: 1px solid ; */
   }
 
   #goals-link {
@@ -63,18 +62,12 @@ header#profile {
     }
   }
 }
-.aside-icons {
-  width: 30px;
-  height: 30px;
-}
-#goals-icon {
-  width: 35px;
-  height: 35px;
-}
+
 section#profile-links {
   display: flex;
   flex-direction: column;
   gap: var(--gap-s);
+  margin-top: var(--gap-s);
   .aside-link {
     gap: var(--gap-m);
     padding: 10px 16px;
@@ -95,4 +88,14 @@ footer#logout {
     border-radius: var(--border-m);
     padding: 10px;
   }
+}
+
+
+.aside-icons {
+  width: 30px;
+  height: 30px;
+}
+#goals-icon {
+  width: 35px;
+  height: 35px;
 }

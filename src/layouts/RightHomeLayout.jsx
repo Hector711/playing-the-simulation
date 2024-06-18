@@ -14,13 +14,7 @@ export default function RightHomeLayout() {
 
 function AsideRight() {
   return (
-    <ModelAsideRight>
-      <header>
-        <h2 id='news' className='impact'>
-          Noticias
-        </h2>
-        <hr />
-      </header>
+    <ModelAsideRight title='Noticias' id='news'>
       <section id='news'>
         <Post
           user='Carlos Adams'

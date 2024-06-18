@@ -9,7 +9,6 @@ export default function NavLayout() {
       <div id='layout'>
         <Outlet />
       </div>
-      <footer id='home'></footer>
     </>
   );
 }

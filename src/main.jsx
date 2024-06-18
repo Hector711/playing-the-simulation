@@ -8,7 +8,6 @@ import '@/css/elements.css';
 import '@/css/init.css';
 // Layout
 import '@/css/layout-nav.css';
-import '@/css/layout-profile.css';
 import '@/css/layout-model.css';
 // Profile Pages
 import '@/css/page-wellcome.css';
@@ -21,10 +20,13 @@ import '@/css/page-calendar.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
-import '@/css/comp-aside-right.css';
+
 import '@/css/comp-new-post.css';
 import '@/css/comp-dnd-kit.css';
 import '@/css/comp-select-filter.css';
+import '@/css/comp-news.css';
+import '@/css/comp-aside-profile.css';
+
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

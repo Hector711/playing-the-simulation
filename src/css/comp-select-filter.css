@@ -34,3 +34,22 @@ div.select-filter {
   background-color: var(--blue-1);
 }
 }
+
+ /* COMMUNITY LAYOUT */
+div.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  padding-block: 0.9rem;
+  align-items: center;
+  gap: var(--gap-s);
+  button {
+    font-weight: 600;
+    max-width: 90%;
+    width: 100%;
+    padding-inline: 30px;
+  }
+  button:hover {
+    background-color: var(--blue-1);
+    border-color: var(--white-1);
+  }
+}

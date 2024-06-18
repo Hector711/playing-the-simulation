@@ -158,9 +158,9 @@ export default function Members(props) {
           )}
         </div>
       </ModelAsideLeft>
-      <ModelMainPro id='members'>
-        <h3 className='section-page'>Todos los miembros</h3>
-        <hr />
+      <ModelMainPro id='members' title='Miembros de la comunidad'>
+        {/* <h3 className='section-page'>Todos los miembros</h3> */}
+
         <div id='members-grid'>
           {allMembers &&
             members

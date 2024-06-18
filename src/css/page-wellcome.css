@@ -23,7 +23,7 @@ header.wellcome {
   justify-content: center;
   h1 {
     font-size: 3.5rem;
-    text-shadow: 1px 1px 4px rgb(205, 205, 205);
+    text-shadow: 1px 3px 7px #cdcdcd;
     line-height: 1;
     height: var(--height-text-wellcome);
   }

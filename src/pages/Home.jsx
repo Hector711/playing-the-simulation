@@ -6,7 +6,7 @@ import ModelMain from '../layouts/ModelMain';
 export default function Home() {
   return (
     <>
-      <ModelMain>
+      <ModelMain id='timeline'>
         <NewPost />
         <hr className='home' />
         <Timeline />

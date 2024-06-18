@@ -16,17 +16,15 @@ aside#members {
 main#members {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-l);
 
-  hr {
-    margin-block: 5px;
-  }
 }
 
-div#members-grid {
+section#members-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1em;
+  margin-block: var(--gap-l);
+
 }
 
 article.member {

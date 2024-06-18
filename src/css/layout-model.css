@@ -29,18 +29,25 @@ aside.aside-left {
  
 }
 
-main#home {
+main.home {
   grid-area: main;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-s);
+  h2.impact {
+    padding: 15px 5px;
+  }
 }
 
-main.two-col {
+main.pro {
   grid-area: main;
   grid-column: main / span 2;
-  /* border: 1px solid; */
-  /* padding-left: var(--pad-m); */
+  * {
+    /* border: 1px solid; */
+  }
+
+  h2.impact {
+    padding: 15px 5px;
+  }
 
   /* TITULOS DE SECCIÓN */
   h3.section-page {

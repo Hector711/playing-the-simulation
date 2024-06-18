@@ -14,12 +14,15 @@ aside.community {
 main#classroom {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-l);
   section {
     display: flex;
     flex-direction: column;
     gap: var(--gap-m);
     margin-block: var(--gap-l);
+    h4{
+      padding: 5px 5px;
+
+    }
   }
 
   #cards-grid {

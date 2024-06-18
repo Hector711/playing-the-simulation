@@ -7,7 +7,7 @@ import Gif from '@/icons/Gif';
 import Select from 'react-select';
 
 export default function NewPost() {
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
 
   const toggleNewPostForm = () => {
     setState(prevState => !prevState);

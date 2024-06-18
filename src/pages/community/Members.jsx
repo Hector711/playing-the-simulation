@@ -161,7 +161,7 @@ export default function Members(props) {
       <ModelMainPro id='members' title='Miembros de la comunidad'>
         {/* <h3 className='section-page'>Todos los miembros</h3> */}
 
-        <div id='members-grid'>
+        <section id='members-grid'>
           {allMembers &&
             members
               .sort((a, b) => a.fullName.localeCompare(b.fullName))
@@ -176,7 +176,7 @@ export default function Members(props) {
               .filter(contact => contact.level === filter)
               .sort((a, b) => a.fullName.localeCompare(b.fullName))
               .map(contact => <MemberCard key={contact.id} {...contact} />)}
-        </div>
+        </section>
       </ModelMainPro>
     </>
   );

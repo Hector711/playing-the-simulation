@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function ModelMain({ children, title }) {
+export default function ModelMain({ children, title, id }) {
   return (
-    <main id='home'>
+    <main className='home' id={id}>
       {title && (
         <>
           <h2 className='impact home'>{title}</h2>

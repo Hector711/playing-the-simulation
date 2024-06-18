@@ -6,6 +6,7 @@ import Work from '@/icons/Work';
 import Location from '@/icons/Location';
 import Select from 'react-select';
 import Business from '@/icons/Business';
+import Avatar from '@/components/Avatar';
 
 export default function Members(props) {
   const [selectedValue, setSelectedValue] = useState('speciality');
@@ -199,7 +200,8 @@ function MemberCard({
     <article kay={id} className='member'>
       <header>
         <NavLink to={url}>
-          {business.length > 0 ? (
+          <Avatar src={img} business={business.length > 0} />
+          {/* {business.length > 0 ? (
             <img 
             // src={img} alt={fullName} 
             className='entrepeneur' />
@@ -207,7 +209,7 @@ function MemberCard({
             <img className='employee'
             // src={img} alt={fullName}
              />
-          )}
+          )} */}
         </NavLink>
         <NavLink to={url} className='user'>
           <div>

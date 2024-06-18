@@ -86,8 +86,8 @@ export default function Archives(props) {
           </button>
         </div>
       </ModelAsideLeft>
-      <ModelMainPro>
-        <h2></h2>
+      <ModelMainPro title='Publicaciones de la comunidad'>
+
       </ModelMainPro>
     </>
   );

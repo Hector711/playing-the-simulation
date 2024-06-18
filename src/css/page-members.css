@@ -40,18 +40,11 @@ article.member {
     gap: 20px;
     align-items: center;
     padding-bottom: 10px;
-    img {
-      border-radius: 50%;
+    img.avatar {
       width: 60px;
       height: 60px;
-      background-color: var(--white-2);
     }
-    img.employee{
-      border: 4px solid var(--blue-0);
-    }
-    img.entrepeneur {
-      border: 4px solid var(--orange-0);
-    }
+
     .user {
       div {
         display: flex;

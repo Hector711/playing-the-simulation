@@ -1,0 +1,10 @@
+img.avatar{
+  border-radius: 50%;
+}
+
+img.employee{
+  border: 4px solid var(--white-2);
+}
+img.entrepeneur {
+  border: 4px solid var(--orange-0);
+}

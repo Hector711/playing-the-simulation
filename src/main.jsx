@@ -12,7 +12,8 @@ import '@/css/layout-model.css';
 // Profile Pages
 import '@/css/page-wellcome.css';
 import '@/css/page-home.css';
-import '@/css/page-goals.css';
+import '@/css/page-planning.css';
+import '@/css/page-profile.css';
 // Community Pages
 import '@/css/page-classroom.css';
 import '@/css/page-members.css';
@@ -20,6 +21,7 @@ import '@/css/page-calendar.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
+import '@/css/comp-avatar.css';
 
 import '@/css/comp-new-post.css';
 import '@/css/comp-dnd-kit.css';

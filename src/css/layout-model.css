@@ -26,7 +26,6 @@ aside.aside-left {
     padding: 15px;
     /* border: 1px solid var(--white-3); */
   }
- 
 }
 
 main.home {
@@ -41,21 +40,17 @@ main.home {
 main.pro {
   grid-area: main;
   grid-column: main / span 2;
-  * {
-    /* border: 1px solid; */
-  }
-
   h2.impact {
     padding: 15px 5px;
   }
-
   /* TITULOS DE SECCIÓN */
   h3.section-page {
     font-size: 1.4rem;
     font-weight: 600;
-
   }
-
+}
+main.pro.left {
+  grid-column: left / span 2;
 }
 
 

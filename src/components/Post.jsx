@@ -33,7 +33,7 @@ export default function Post({
       </div>
       <hr />
       <header className='post-user'>
-        <Avatar size={size} />
+        <Avatar src='' business='true' />
         <h4>{user}</h4>
         <div>Hace 2 h</div>
       </header>

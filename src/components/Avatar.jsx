@@ -1,5 +1,11 @@
 import React from 'react';
 
-export default function Avatar({ size }) {
-  return <img alt='Héctor profile picture' src="https://i.ibb.co/s5smtmL/profile-pic.jpg"  id='avatar' className={size} />;
+export default function Avatar({ src, business }) {
+  if (business) {
+    return (
+      <img alt='Foto de perfil' src={src} className='avatar entrepeneur' />
+    );
+  } else {
+    return <img alt='Foto de perfil' src={src} className='avatar employee' />;
+  }
 }

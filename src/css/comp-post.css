@@ -21,6 +21,10 @@ article.post {
     display: flex;
     align-items: center;
     gap: 15px;
+    img.avatar {
+      width: 60px;
+      height: 60px;
+    }
   }
   section {
     display: flex;
@@ -51,20 +55,8 @@ section#timeline {
   gap: var(--gap-m);
 }
 
-#avatar.news {
-  width: 40px;
-  height: 40px;
-}
-#avatar.timeline {
-  width: 50px;
-  height: 50px;
-}
-#avatar.profile {
-  width: 70px;
-  height: 70px;
-}
-#avatar.large {
-}
+
+
 
 #avatar {
   background-color: #bbc9e5;

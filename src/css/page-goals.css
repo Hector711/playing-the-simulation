@@ -1,7 +1,5 @@
 main#pro {
-  h2 {
-    font-size: 2rem;
-  }
+  
   div#route {
     background-color: var(--blue-1);
     padding: 20px;

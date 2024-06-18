@@ -27,6 +27,10 @@ h2.impact {
   color: var(--white-2);
   padding: var(--pad-m);
 }
+h2.impact.home{
+  display: flex;
+  padding: 20px 0 !important;
+}
 /* TITULO DE PERFILES */
 h2.profile {
   font-weight: 600;

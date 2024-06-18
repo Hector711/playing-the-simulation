@@ -1,5 +1,11 @@
 import React from 'react';
+import ModelMain from '@/layouts/ModelMain';
 
 export default function Messages() {
-  return <div>Messages</div>;
+  return <>
+  <ModelMain title='Mensajes'>
+    
+  </ModelMain>
+
+  </>;
 }

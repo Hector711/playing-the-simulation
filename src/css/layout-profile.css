@@ -22,6 +22,10 @@ header#profile {
       width: 100%;
       height: 70px;
       background-color: var(--orange-0);
+      object-fit: cover;
+      overflow: hidden;
+      /* transform: scale(1); */
+      /* border: 1px solid ; */
     }
   }
   #profile-link:hover {

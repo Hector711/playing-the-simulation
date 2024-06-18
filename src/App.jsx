@@ -9,12 +9,13 @@ import Wellcome from '@/pages/Wellcome';
 import Home from '@/pages/Home';
 // Layouts
 import NavLayout from '@/layouts/NavLayout';
-import ProfileLayout from '@/layouts/ProfileLayout';
+import LeftHomeLayout from '@/layouts/LeftHomeLayout';
+import RightHomeLayout from '@/layouts/RightHomeLayout';
 // Profile Pages
 import Profile from '@/pages/profile/Profile';
 import Notifications from '@/pages/profile/Notifications';
 import Messages from '@/pages/profile/Messages';
-import Goals from '@/pages/profile/Goals';
+import Planning from '@/pages/profile/Planning';
 import Saved from '@/pages/profile/Saved';
 //  Community Pages
 import Classroom from '@/pages/community/Classroom';
@@ -33,14 +34,16 @@ function App() {
             <Route element={<ProtectedRoute />}>
               <Route element={<NavLayout />}>
                 {/* Profile Pages */}
-                <Route element={<ProfileLayout />}>
-                  <Route path='/home' element={<Home />} />
-                  <Route path='/profile' element={<Profile />} />
-                  <Route path='/goals' element={<Goals />} />
-                  <Route path='/notifications' element={<Notifications />} />
-                  <Route path='/messages' element={<Messages />} />
-                  <Route path='/saved' element={<Saved />} />
+                <Route element={<LeftHomeLayout />}>
+                  <Route element={<RightHomeLayout />}>
+                    <Route path='/home' element={<Home />} />
+                    <Route path='/notifications' element={<Notifications />} />
+                    <Route path='/messages' element={<Messages />} />
+                    <Route path='/saved' element={<Saved />} />
+                  </Route>
+                  <Route path='/planning' element={<Planning />} />
                 </Route>
+                <Route path='/profile' element={<Profile />} />
                 {/* Community Pages */}
                 <Route path='/classroom' element={<Classroom />} />
                 <Route path='/members' element={<Members />} />

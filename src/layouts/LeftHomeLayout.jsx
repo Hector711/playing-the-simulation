@@ -7,9 +7,9 @@ import IconNotifications from '@/icons/IconNotifications';
 import IconMessages from '@/icons/IconMessages';
 import IconSave from '@/icons/IconSave';
 import IconGoals from '@/icons/IconGoals';
-import ModelAsideLeft from '../layouts/ModelAsideLeft';
+import ModelAsideLeft from './ModelAsideLeft';
 
-export default function ProfileLayout() {
+export default function LeftHomeLayout() {
   return (
     <>
       <AsideProfile />
@@ -24,7 +24,7 @@ function AsideProfile() {
     <ModelAsideLeft>
       <header id='profile'>
         <NavLink to='/profile' id='profile-link'>
-          <img id='cover' alt='' />
+          <img id='cover'src="https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg" alt='' />
           <Avatar size='profile' />
           <h4>Héctor Guerra</h4>
         </NavLink>
@@ -34,7 +34,7 @@ function AsideProfile() {
           <p>Nivel 4: Funcionario</p>
         </div>
         <hr />
-        <NavLink id='goals-link' to='/goals'>
+        <NavLink id='goals-link' to='/planning'>
           <IconGoals />
           <h2>Planificación</h2>
         </NavLink>
@@ -43,11 +43,11 @@ function AsideProfile() {
         <NavLink className='aside-link' to='/notifications'>
           <IconNotifications className='aside-icons' /> <h2>Notificaciones</h2>
         </NavLink>
-        <NavLink className='aside-link' to='/saved'>
-          <IconSave className='aside-icons' /> <h2>Guardados</h2>
-        </NavLink>
         <NavLink className='aside-link' to='/messages'>
           <IconMessages className='aside-icons' /> <h2>Mensajes</h2>
+        </NavLink>
+        <NavLink className='aside-link' to='/saved'>
+          <IconSave className='aside-icons' /> <h2>Guardados</h2>
         </NavLink>
       </section>
       <footer id='logout'>

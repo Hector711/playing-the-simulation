@@ -3,7 +3,7 @@ import NewPost from '@/components/NewPost';
 import Timeline from '@/components/Timeline';
 import ModelMain from '../layouts/ModelMain';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <ModelMain id='timeline'>

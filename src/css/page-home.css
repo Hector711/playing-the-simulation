@@ -5,11 +5,10 @@ hr.home {
 main#timeline{
   gap: var(--gap-s);
 }
-section#timeline {
-  header {
+section.timeline {
+  header.timeline {
     display: flex;
     justify-content: space-between;
-
     button {
       padding: var(--pad-s) 35px;
       /* border: 0.6px solid var(--white-3) ; */
@@ -18,7 +17,7 @@ section#timeline {
       justify-content: center;
     }
   }
-  hr {
+  hr.timeline {
     height: 100%;
   }
 }

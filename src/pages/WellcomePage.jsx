@@ -1,7 +1,7 @@
 import React from 'react';
 import Login from '@/pages/Login';
 
-export default function Welcome() {
+export default function WelcomePage() {
   return (
     <div id='wellcome-body'>
       <header className='wellcome'>

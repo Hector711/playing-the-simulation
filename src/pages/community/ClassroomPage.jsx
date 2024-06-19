@@ -5,7 +5,7 @@ import ModelMainPro from '@/layouts/ModelMainPro';
 
 
 
-export default function Classroom() {
+export default function ClassroomPage() {
   const groupedByLevel = cards.reduce((acc, card) => {
     acc[card.level] = acc[card.level] ? [...acc[card.level], card] : [card];
     return acc;

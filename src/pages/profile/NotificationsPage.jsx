@@ -1,7 +1,7 @@
 
 import ModelMain from '@/layouts/ModelMain';
 
-export default function Notifications() {
+export default function NotificationsPage() {
 
   return (
     <>

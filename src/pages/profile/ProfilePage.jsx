@@ -3,7 +3,7 @@ import ModelAsideRight from '@/layouts/ModelAsideRight';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import Avatar from '@/components/Avatar';
 
-export default function Profile() {
+export default function ProfilePage() {
   return (
     <>
       <ModelMainPro className='left' id='profile'>

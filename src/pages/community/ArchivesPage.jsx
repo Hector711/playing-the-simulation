@@ -7,7 +7,7 @@ import Select from 'react-select';
 
 
 
-export default function Archives(props) {
+export default function ArchivesPage(props) {
   const [selectedValue, setSelectedValue] = useState(null);
   const [filter, setFilter] = useState(null);
   const [allPosts, setAllPosts] = useState([]);

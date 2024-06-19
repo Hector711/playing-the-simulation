@@ -56,7 +56,7 @@ header#profile {
     align-items: center;
     gap: 10px;
     padding: 10px 14px;
-    background-color: var(--orange-1);
+    background-color: var(--orange-0);
     width: 100%;
     color: var(--blue-1);
     h2 {

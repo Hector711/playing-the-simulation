@@ -1,51 +1,76 @@
 article.post {
   background-color: var(--blue-1);
   border-radius: var(--border-m);
-  padding: 19px;
+  padding: 10px 19px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
 
-  div#nav {
-    display: flex;
-    gap: var(--gap-s);
-    align-items: center;
-    #post-type {
-      border: 1px solid var(--white-2);
-      padding: 5px 15px;
-      border-radius: var(--border-s);
-    }
+div.post#top {
+  display: flex;
+  gap: var(--gap-s);
+  align-items: center;
+  #post-type {
+    border: 1px solid var(--white-2);
+    padding: 5px 15px;
+    border-radius: var(--border-s);
   }
+}
 
-  header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    img.avatar {
-      width: 60px;
-      height: 60px;
-    }
+header.post {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  img.avatar {
+    width: 60px;
+    height: 60px;
   }
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  footer {
-    display: flex;
-    justify-content: space-between;
-    button {
+  div#urls-container {
+    a#url-profile {
       display: flex;
-      gap: 8px;
-      font-size: 0.9rem;
-      align-items: center;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+      margin-bottom: 5px;
+      /* color: var(--white-2); */
     }
+    a#url-post {
+    }
+  }
+  #save {
+    margin-left: auto;
     .post-icons {
       color: var(--orange-0);
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
     }
+  }
+  span {
+    color: var(--white-2);
+  }
+}
+
+section.post {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer.post {
+  display: flex;
+  justify-content: space-around;
+  button {
+    display: flex;
+    gap: 8px;
+    font-size: 0.9rem;
+    align-items: center;
+  }
+  .post-icons {
+    color: var(--orange-0);
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -54,9 +79,6 @@ section#timeline {
   flex-direction: column;
   gap: var(--gap-m);
 }
-
-
-
 
 #avatar {
   background-color: #bbc9e5;

@@ -7,17 +7,21 @@ import IconSend from '@/icons/IconSend';
 import IconSave from '@/icons/IconSave';
 
 export default function Post({
+  profilePic,
   title,
   description,
-  user,
-  size,
-  url,
+  fullName,
+  username,
+  urlPost,
+  urlProfile,
   labels,
   type,
+  numLikes,
+  numComments
 }) {
   return (
     <article className='post'>
-      <div id='nav'>
+      <div className='post' id='top'>
         <a href='' className='underlined' id='post-type'>
           {type}
         </a>
@@ -32,30 +36,42 @@ export default function Post({
         </a>
       </div>
       <hr />
-      <header className='post-user'>
-        <Avatar src='' business='true' />
-        <h4>{user}</h4>
-        <div>Hace 2 h</div>
+
+      <header className='post'>
+        <NavLink to={urlProfile}>
+          <Avatar src={profilePic} business='true' />
+        </NavLink>
+        <div id='urls-container'>
+          <NavLink to={urlProfile} id='url-profile'>
+            <h4>{fullName}</h4>
+            <span>&#8226; @{username}</span>
+          </NavLink>
+          <NavLink to={urlPost} id='url-post'>
+            <span>Hace 2 h</span>
+          </NavLink>
+        </div>
+        <button id='save'>
+          <IconSave className='post-icons' />
+        </button>
       </header>
-      <NavLink to={url}>
-        <section>
+
+      <section className='post'>
+        <NavLink to={urlPost}>
           <h4>{title}</h4>
           <p>{description}</p>
-        </section>
-      </NavLink>
+        </NavLink>
+      </section>
       <hr />
       <footer className='post'>
         <button>
-          Like <IconLike className='post-icons' />
+          <IconLike className='post-icons' /> {numLikes}
         </button>
         <button>
-          Comentarios <IconComment className='post-icons' />
+          <IconComment className='post-icons' /> {numComments}
         </button>
+
         <button>
-          Guardar <IconSave className='post-icons' />
-        </button>
-        <button>
-          Enviar <IconSend className='post-icons' />
+          <IconSend className='post-icons' />
         </button>
       </footer>
     </article>

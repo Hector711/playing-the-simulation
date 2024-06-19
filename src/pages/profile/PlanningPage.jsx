@@ -4,7 +4,7 @@ import { DndContext } from '@dnd-kit/core';
 import Droppable from '@/components/dnd-kit/Droppable';
 import Draggable from '@/components/dnd-kit/Draggable';
 
-export default function Planning() {
+export default function PlanningPage() {
   const [goals, setGoals] = useState([]);
   const [route, setRoute] = useState('select');
   const [numGoals, setNumGoals] = useState(0);

@@ -8,7 +8,7 @@ import Select from 'react-select';
 import Business from '@/icons/Business';
 import Avatar from '@/components/Avatar';
 
-export default function Members(props) {
+export default function MembersPage(props) {
   const [selectedValue, setSelectedValue] = useState('speciality');
   const [toggleShow, setToggleShow] = useState(false);
   const [filter, setFilter] = useState(null);
@@ -159,9 +159,9 @@ export default function Members(props) {
           )}
         </div>
       </ModelAsideLeft>
+
       <ModelMainPro id='members' title='Miembros de la comunidad'>
         {/* <h3 className='section-page'>Todos los miembros</h3> */}
-
         <section id='members-grid'>
           {allMembers &&
             members
@@ -197,20 +197,13 @@ function MemberCard({
   business,
 }) {
   return (
-    <article kay={id} className='member'>
-      <header>
+    <article kay={id} className='memberCard'>
+
+      <header className='memberCard'>
         <NavLink to={url}>
           <Avatar src={img} business={business.length > 0} />
-          {/* {business.length > 0 ? (
-            <img 
-            // src={img} alt={fullName} 
-            className='entrepeneur' />
-          ) : (
-            <img className='employee'
-            // src={img} alt={fullName}
-             />
-          )} */}
         </NavLink>
+
         <NavLink to={url} className='user'>
           <div>
             <h2 className='profile'>{fullName}</h2>
@@ -219,9 +212,12 @@ function MemberCard({
           <b>Nivel {level}</b>
           <span> &#8226; {points} puntos</span>
         </NavLink>
+        
       </header>
+
       <hr />
-      <section>
+
+      <section className='memberCard'>
         <div id='left'>
           <p>
             <Location />
@@ -243,8 +239,8 @@ function MemberCard({
             : ''}
         </div>
       </section>
-      {/* <hr /> */}
-      <footer>
+
+      <footer className='memberCard'>
         <p>{about}</p>
       </footer>
     </article>

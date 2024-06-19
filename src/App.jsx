@@ -5,24 +5,24 @@ import { TaskProvider } from '@/context/TaskContext';
 // Protected Route
 import ProtectedRoute from '@/ProtectedRoute';
 // Basics
-import Wellcome from '@/pages/Wellcome';
-import Home from '@/pages/Home';
+import WellcomePage from '@/pages/WellcomePage';
+import HomePage from '@/pages/HomePage';
 // Layouts
 import NavLayout from '@/layouts/NavLayout';
 import LeftHomeLayout from '@/layouts/LeftHomeLayout';
 import RightHomeLayout from '@/layouts/RightHomeLayout';
 // Profile Pages
-import Profile from '@/pages/profile/Profile';
-import Notifications from '@/pages/profile/Notifications';
-import Messages from '@/pages/profile/Messages';
-import Planning from '@/pages/profile/Planning';
-import Saved from '@/pages/profile/Saved';
+import ProfilePage from '@/pages/profile/ProfilePage';
+import NotificationsPage from '@/pages/profile/NotificationsPage';
+import MessagesPage from '@/pages/profile/MessagesPage';
+import PlanningPage from '@/pages/profile/PlanningPage';
+import SavedPage from '@/pages/profile/SavedPage';
 //  Community Pages
-import Classroom from '@/pages/community/Classroom';
-import Community from '@/pages/community/Community';
-import Members from '@/pages/community/Members';
-import Archives from '@/pages/community/Archives';
-import Calendar from '@/pages/community/Calendar';
+import ClassroomPage from '@/pages/community/ClassroomPage';
+import CommunityPage from '@/pages/community/CommunityPage';
+import MembersPage from '@/pages/community/MembersPage';
+import ArchivesPage from '@/pages/community/ArchivesPage';
+import CalendarPage from '@/pages/community/CalendarPage';
 
 function App() {
   return (
@@ -30,26 +30,26 @@ function App() {
       <TaskProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Wellcome />} />
+            <Route path='/' element={<WellcomePage />} />
             <Route element={<ProtectedRoute />}>
               <Route element={<NavLayout />}>
                 {/* Profile Pages */}
                 <Route element={<LeftHomeLayout />}>
                   <Route element={<RightHomeLayout />}>
-                    <Route path='/home' element={<Home />} />
-                    <Route path='/notifications' element={<Notifications />} />
-                    <Route path='/messages' element={<Messages />} />
-                    <Route path='/saved' element={<Saved />} />
+                    <Route path='/home' element={<HomePage />} />
+                    <Route path='/notifications' element={<NotificationsPage />} />
+                    <Route path='/messages' element={<MessagesPage />} />
+                    <Route path='/saved' element={<SavedPage />} />
                   </Route>
-                  <Route path='/planning' element={<Planning />} />
+                  <Route path='/planning' element={<PlanningPage />} />
                 </Route>
-                <Route path='/profile' element={<Profile />} />
+                <Route path='/profile' element={<ProfilePage />} />
                 {/* Community Pages */}
-                <Route path='/classroom' element={<Classroom />} />
-                <Route path='/members' element={<Members />} />
-                <Route path='/calendar' element={<Calendar />} />
-                <Route path='/archives' element={<Archives />} />
-                <Route path='/community' element={<Community />} />
+                <Route path='/classroom' element={<ClassroomPage />} />
+                <Route path='/members' element={<MembersPage />} />
+                <Route path='/calendar' element={<CalendarPage />} />
+                <Route path='/archives' element={<ArchivesPage />} />
+                <Route path='/community' element={<CommunityPage />} />
               </Route>
             </Route>
           </Routes>

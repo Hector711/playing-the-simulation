@@ -1,14 +1,4 @@
 aside#members {
-  * {
-    /* border: 1px solid; */
-  }
-  /* overflow: hidden; */
-  
-  
-  
-
-    
-
   span.pts {
     color: var(--white-2)
   }
@@ -16,7 +6,6 @@ aside#members {
 main#members {
   display: flex;
   flex-direction: column;
-
 }
 
 section#members-grid {
@@ -24,10 +13,9 @@ section#members-grid {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 1em;
   margin-block: var(--gap-l);
-
 }
 
-article.member {
+article.memberCard {
   display: flex;
   flex-direction: column;
   background-color: var(--blue-1);
@@ -35,7 +23,7 @@ article.member {
   padding: var(--pad-m);
   border: 0.5px solid var(--white-3);
   gap: var(--gap-s);
-  header {
+  header.memberCard {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -53,6 +41,9 @@ article.member {
         gap: 5px;
         margin-bottom: 5px;
         /* color: var(--white-2); */
+        h2.profile{
+          font-size: 1.3rem;
+        }
       }
       span {
         color: var(--white-2);

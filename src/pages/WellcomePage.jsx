@@ -6,6 +6,7 @@ export default function WelcomePage() {
     <div id='wellcome-body'>
       <header className='wellcome'>
         <h1>Playing The Simulation</h1>
+        <h3 className='impact'>Make PTS Great Again</h3>
       </header>
       <section className='wellcome'>
         <Login />

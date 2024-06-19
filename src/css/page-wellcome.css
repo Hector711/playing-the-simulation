@@ -18,12 +18,14 @@ div#wellcome-body {
 header.wellcome {
   height: 100%;
   width: 50%;
+  flex-direction: column;
+  gap: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
   h1 {
     font-size: 3.5rem;
-    text-shadow: 1px 3px 7px #cdcdcd;
+    text-shadow: 1px 3px 10px #9d9d9d;
     line-height: 1;
     height: var(--height-text-wellcome);
   }

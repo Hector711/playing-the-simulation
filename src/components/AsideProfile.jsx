@@ -23,7 +23,7 @@ export default function AsideProfile() {
           <h5>Full Stack Web Developer</h5>
           <p>Nivel 4: Funcionario</p>
         </div>
-        <hr />
+
         <NavLink id='goals-link' to='/planning'>
           <IconGoals />
           <h2>Planificación</h2>

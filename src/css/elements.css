@@ -18,8 +18,6 @@ h2 {
 /* TITULO DE ASIDES */
 h2.impact {
   font-size: 1.1rem !important;
-  font-family: 'Heading';
-  text-transform: uppercase;
   color: var(--white-2);
 }
 h2.impact.home{
@@ -31,6 +29,15 @@ h2.profile {
   font-size: 1.6rem;
   font-weight: 700;
   /* color: var(--white-0); */
+}
+.impact{
+  font-family: 'Heading';
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 

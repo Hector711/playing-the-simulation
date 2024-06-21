@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Close from '@/icons/Close';
 import Poll from '@/icons/Poll';
 import Clip from '@/icons/Clip';
@@ -41,26 +41,22 @@ export default function NewPost() {
   ];
 
   return (
-    <div id='new-post' className={state ? 'expanded' : 'collapsed'}>
+    <div id='new-post'>
       {!state ? (
-        <button
-          onClick={toggleNewPostForm}
-          id='open'
-          className={state ? 'expanded' : 'collapsed'}
-        >
-          Nuevo Post
+        <button onClick={toggleNewPostForm} id='open'>
+          <h2 className='impact'>Nuevo Post</h2>
         </button>
       ) : (
         <>
-          <div id='header' className={state ? 'expanded' : 'collapsed'}>
-            <h2>New Post</h2>
+          <div id='header'>
+            <h2 className='impact'>Nuevo Post</h2>
             <button onClick={toggleNewPostForm} id='close'>
               <Close />
             </button>
           </div>
           <form>
             <input type='text' placeholder='Tiulo' id='title' />
-            <input type='text' placeholder='Descripción' id='description' />
+            <Textarea />
             <div id='options'>
               <button>
                 <Clip />
@@ -91,10 +87,37 @@ export default function NewPost() {
                 placeholder='Etiquetas'
               />
             </div>
-            <button>Send</button>
+            <button id='send'>Enviar</button>
           </form>
         </>
       )}
     </div>
+  );
+}
+
+function Textarea() {
+  const textareaRef = useRef(null);
+
+  useEffect(() => {
+    const textarea = textareaRef.current;
+    const adjustHeight = () => {
+      textarea.style.height = 'auto';
+      textarea.style.height = textarea.scrollHeight + 'px';
+    };
+    // Ajustar la altura inicialmente en caso de que haya un valor predeterminado
+    adjustHeight();
+    // Ajustar la altura cada vez que el usuario escribe
+    textarea.addEventListener('input', adjustHeight);
+    // Limpiar el event listener cuando el componente se desmonte
+    return () => textarea.removeEventListener('input', adjustHeight);
+  }, []);
+
+  return (
+    <textarea
+      ref={textareaRef}
+      placeholder='Descripción'
+      id='description'
+      style={{ resize: 'none', width: '100%' }}
+    />
   );
 }

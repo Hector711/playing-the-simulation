@@ -50,6 +50,7 @@ function App() {
                 <Route path='/calendar' element={<CalendarPage />} />
                 <Route path='/archives' element={<ArchivesPage />} />
                 <Route path='/community' element={<CommunityPage />} />
+                <Route path='*' element={<h1>NOT FOUND</h1>} />
               </Route>
             </Route>
           </Routes>

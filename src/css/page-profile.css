@@ -35,8 +35,29 @@ header.profile-page {
     height: 150px;
     margin-block: 1rem;
   }
+  button#add {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgb(74, 135, 131);
+    svg.icons {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  button#follow {
+    border: 1px solid var(--white-0);
+  }
 }
 
+a#cv {
+  display: flex;
+  width: max-content;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--border-m);
+  background-color: var(--white-0);
+  color: var(--black-1);
+}
 
 section.profile-page {
   background-color: var(--blue-1);

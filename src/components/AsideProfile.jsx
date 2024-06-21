@@ -20,8 +20,9 @@ export default function AsideProfile() {
         </NavLink>
         <hr />
         <div id='profile-info'>
-          <h5>Full Stack Web Developer</h5>
+          <h6>Full Stack Web Developer</h6>
           <p>Nivel 4: Funcionario</p>
+          <p>400 pts</p>
         </div>
 
         <NavLink id='goals-link' to='/planning'>

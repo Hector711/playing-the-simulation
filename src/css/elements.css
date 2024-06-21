@@ -35,19 +35,17 @@ h2.profile {
   text-transform: uppercase;
 }
 
-h5 {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-
 /* TITULOS DE POST Y CURSOS */
 h4 {
   font-size: 1.2rem;
   font-weight: 800;
 }
-
 h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+h6{
+  font-weight: 600;
 }
 
 p {
@@ -63,14 +61,14 @@ ul {
   list-style: none;
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: inherit;
 }
 
 a:hover {
   color: var(--white-1);
-}
+} */
 
 button {
   border-radius: var(--border-m);
@@ -82,9 +80,6 @@ button {
   justify-content: center;
   text-wrap: nowrap;
 }
-button.submit:hover{
-  box-shadow: 3px 2px 5px 1px var(--black-0);
-}
 
 
 hr {
@@ -94,4 +89,7 @@ hr {
 button.submit {
   background-color: var(--white-1);
   color: var(--black-0);
+}
+button.submit:hover{
+  box-shadow: 3px 2px 5px 1px var(--black-0);
 }

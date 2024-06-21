@@ -9,57 +9,28 @@ div#new-post {
   padding: 10px;
   background-color: var(--blue-1);
   border-radius: var(--border-m);
-  /* overflow: hidden; */
   button#open {
-    background-color: var(--black-0);
-    padding: 10px;
+    background-color: var(--black-1);
     border-radius: var(--border-s);
     opacity: 1;
+    color: var(--white-2);
+    h2 {
+      padding: 0.6rem 0.7rem;
+    }
   }
   div#header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     h2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      padding: 0.6rem 0.7rem;
     }
     button#close {
       padding: 10px;
       border-radius: var(--border-s);
-      align-self: flex-end;
       width: max-content;
     }
   }
-}
-
-div#new-post {
-  transition: height 0.5s ease-in-out;
-}
-div#header,
-button#open {
-  transition: opacity 0.8s ease-in-out;
-}
-/* COLLAPSADO */
-div#new-post.collapsed {
-  height: 65px;
-}
-button#open.collapsed {
-  opacity: 1;
-}
-div#header.collapsed {
-  opacity: 0;
-}
-
-/* EXPANDIDO */
-div#new-post.expanded {
-  height: max-content;
-}
-button#open.expanded {
-  opacity: 0;
-}
-div#header.expanded {
-  opacity: 1;
 }
 
 form {
@@ -74,18 +45,30 @@ form {
   grid-template-columns: 150px 1fr 1fr;
   grid-template-rows: max-content max-content max-content;
   input {
-    padding: 10px;
+    padding: 1rem 1rem;
     border-radius: var(--border-s);
   }
   input#title {
     grid-area: title;
   }
-  input#description {
+  textarea#description {
+    border-radius: var(--border-s);
     grid-area: description;
+    text-wrap: wrap;
+    resize: none;
+    padding: 1rem 1rem;
   }
   div#options {
     grid-area: options;
     display: flex;
+    svg.icon {
+      width: 25px;
+      height: 25px;
+    }
+    svg#gif {
+      width: 30px;
+      height: 30px;
+    }
   }
   div#selects {
     grid-area: selects;
@@ -98,15 +81,8 @@ form {
       width: 100%;
     }
   }
-  button {
+  button#send {
     grid-area: send;
-  }
-  .icon {
-    width: 25px;
-    height: 25px;
-  }
-  #gif {
-    width: 30px;
-    height: 30px;
+    background-color: var(--black-1);
   }
 }

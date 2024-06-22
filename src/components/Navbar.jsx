@@ -8,7 +8,7 @@ function Navbar() {
       <div id='nav-container'>
         <div id='nav-left'>
           <NavLink to='/home'>
-            <h1>Playing The Simulation</h1>
+            <h1 className='main-title'>Playing The Simulation</h1>
           </NavLink>
           <NavLinkButton to='/classroom'>Classroom</NavLinkButton>
           <NavLinkButton to='/members'>Miembros</NavLinkButton>

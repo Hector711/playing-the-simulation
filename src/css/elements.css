@@ -6,11 +6,12 @@ body {
   margin: 0;
   min-width: 320px;
 }
-/* TITULOS PRINCIPAL */
-h1 {
+/* TITULO PRINCIPAL */
+h1.main-title {
   font-family: 'palo';
   color: white;
 }
+
 /* NAVBAR LINKS */
 h2 {
   font-size: 1.2rem;

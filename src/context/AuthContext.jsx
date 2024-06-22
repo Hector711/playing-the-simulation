@@ -38,6 +38,7 @@ export const AuthProvider = ({ children }) => {
       console.log(res);
       setUser(res.data);
       setIsAuthenticated(true);
+      Cookies.set('user', res.data.id);
     } catch (error) {
       if (Array.isArray(error.response.data)) {
         return setErrors(error.response.data);

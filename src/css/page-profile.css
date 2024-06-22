@@ -10,6 +10,9 @@ main#profile {
 }
 
 header.profile-page {
+  * {
+    /* border: 1px solid var(--white-3); */
+  }
   overflow: hidden;
   border-radius: var(--border-m);
   position: relative;
@@ -18,6 +21,14 @@ header.profile-page {
   padding-block: 70px 20px;
   background-color: var(--blue-1);
   border: 1px solid var(--white-3);
+  display: grid;
+  grid-template-areas:
+    'avatar empty'
+    'left-info right-info'
+    'left-info right-info'
+    'score score'
+    'projects projects';
+  grid-template-columns: 1fr auto;
   img#cover {
     position: absolute;
     top: 0;
@@ -29,35 +40,163 @@ header.profile-page {
     overflow: hidden;
   }
   img.avatar {
+    grid-area: avatar;
     z-index: 999;
     position: relative;
     width: 150px;
     height: 150px;
     margin-block: 1rem;
   }
-  button#add {
+  div#left-info {
+    grid-area: left-info;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: rgb(74, 135, 131);
-    svg.icons {
-      width: 25px;
-      height: 25px;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  div#score {
+    grid-area: score;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    hr{
+      order: 1;
+    }
+    div {
+      order: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    span{
+      font-weight: 700;
+      color: var(--orange-0);
+      height: 100%;
     }
   }
-  button#follow {
-    border: 1px solid var(--white-0);
+  div#right-info {
+    grid-area: right-info;
+    display: grid;
+    grid-template-areas: 
+    'cv add'
+    'video video';
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    align-items: flex-start;
+    button#add {
+      grid-area: add;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: #7299b3;
+      color: var(--black-0);
+      svg.icons {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    a, button {
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--border-m);
+      width: max-content;
+      height: max-content;
+    }
+    a#cv {
+      grid-area: cv;
+      display: flex;
+      width: max-content;
+      background-color: var(--white-0);
+      color: var(--black-1);
+    }
+    a#video {
+      grid-area: video;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      border: 2px solid var(--black-1);
+      box-shadow: 2px 4px 2px 0px black;
+      .icons{
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+  div#rrss {
+    grid-area: rrss;
+    display: flex;
+    margin-top: 0.3rem;
+    gap: 1rem;
+    .icons {
+      width: 25px;
+      height: 25px;
+      fill: var(--black-1);
+    }
+    #x{
+      width: 25px;
+      height: 25px;
+      stroke: var(--black-1);
+    }
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0.35rem;
+      border-radius: var(--border-m);
+      width: max-content;
+      height: max-content;
+      background-color: var(--white-0);
+      color: var(--black-1);
+    }
+    a#portfolio {
+      padding: 0.4rem 0.9rem;
+      font-weight: 500;
+    }
+    
+  }
+  div#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-content: center;
+    margin-block: 1rem;
+    a.project-card {
+      border: 1px solid var(--white-3);
+      padding: 1rem;
+      border-radius: var(--border-m);
+    }
+  }
+  hr {
+    border: 1px solid var(--white-3);
+    width: 100%;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  h3.section {
+    color: var(--white-2);
+  }
+  p,span {
+    font-size: 1.1rem;
+  }
+  div#projects {
+    grid-area: projects;
+  }
+  .mini-section {
+    margin-block: 1rem;
   }
 }
 
-a#cv {
-  display: flex;
-  width: max-content;
-  padding: 0.4rem 0.9rem;
-  border-radius: var(--border-m);
-  background-color: var(--white-0);
-  color: var(--black-1);
-}
 
 section.profile-page {
   background-color: var(--blue-1);
@@ -79,6 +218,4 @@ section.profile-page#posts {
   gap: var(--gap-m);
   padding-inline: 3rem;
   padding-block: 1rem;
-
 }
-

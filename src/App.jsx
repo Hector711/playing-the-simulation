@@ -44,6 +44,8 @@ function App() {
                   <Route path='/planning' element={<PlanningPage />} />
                 </Route>
                 <Route path='/profile' element={<ProfilePage />} />
+                <Route path='/profile/:id' element={<ProfilePage />} />
+                {/* <Route path='/post/:id' element={<PostPage />} /> */}
                 {/* Community Pages */}
                 <Route path='/classroom' element={<ClassroomPage />} />
                 <Route path='/members' element={<MembersPage />} />

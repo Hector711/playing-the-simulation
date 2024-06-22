@@ -5,6 +5,7 @@ article.post {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-block: var(--gap-m);
 }
 
 div.post#top {

@@ -7,8 +7,26 @@ import Location from '@/icons/Location';
 import Select from 'react-select';
 import Business from '@/icons/Business';
 import Avatar from '@/components/Avatar';
+import { useQuery } from '@tanstack/react-query';
+import { getUsers } from '@/api/usersAPI';
 
 export default function MembersPage(props) {
+  const {
+    isLoading,
+    isError,
+    error,
+    data: users,
+  } = useQuery({
+    queryKey: ['users'],
+    queryFn: getUsers,
+  });
+
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // } else if (isError) {
+  //   return <div>Error: {error.message}</div>;
+  // }
+
   const [selectedValue, setSelectedValue] = useState('speciality');
   const [toggleShow, setToggleShow] = useState(false);
   const [filter, setFilter] = useState(null);
@@ -88,81 +106,33 @@ export default function MembersPage(props) {
         <div className='filter-buttons'>
           {toggleShow ? (
             <>
-              <button value='1' onClick={handleLevelFilterChange}>
-                Nvl 1 <span className='pts'>&nbsp;&#8226;&nbsp;0 pts</span>
-              </button>
-              <button value='2' onClick={handleLevelFilterChange}>
-                Nvl 2 <span className='pts'>&nbsp;&#8226;&nbsp;5 pts</span>
-              </button>
-              <button value='3' onClick={handleLevelFilterChange}>
-                Nvl 3 <span className='pts'>&nbsp;&#8226;&nbsp;20 pts</span>
-              </button>
-              <button value='4' onClick={handleLevelFilterChange}>
-                Nvl 4 <span className='pts'>&nbsp;&#8226;&nbsp;65 pts</span>
-              </button>
-              <button value='5' onClick={handleLevelFilterChange}>
-                Nvl 5 <span className='pts'>&nbsp;&#8226;&nbsp;155 pts</span>
-              </button>
-              <button value='6' onClick={handleLevelFilterChange}>
-                Nvl 6 <span className='pts'>&nbsp;&#8226;&nbsp;515 pts</span>
-              </button>
-              <button value='7' onClick={handleLevelFilterChange}>
-                Nvl 7 <span className='pts'>&nbsp;&#8226;&nbsp;2.015 pts</span>
-              </button>
-              <button value='8' onClick={handleLevelFilterChange}>
-                Nvl 8 <span className='pts'>&nbsp;&#8226;&nbsp;8.015 pts</span>
-              </button>
-              <button value='9' onClick={handleLevelFilterChange}>
-                Nvl 9 <span className='pts'>&nbsp;&#8226;&nbsp;33.015 pts</span>
-              </button>
-              <button value='10' onClick={handleLevelFilterChange}>
-                Final Boss
-                <span className='pts'>&nbsp;&#8226;&nbsp;1M pts</span>
-              </button>
+              {LevelFilterButtons.map(({ value, level, points }, index) => (
+                <FilterButton
+                  key={index}
+                  value={value}
+                  onClick={handleLevelFilterChange}
+                  level={level}
+                  points={points}
+                />
+              ))}
             </>
           ) : (
             <>
-              <button value='Admin' onClick={handleSpecialityFilterChange}>
-                Administradores
-              </button>
-              <button value='Ventas' onClick={handleSpecialityFilterChange}>
-                Ventas
-              </button>
-              <button value='SEO' onClick={handleSpecialityFilterChange}>
-                SEO
-              </button>
-              <button
-                value='Arquitectura'
-                onClick={handleSpecialityFilterChange}
-              >
-                Arquitectura
-              </button>
-              <button value='Diseño' onClick={handleSpecialityFilterChange}>
-                Diseño
-              </button>
-              <button
-                value='Programación'
-                onClick={handleSpecialityFilterChange}
-              >
-                Programación
-              </button>
-              <button value='Marketing' onClick={handleSpecialityFilterChange}>
-                Marketing
-              </button>
-              <button value='IA' onClick={handleSpecialityFilterChange}>
-                IA
-              </button>
-              <button value='Fiscalidad' onClick={handleSpecialityFilterChange}>
-                Fiscalidad
-              </button>
+              {SpecialityFilterButtons.map(({ value, speciality }, index) => (
+                <FilterButton
+                  key={index}
+                  value={value}
+                  onClick={handleSpecialityFilterChange}
+                  speciality={speciality}
+                />
+              ))}
             </>
           )}
         </div>
       </ModelAsideLeft>
 
       <ModelMainPro id='members' title='Miembros de la comunidad'>
-        {/* <h3 className='section-page'>Todos los miembros</h3> */}
-        <section id='members-grid'>
+        {/* <section id='members-grid'>
           {allMembers &&
             members
               .sort((a, b) => a.fullName.localeCompare(b.fullName))
@@ -177,7 +147,14 @@ export default function MembersPage(props) {
               .filter(contact => contact.level === filter)
               .sort((a, b) => a.fullName.localeCompare(b.fullName))
               .map(contact => <MemberCard key={contact.id} {...contact} />)}
-        </section>
+        </section> */}
+        {/* <section id='members-grid'>
+          {users
+            .sort((a, b) => a.fullName.localeCompare(b.fullName))
+            .map(contact => (
+              <MemberCard key={contact.id} {...contact} />
+            ))}
+        </section> */}
       </ModelMainPro>
     </>
   );
@@ -198,7 +175,6 @@ function MemberCard({
 }) {
   return (
     <article kay={id} className='memberCard'>
-
       <header className='memberCard'>
         <NavLink to={url}>
           <Avatar src={img} business={business.length > 0} />
@@ -212,7 +188,6 @@ function MemberCard({
           <b>Nivel {level}</b>
           <span> &#8226; {points} puntos</span>
         </NavLink>
-        
       </header>
 
       <hr />
@@ -247,504 +222,42 @@ function MemberCard({
   );
 }
 
-const members = [
-  {
-    id: 1,
-    fullName: 'Alejandro Sánchez',
-    job: 'Arquitecto de Nube',
-    area: 'Arquitectura',
-    about: 'Experto en el diseño de soluciones escalables en la nube.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Madrid, España',
-    username: 'alejandro_s',
-    url: '/perfil/alejandro_s',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 2,
-    fullName: 'María López',
-    job: 'Desarrolladora Senior',
-    area: 'Programación',
-    about: 'Apasionada por la creación de software innovador.',
-    img: 'https://via.placeholder.com/150',
-    business: ['ByteCrafters'],
-    location: 'Barcelona, España',
-    username: 'maria_l',
-    url: '/perfil/maria_l',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 3,
-    fullName: 'Carlos García',
-    job: 'Especialista en SEO',
-    area: 'SEO',
-    about:
-      'Optimización de motores de búsqueda para obtener mejores resultados.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Valencia, España',
-    username: 'carlos_g',
-    url: '/perfil/carlos_g',
-    points: 2015,
-    level: 7,
-  },
-  {
-    id: 4,
-    fullName: 'Laura Fernández',
-    job: 'Diseñadora UI/UX',
-    area: 'Diseño',
-    about:
-      'Creación de interfaces intuitivas y atractivas para aplicaciones y sitios web.',
-    img: 'https://via.placeholder.com/150',
-    business: ['DesignLab'],
-    location: 'Sevilla, España',
-    username: 'laura_f',
-    url: '/perfil/laura_f',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 5,
-    fullName: 'Javier Rodríguez',
-    job: 'Consultor de Marketing Digital',
-    area: 'Marketing',
-    about:
-      'Estrategias efectivas para mejorar la presencia online y generar leads cualificados.',
-    img: 'https://via.placeholder.com/150',
-    business: ['DigitalStrategia', 'MarketingGurus'],
-    location: 'Madrid, España',
-    username: 'javier_r',
-    url: '/perfil/javier_r',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 6,
-    fullName: 'Ana Gutiérrez',
-    job: 'Desarrolladora Frontend',
-    area: 'Programación',
-    about:
-      'Especializada en la creación de interfaces de usuario dinámicas y responsivas.',
-    img: 'https://via.placeholder.com/150',
-    business: ['FrontEndGenius'],
-    location: 'Barcelona, España',
-    username: 'ana_g',
-    url: '/perfil/ana_g',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 7,
-    fullName: 'Pablo Martín',
-    job: 'Especialista en IA',
-    area: 'IA',
-    about:
-      'Desarrollo de algoritmos avanzados para aplicaciones de inteligencia artificial.',
-    img: 'https://via.placeholder.com/150',
-    business: ['AI Solutions', 'TechBrains'],
-    location: 'Valencia, España',
-    username: 'pablo_m',
-    url: '/perfil/pablo_m',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 8,
-    fullName: 'Lucía Navarro',
-    job: 'Consultora Financiera',
-    area: 'Fiscalidad',
-    about:
-      'Asesoramiento financiero para optimizar la gestión de recursos y cumplir con las normativas fiscales.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Madrid, España',
-    username: 'lucia_n',
-    url: '/perfil/lucia_n',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 9,
-    fullName: 'Marcos Ruiz',
-    job: 'Seller ',
-    area: 'Ventas',
-    about:
-      'Fundador y CEO de varias startups exitosas en el sector tecnológico.',
-    img: 'https://via.placeholder.com/150',
-    business: ['TechVentures'],
-    location: 'Barcelona, España',
-    username: 'marcos_r',
-    url: '/perfil/marcos_r',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 10,
-    fullName: 'Sara Díaz',
-    job: 'Analista de Datos',
-    area: 'Analítica',
-    about:
-      'Extracción de información relevante para la toma de decisiones estratégicas.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Valencia, España',
-    username: 'sara_d',
-    url: '/perfil/sara_d',
-    points: 2015,
-    level: 7,
-  },
-  {
-    id: 11,
-    fullName: 'Diego Torres',
-    job: 'Consultor SEO',
-    area: 'SEO',
-    about:
-      'Especialista en optimización de motores de búsqueda para mejorar el posicionamiento web.',
-    img: 'https://via.placeholder.com/150',
-    business: ['SEO Masters'],
-    location: 'Madrid, España',
-    username: 'diego_t',
-    url: '/perfil/diego_t',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 12,
-    fullName: 'Isabel González',
-    job: 'Diseñadora Gráfica',
-    area: 'Diseño',
-    about:
-      'Creación de identidades visuales únicas que transmiten la esencia de las marcas.',
-    img: 'https://via.placeholder.com/150',
-    business: ['DesignLab', 'ArtWorks', 'CreativeVisions'],
-    location: 'Barcelona, España',
-    username: 'isabel_g',
-    url: '/perfil/isabel_g',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 13,
-    fullName: 'Rafael Jiménez',
-    job: 'Desarrollador Backend',
-    area: 'Programación',
-    about:
-      'Experto en el desarrollo de lógica y funcionalidades de aplicaciones desde el servidor.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Valencia, España',
-    username: 'rafael_j',
-    url: '/perfil/rafael_j',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 14,
-    fullName: 'Cristina Ramírez',
-    job: 'Especialista en Marketing Digital',
-    area: 'Marketing',
-    about:
-      'Planificación estratégica y ejecución de campañas efectivas de marketing digital.',
-    img: 'https://via.placeholder.com/150',
-    business: ['DigitalBoost'],
-    location: 'Madrid, España',
-    username: 'cristina_r',
-    url: '/perfil/cristina_r',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 15,
-    fullName: 'Mario Vargas',
-    job: 'Analista de Datos',
-    area: 'Analítica',
-    about:
-      'Análisis profundo de datos para descubrir insights y patrones clave.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Barcelona, España',
-    username: 'mario_v',
-    url: '/perfil/mario_v',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 16,
-    fullName: 'Eva Martínez',
-    job: 'Consultora Financiera',
-    area: 'Fiscalidad',
-    about:
-      'Asesoramiento experto en gestión financiera y optimización de recursos.',
-    img: 'https://via.placeholder.com/150',
-    business: ['FinancePro'],
-    location: 'Valencia, España',
-    username: 'eva_m',
-    url: '/perfil/eva_m',
-    points: 2015,
-    level: 7,
-  },
-  {
-    id: 17,
-    fullName: 'Hugo Sánchez',
-    job: 'Closer de ventas',
-    area: 'Ventas',
-    about:
-      'Fundador y CEO de varias startups exitosas en el ámbito tecnológico.',
-    img: 'https://via.placeholder.com/150',
-    business: ['TechVisionaries', 'InnovationHub'],
-    location: 'Madrid, España',
-    username: 'hugo_s',
-    url: '/perfil/hugo_s',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 18,
-    fullName: 'Natalia López',
-    job: 'Especialista en SEO',
-    area: 'SEO',
-    about:
-      'Optimización de motores de búsqueda para mejorar el posicionamiento orgánico.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Barcelona, España',
-    username: 'natalia_l',
-    url: '/perfil/natalia_l',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 19,
-    fullName: 'Roberto Flores',
-    job: 'Diseñador UI/UX',
-    area: 'Diseño',
-    about:
-      'Creación de interfaces atractivas y funcionales para diversas plataformas digitales.',
-    img: 'https://via.placeholder.com/150',
-    business: ['UI DesignLab', 'CreativePixels', 'Innovative Designs'],
-    location: 'Valencia, España',
-    username: 'roberto_f',
-    url: '/perfil/roberto_f',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 20,
-    fullName: 'Luisa Martínez',
-    job: 'Analista de Datos',
-    area: 'Analítica',
-    about: 'Extracción y análisis de datos para obtener insights estratégicos.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Madrid, España',
-    username: 'luisa_m',
-    url: '/perfil/luisa_m',
-    points: 2015,
-    level: 7,
-  },
-  {
-    id: 21,
-    fullName: 'Diego Martínez',
-    job: 'Desarrollador Full Stack',
-    area: 'Programación',
-    about:
-      'Especializado en el desarrollo tanto del frontend como del backend para aplicaciones web.',
-    img: 'https://via.placeholder.com/150',
-    business: ['FullStack Solutions'],
-    location: 'Barcelona, España',
-    username: 'diego_m',
-    url: '/perfil/diego_m',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 22,
-    fullName: 'Elena Pérez',
-    job: 'Estratega de Contenidos',
-    area: 'Marketing',
-    about:
-      'Planificación y ejecución de estrategias de contenidos para mejorar la visibilidad y engagement.',
-    img: 'https://via.placeholder.com/150',
-    business: ['ContentMasters'],
-    location: 'Madrid, España',
-    username: 'elena_p',
-    url: '/perfil/elena_p',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 23,
-    fullName: 'Pedro Ruiz',
-    job: 'Consultor Financiero',
-    area: 'Fiscalidad',
-    about:
-      'Asesoramiento experto en gestión financiera y estrategias fiscales.',
-    img: 'https://via.placeholder.com/150',
-    business: ['FinancialConsult'],
-    location: 'Valencia, España',
-    username: 'pedro_r',
-    url: '/perfil/pedro_r',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 24,
-    fullName: 'Laura Navarro',
-    job: 'Diseñadora UI/UX',
-    area: 'Diseño',
-    about:
-      'Diseño de interfaces intuitivas y atractivas para aplicaciones móviles y web.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Barcelona, España',
-    username: 'laura_n',
-    url: '/perfil/laura_n',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 25,
-    fullName: 'Héctor Guerra',
-    job: 'Desarrollador Frontend',
-    area: 'Programación',
-    about:
-      'Análisis estadístico y modelado de datos para la generación de informes estratégicos.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Madrid, España',
-    username: 'hector-guerra',
-    url: '/perfil/antonio_g',
-    points: 2015,
-    level: 7,
-  },
-  {
-    id: 26,
-    fullName: 'Sofía Martínez',
-    job: 'Consultora SEO',
-    area: 'SEO',
-    about:
-      'Optimización de motores de búsqueda para mejorar el posicionamiento orgánico de sitios web.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Barcelona, España',
-    username: 'sofia_m',
-    url: '/perfil/sofia_m',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 27,
-    fullName: 'Miguel Ángel Sánchez',
-    job: 'Desarrollador Backend',
-    area: 'Programación',
-    about:
-      'Especializado en el desarrollo de la lógica y funcionalidades del backend para aplicaciones web.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Madrid, España',
-    username: 'miguel_s',
-    url: '/perfil/miguel_s',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 28,
-    fullName: 'Marina Torres',
-    job: 'Diseñadora Gráfica',
-    area: 'Diseño',
-    about:
-      'Creación de identidades visuales impactantes y adaptadas a las necesidades del cliente.',
-    img: 'https://via.placeholder.com/150',
-    business: ['GraphicVisions'],
-    location: 'Barcelona, España',
-    username: 'marina_t',
-    url: '/perfil/marina_t',
-    points: 155,
-    level: 5,
-  },
-  {
-    id: 29,
-    fullName: 'Héctor Jiménez',
-    job: 'Consultor de Marketing Digital',
-    area: 'Marketing',
-    about:
-      'Estrategias digitales para aumentar la visibilidad y las conversiones de negocios online.',
-    img: 'https://via.placeholder.com/150',
-    business: ['DigitalMarketing Experts'],
-    location: 'Madrid, España',
-    username: 'hector_j',
-    url: '/perfil/hector_j',
-    points: 65,
-    level: 4,
-  },
-  {
-    id: 30,
-    fullName: 'Carmen García',
-    job: 'Analista de Datos',
-    area: 'Analítica',
-    about:
-      'Análisis de datos para generar informes estratégicos y mejorar la toma de decisiones.',
-    img: 'https://via.placeholder.com/150',
-    business: ['Data Insights'],
-    location: 'Valencia, España',
-    username: 'carmen_g',
-    url: '/perfil/carmen_g',
-    points: 2015,
-    level: 7,
-  },
+function FilterButton({ value, onClick, speciality, level, points }) {
+  return (
+    <button value={value} onClick={onClick}>
+      {level ? (
+        <>
+          {level}
+          <span className='pts'>&nbsp;&#8226;&nbsp; {points} </span>{' '}
+        </>
+      ) : (
+        <>{speciality}</>
+      )}
+    </button>
+  );
+}
 
-  {
-    id: 34,
-    fullName: 'Carlos Adams',
-    job: 'Diseñador',
-    area: 'Admin',
-    about:
-      'Diseño de interfaces centradas en la experiencia del usuario y la estética.',
-    img: 'https://via.placeholder.com/150',
-    business: [
-      'Racks',
-      'Racks Labs',
-      'Ergonomics',
-      'Playing The Simulation',
-      'DISRUP3',
-    ],
-    location: 'Andorra, Andorra',
-    username: 'carlos-adams',
-    url: '/perfil/andres_m',
-    points: 515,
-    level: 10,
-  },
-  {
-    id: 35,
-    fullName: 'Juan Alberto',
-    job: 'Diseñador UX/UI',
-    area: 'Admin',
-    about:
-      'Diseño de interfaces centradas en la experiencia del usuario y la estética.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Lima, Perú',
-    username: 'andres_m',
-    url: '/perfil/andres_m',
-    points: 515,
-    level: 6,
-  },
-  {
-    id: 36,
-    fullName: 'Felipe Gonzalez',
-    job: 'Diseñador UX/UI',
-    area: 'Admin',
-    about:
-      'Diseño de interfaces centradas en la experiencia del usuario y la estética.',
-    img: 'https://via.placeholder.com/150',
-    business: [],
-    location: 'Lima, Perú',
-    username: 'andres_m',
-    url: '/perfil/andres_m',
-    points: 515,
-    level: 6,
-  },
+const SpecialityFilterButtons = [
+  { value: 'admin', speciality: 'Administradores' },
+  { value: 'ventas', speciality: 'Ventas' },
+  { value: 'seo', speciality: 'SEO' },
+  { value: 'arquitectura', speciality: 'Arquitectura' },
+  { value: 'diseño', speciality: 'Diseño' },
+  { value: 'programación', speciality: 'Programación' },
+  { value: 'marketing', speciality: 'Marketing' },
+  { value: 'ia', speciality: 'IA' },
+  { value: 'fiscalidad', speciality: 'Fiscalidad' },
+];
+
+const LevelFilterButtons = [
+  { value: '1', level: 'Nvl 1', points: '0 pts' },
+  { value: '2', level: 'Nvl 2', points: '5 pts' },
+  { value: '3', level: 'Nvl 3', points: '20 pts' },
+  { value: '4', level: 'Nvl 4', points: '65 pts' },
+  { value: '5', level: 'Nvl 5', points: '155 pts' },
+  { value: '6', level: 'Nvl 6', points: '515 pts' },
+  { value: '7', level: 'Nvl 7', points: '2.015 pts' },
+  { value: '8', level: 'Nvl 8', points: '8.015 pts' },
+  { value: '9', level: 'Nvl 9', points: '33.015 pts' },
+  { value: '10', level: 'Final Boss', points: '1M pts' },
 ];

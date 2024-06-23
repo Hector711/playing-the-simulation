@@ -1,0 +1,569 @@
+{
+  "classes": [
+    {
+      "title": "Introducción a Playing the Simulation",
+      "description": "Pásate por todos los canales y aporta algo, así escalarás en la comunidad (Obteniendo",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/bf71eb2e22364cfdbd1ee43897eeb6e2fefe68f833b44bb686a865ce61e53aef",
+      "level": "Introducción"
+    },
+    {
+      "title": "Directos",
+      "description": "Aquí re-subiremos todos los directos para que podáis verlos si no pudisteis asistir.",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/a31ce920f94b4f419940a8320178caf2a2efafbf424e464c847214e24133d79e",
+      "level": "Introducción"
+    },
+    {
+      "title": "Sistema de Fianzas",
+      "description": "Pruébalo un mes y te garantizo que tu vida jamás volverá a ser igual.",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/de0e0c26c1dc47b1881bbcaaadfce3c6b7a5faf26e2a4b359cd1c8cf17f33273",
+      "level": "Introducción"
+    },
+    {
+      "title": "Community post LOOMs",
+      "description": "",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/e4f1907c8df5439abbcacf08f1d08c0b1ba0ec09cf5646a683ceca1b772b24ce",
+      "level": "Introducción"
+    },
+    {
+      "title": "Bonus Marronero 50€",
+      "description": "Genera 50€ mensuales",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/5abfe61d8a5948d19117015e21c45dbbdd9e9970f03845bfa3918f70bd7f3f99",
+      "level": "Bonus"
+    },
+    {
+      "title": "Presentacion Escrita",
+      "description": "Presentate ante la comunidad escribiendo un post hablando sobre ti",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/5abfe61d8a5948d19117015e21c45dbbdd9e9970f03845bfa3918f70bd7f3f99",
+      "level": "Bonus"
+    },
+    {
+      "title": "Bonus Presentacion en Video",
+      "description": "Crea un video hablando a camara hablando sobre ti",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/5abfe61d8a5948d19117015e21c45dbbdd9e9970f03845bfa3918f70bd7f3f99",
+      "level": "Bonus"
+    },
+    {
+      "title": "Bonus Minimal CV",
+      "description": "Crea un video hablando a camara hablando sobre ti",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/5abfe61d8a5948d19117015e21c45dbbdd9e9970f03845bfa3918f70bd7f3f99",
+      "level": "Bonus"
+    },
+    {
+      "title": "Bonus Reto Galletas",
+      "description": "Realiza el mitico reto de la venta de galletas",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/5abfe61d8a5948d19117015e21c45dbbdd9e9970f03845bfa3918f70bd7f3f99",
+      "level": "Bonus"
+    },
+    {
+      "title": "Fundamentos | de 0 - 10k",
+      "description": "Se desbloquean semanalmente.",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/ae12604bddc940d9842f742a636107db95079e35794c4175bee6a1db16b50104",
+      "level": "De 0 a 10k"
+    },
+    {
+      "title": "Proyecto 1",
+      "description": "Descripción del proyecto",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/ae12604bddc940d9842f742a636107db95079e35794c4175bee6a1db16b50104",
+      "level": "Ideas / Retos"
+    },
+    {
+      "title": "Proyecto 2",
+      "description": "Descripción del proyecto",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/ae12604bddc940d9842f742a636107db95079e35794c4175bee6a1db16b50104",
+      "level": "Ideas / Retos"
+    },
+    {
+      "title": "Proyecto 3",
+      "description": "Descripción del proyecto",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/ae12604bddc940d9842f742a636107db95079e35794c4175bee6a1db16b50104",
+      "level": "Ideas / Retos"
+    },
+    {
+      "title": "Nivel 2: Manual del Viajero",
+      "description": "Bienvenido Funcionario, este es tu regalo desbloqueable, disfrútalo! (Próximamente)",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/00edfe38ecb947ab9c359842aa5a179d65ed1c332b764941986147e86967ec6c",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 3: Herramientas para dejar de ser mileurista",
+      "description": "Bienvenido Mileurista, este es tu regalo desbloqueable, disfrútalo! (Próximamente)",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/0a7b518f8217460bb82952f5139858092da71d1d1e9745c78bf5a7141e6e9deb",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 4: Técnicas de Ahorro básicas para que las crypto te la pelen",
+      "description": "Bienvenido CryptoBro, este es tu regalo desbloqueable, disfrútalo! (Próximamente)",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/42e20ac0e8d24123b957df624d44388e70d71d69dec042c5bf1dc9a268f28447",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 5: Instagram para vender más",
+      "description": "Bienvenido CEO de Bio de Instagram, este es tu regalo desbloqueable, disfrútalo!",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/876d21a49bb847e682307b4267299296c2252345c26c444e9a50aa0812b7a074",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 6: Enciclopedia 0.19%",
+      "description": "Este premio está solo reservado a las personas que han aportado mucho a la",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/7b01789c10c3460abf5fa1152c8bfb325629a3ebe6e942b3b9c1428fdbf01b21",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 7: Técnicas de Elusión Fiscal",
+      "description": "Bienvenido Emprendedor, este es tu regalo desbloqueable, disfrútalo! (Próximamente)",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/6211290555eb4fbd968e6e1cf46b648120492bc4c1034066a0a5f529563f9f3d",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 8: Global project",
+      "description": "Bienvenido Dueño de Holding, este es tu regalo desbloqueable, disfrútalo!",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/da127db347e64ea9afe78871636bff028d33e119af06403e92b701c8876f83e4",
+      "level": "Desbloqueables"
+    },
+    {
+      "title": "Nivel 9: Secret",
+      "description": "Solo los elegidos podrán llegar hasta aquí, si eres uno de ellos; nunca podrás contar lo que",
+      "img": "https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/f0ba9541b5364680b208c05144e26561e0e9ab01a5814e8093b0882ab49e4d09",
+      "level": "Desbloqueables"
+    }
+  ],
+  "posts": [
+    
+  ],
+  "users": [
+    {
+      "id": 12345,
+      "username": "hector-guerra",
+      "fullName": "Héctor Guerra",
+      "points": 155,
+      "level": 5,
+      "job": "Full Stack Web Developer",
+      "speciality": "Programación",
+      "about": "Experto en el diseño de soluciones escalables en la nube.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/john_doe_cv",
+      "videoUrl": "https://example.com/john_doe_video",
+      "webPageUrl": "https://example.com/john_doe_portfolio",
+      "location": "Madrid, España",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/john_doe"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/john_doe"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/john_doe"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/john_doe"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/john_doe"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/project1",
+          "name": "Project 1",
+          "description": "This is project 1"
+        },
+        {
+          "projectUrl": "https://example.com/project1",
+          "name": "Project 1",
+          "description": "This is project 1"
+        },
+        {
+          "projectUrl": "https://example.com/project2",
+          "name": "Project 2",
+          "description": "This is project 2"
+        },
+        {
+          "projectUrl": "https://example.com/project3",
+          "name": "Project 3",
+          "description": "This is project 3"
+        },
+        {
+          "projectUrl": "https://example.com/project4",
+          "name": "Project 4",
+          "description": "This is project 4"
+        },
+        {
+          "projectUrl": "https://example.com/project5",
+          "name": "Project 5",
+          "description": "This is project 5"
+        }
+      ],
+      "posts": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 54321,
+      "username": "carlos-adams",
+      "fullName": "Carlos Adams",
+      "points": 200,
+      "level": 6,
+      "admin": true,
+      "job": "Frontend Developer",
+      "speciality": "Diseño",
+      "about": "Passionate about creating beautiful and user-friendly interfaces.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/maria_sanchez_cv",
+      "videoUrl": "https://example.com/maria_sanchez_video",
+      "webPageUrl": "https://example.com/maria_sanchez_portfolio",
+      "location": "Barcelona, Spain",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/maria_sanchez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/maria_sanchez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/maria_sanchez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/maria_sanchez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/maria_sanchez"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/project1",
+          "name": "Project 1",
+          "description": "This is project 1"
+        },
+        {
+          "projectUrl": "https://example.com/project1",
+          "name": "Project 1",
+          "description": "This is project 1"
+        },
+        {
+          "projectUrl": "https://example.com/project2",
+          "name": "Project 2",
+          "description": "This is project 2"
+        },
+        {
+          "projectUrl": "https://example.com/project3",
+          "name": "Project 3",
+          "description": "This is project 3"
+        },
+        {
+          "projectUrl": "https://example.com/project4",
+          "name": "Project 4",
+          "description": "This is project 4"
+        },
+        {
+          "projectUrl": "https://example.com/project5",
+          "name": "Project 5",
+          "description": "This is project 5"
+        }
+      ],
+      "posts": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 1,
+      "username": "laura-fernandez",
+      "fullName": "Laura Fernández",
+      "points": 20,
+      "level": 3,
+      "job": "Especialista en SEO",
+      "speciality": "SEO",
+      "about": "Apasionada por la optimización de motores de búsqueda.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/laura_fernandez_cv",
+      "videoUrl": "https://example.com/laura_fernandez_video",
+      "webPageUrl": "https://example.com/laura_fernandez_portfolio",
+      "location": "Barcelona, España",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/laura_fernandez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/laura_fernandez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/laura_fernandez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/laura_fernandez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/laura_fernandez"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/laura_project1",
+          "name": "Proyecto SEO 1",
+          "description": "Este es el proyecto 1 de SEO"
+        },
+        {
+          "projectUrl": "https://example.com/laura_project2",
+          "name": "Proyecto SEO 2",
+          "description": "Este es el proyecto 2 de SEO"
+        }
+      ],
+      "posts": [
+        6,
+        7,
+        8
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 2,
+      "username": "ana-jimenez",
+      "fullName": "Ana Jiménez",
+      "points": 515,
+      "level": 6,
+      "job": "Diseñadora UX/UI",
+      "speciality": "Diseño",
+      "about": "Especializada en interfaces de usuario intuitivas y atractivas.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/ana_jimenez_cv",
+      "videoUrl": "https://example.com/ana_jimenez_video",
+      "webPageUrl": "https://example.com/ana_jimenez_portfolio",
+      "location": "Madrid, España",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/ana_jimenez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/ana_jimenez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/ana_jimenez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/ana_jimenez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/ana_jimenez"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/ana_project1",
+          "name": "Proyecto de Diseño 1",
+          "description": "Este es el proyecto 1 de diseño"
+        },
+        {
+          "projectUrl": "https://example.com/ana_project2",
+          "name": "Proyecto de Diseño 2",
+          "description": "Este es el proyecto 2 de diseño"
+        }
+      ],
+      "posts": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 3,
+      "username": "carlos-ramirez",
+      "fullName": "Carlos Ramírez",
+      "points": 8015,
+      "level": 8,
+      "job": "Especialista en Marketing Digital",
+      "speciality": "Marketing",
+      "about": "Experto en estrategias de marketing digital y redes sociales.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/carlos_ramirez_cv",
+      "videoUrl": "https://example.com/carlos_ramirez_video",
+      "webPageUrl": "https://example.com/carlos_ramirez_portfolio",
+      "location": "México DF, México",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/carlos_ramirez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/carlos_ramirez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/carlos_ramirez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/carlos_ramirez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/carlos_ramirez"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/carlos_project1",
+          "name": "Campaña de Marketing 1",
+          "description": "Esta es la campaña 1 de marketing"
+        },
+        {
+          "projectUrl": "https://example.com/carlos_project2",
+          "name": "Campaña de Marketing 2",
+          "description": "Esta es la campaña 2 de marketing"
+        }
+      ],
+      "posts": [
+        13,
+        14
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 4,
+      "username": "maria-gomez",
+      "fullName": "María Gómez",
+      "points": 0,
+      "level": 1,
+      "job": "Administradora de Sistemas",
+      "speciality": "Administradores",
+      "about": "Gestión eficiente de sistemas y redes empresariales.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/maria_gomez_cv",
+      "videoUrl": "https://example.com/maria_gomez_video",
+      "webPageUrl": "https://example.com/maria_gomez_portfolio",
+      "location": "Bogotá, Colombia",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/maria_gomez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/maria_gomez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/maria_gomez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/maria_gomez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/maria_gomez"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/maria_project1",
+          "name": "Gestión de Redes 1",
+          "description": "Este es el proyecto 1 de gestión de redes"
+        }
+      ],
+      "posts": [
+        15
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "javier-lopez",
+      "fullName": "Javier López",
+      "points": 65,
+      "level": 4,
+      "job": "Arquitecto de Soluciones",
+      "speciality": "Arquitectura",
+      "about": "Diseño y desarrollo de arquitecturas robustas y escalables.",
+      "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [
+        {
+          "projectUrl": "https://example.com/javier_project1",
+          "name": "Proyecto Arquitectura 1",
+          "description": "Este es el proyecto 1 de arquitectura"
+        },
+        {
+          "projectUrl": "https://example.com/javier_project2",
+          "name": "Proyecto Arquitectura 2",
+          "description": "Este es el proyecto 2 de arquitectura"
+        }
+      ],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    }
+    
+  ],
+  "events": [
+
+  ]
+}

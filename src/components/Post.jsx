@@ -17,8 +17,13 @@ export default function Post({
   labels,
   type,
   numLikes,
-  numComments
+  numComments,
+  deleteById,
+  save,
+  post
 }) {
+  
+
   return (
     <article className='post'>
       <div className='post' id='top'>
@@ -50,8 +55,17 @@ export default function Post({
             <span>Hace 2 h</span>
           </NavLink>
         </div>
-        <button id='save'>
+        <button
+          id='save'
+          onClick={() => save(post)}
+        >
           <IconSave className='post-icons' />
+        </button>
+        <button
+          id='save'
+          onClick={() => deleteById(post)}
+        >
+          Delete
         </button>
       </header>
 

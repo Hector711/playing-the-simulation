@@ -3,11 +3,41 @@ import Close from '@/icons/Close';
 import Poll from '@/icons/Poll';
 import Clip from '@/icons/Clip';
 import Gif from '@/icons/Gif';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { createPost } from '@/api/postsApi';
+
 
 import Select from 'react-select';
 
 export default function NewPost() {
-  const [state, setState] = useState(false);
+
+  const queryClient = useQueryClient();
+
+  const addPostMutation = useMutation({
+    // mutation se usa para hacer peticiones POST, PUT, DELETE
+    mutationFn: createPost,
+    // funcion que se ejecuta cuando la petición es exitosa
+    onSuccess: () => {
+      // hace una nueva petición a la API para actualizar los datos
+      // trae los datos nuevos los compara y actualiza la cache / interfaz
+      queryClient.invalidateQueries(['posts'])
+    }
+  })
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const post = Object.fromEntries(formData);
+    addPostMutation.mutate({
+      ...post,
+      numLikes: 0,
+      numComments: 0,
+      user: 12345,
+    });
+  }
+
+
+  const [state, setState] = useState(true);
 
   const toggleNewPostForm = () => {
     setState(prevState => !prevState);
@@ -54,8 +84,11 @@ export default function NewPost() {
               <Close />
             </button>
           </div>
-          <form>
-            <input type='text' placeholder='Tiulo' id='title' />
+          
+          {/* FORMULARIO */}
+          <form onSubmit={handleSubmit}>
+            <label htmlFor='title'>Título</label>
+            <input type='text' placeholder='Tiulo' id='title' name='title' />
             <Textarea />
             <div id='options'>
               <button>
@@ -69,13 +102,16 @@ export default function NewPost() {
               </button>
             </div>
             <div id='selects'>
+              <label htmlFor='category'>Categoría</label>
               <Select
                 options={category}
                 className='selects'
                 id='category'
                 styles={colourStyles}
                 placeholder='Categoría'
+                name='category'
               />
+              <label htmlFor='label'>Etiquetas</label>
               <Select
                 closeMenuOnSelect={false}
                 defaultValue='Etiquetas'
@@ -85,10 +121,14 @@ export default function NewPost() {
                 className='selects'
                 id='label'
                 placeholder='Etiquetas'
+                name='label'
               />
             </div>
             <button id='send'>Enviar</button>
           </form>
+
+
+
         </>
       )}
     </div>
@@ -104,20 +144,21 @@ function Textarea() {
       textarea.style.height = 'auto';
       textarea.style.height = textarea.scrollHeight + 'px';
     };
-    // Ajustar la altura inicialmente en caso de que haya un valor predeterminado
     adjustHeight();
-    // Ajustar la altura cada vez que el usuario escribe
     textarea.addEventListener('input', adjustHeight);
-    // Limpiar el event listener cuando el componente se desmonte
     return () => textarea.removeEventListener('input', adjustHeight);
   }, []);
 
   return (
+    <>
+    <label htmlFor='description'>Descripción</label>
     <textarea
       ref={textareaRef}
       placeholder='Descripción'
       id='description'
+      name='description'
       style={{ resize: 'none', width: '100%' }}
-    />
+      />
+      </>
   );
 }

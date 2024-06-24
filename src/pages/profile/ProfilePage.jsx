@@ -10,6 +10,8 @@ import WhatsApp from '@/icons/WhatsApp';
 import YouTube from '@/icons/YouTube';
 import Instagram from '@/icons/Instagram';
 import GitHub from '@/icons/GitHub';
+import Location from '@/icons/Location';
+import Game from '@/icons/Game';
 
 export default function ProfilePage() {
   const { id } = useParams();
@@ -29,8 +31,14 @@ export default function ProfilePage() {
           <div id='left-info'>
             <h1>Héctor Guerra</h1>
             <h2>Full Stack Web Developer</h2>
-            <p>Nivel 4 - 215 pts</p>
-            <p>Madrid, España.</p>
+            <div className='flex gap-[10px] mt-[10px]'>
+            <Location />
+            <p> Madrid, España.</p>
+            </div>
+            <div className='flex gap-[10px] mt-[10px]'>
+            <Game />
+            <p> Nivel 4 &#8226; 200 pts</p>
+            </div>
             <div id='rrss'>
               <a href='' target='_blank'>
                 <LinkedIn />

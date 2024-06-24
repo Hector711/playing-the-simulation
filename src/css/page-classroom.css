@@ -5,7 +5,6 @@ aside.community {
   border-radius: var(--border-m);
   display: flex;
   flex-direction: column;
-  /* gap: var(--gap-s); */
   a {
     text-transform: uppercase;
     text-align: center;
@@ -21,7 +20,6 @@ main#classroom {
     margin-block: var(--gap-l);
     h4{
       padding: 5px 5px;
-
     }
   }
 

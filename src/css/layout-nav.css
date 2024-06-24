@@ -48,10 +48,14 @@ nav#nav {
   width: var(--right-aside);
   /* border: 1px solid ; */
   h2 {
-    border: 2px solid var(--white-3);
+    /* border: 2px solid var(--white-3); */
     padding: 0.5rem 3rem;
     border-radius: var(--border-s);
     display: flex;
     justify-content: center;
+  }
+  .icons{
+    width: 30px;
+    height: 30px;
   }
 }

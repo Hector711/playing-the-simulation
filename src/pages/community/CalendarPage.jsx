@@ -6,30 +6,47 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 dayjs.locale('es');
+import { useQuery } from '@tanstack/react-query'
+import { getEvents } from '../../api/eventsApi';
 
 export default function CalendarPage() {
+  const { data: events, isLoading, isError, error } = useQuery({
+    queryKey: 'events',
+    queryFn: getEvents
+  });
   const localizer = dayjsLocalizer(dayjs);
-  const events = [
-    {
-      start: dayjs('2024-6-18T12:00:00').toDate(),
-      end: dayjs('2024-6-18T14:00:00').toDate(),
-      title: 'Streaming',
-    },
-  ];
+  const eventsObject = events ? events.map(event => {
+    return {
+      start: dayjs(event.start).toDate(),
+      end: dayjs(event.end).toDate(),
+      category: event.category,
+      title: event.title,
+    }
+  }): [];
   const components = {
     event: props => {
-      console.log(props);
-      return <div>{props.title}</div>;
+      const eventCategory = props.event.category;
+      console.log(eventCategory);
+      if (eventCategory === 'Streaming') {
+        return <div className='streaming'>{props.title}</div>;
+      } else if (eventCategory === 'Reunión Grupal') {
+        return <div className='reunion-grupal'>{props.title}</div>;
+      } else if (eventCategory === 'Castillo') {
+        return <div className='castillo'>{props.title}</div>;
+        
+      }
     },
   };
   return (
     <>
       <ModelAsideLeft id='calendar' title='Eventos' className='community'>
+      <div className='filter-buttons'>
         <button>Streamings</button>
         <button>Reuniones Grupales</button>
         <button>Castillo</button>
         <button>Racks Labs</button>
         <button>Otros</button>
+        </div>
       </ModelAsideLeft>
       <ModelMainPro id='calendar'>
         {/* <h2>Calendario</h2>
@@ -37,7 +54,7 @@ export default function CalendarPage() {
         <Calendar
           // La forma es en la que nosotros vamos a poder convertir las fechas a un formato que el calendario pueda entender
           localizer={localizer}
-          events={events}
+          events={eventsObject && eventsObject}
           className='calendar'
           // views={['month', 'week', 'day']}
           // defaultView={'month'}

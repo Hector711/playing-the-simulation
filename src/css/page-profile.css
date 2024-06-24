@@ -51,7 +51,41 @@ header.profile-page {
     grid-area: left-info;
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    /* background-color: red; */
+    svg.icons{
+      width: 25px;
+      height: 25px;
+    }
+    div#rrss {
+      display: flex;
+      margin-top: auto;
+      gap: 1rem;
+      .icons {
+        width: 25px;
+        height: 25px;
+        fill: var(--black-1);
+      }
+      #x{
+        width: 25px;
+        height: 25px;
+        stroke: var(--black-1);
+      }
+      a {
+        display: flex;
+        align-items: center;
+        padding: 0.35rem;
+        border-radius: var(--border-m);
+        width: max-content;
+        height: max-content;
+        background-color: var(--white-0);
+        color: var(--black-1);
+      }
+      a#portfolio {
+        padding: 0.4rem 0.9rem;
+        font-weight: 500;
+      }
+      
+    }
   }
   div#score {
     grid-area: score;
@@ -126,37 +160,7 @@ header.profile-page {
       }
     }
   }
-  div#rrss {
-    grid-area: rrss;
-    display: flex;
-    margin-top: 0.3rem;
-    gap: 1rem;
-    .icons {
-      width: 25px;
-      height: 25px;
-      fill: var(--black-1);
-    }
-    #x{
-      width: 25px;
-      height: 25px;
-      stroke: var(--black-1);
-    }
-    a {
-      display: flex;
-      align-items: center;
-      padding: 0.35rem;
-      border-radius: var(--border-m);
-      width: max-content;
-      height: max-content;
-      background-color: var(--white-0);
-      color: var(--black-1);
-    }
-    a#portfolio {
-      padding: 0.4rem 0.9rem;
-      font-weight: 500;
-    }
-    
-  }
+  
   div#projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -174,11 +178,12 @@ header.profile-page {
     width: 100%;
   }
   h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.9rem;
+    font-weight: 600;
+    height: 40px;
   }
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   h3 {
     font-size: 1.2rem;

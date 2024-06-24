@@ -7,6 +7,14 @@
       "runOptions": {
         "runOn": "folderOpen"
       }
+    },
+    {
+      "label": "Start Server",
+      "type": "shell",
+      "command": "pnpm run start:server",
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
     }
   ]
 }

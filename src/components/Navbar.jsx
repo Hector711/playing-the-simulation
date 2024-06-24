@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import NavLinkButton from '@/components/NavLinkButton';
+import Game from '@/icons/Game'
 
 function Navbar() {
   return (
@@ -16,7 +17,7 @@ function Navbar() {
           <NavLinkButton to='/archives'>Biblioteca</NavLinkButton>
         </div>
         <div id='nav-right'>
-          <NavLinkButton to='/community'>Comunidad</NavLinkButton>
+          <NavLinkButton to='/community'><Game /></NavLinkButton>
         </div>
       </div>
     </nav>

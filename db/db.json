@@ -135,8 +135,8 @@
       "id": 12345,
       "username": "hector-guerra",
       "fullName": "Héctor Guerra",
-      "points": 155,
       "level": 5,
+      "points": 155,
       "job": "Full Stack Web Developer",
       "speciality": "Programación",
       "about": "Experto en el diseño de soluciones escalables en la nube.",
@@ -170,34 +170,24 @@
       ],
       "business": [
         {
-          "projectUrl": "https://example.com/project1",
           "name": "Project 1",
+          "url": "https://example.com/project1",
           "description": "This is project 1"
         },
         {
-          "projectUrl": "https://example.com/project1",
           "name": "Project 1",
+          "url": "https://example.com/project1",
           "description": "This is project 1"
         },
         {
-          "projectUrl": "https://example.com/project2",
           "name": "Project 2",
+          "url": "https://example.com/project2",
           "description": "This is project 2"
         },
         {
-          "projectUrl": "https://example.com/project3",
+          "url": "https://example.com/project3",
           "name": "Project 3",
           "description": "This is project 3"
-        },
-        {
-          "projectUrl": "https://example.com/project4",
-          "name": "Project 4",
-          "description": "This is project 4"
-        },
-        {
-          "projectUrl": "https://example.com/project5",
-          "name": "Project 5",
-          "description": "This is project 5"
         }
       ],
       "posts": [
@@ -249,34 +239,19 @@
       ],
       "business": [
         {
-          "projectUrl": "https://example.com/project1",
+          "url": "https://example.com/project1",
           "name": "Project 1",
           "description": "This is project 1"
         },
         {
-          "projectUrl": "https://example.com/project1",
+          "url": "https://example.com/project1",
           "name": "Project 1",
           "description": "This is project 1"
         },
         {
-          "projectUrl": "https://example.com/project2",
+          "url": "https://example.com/project2",
           "name": "Project 2",
           "description": "This is project 2"
-        },
-        {
-          "projectUrl": "https://example.com/project3",
-          "name": "Project 3",
-          "description": "This is project 3"
-        },
-        {
-          "projectUrl": "https://example.com/project4",
-          "name": "Project 4",
-          "description": "This is project 4"
-        },
-        {
-          "projectUrl": "https://example.com/project5",
-          "name": "Project 5",
-          "description": "This is project 5"
         }
       ],
       "posts": [
@@ -325,18 +300,7 @@
           "url": "https://www.linkedin.com/in/laura_fernandez"
         }
       ],
-      "business": [
-        {
-          "projectUrl": "https://example.com/laura_project1",
-          "name": "Proyecto SEO 1",
-          "description": "Este es el proyecto 1 de SEO"
-        },
-        {
-          "projectUrl": "https://example.com/laura_project2",
-          "name": "Proyecto SEO 2",
-          "description": "Este es el proyecto 2 de SEO"
-        }
-      ],
+      "business": [],
       "posts": [
         6,
         7,
@@ -383,12 +347,12 @@
       ],
       "business": [
         {
-          "projectUrl": "https://example.com/ana_project1",
+          "url": "https://example.com/ana_project1",
           "name": "Proyecto de Diseño 1",
           "description": "Este es el proyecto 1 de diseño"
         },
         {
-          "projectUrl": "https://example.com/ana_project2",
+          "url": "https://example.com/ana_project2",
           "name": "Proyecto de Diseño 2",
           "description": "Este es el proyecto 2 de diseño"
         }
@@ -440,12 +404,12 @@
       ],
       "business": [
         {
-          "projectUrl": "https://example.com/carlos_project1",
+          "url": "https://example.com/carlos_project1",
           "name": "Campaña de Marketing 1",
           "description": "Esta es la campaña 1 de marketing"
         },
         {
-          "projectUrl": "https://example.com/carlos_project2",
+          "url": "https://example.com/carlos_project2",
           "name": "Campaña de Marketing 2",
           "description": "Esta es la campaña 2 de marketing"
         }
@@ -495,7 +459,7 @@
       ],
       "business": [
         {
-          "projectUrl": "https://example.com/maria_project1",
+          "url": "https://example.com/maria_project1",
           "name": "Gestión de Redes 1",
           "description": "Este es el proyecto 1 de gestión de redes"
         }
@@ -544,12 +508,12 @@
       ],
       "business": [
         {
-          "projectUrl": "https://example.com/javier_project1",
+          "url": "https://example.com/javier_project1",
           "name": "Proyecto Arquitectura 1",
           "description": "Este es el proyecto 1 de arquitectura"
         },
         {
-          "projectUrl": "https://example.com/javier_project2",
+          "url": "https://example.com/javier_project2",
           "name": "Proyecto Arquitectura 2",
           "description": "Este es el proyecto 2 de arquitectura"
         }
@@ -561,9 +525,28 @@
       ],
       "savedPosts": []
     }
-    
   ],
   "events": [
-
+    {
+      "title": "Streaming",
+      "category": "Streaming",
+      "start": "2024-06-18T12:00:00",
+      "end": "2024-06-18T14:00:00"
+    },
+    {
+      "title": "Reunión Grupal",
+      "category": "Reunión Grupal",
+      "start": "2024-06-23T12:00:00",
+      "end": "2024-06-23T13:00:00"
+    },
+    {
+      "title": "Reunión Grupal",
+      "category": "Reunión Grupal",
+      "start": "2024-06-30T12:00:00",
+      "end": "2024-06-30T13:00:00"
+    },
+    {
+      
+    }
   ]
 }

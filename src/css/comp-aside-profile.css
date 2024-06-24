@@ -79,6 +79,7 @@ section#profile-links {
     display: flex;
     border-radius: var(--border-m);
     background-color: var(--blue-1);
+    /* color: var(--orange-0); */
   }
 }
 footer#logout {

@@ -44,6 +44,10 @@ import '@fontsource/tenor-sans';
 // Supports weights 100-900
 import '@fontsource-variable/onest';
 
+// 'Gilroy': Supports weights 100-900
+import '@pixelpay/fonts/dist/gilroy.css';
+
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />

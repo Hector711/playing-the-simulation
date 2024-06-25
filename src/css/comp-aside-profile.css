@@ -48,7 +48,6 @@ header#profile {
     height: max-content;
     width: 100%;
     padding-block: 12px;
-
   }
 
   #goals-link {
@@ -94,7 +93,6 @@ footer#logout {
     padding: 10px;
   }
 }
-
 
 .aside-icons {
   width: 30px;

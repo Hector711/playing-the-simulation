@@ -548,5 +548,149 @@
     {
       
     }
+  ],
+  "tasks": [
+    {
+      "user": 12345,
+      "months": [
+        {"month": "ene",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "feb",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "mar",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "abr",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "may",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "jun",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {
+            "quantity": "50€",
+            "status": "completed"
+          }
+        },
+        {
+          "month": "jul",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            },
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            },
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "ago",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "sep",
+          "tasks": [
+            {
+              "title": "Presentación en video",
+              "description": "Crea un video hablando a cámara hablando sobre ti",
+              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "oct",
+          "tasks": [],
+          "bail": {}
+        },
+        {
+          "month": "nov",
+          "tasks": [],
+          "bail": {}
+        },
+        {
+          "month": "dic",
+          "tasks": [],
+          "bail": {}
+        }
+      ]
+    }
   ]
 }

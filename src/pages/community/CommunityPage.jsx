@@ -4,7 +4,6 @@ export default function CommunityPage() {
   return <div>Community</div>;
 }
 
-
 // Level 1 (0 pts) - NiNi: "Introducción a la comunidad"
 // Level 2 (5 pts) - Funcionario: "Funcionario: Manual del Viajero"
 // Level 3 (20 pts) - Mileurista: "Herramientas para dejar el mileurismo"

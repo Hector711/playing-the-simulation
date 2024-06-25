@@ -8,7 +8,6 @@ export default function X(props) {
       strokeLinecap='round'
       strokeLinejoin='round'
       viewBox='1 1 22 22'
-
       {...props}
       id='x'
     >

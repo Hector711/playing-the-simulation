@@ -1,6 +1,6 @@
 aside#members {
   span.pts {
-    color: var(--white-2)
+    color: var(--white-2);
   }
 }
 main#members {
@@ -41,7 +41,7 @@ article.memberCard {
         gap: 5px;
         margin-bottom: 5px;
         /* color: var(--white-2); */
-        h2.profile{
+        h2.profile {
           font-size: 1.3rem;
         }
       }

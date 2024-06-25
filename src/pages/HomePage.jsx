@@ -8,7 +8,7 @@ import { useAuth } from '@/context/AuthContext';
 
 export default function HomePage() {
   const { user } = useAuth();
-  console.log("Cookies User", Cookies.get("user"));
+  console.log('Cookies User', Cookies.get('user'));
   return (
     <>
       <ModelMain id='timeline'>

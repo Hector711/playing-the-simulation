@@ -53,8 +53,6 @@ main.pro.left {
   grid-column: left / span 2;
 }
 
-
-
 aside.aside-right {
   grid-area: right;
   border-radius: var(--border-m);
@@ -63,7 +61,7 @@ aside.aside-right {
     padding: 15px;
     text-align: center;
   }
-  
+
   section#news {
     display: flex;
     flex-direction: column;

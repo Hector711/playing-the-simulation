@@ -6,23 +6,30 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 dayjs.locale('es');
-import { useQuery } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query';
 import { getEvents } from '../../api/eventsApi';
 
 export default function CalendarPage() {
-  const { data: events, isLoading, isError, error } = useQuery({
+  const {
+    data: events,
+    isLoading,
+    isError,
+    error,
+  } = useQuery({
     queryKey: 'events',
-    queryFn: getEvents
+    queryFn: getEvents,
   });
   const localizer = dayjsLocalizer(dayjs);
-  const eventsObject = events ? events.map(event => {
-    return {
-      start: dayjs(event.start).toDate(),
-      end: dayjs(event.end).toDate(),
-      category: event.category,
-      title: event.title,
-    }
-  }): [];
+  const eventsObject = events
+    ? events.map(event => {
+        return {
+          start: dayjs(event.start).toDate(),
+          end: dayjs(event.end).toDate(),
+          category: event.category,
+          title: event.title,
+        };
+      })
+    : [];
   const components = {
     event: props => {
       const eventCategory = props.event.category;
@@ -33,19 +40,18 @@ export default function CalendarPage() {
         return <div className='reunion-grupal'>{props.title}</div>;
       } else if (eventCategory === 'Castillo') {
         return <div className='castillo'>{props.title}</div>;
-        
       }
     },
   };
   return (
     <>
       <ModelAsideLeft id='calendar' title='Eventos' className='community'>
-      <div className='filter-buttons'>
-        <button>Streamings</button>
-        <button>Reuniones Grupales</button>
-        <button>Castillo</button>
-        <button>Racks Labs</button>
-        <button>Otros</button>
+        <div className='filter-buttons'>
+          <button>Streamings</button>
+          <button>Reuniones Grupales</button>
+          <button>Castillo</button>
+          <button>Racks Labs</button>
+          <button>Otros</button>
         </div>
       </ModelAsideLeft>
       <ModelMainPro id='calendar'>

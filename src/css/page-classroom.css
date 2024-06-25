@@ -18,7 +18,7 @@ main#classroom {
     flex-direction: column;
     gap: var(--gap-m);
     margin-block: var(--gap-l);
-    h4{
+    h4 {
       padding: 5px 5px;
     }
   }

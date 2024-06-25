@@ -30,7 +30,6 @@ import '@/css/comp-select-filter.css';
 import '@/css/comp-news.css';
 import '@/css/comp-aside-profile.css';
 
-
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700
 import '@fontsource-variable/comfortaa';
@@ -46,7 +45,6 @@ import '@fontsource-variable/onest';
 
 // 'Gilroy': Supports weights 100-900
 import '@pixelpay/fonts/dist/gilroy.css';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

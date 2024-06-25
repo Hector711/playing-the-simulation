@@ -3,10 +3,6 @@ import ModelMainPro from '@/layouts/ModelMainPro';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import Select from 'react-select';
 
-
-
-
-
 export default function ArchivesPage(props) {
   const [selectedValue, setSelectedValue] = useState(null);
   const [filter, setFilter] = useState(null);
@@ -45,7 +41,7 @@ export default function ArchivesPage(props) {
   return (
     <>
       <ModelAsideLeft id='classroom' title='Filtro' className='community'>
-      <div className='select-filter'>
+        <div className='select-filter'>
           <Select
             {...props}
             options={selectFilter}
@@ -59,7 +55,6 @@ export default function ArchivesPage(props) {
         </div>
         <hr />
         <div className='filter-buttons'>
-          
           <button value='Ventas' onClick={handleSubjectFilterChange}>
             Ventas
           </button>
@@ -86,15 +81,7 @@ export default function ArchivesPage(props) {
           </button>
         </div>
       </ModelAsideLeft>
-      <ModelMainPro title='Publicaciones de la comunidad'>
-
-      </ModelMainPro>
+      <ModelMainPro title='Publicaciones de la comunidad'></ModelMainPro>
     </>
   );
 }
-
-
-
-
-
-

@@ -15,7 +15,6 @@ import { PopupModal } from 'react-calendly';
 import { useEffect } from 'react';
 
 export default function ProfilePage() {
-
   const [state, setState] = useState({
     addPopUp: false,
     calendlyPopUp: false,
@@ -169,8 +168,6 @@ export default function ProfilePage() {
               <p>Wins</p>
             </div>
           </div>
-          
-          
         </header>
         <hr />
         <section id='wins' className='profile-page'>
@@ -206,7 +203,7 @@ export default function ProfilePage() {
         </section>
         <hr />
         <section id='posts' className='profile-page'>
-        <h3 className='section impact'>Posts</h3>
+          <h3 className='section impact'>Posts</h3>
         </section>
       </ModelMainPro>
 

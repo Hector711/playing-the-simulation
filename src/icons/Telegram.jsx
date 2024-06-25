@@ -3,7 +3,7 @@ import * as React from 'react';
 export default function Telegram(props) {
   return (
     <svg
-    viewBox='0 0 24 24' 
+      viewBox='0 0 24 24'
       fillRule='evenodd'
       clipRule='evenodd'
       strokeLinejoin='round'

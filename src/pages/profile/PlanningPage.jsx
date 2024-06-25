@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import Edit from '@/icons/Edit.jsx';
 import Edit2 from '@/icons/Edit2.jsx';
+import { usePlanning } from '@/context/PlanningContext';
 
 export default function PlanningPage() {
+  const { monthToShow } = usePlanning();
+
+  useEffect(() => {
+    console.log(monthToShow);
+  }, [monthToShow]);
+
   return (
     <ModelMainPro title='Planificación' className='plan-page'>
       {/* CABECERA */}
@@ -30,10 +36,12 @@ export default function PlanningPage() {
       <hr />
       {/* RUTA ANUAL */}
       <section className='plan-page' id='anual-route'>
-        <LineRoute year='2024' />
+        <LineRoute />
       </section>
       {/* TAREAS MENSUALES */}
       <section id='month-grid' className='plan-page'>
+        {/*  */}
+        {}
         <div id='tasks'>
           <div id='header-tasks'>
             <h2 className='impact orange'>Tareas de Julio</h2>
@@ -47,27 +55,18 @@ export default function PlanningPage() {
               <input type='checkbox' />
               <span>
                 <h5>Terminal la UI de PTS APP</h5>
-                <dd>&#8226; Completar perfil</dd>
-                <dd>&#8226; Completar Planning</dd>
-                <dd>&#8226; Completar Mensajes</dd>
-                <dd>&#8226; Completar Notificaciones</dd>
-                <dd>&#8226; Completar Noticias</dd>
               </span>
             </dt>
             <dt>
               <input type='checkbox' />
               <span>
                 <h5>Recopilar la informacion de Skool</h5>
-                <dd>&#8226; Contactar con Javier</dd>
-                <dd>&#8226; Crear los scripts</dd>
               </span>
             </dt>
             <dt>
               <input type='checkbox' />
               <span>
                 <h5>Recibir Feedback</h5>
-                <dd>&#8226; Grabar video tutorial</dd>
-                <dd>&#8226; Enviarselo a 5 personas</dd>
               </span>
             </dt>
           </dl>
@@ -78,81 +77,94 @@ export default function PlanningPage() {
           <h3>Limite: 1 de agosto</h3>
           <button>Presentar Informe</button>
         </div>
+        {/*  */}
       </section>
     </ModelMainPro>
   );
 }
 
 function LineRoute() {
+  const { setMonthToShow } = usePlanning();
   return (
-    <>
-      <div id='route'>
-        <div id='route-container'>
-          <div id='line'></div>
-          <div id='dots'>
-            <div className='dot past'>
-              <span>
-                <button className='past'>ENE</button>
-              </span>
-            </div>
-            <div className='dot past'>
-              <span>
-                <button className='past'>FEB</button>
-              </span>
-            </div>
-            <div className='dot past'>
-              <span>
-                <button className='past'>MAR</button>
-              </span>
-            </div>
-            <div className='dot past'>
-              <span>
-                <button className='past'>ABR</button>
-              </span>
-            </div>
-            <div className='dot past'>
-              <span>
-                <button className='past'>MAY</button>
-              </span>
-            </div>
-            <div className='dot past'>
-              <span>
-                <button className='past'>JUN</button>
-              </span>
-            </div>
-            <div className='dot future'>
-              <span>
-                <button className='future'>JUL</button>
-              </span>
-            </div>
-            <div className='dot future'>
-              <span>
-                <button className='future'>AGO</button>
-              </span>
-            </div>
-            <div className='dot future'>
-              <span>
-                <button className='future'>SEP</button>
-              </span>
-            </div>
-            <div className='dot future'>
-              <span>
-                <button className='future'>OCT</button>
-              </span>
-            </div>
-            <div className='dot future'>
-              <span>
-                <button className='future'>NOV</button>
-              </span>
-            </div>
-            <div className='dot future'>
-              <span>
-                <button className='future'>DIC</button>
-              </span>
-            </div>
-          </div>
+    <div id='route'>
+      <div id='route-container'>
+        <div id='line'></div>
+        <div id='dots'>
+          {yearMonths.map(({ month, time }, i) => (
+            <MonthDot
+              key={i}
+              month={month}
+              time={time}
+              onClick={() => {
+                setMonthToShow(month);
+              }}
+            />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
+
+function MonthDot({ month, time, onClick }) {
+  return (
+    <div className={`dot ${time}`}>
+      <span>
+        <button className={time} onClick={onClick}>
+          {month}
+        </button>
+      </span>
+    </div>
+  );
+}
+
+const yearMonths = [
+  {
+    month: 'ENE',
+    time: 'past',
+  },
+  {
+    month: 'FEB',
+    time: 'past',
+  },
+  {
+    month: 'MAR',
+    time: 'past',
+  },
+  {
+    month: 'ABR',
+    time: 'past',
+  },
+  {
+    month: 'MAY',
+    time: 'past',
+  },
+  {
+    month: 'JUN',
+    time: 'past',
+  },
+  {
+    month: 'JUL',
+    time: 'future',
+  },
+  {
+    month: 'AGO',
+    time: 'future',
+  },
+  {
+    month: 'SEP',
+    time: 'future',
+  },
+  {
+    month: 'OCT',
+    time: 'future',
+  },
+  {
+    month: 'NOV',
+    time: 'future',
+  },
+  {
+    month: 'DIC',
+    time: 'future',
+  },
+];

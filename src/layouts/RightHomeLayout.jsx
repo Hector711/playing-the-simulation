@@ -15,10 +15,7 @@ export default function RightHomeLayout() {
 function AsideRight() {
   return (
     <ModelAsideRight title='Noticias' id='news'>
-      <section id='news'>
-        
-        
-      </section>
+      <section id='news'></section>
     </ModelAsideRight>
   );
 }

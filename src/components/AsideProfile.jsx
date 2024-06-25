@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '@/context/AuthContext';
 import Avatar from '@/components/Avatar';
@@ -14,8 +14,15 @@ export default function AsideProfile() {
     <ModelAsideLeft>
       <header id='profile'>
         <NavLink to='/profile' id='profile-link'>
-          <img id='cover' src="https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg" alt='' />
-          <Avatar src='https://i.ibb.co/s5smtmL/profile-pic.jpg' business='yes'/>
+          <img
+            id='cover'
+            src='https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg'
+            alt=''
+          />
+          <Avatar
+            src='https://i.ibb.co/s5smtmL/profile-pic.jpg'
+            business='yes'
+          />
           <h4>Héctor Guerra</h4>
         </NavLink>
         <hr />

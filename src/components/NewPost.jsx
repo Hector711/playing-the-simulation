@@ -6,11 +6,9 @@ import Gif from '@/icons/Gif';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { createPost } from '@/api/postsApi';
 
-
 import Select from 'react-select';
 
 export default function NewPost() {
-
   const queryClient = useQueryClient();
 
   const addPostMutation = useMutation({
@@ -20,11 +18,11 @@ export default function NewPost() {
     onSuccess: () => {
       // hace una nueva petición a la API para actualizar los datos
       // trae los datos nuevos los compara y actualiza la cache / interfaz
-      queryClient.invalidateQueries(['posts'])
-    }
-  })
+      queryClient.invalidateQueries(['posts']);
+    },
+  });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const post = Object.fromEntries(formData);
@@ -34,8 +32,7 @@ export default function NewPost() {
       numComments: 0,
       user: 12345,
     });
-  }
-
+  };
 
   const [state, setState] = useState(true);
 
@@ -84,7 +81,7 @@ export default function NewPost() {
               <Close />
             </button>
           </div>
-          
+
           {/* FORMULARIO */}
           <form onSubmit={handleSubmit}>
             <label htmlFor='title'>Título</label>
@@ -126,9 +123,6 @@ export default function NewPost() {
             </div>
             <button id='send'>Enviar</button>
           </form>
-
-
-
         </>
       )}
     </div>
@@ -151,14 +145,14 @@ function Textarea() {
 
   return (
     <>
-    <label htmlFor='description'>Descripción</label>
-    <textarea
-      ref={textareaRef}
-      placeholder='Descripción'
-      id='description'
-      name='description'
-      style={{ resize: 'none', width: '100%' }}
+      <label htmlFor='description'>Descripción</label>
+      <textarea
+        ref={textareaRef}
+        placeholder='Descripción'
+        id='description'
+        name='description'
+        style={{ resize: 'none', width: '100%' }}
       />
-      </>
+    </>
   );
 }

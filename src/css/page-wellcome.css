@@ -34,12 +34,11 @@ header.wellcome {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
   }
-  svg.icons{
+  svg.icons {
     width: 80px;
     height: 110px;
-    color: var(--white-0)
+    color: var(--white-0);
   }
 }
 section.wellcome {

@@ -21,7 +21,7 @@ h2.impact {
   font-size: 1.1rem !important;
   color: var(--white-2);
 }
-h2.impact.home{
+h2.impact.home {
   display: flex;
   /* padding: 20px 0 !important; */
 }
@@ -31,7 +31,7 @@ h2.profile {
   font-weight: 700;
   /* color: var(--white-0); */
 }
-.impact{
+.impact {
   font-family: 'Heading';
   text-transform: uppercase;
 }
@@ -45,7 +45,7 @@ h5 {
   font-size: 1.1rem;
   font-weight: 700;
 }
-h6{
+h6 {
   font-weight: 600;
 }
 
@@ -82,7 +82,6 @@ button {
   text-wrap: nowrap;
 }
 
-
 hr {
   border: 0.5px solid var(--white-3);
 }
@@ -91,6 +90,6 @@ button.submit {
   background-color: var(--white-1);
   color: var(--black-0);
 }
-button.submit:hover{
+button.submit:hover {
   box-shadow: 3px 2px 5px 1px var(--black-0);
 }

@@ -2,14 +2,14 @@ main#messages {
   display: flex;
   flex-direction: column;
   gap: var(--gap-m);
-  *{
+  * {
     /* border: 1px solid white; */
   }
   div#groups-links {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
-    a{
+    a {
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -19,20 +19,17 @@ main#messages {
       border-radius: var(--border-m);
       color: var(--white-0);
     }
-    svg.icons{
-
+    svg.icons {
       width: 30px;
       height: 30px;
     }
-    svg#whatsapp{
-
-      fill: white
+    svg#whatsapp {
+      fill: white;
     }
     svg#telegram {
       fill: #0088cc;
       background-color: white;
       border-radius: 50%;
-      
     }
   }
 }

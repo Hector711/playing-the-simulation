@@ -127,9 +127,7 @@
       "level": "Desbloqueables"
     }
   ],
-  "posts": [
-    
-  ],
+  "posts": [],
   "users": [
     {
       "id": 12345,
@@ -545,20 +543,153 @@
       "start": "2024-06-30T12:00:00",
       "end": "2024-06-30T13:00:00"
     },
-    {
-      
-    }
+    {}
   ],
   "tasks": [
     {
       "user": 12345,
       "months": [
-        {"month": "ene",
+        {
+          "month": "ENE",
           "tasks": [
             {
+              "id": 1,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "FEB",
+          "tasks": [
+            {
+              "id": 2,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "MAR",
+          "tasks": [
+            {
+              "id": 3,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "ABR",
+          "tasks": [
+            {
+              "id": 4,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "MAY",
+          "tasks": [
+            {
+              "id": 5,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "JUN",
+          "tasks": [
+            {
+              "id": 6,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {
+            "quantity": "50€",
+            "status": "completed"
+          }
+        },
+        {
+          "month": "JUL",
+          "tasks": [
+            {
+              "id": 7,
+              "title": "Presentación en video",
+              "status": "pending"
+            },
+            {
+              "id": 8,
+              "title": "Presentación en video",
+              "status": "pending"
+            },
+            {
+              "id": 9,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {
+            "quantity": "100€",
+            "status": "completed"
+          }
+        },
+        {
+          "month": "AGO",
+          "tasks": [
+            {
+              "id": 10,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "SEP",
+          "tasks": [
+            {
+              "id": 11,
+              "title": "Presentación en video",
+              "status": "pending"
+            }
+          ],
+          "bail": {}
+        },
+        {
+          "month": "OCT",
+          "tasks": [],
+          "bail": {}
+        },
+        {
+          "month": "NOV",
+          "tasks": [],
+          "bail": {}
+        },
+        {
+          "month": "DIC",
+          "tasks": [],
+          "bail": {}
+        }
+      ]
+    },
+    {
+      "user": 54321,
+      "months": [
+        {
+          "month": "ene",
+          "tasks": [
+            {
+              "id": 40,
+              "title": "Presentación en video",
               "status": "pending"
             }
           ],
@@ -568,9 +699,8 @@
           "month": "feb",
           "tasks": [
             {
+              "id": 41,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
@@ -580,9 +710,8 @@
           "month": "mar",
           "tasks": [
             {
+              "id": 42,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
@@ -592,9 +721,8 @@
           "month": "abr",
           "tasks": [
             {
+              "id": 43,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
@@ -604,9 +732,8 @@
           "month": "may",
           "tasks": [
             {
+              "id": 44,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
@@ -616,9 +743,8 @@
           "month": "jun",
           "tasks": [
             {
+              "id": 45,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
@@ -631,33 +757,32 @@
           "month": "jul",
           "tasks": [
             {
+              "id": 46,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             },
             {
+              "id": 47,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             },
             {
+              "id": 48,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
-          "bail": {}
+          "bail": {
+            "quantity": "50€",
+            "status": "completed"
+          }
         },
         {
           "month": "ago",
           "tasks": [
             {
+              "id": 49,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],
@@ -667,9 +792,8 @@
           "month": "sep",
           "tasks": [
             {
+              "id": 50,
               "title": "Presentación en video",
-              "description": "Crea un video hablando a cámara hablando sobre ti",
-              "points": 50,
               "status": "pending"
             }
           ],

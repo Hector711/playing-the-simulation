@@ -5,18 +5,27 @@ import Edit2 from '@/icons/Edit2.jsx';
 import { usePlanning } from '@/context/PlanningContext';
 
 export default function PlanningPage() {
-  const { monthToShow } = usePlanning();
+  const {
+    monthToShow,
+    getMonthTasks,
+    monthTasks,
+    convertMonthName,
+    getMonthBail,
+    monthBail,
+  } = usePlanning();
 
   useEffect(() => {
     console.log(monthToShow);
+    getMonthTasks(12345, monthToShow);
+    getMonthBail(12345, monthToShow);
   }, [monthToShow]);
 
   return (
     <ModelMainPro title='Planificación' className='plan-page'>
       {/* CABECERA */}
-      <header className='plan-page'>
+      {/* <header className='plan-page'>
         <h4>VISIÓN A LARGO PLAZO</h4>
-        {/* <Edit /> */}
+
         <button id='edit'>
           <Edit2 />
         </button>
@@ -33,52 +42,58 @@ export default function PlanningPage() {
           </div>
         </div>
       </header>
-      <hr />
+      <hr /> */}
       {/* RUTA ANUAL */}
       <section className='plan-page' id='anual-route'>
         <LineRoute />
       </section>
       {/* TAREAS MENSUALES */}
-      <section id='month-grid' className='plan-page'>
-        {/*  */}
-        {}
-        <div id='tasks'>
-          <div id='header-tasks'>
-            <h2 className='impact orange'>Tareas de Julio</h2>
-            {/* <Edit /> */}
-            <button>
-              <Edit2 />
-            </button>
+      {
+        <section id='month-grid' className='plan-page'>
+          <div id='tasks'>
+            <div id='header-tasks'>
+              <h2 className='impact orange'>
+                Tareas de {convertMonthName(monthToShow)}
+              </h2>
+              {/* <Edit /> */}
+              <button>
+                <Edit2 />
+              </button>
+            </div>
+            <dl>
+              {monthTasks.map(({ id, title }) => (
+                <dt key={id}>
+                  <input type='checkbox' />
+                  <span>
+                    <h5>{title}</h5>
+                  </span>
+                </dt>
+              ))}
+            </dl>
           </div>
-          <dl>
-            <dt>
-              <input type='checkbox' />
-              <span>
-                <h5>Terminal la UI de PTS APP</h5>
-              </span>
-            </dt>
-            <dt>
-              <input type='checkbox' />
-              <span>
-                <h5>Recopilar la informacion de Skool</h5>
-              </span>
-            </dt>
-            <dt>
-              <input type='checkbox' />
-              <span>
-                <h5>Recibir Feedback</h5>
-              </span>
-            </dt>
-          </dl>
-        </div>
-        <div id='bail'>
-          <h2 className='impact orange'>Fianza</h2>
-          <h3 id='amount'>50€</h3>
-          <h3>Limite: 1 de agosto</h3>
-          <button>Presentar Informe</button>
-        </div>
-        {/*  */}
-      </section>
+          <div id='bail'>
+            <h2 className='impact orange'>Fianza</h2>
+            {monthBail && Object.keys(monthBail).length > 0  ? (
+              <>
+                <h3 id='amount'>{monthBail.quantity}</h3>
+                <h3>Limite: 1 de agosto</h3>
+                <button>Presentar Informe</button>
+              </>
+            ) : (
+              <>
+              <h3>Fianza no presentada</h3>
+              <label htmlFor="">Cantidad:</label>
+              <input type="text" />
+              <button>Abrir Fianza</button>
+              </>
+            )}
+
+            {console.log(monthBail)}
+
+            
+          </div>
+        </section>
+      }
     </ModelMainPro>
   );
 }

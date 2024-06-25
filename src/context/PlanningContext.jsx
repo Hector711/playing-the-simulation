@@ -1,4 +1,6 @@
 import { createContext, useContext, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { getTasks } from '@/api/tasksApi';
 
 const PlanningContext = createContext();
 
@@ -11,10 +13,114 @@ export const usePlanning = () => {
 };
 
 export function PlanningProvider({ children }) {
-  const [monthToShow, setMonthToShow] = useState('JUL');
+  const [monthToShow, setMonthToShow] = useState('JUN');
+  const [monthTasks, setMonthTasks] = useState([]);
+  const [monthBail, setMonthBail] = useState([]);
+  const {
+    isLoading,
+    data: tasks,
+    isError,
+    error,
+  } = useQuery({
+    queryKey: ['tasks'],
+    queryFn: getTasks,
+  });
+
+  function getMonthObject(user, month) {
+    if (isLoading) {
+      return 'Loading...';
+    } else if (isError) {
+      return `Error: ${error.message}`;
+    } else if (tasks) {
+      const userTasks = tasks.find(task => task.user === user);
+      if (userTasks) {
+        const monthObject = userTasks.months.find(
+          months => months.month === month,
+        );
+        if (monthObject) {
+          return monthObject;
+        } else {
+          return console.log(`El objeto del mes de ${month}} esta vacío.`);
+        }
+      } else {
+        return console.log(`No se encontró el usuario ${user}`);
+      }
+    } else {
+      return console.log('No se encontraron tareas.');
+    }
+  }
+
+  function getMonthTasks(user, month) {
+    const monthObject = getMonthObject(user, month);
+    return setMonthTasks(monthObject.tasks);
+  }
+  function getMonthBail(user, month) {
+    const monthObject = getMonthObject(user, month);
+    return setMonthBail(monthObject.bail);
+  }
+
+  // function findUserTasks(user, month) {
+  //   if (isLoading) {
+  //     return 'Loading...';
+  //   } else if (isError) {
+  //     return `Error: ${error.message}`;
+  //   } else if (tasks) {
+  //     const userTasks = tasks.find(task => task.user === user);
+  //     if (userTasks) {
+  //       const monthObject = userTasks.months.find(
+  //         months => months.month === month,
+  //       );
+  //       if (monthObject && monthObject.tasks) {
+  //         console.log(monthObject.tasks);
+  //         setMonthTasks(monthObject.tasks);
+  //       } else {
+  //         return console.log(`No se encontraron tareas para ${month}}.`);
+  //       }
+  //     } else {
+  //       return console.log(`No se encontró el usuario ${user}`);
+  //     }
+  //   } else {
+  //     return console.log('No se encontraron tareas.');
+  //   }
+  // }
+
+  function convertMonthName(month) {
+    switch (month) {
+      case 'ENE':
+        return 'enero';
+      case 'FEB':
+        return 'febrero';
+      case 'MAR':
+        return 'marzo';
+      case 'ABR':
+        return 'abril';
+      case 'MAY':
+        return 'mayo';
+      case 'JUN':
+        return 'junio';
+      case 'JUL':
+        return 'julio';
+      case 'AGO':
+        return 'agosto';
+      case 'SEP':
+        return 'septiembre';
+      case 'OCT':
+        return 'octubre';
+      case 'NOV':
+        return 'noviembre';
+      case 'DIC':
+        return 'diciembre';
+      default:
+        return '';
+    }
+  }
+
+  
 
   return (
-    <PlanningContext.Provider value={{ monthToShow, setMonthToShow }}>
+    <PlanningContext.Provider
+      value={{ monthToShow, monthBail, setMonthToShow, getMonthTasks, monthTasks, convertMonthName, getMonthBail }}
+    >
       {children}
     </PlanningContext.Provider>
   );

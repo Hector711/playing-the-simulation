@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import MembersGrid from '@/components/MembersGrid';
 import Select from 'react-select';
+import { useMembers } from '@/context/MembersContext';
 
 export default function MembersPage() {
-  const [categoriesType, setCategoriesType] = useState('speciality');
-
-  const handleChangeCategoryType = e => {
-    const categoriesValue = e.value;
-    setCategoriesType(categoriesValue);
-  };
-
-  useEffect(() => {}, [categoriesType]);
+  const { selectFilter, onChangeSelectFilter, onChangeSpecialityFilter, onChangeLevelFilter, filter } = useMembers();
+  useEffect(() => {
+    
+  }, [selectFilter, filter]);
 
   return (
     <>
@@ -20,23 +17,23 @@ export default function MembersPage() {
         <div className='select-filter'>
           <Select
             styles={colourStyles}
-            options={selectFilter}
+            options={optionsFilter}
             id='category'
-            placeholder='Categoría'
+            placeholder='Tipo de Filtro'
             className='react-select-container'
             classNamePrefix='react-select'
-            onChange={handleChangeCategoryType}
+            onChange={onChangeSelectFilter}
           />
         </div>
         <hr />
         <div className='filter-buttons'>
-          {categoriesType == 'levels' ? (
+          {selectFilter == 'level' ? (
             <>
               {levelFilterButtons.map(({ value, level, points }, index) => (
                 <FilterButton
                   key={index}
                   value={value}
-                  // onClick={handleLevelFilterChange}
+                  onClick={() =>  onChangeLevelFilter(value)}
                   level={level}
                   points={points}
                 />
@@ -48,7 +45,7 @@ export default function MembersPage() {
                 <FilterButton
                   key={index}
                   value={value}
-                  // onClick={handleSpecialityFilterChange}
+                  onClick={onChangeSpecialityFilter}
                   speciality={speciality}
                 />
               ))}
@@ -88,9 +85,9 @@ const levelFilterButtons = [
   { value: '10', level: 'Final Boss', points: '1M pts' },
 ];
 
-const selectFilter = [
-  { value: 'speciality', label: 'Por especialidad' },
-  { value: 'level', label: 'Por nivel' },
+const optionsFilter = [
+  { value: 'speciality', label: 'Especialidad' },
+  { value: 'level', label: 'Nivel' },
 ];
 
 const colourStyles = {

@@ -27,6 +27,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import { PlanningProvider } from '@/context/PlanningContext';
+import { MembersProvider } from '@/context/MembersContext';
 
 const queryClient = new QueryClient();
 
@@ -36,38 +37,40 @@ function App() {
       <AuthProvider>
         <TaskProvider>
           <PlanningProvider>
-            <BrowserRouter>
-              <Routes>
-                <Route path='/' element={<WellcomePage />} />
-                <Route element={<ProtectedRoute />}>
-                  <Route element={<NavLayout />}>
-                    {/* Profile Pages */}
-                    <Route element={<LeftHomeLayout />}>
-                      <Route element={<RightHomeLayout />}>
-                        <Route path='/home' element={<HomePage />} />
-                        <Route
-                          path='/notifications'
-                          element={<NotificationsPage />}
-                        />
-                        <Route path='/messages' element={<MessagesPage />} />
-                        <Route path='/saved' element={<SavedPage />} />
+            <MembersProvider>
+              <BrowserRouter>
+                <Routes>
+                  <Route path='/' element={<WellcomePage />} />
+                  <Route element={<ProtectedRoute />}>
+                    <Route element={<NavLayout />}>
+                      {/* Profile Pages */}
+                      <Route element={<LeftHomeLayout />}>
+                        <Route element={<RightHomeLayout />}>
+                          <Route path='/home' element={<HomePage />} />
+                          <Route
+                            path='/notifications'
+                            element={<NotificationsPage />}
+                          />
+                          <Route path='/messages' element={<MessagesPage />} />
+                          <Route path='/saved' element={<SavedPage />} />
+                        </Route>
+                        <Route path='/planning' element={<PlanningPage />} />
                       </Route>
-                      <Route path='/planning' element={<PlanningPage />} />
+                      <Route path='/profile' element={<ProfilePage />} />
+                      <Route path='/profile/:id' element={<ProfilePage />} />
+                      {/* <Route path='/post/:id' element={<PostPage />} /> */}
+                      {/* Community Pages */}
+                      <Route path='/classroom' element={<ClassroomPage />} />
+                      <Route path='/members' element={<MembersPage />} />
+                      <Route path='/calendar' element={<CalendarPage />} />
+                      <Route path='/archives' element={<ArchivesPage />} />
+                      <Route path='/community' element={<CommunityPage />} />
+                      <Route path='*' element={<h1>NOT FOUND</h1>} />
                     </Route>
-                    <Route path='/profile' element={<ProfilePage />} />
-                    <Route path='/profile/:id' element={<ProfilePage />} />
-                    {/* <Route path='/post/:id' element={<PostPage />} /> */}
-                    {/* Community Pages */}
-                    <Route path='/classroom' element={<ClassroomPage />} />
-                    <Route path='/members' element={<MembersPage />} />
-                    <Route path='/calendar' element={<CalendarPage />} />
-                    <Route path='/archives' element={<ArchivesPage />} />
-                    <Route path='/community' element={<CommunityPage />} />
-                    <Route path='*' element={<h1>NOT FOUND</h1>} />
                   </Route>
-                </Route>
-              </Routes>
-            </BrowserRouter>
+                </Routes>
+              </BrowserRouter>
+            </MembersProvider>
           </PlanningProvider>
         </TaskProvider>
       </AuthProvider>

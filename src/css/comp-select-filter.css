@@ -14,7 +14,7 @@ div.select-filter {
     background-color: var(--blue-1);
     text-align: center;
   }
-
+  
   /* contenedor de los valores */
   .react-select__value-container {
   }
@@ -31,6 +31,12 @@ div.select-filter {
     background-color: var(--blue-1);
   }
 }
+
+/* letras del select */
+.react-select__single-value{
+  color: var(--white-0) !important;
+}
+
 
 /* COMMUNITY LAYOUT */
 div.filter-buttons {

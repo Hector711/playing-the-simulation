@@ -40,13 +40,16 @@ export function PlanningProvider({ children }) {
         if (monthObject) {
           return monthObject;
         } else {
-          return console.log(`El objeto del mes de ${month}} esta vacío.`);
+          console.log(`El objeto del mes de ${month}} esta vacío.`);
+          return {} 
         }
       } else {
-        return console.log(`No se encontró el usuario ${user}`);
+        console.log(`No se encontró el usuario ${user}`);
+        return {}
       }
     } else {
-      return console.log('No se encontraron tareas.');
+      console.log('No se encontraron tareas.');
+      return {}
     }
   }
 
@@ -58,31 +61,6 @@ export function PlanningProvider({ children }) {
     const monthObject = getMonthObject(user, month);
     return setMonthBail(monthObject.bail);
   }
-
-  // function findUserTasks(user, month) {
-  //   if (isLoading) {
-  //     return 'Loading...';
-  //   } else if (isError) {
-  //     return `Error: ${error.message}`;
-  //   } else if (tasks) {
-  //     const userTasks = tasks.find(task => task.user === user);
-  //     if (userTasks) {
-  //       const monthObject = userTasks.months.find(
-  //         months => months.month === month,
-  //       );
-  //       if (monthObject && monthObject.tasks) {
-  //         console.log(monthObject.tasks);
-  //         setMonthTasks(monthObject.tasks);
-  //       } else {
-  //         return console.log(`No se encontraron tareas para ${month}}.`);
-  //       }
-  //     } else {
-  //       return console.log(`No se encontró el usuario ${user}`);
-  //     }
-  //   } else {
-  //     return console.log('No se encontraron tareas.');
-  //   }
-  // }
 
   function convertMonthName(month) {
     switch (month) {
@@ -114,8 +92,6 @@ export function PlanningProvider({ children }) {
         return '';
     }
   }
-
-  
 
   return (
     <PlanningContext.Provider

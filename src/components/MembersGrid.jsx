@@ -1,28 +1,22 @@
 import React from 'react';
-import { useQuery } from '@tanstack/react-query';
-import { getUsers } from '@/api/usersAPI';
 import Work from '@/icons/Work';
 import { NavLink } from 'react-router-dom';
 import Location from '@/icons/Location';
 import Business from '@/icons/Business';
 import Avatar from '@/components/Avatar';
+import { useMembers } from '@/context/MembersContext';
 
 export default function MembersGrid() {
-  const {
-    isLoading,
-    isError,
-    error,
-    data: users,
-  } = useQuery({
-    queryKey: ['users'],
-    queryFn: getUsers,
-  });
+  const { allUsers, isLoading, isError, error, levelFilterUsers, show } = useMembers();
+  console.log(show);
   return (
     <>
       <section id='members-grid'>
         {isLoading && <div>Loading...</div>}
         {isError && <div>Error: {error.message}</div>}
-        {users && users.map(user => <MemberCard key={user.id} {...user} />)}
+        {/* {allUsers && allUsers().map(user => <MemberCard key={user.id} {...user} />)} */}
+        {show && show.map(user => <MemberCard key={user.id} {...user} />)}
+        {}
       </section>
     </>
   );

@@ -32,7 +32,6 @@ article.memberCard {
       width: 60px;
       height: 60px;
     }
-
     .user {
       div {
         display: flex;
@@ -50,12 +49,9 @@ article.memberCard {
       }
     }
   }
-  * {
-    /* border: 1px solid ; */
-  }
+
   section {
     display: flex;
-
     padding: 10px 0 0 0;
     display: flex;
     align-items: flex-start;
@@ -86,3 +82,5 @@ article.memberCard {
 .business-icon {
   color: var(--orange-0);
 }
+
+

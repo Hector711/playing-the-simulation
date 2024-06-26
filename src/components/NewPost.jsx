@@ -84,7 +84,7 @@ export default function NewPost() {
 
           {/* FORMULARIO */}
           <form onSubmit={handleSubmit}>
-            <label htmlFor='title'>Título</label>
+            <label htmlFor='title' className='hidden'></label>
             <input type='text' placeholder='Tiulo' id='title' name='title' />
             <Textarea />
             <div id='options'>
@@ -99,7 +99,7 @@ export default function NewPost() {
               </button>
             </div>
             <div id='selects'>
-              <label htmlFor='category'>Categoría</label>
+              <label htmlFor='category' className='hidden'></label>
               <Select
                 options={category}
                 className='selects'
@@ -108,7 +108,7 @@ export default function NewPost() {
                 placeholder='Categoría'
                 name='category'
               />
-              <label htmlFor='label'>Etiquetas</label>
+              <label htmlFor='label' className='hidden'></label>
               <Select
                 closeMenuOnSelect={false}
                 defaultValue='Etiquetas'
@@ -145,7 +145,7 @@ function Textarea() {
 
   return (
     <>
-      <label htmlFor='description'>Descripción</label>
+      <label htmlFor='description' className='hidden'></label>
       <textarea
         ref={textareaRef}
         placeholder='Descripción'

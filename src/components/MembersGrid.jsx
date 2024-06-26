@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Work from '@/icons/Work';
 import { NavLink } from 'react-router-dom';
 import Location from '@/icons/Location';
@@ -7,23 +7,23 @@ import Avatar from '@/components/Avatar';
 import { useMembers } from '@/context/MembersContext';
 
 export default function MembersGrid() {
-  const { allUsers, isLoading, isError, error, levelFilterUsers, show } = useMembers();
-  console.log(show);
+  const { allUsers, isLoading, isError, error, show } = useMembers();
+  useEffect(() => {
+    allUsers();
+  }, []);
   return (
     <>
       <section id='members-grid'>
         {isLoading && <div>Loading...</div>}
         {isError && <div>Error: {error.message}</div>}
-        {/* {allUsers && allUsers().map(user => <MemberCard key={user.id} {...user} />)} */}
         {show && show.map(user => <MemberCard key={user.id} {...user} />)}
-        {}
       </section>
     </>
   );
 }
 function MemberCard({
   fullName,
-  job,
+  speciality,
   about,
   img,
   id,
@@ -45,7 +45,7 @@ function MemberCard({
             <h2 className='profile'>{fullName}</h2>
             <span>&#8226; @{username}</span>
           </div>
-          <b>Nivel {level}</b>
+          {level === 10 ? <b>Final Boss</b> : <b>Nivel {level}</b>}
           <span> &#8226; {points} puntos</span>
         </NavLink>
       </header>
@@ -60,7 +60,7 @@ function MemberCard({
           </p>
           <p id='job'>
             <Work />
-            {job}
+            {speciality}
           </p>
         </div>
         <div id='business'>

@@ -2,6 +2,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Contextos
 import { AuthProvider } from '@/context/AuthContext';
 import { TaskProvider } from '@/context/TaskContext';
+import { PlanningProvider } from '@/context/PlanningContext';
+import { MembersProvider } from '@/context/MembersContext';
+import { ClassroomProvider } from '@/context/ClassroomContext';
+import { PostsProvider } from '@/context/PostsContext';
 // Protected Route
 import ProtectedRoute from '@/ProtectedRoute';
 // Basics
@@ -26,9 +30,6 @@ import CalendarPage from '@/pages/community/CalendarPage';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-import { PlanningProvider } from '@/context/PlanningContext';
-import { MembersProvider } from '@/context/MembersContext';
-
 const queryClient = new QueryClient();
 
 function App() {
@@ -37,40 +38,59 @@ function App() {
       <AuthProvider>
         <TaskProvider>
           <PlanningProvider>
-            <MembersProvider>
-              <BrowserRouter>
-                <Routes>
-                  <Route path='/' element={<WellcomePage />} />
-                  <Route element={<ProtectedRoute />}>
-                    <Route element={<NavLayout />}>
-                      {/* Profile Pages */}
-                      <Route element={<LeftHomeLayout />}>
-                        <Route element={<RightHomeLayout />}>
-                          <Route path='/home' element={<HomePage />} />
+            <ClassroomProvider>
+              <PostsProvider>
+                <MembersProvider>
+                  <BrowserRouter>
+                    <Routes>
+                      <Route path='/' element={<WellcomePage />} />
+                      <Route element={<ProtectedRoute />}>
+                        <Route element={<NavLayout />}>
+                          {/* Profile Pages */}
+                          <Route element={<LeftHomeLayout />}>
+                            <Route element={<RightHomeLayout />}>
+                              <Route path='/home' element={<HomePage />} />
+                              <Route
+                                path='/notifications'
+                                element={<NotificationsPage />}
+                              />
+                              <Route
+                                path='/messages'
+                                element={<MessagesPage />}
+                              />
+                              <Route path='/saved' element={<SavedPage />} />
+                            </Route>
+                            <Route
+                              path='/planning'
+                              element={<PlanningPage />}
+                            />
+                          </Route>
+                          <Route path='/profile' element={<ProfilePage />} />
                           <Route
-                            path='/notifications'
-                            element={<NotificationsPage />}
+                            path='/profile/:id'
+                            element={<ProfilePage />}
                           />
-                          <Route path='/messages' element={<MessagesPage />} />
-                          <Route path='/saved' element={<SavedPage />} />
+                          {/* <Route path='/post/:id' element={<PostPage />} /> */}
+                          {/* Community Pages */}
+                          <Route
+                            path='/classroom'
+                            element={<ClassroomPage />}
+                          />
+                          <Route path='/members' element={<MembersPage />} />
+                          <Route path='/calendar' element={<CalendarPage />} />
+                          <Route path='/archives' element={<ArchivesPage />} />
+                          <Route
+                            path='/community'
+                            element={<CommunityPage />}
+                          />
+                          <Route path='*' element={<h1>NOT FOUND</h1>} />
                         </Route>
-                        <Route path='/planning' element={<PlanningPage />} />
                       </Route>
-                      <Route path='/profile' element={<ProfilePage />} />
-                      <Route path='/profile/:id' element={<ProfilePage />} />
-                      {/* <Route path='/post/:id' element={<PostPage />} /> */}
-                      {/* Community Pages */}
-                      <Route path='/classroom' element={<ClassroomPage />} />
-                      <Route path='/members' element={<MembersPage />} />
-                      <Route path='/calendar' element={<CalendarPage />} />
-                      <Route path='/archives' element={<ArchivesPage />} />
-                      <Route path='/community' element={<CommunityPage />} />
-                      <Route path='*' element={<h1>NOT FOUND</h1>} />
-                    </Route>
-                  </Route>
-                </Routes>
-              </BrowserRouter>
-            </MembersProvider>
+                    </Routes>
+                  </BrowserRouter>
+                </MembersProvider>
+              </PostsProvider>
+            </ClassroomProvider>
           </PlanningProvider>
         </TaskProvider>
       </AuthProvider>

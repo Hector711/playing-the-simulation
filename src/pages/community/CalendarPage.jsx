@@ -16,7 +16,7 @@ export default function CalendarPage() {
     isError,
     error,
   } = useQuery({
-    queryKey: 'events',
+    queryKey: ['events'],
     queryFn: getEvents,
   });
   const localizer = dayjsLocalizer(dayjs);

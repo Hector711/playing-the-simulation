@@ -1,7 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getUsers } from '@/api/usersAPI';
-import { useEffect } from 'react';
 
 const MembersContext = createContext();
 
@@ -26,39 +25,27 @@ export function MembersProvider({ children }) {
     queryKey: ['users'],
     queryFn: getUsers,
   });
-  const onChangeSelectFilter = e => {
+  const onSelectFilter = e => {
     const selectValue = e.value;
     setSelectFilter(selectValue);
   };
-  const onChangeLevelFilter = (value) => {  
-    console.log(value);
-    setFilter(value);
-    levelFilterUsers(value)
-  }
-  const onChangeSpecialityFilter = (e) => {
-    const filterValue = e.target.value;
-    setFilter(filterValue);
-  }
-  
   function allUsers () {
     const alphaOrderedUsers = users.sort((a, b) => a.fullName.localeCompare(b.fullName));
     console.log(alphaOrderedUsers);
-    return alphaOrderedUsers;
+    return setShow(alphaOrderedUsers);
   }
-
-  function levelFilterUsers (value) {
+  const onFilterByLevel = (value) => {  
+    setFilter(value);
     const levelFilteredUsers = users.filter(user => user.level === value);
-    console.log("value: ",value)
-    console.log("show: ",show)
     return setShow(levelFilteredUsers);
   }
-  function specialityFilterUsers () {
-    
+  const onFilterBySector = (value) => {
+    setFilter(value);
+    const areaFilteredUsers = users.filter(user => user.area === value);
+    return setShow(areaFilteredUsers);
   }
-
-
   return (
-    <MembersContext.Provider value={{ selectFilter, onChangeSelectFilter, isLoading, isError, error, onChangeLevelFilter, onChangeSpecialityFilter, filter, allUsers, show }}>
+    <MembersContext.Provider value={{ selectFilter, onSelectFilter, isLoading, isError, error, onFilterByLevel, onFilterBySector, filter, allUsers, show }}>
       {children}
     </MembersContext.Provider>
   );

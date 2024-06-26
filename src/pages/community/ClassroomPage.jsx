@@ -1,20 +1,11 @@
 import React from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
-import { NavLink } from 'react-router-dom';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import { getClasses } from '@/api/classesApi';
-import { useQuery } from '@tanstack/react-query';
+import { useClassroom } from '@/context/ClassroomContext';
 
 export default function ClassroomPage() {
-  const {
-    isLoading,
-    data: classes,
-    isError,
-    error,
-  } = useQuery({
-    queryKey: ['classes'],
-    queryFn: getClasses,
-  });
+  const { isLoading, classes, isError, error } = useClassroom();
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -29,7 +20,6 @@ export default function ClassroomPage() {
 
   const scrollToSection = event => {
     const value = event.target.value;
-    // Asegúrate de que el elemento exista para evitar errores
     const section = document.getElementById(value);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });

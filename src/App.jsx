@@ -8,6 +8,7 @@ import { PlanningProvider } from '@/context/PlanningContext';
 import { MembersProvider } from '@/context/MembersContext';
 import { ClassroomProvider } from '@/context/ClassroomContext';
 import { PostsProvider } from '@/context/PostsContext';
+import { CommunityProvider } from '@/context/CommunityContext';
 // Protected Route
 import ProtectedRoute from '@/ProtectedRoute';
 // Basics
@@ -40,55 +41,63 @@ function App() {
           <PlanningProvider>
             <ClassroomProvider>
               <PostsProvider>
-                <MembersProvider>
-                  <BrowserRouter>
-                    <Routes>
-                      <Route path='/' element={<WellcomePage />} />
-                      <Route element={<ProtectedRoute />}>
-                        <Route element={<NavLayout />}>
-                          {/* Profile Pages */}
-                          <Route element={<LeftHomeLayout />}>
-                            <Route element={<RightHomeLayout />}>
-                              <Route path='/home' element={<HomePage />} />
+                <CommunityProvider>
+                  <MembersProvider>
+                    <BrowserRouter>
+                      <Routes>
+                        <Route path='/' element={<WellcomePage />} />
+                        <Route element={<ProtectedRoute />}>
+                          <Route element={<NavLayout />}>
+                            {/* Profile Pages */}
+                            <Route element={<LeftHomeLayout />}>
+                              <Route element={<RightHomeLayout />}>
+                                <Route path='/home' element={<HomePage />} />
+                                <Route
+                                  path='/notifications'
+                                  element={<NotificationsPage />}
+                                />
+                                <Route
+                                  path='/messages'
+                                  element={<MessagesPage />}
+                                />
+                                <Route path='/saved' element={<SavedPage />} />
+                              </Route>
                               <Route
-                                path='/notifications'
-                                element={<NotificationsPage />}
+                                path='/planning'
+                                element={<PlanningPage />}
                               />
-                              <Route
-                                path='/messages'
-                                element={<MessagesPage />}
-                              />
-                              <Route path='/saved' element={<SavedPage />} />
                             </Route>
+                            <Route path='/profile' element={<ProfilePage />} />
                             <Route
-                              path='/planning'
-                              element={<PlanningPage />}
+                              path='/profile/:id'
+                              element={<ProfilePage />}
                             />
+                            {/* <Route path='/post/:id' element={<PostPage />} /> */}
+                            {/* Community Pages */}
+                            <Route
+                              path='/classroom'
+                              element={<ClassroomPage />}
+                            />
+                            <Route path='/members' element={<MembersPage />} />
+                            <Route
+                              path='/calendar'
+                              element={<CalendarPage />}
+                            />
+                            <Route
+                              path='/archives'
+                              element={<ArchivesPage />}
+                            />
+                            <Route
+                              path='/community'
+                              element={<CommunityPage />}
+                            />
+                            <Route path='*' element={<h1>NOT FOUND</h1>} />
                           </Route>
-                          <Route path='/profile' element={<ProfilePage />} />
-                          <Route
-                            path='/profile/:id'
-                            element={<ProfilePage />}
-                          />
-                          {/* <Route path='/post/:id' element={<PostPage />} /> */}
-                          {/* Community Pages */}
-                          <Route
-                            path='/classroom'
-                            element={<ClassroomPage />}
-                          />
-                          <Route path='/members' element={<MembersPage />} />
-                          <Route path='/calendar' element={<CalendarPage />} />
-                          <Route path='/archives' element={<ArchivesPage />} />
-                          <Route
-                            path='/community'
-                            element={<CommunityPage />}
-                          />
-                          <Route path='*' element={<h1>NOT FOUND</h1>} />
                         </Route>
-                      </Route>
-                    </Routes>
-                  </BrowserRouter>
-                </MembersProvider>
+                      </Routes>
+                    </BrowserRouter>
+                  </MembersProvider>
+                </CommunityProvider>
               </PostsProvider>
             </ClassroomProvider>
           </PlanningProvider>

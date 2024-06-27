@@ -37,26 +37,31 @@ article.cards-levels {
     align-items: center;
     margin-bottom: var(--gap-m);
     h5 {
-      font-weight: 600;
+      font-weight: 700;
       color: var(--orange-0);
     }
     span {
       color: var(--white-2);
+      width: 200px;
+      height: 10%;
+      font-size: 1.1rem;
     }
   }
   section.cards-levels {
     display: flex;
-    span {
-      font-weight: 600;
+    h6 {
+
+      font-size: 0.95rem;
     }
-    p {
+    span {
+      font-size: 0.95rem;
       color: var(--white-1);
     }
   }
 }
 
 aside#community {
-  header {
+  button {
     width: 100%;
     display: flex;
     align-items: center;

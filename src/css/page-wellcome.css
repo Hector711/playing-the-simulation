@@ -69,9 +69,8 @@ div.login {
     width: 300px;
     max-width: 500px;
     height: max-content;
-    border-radius: var(--border-m);c
-
-    input {
+    border-radius: var(--border-m);
+    c input {
       padding: var(--pad-s);
     }
   }

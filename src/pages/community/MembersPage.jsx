@@ -6,9 +6,14 @@ import Select from 'react-select';
 import { useMembers } from '@/context/MembersContext';
 
 export default function MembersPage() {
-  const { selectFilter, onSelectFilter, onFilterBySector, onFilterByLevel, filter } = useMembers();
-  useEffect(() => {
-  }, [selectFilter, filter]);
+  const {
+    selectFilter,
+    onSelectFilter,
+    onFilterBySector,
+    onFilterByLevel,
+    filter,
+  } = useMembers();
+  useEffect(() => {}, [selectFilter, filter]);
 
   return (
     <>
@@ -32,7 +37,7 @@ export default function MembersPage() {
                 <FilterButton
                   key={index}
                   value={value}
-                  onClick={() =>  onFilterByLevel(value)}
+                  onClick={() => onFilterByLevel(value)}
                   level={level}
                   points={points}
                 />

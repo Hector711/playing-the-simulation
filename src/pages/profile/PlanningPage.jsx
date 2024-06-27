@@ -73,7 +73,7 @@ export default function PlanningPage() {
           </div>
           <div id='bail'>
             <h2 className='impact orange'>Fianza</h2>
-            {monthBail && Object.keys(monthBail).length > 0  ? (
+            {monthBail && Object.keys(monthBail).length > 0 ? (
               <>
                 <h3 id='amount'>{monthBail.quantity}</h3>
                 <h3>Limite: 1 de agosto</h3>
@@ -81,16 +81,14 @@ export default function PlanningPage() {
               </>
             ) : (
               <>
-              <h3>Fianza no presentada</h3>
-              <label htmlFor="">Cantidad:</label>
-              <input type="text" />
-              <button>Abrir Fianza</button>
+                <h3>Fianza no presentada</h3>
+                <label htmlFor=''>Cantidad:</label>
+                <input type='text' />
+                <button>Abrir Fianza</button>
               </>
             )}
 
             {console.log(monthBail)}
-
-            
           </div>
         </section>
       }

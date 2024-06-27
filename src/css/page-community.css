@@ -6,7 +6,7 @@ article.community {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  header.community{
+  header.community {
     background-color: var(--blue-1);
     padding: var(--pad-l);
     border-radius: var(--border-m);
@@ -24,7 +24,7 @@ article.community {
     flex-direction: column;
     border-radius: var(--border-m);
   }
-} 
+}
 
 article.cards-levels {
   border: 0.5px solid var(--white-3);
@@ -32,11 +32,11 @@ article.cards-levels {
   border-radius: var(--border-s);
   padding: var(--pad-m);
   background-color: var(--blue-1);
-  header.cards-levels{
+  header.cards-levels {
     display: flex;
     align-items: center;
     margin-bottom: var(--gap-m);
-    h5{
+    h5 {
       font-weight: 600;
       color: var(--orange-0);
     }
@@ -49,12 +49,11 @@ article.cards-levels {
     span {
       font-weight: 600;
     }
-    p{
+    p {
       color: var(--white-1);
     }
   }
 }
-
 
 aside#community {
   header {
@@ -68,5 +67,3 @@ aside#community {
     }
   }
 }
-
-

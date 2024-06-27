@@ -41,15 +41,15 @@ export function PlanningProvider({ children }) {
           return monthObject;
         } else {
           console.log(`El objeto del mes de ${month}} esta vacío.`);
-          return {} 
+          return {};
         }
       } else {
         console.log(`No se encontró el usuario ${user}`);
-        return {}
+        return {};
       }
     } else {
       console.log('No se encontraron tareas.');
-      return {}
+      return {};
     }
   }
 
@@ -95,7 +95,15 @@ export function PlanningProvider({ children }) {
 
   return (
     <PlanningContext.Provider
-      value={{ monthToShow, monthBail, setMonthToShow, getMonthTasks, monthTasks, convertMonthName, getMonthBail }}
+      value={{
+        monthToShow,
+        monthBail,
+        setMonthToShow,
+        getMonthTasks,
+        monthTasks,
+        convertMonthName,
+        getMonthBail,
+      }}
     >
       {children}
     </PlanningContext.Provider>

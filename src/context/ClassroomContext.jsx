@@ -26,5 +26,5 @@ export function ClassroomProvider({ children }) {
     <ClassroomContext.Provider value={{ isLoading, classes, isError, error }}>
       {children}
     </ClassroomContext.Provider>
-  )
+  );
 }

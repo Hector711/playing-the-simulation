@@ -1,12 +1,7 @@
 :root {
   --height-text-wellcome: 3rem;
-  --pad-s: 10px;
-  --pad-m: 20px;
   --red-0: #961616;
   transition: all 0.5s ease-in-out;
-}
-* {
-  /* border: 1px solid; */
 }
 div#wellcome-body {
   display: flex;
@@ -69,13 +64,12 @@ div.login {
   form.login {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     background-color: var(--blue-1);
     padding: var(--pad-m);
     width: 300px;
     max-width: 500px;
     height: max-content;
-    border-radius: var(--border-m);
+    border-radius: var(--border-m);c
 
     input {
       padding: var(--pad-s);

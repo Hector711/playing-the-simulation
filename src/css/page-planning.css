@@ -112,9 +112,6 @@ div#route {
 }
 
 section#month-grid {
-  * {
-    /* border: 1px solid var(--white-3); */
-  }
   display: grid;
   grid-template-areas: 'tasks bail';
   grid-template-columns: 1fr var(--right-aside);
@@ -124,17 +121,12 @@ section#month-grid {
     background-color: var(--blue-1);
     grid-area: tasks;
     padding: 5px 10px 20px 18px;
-    /* border: 1px solid var(--white-3); */
     border-radius: var(--border-m);
 
     div#header-tasks {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      button {
-        /* background-color: red; */
-        /* border: 1px solid var(--white-3); */
-      }
     }
 
     dl {
@@ -159,10 +151,9 @@ section#month-grid {
   }
   div#bail {
     grid-area: bail;
-    /* box-shadow: 1px 1px 5px 1px var(--white-0); */
     background-color: var(--blue-1);
     border-radius: var(--border-m);
-    padding: 0 var(--pad-m) 2rem;
+    padding: 0 0 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,7 +170,6 @@ section#month-grid {
       border: 0.5px solid var(--orange-0);
       font-size: 1.3rem;
       box-shadow: 1px 1px 5px 1px var(--orange-0);
-      /* background-color: var(--black-0); */
       color: var(--white-0);
       margin-top: 10px;
     }

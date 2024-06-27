@@ -19,6 +19,7 @@ import '@/css/page-messages.css';
 import '@/css/page-classroom.css';
 import '@/css/page-members.css';
 import '@/css/page-calendar.css';
+import '@/css/page-community.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
@@ -29,6 +30,7 @@ import '@/css/comp-dnd-kit.css';
 import '@/css/comp-select-filter.css';
 import '@/css/comp-news.css';
 import '@/css/comp-aside-profile.css';
+import '@/css/comp-line-leves.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

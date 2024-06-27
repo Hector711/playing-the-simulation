@@ -1,9 +1,6 @@
 :root {
   --calendly: #016dff;
 }
-main * {
-  /* border: 1px solid; */
-}
 main#profile {
   display: flex;
   flex-direction: column;
@@ -12,13 +9,9 @@ main#profile {
   height: max-content;
 }
 div#blur {
-  * {
-    /* border: 1px solid var(--black-0); */
-  }
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background-color: red; */
   z-index: 999;
   left: 0;
   top: 0;
@@ -32,9 +25,7 @@ div#blur {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: var(--gap-l); */
     gap: 2rem;
-
     background-color: #ffffff;
     color: var(--black-0);
     border-radius: var(--border-m);
@@ -89,9 +80,6 @@ div#blur {
 }
 
 header.profile-page {
-  * {
-    /* border: 1px solid var(--white-3); */
-  }
   overflow: hidden;
   border-radius: var(--border-m);
   position: relative;
@@ -130,7 +118,6 @@ header.profile-page {
     grid-area: left-info;
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
     svg.icons {
       width: 25px;
       height: 25px;

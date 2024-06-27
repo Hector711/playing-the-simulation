@@ -22,9 +22,9 @@
   --gap-m: 10px;
   --gap-l: 15px;
 
-  --pad-s: 5px;
-  --pad-m: 10px;
-  --pad-l: 15px;
+  --pad-s: 0.8rem;
+  --pad-m: 1rem;
+  --pad-l: 1.2rem;
 
   --white-0: #f4f4f4de;
   --white-1: #cbcbcbde;

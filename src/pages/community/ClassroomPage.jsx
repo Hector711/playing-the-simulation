@@ -1,7 +1,6 @@
 import React from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import ModelMainPro from '@/layouts/ModelMainPro';
-import { getClasses } from '@/api/classesApi';
 import { useClassroom } from '@/context/ClassroomContext';
 
 export default function ClassroomPage() {

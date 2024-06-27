@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 // Contextos
 import { AuthProvider } from '@/context/AuthContext';
 import { TaskProvider } from '@/context/TaskContext';
@@ -27,8 +29,6 @@ import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
 import ArchivesPage from '@/pages/community/ArchivesPage';
 import CalendarPage from '@/pages/community/CalendarPage';
-import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const queryClient = new QueryClient();
 

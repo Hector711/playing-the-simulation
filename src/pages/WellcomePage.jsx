@@ -6,15 +6,22 @@ export default function WelcomePage() {
   return (
     <div id='wellcome-body'>
       <header className='wellcome'>
-        <h1 className='main-title'>Playing The Simulation</h1>
-        <div>
-          <h3 className='impact '>Make PTS Great Again</h3>
-          <Game />
-        </div>
+        <MainTitle />
       </header>
       <section className='wellcome'>
         <Login />
       </section>
     </div>
+  );
+}
+export function MainTitle() {
+  return (
+    <>
+      <h1 className='main-title'>Playing The Simulation</h1>
+      <div>
+        <h3 className='impact '>Make PTS Great Again</h3>
+        <Game />
+      </div>
+    </>
   );
 }

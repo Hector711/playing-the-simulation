@@ -2,12 +2,12 @@
   --height-container: 28px;
 }
 div#line-levels {
-  border: 2px solid var(--black-0);
+  border: 1px solid var(--white-3);
   box-shadow: 2px 2px 2px 0 var(--black-1);
   background-color: var(--blue-1);
   padding: 20px;
   border-radius: var(--border-l);
-  margin-block: 4.6rem 0rem;
+  margin-block: 2.8rem 0rem;
   #line-container {
     position: relative;
     height: 100%;
@@ -75,28 +75,28 @@ div#line-levels {
         flex-grow: 0;
       }
       div#dos {
-        flex-grow: 5;
+        flex-grow: 1;
       }
       div#tres {
-        flex-grow: 20;
+        flex-grow: 4;
       }
       div#cuatro {
-        flex-grow: 65;
+        flex-grow: 13;
       }
       div#cinco {
-        flex-grow: 155;
+        flex-grow: 31;
       }
       div#seis {
-        flex-grow: 515;
+        flex-grow: 103;
       }
       div#siete {
-        flex-grow: 2015;
+        flex-grow: 403;
       }
       div#ocho {
-        flex-grow: 8015;
+        flex-grow: 1603;
       }
       div#nueve {
-        flex-grow: 33015;
+        flex-grow: 6603;
       }
     }
   }

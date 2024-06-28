@@ -2,9 +2,7 @@ main#messages {
   display: flex;
   flex-direction: column;
   gap: var(--gap-m);
-  * {
-    /* border: 1px solid white; */
-  }
+
   div#groups-links {
     display: flex;
     justify-content: space-between;

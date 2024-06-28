@@ -6,10 +6,10 @@ export default function Work(props) {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth={1}
+      strokeWidth={1.5}
       strokeLinecap='round'
       strokeLinejoin='round'
-      className='profile-icons'
+      className='icons'
       {...props}
     >
       <path d='M0 0h24v24H0z' stroke='none' />

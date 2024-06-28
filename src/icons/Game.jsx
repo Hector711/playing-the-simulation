@@ -1,5 +1,5 @@
 import * as React from 'react';
-const controller = true;
+const controller = false;
 
 export default function Game(props) {
   return !controller ? (
@@ -7,7 +7,7 @@ export default function Game(props) {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth={1}
+      strokeWidth={1.5}
       strokeLinecap='round'
       strokeLinejoin='round'
       className='icons'
@@ -21,7 +21,7 @@ export default function Game(props) {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth={1.2}
+      strokeWidth={1.5}
       strokeLinecap='round'
       strokeLinejoin='round'
       className='icons'

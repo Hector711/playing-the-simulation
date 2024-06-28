@@ -17,8 +17,14 @@ export function CommunityProvider({children}) {
     queryKey: ['levels'],
     queryFn: getLevels,
   });
+  const [page, setPage] = useState('Introducción');
+
+  function onChangePage(value) {
+    return setPage(value);
+  }
+
   return (
-    <CommunityContext.Provider value={{isLoadingLevels, levels, isErrorLevels, errorLevels }}>
+    <CommunityContext.Provider value={{isLoadingLevels, levels, isErrorLevels, errorLevels, page, onChangePage }}>
       {children}
     </CommunityContext.Provider>
   )

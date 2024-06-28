@@ -39,7 +39,7 @@ header#profile {
   hr {
     width: 100%;
   }
-  #profile-info {
+  div#profile-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,6 +48,15 @@ header#profile {
     height: max-content;
     width: 100%;
     padding-block: 12px;
+    div {
+      display: flex;
+      svg.icons {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        color: var(--orange-0);
+      }
+    }
   }
 
   #goals-link {
@@ -61,7 +70,7 @@ header#profile {
     h2 {
       font-weight: 700;
       text-align: center;
-      font-size: 1.3rem !important;
+      font-size: 1.2rem !important;
     }
   }
 }
@@ -93,12 +102,14 @@ footer#logout {
     padding: 10px;
   }
 }
-
+* {
+  /* border: 1px solid ; */
+}
 .aside-icons {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 #goals-icon {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }

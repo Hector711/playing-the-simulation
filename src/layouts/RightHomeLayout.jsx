@@ -2,6 +2,7 @@ import React from 'react';
 import Post from '@/components/Post';
 import ModelAsideRight from '@/layouts/ModelAsideRight';
 import { Outlet } from 'react-router-dom';
+import Newspaper from '@/icons/Newspaper';
 
 export default function RightHomeLayout() {
   return (
@@ -14,7 +15,11 @@ export default function RightHomeLayout() {
 
 function AsideRight() {
   return (
-    <ModelAsideRight title='Noticias' id='news'>
+    <ModelAsideRight id='news'>
+      <header>
+      <Newspaper /><h2 className='impact'>Noticias</h2>
+      </header>
+      <hr />
       <section id='news'></section>
     </ModelAsideRight>
   );

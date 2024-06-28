@@ -46,7 +46,8 @@ h5 {
   font-weight: 700;
 }
 h6 {
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 550;
   color: var(--white-2) !important;
 }
 

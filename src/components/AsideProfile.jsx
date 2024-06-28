@@ -68,7 +68,7 @@ export default function AsideProfile() {
             logout();
           }}
         >
-          <h4>Cerrar Sesión</h4>
+          <h6>Cerrar Sesión</h6>
         </NavLink>
       </footer>
     </ModelAsideLeft>

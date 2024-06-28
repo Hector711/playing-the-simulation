@@ -26,10 +26,6 @@ export default function CommunityPage() {
       </ModelMainPro>
 
       <ModelAsideRight id='community'>
-        <button>
-          <Game />
-        </button>
-        <hr />
         {communityButtons.map(({ title, value }, index) => (
           <CommunityButton
             key={index}

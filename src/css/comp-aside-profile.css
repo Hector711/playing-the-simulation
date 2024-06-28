@@ -68,7 +68,7 @@ header#profile {
     width: 100%;
     color: var(--blue-1);
     h2 {
-      font-weight: 700;
+      font-weight: 750;
       text-align: center;
       font-size: 1.2rem !important;
     }
@@ -95,15 +95,12 @@ footer#logout {
   bottom: 0;
   width: 100%;
   #logout {
-    border: 0.5px solid var(--white-2);
+    border: 0.5px solid var(--white-3);
     display: flex;
     justify-content: center;
     border-radius: var(--border-m);
     padding: 10px;
   }
-}
-* {
-  /* border: 1px solid ; */
 }
 .aside-icons {
   width: 25px;

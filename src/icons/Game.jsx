@@ -1,5 +1,5 @@
 import * as React from 'react';
-const controller = false;
+const controller = true;
 
 export default function Game(props) {
   return !controller ? (

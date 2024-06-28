@@ -10,11 +10,13 @@ nav#nav {
 }
 
 #nav-container {
+  
   display: flex;
   padding-block: 0.5rem;
   align-items: center;
   justify-content: space-between;
-  width: 1200px;
+  width: 100%;
+  max-width: var(--width);
   h1 {
     font-size: 28px;
     text-wrap: nowrap;
@@ -35,7 +37,7 @@ nav#nav {
   }
 }
 #nav-left {
-  gap: 2rem;
+  gap: 1.5rem;
   display: flex;
   color: var(--orange-0);
 }

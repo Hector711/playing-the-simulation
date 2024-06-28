@@ -12,28 +12,28 @@ h1.main-title {
   color: white;
 }
 
-/* NAVBAR LINKS */
+/* NAVBAR LINKS, ASIDE LINKS */
 h2 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  font-weight: 450;
 }
 /* TITULO DE ASIDES */
 h2.impact {
   font-size: 1.1rem !important;
-  color: var(--white-2);
+  color: var(--white-1);
 }
 h2.impact.home {
   display: flex;
   /* padding: 20px 0 !important; */
 }
-/* TITULO DE PERFILES */
-h2.profile {
-  font-size: 1.6rem;
-  font-weight: 700;
-  /* color: var(--white-0); */
-}
 .impact {
   font-family: 'Heading';
   text-transform: uppercase;
+}
+/* MESES DE PLANIFICACION */
+h3{
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 /* TITULOS DE POST Y CURSOS */
@@ -42,7 +42,7 @@ h4 {
   font-weight: 800;
 }
 h5 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 h6 {
@@ -52,11 +52,14 @@ h6 {
 }
 
 p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   text-wrap: pretty;
   word-wrap: break-word;
   padding-inline: auto;
+}
+span{
+  font-size: 0.9rem;
 }
 
 ol,
@@ -72,7 +75,9 @@ ul {
 a:hover {
   color: var(--white-1);
 } */
-
+div#nav-container, div#layout {
+  padding-inline: var(--pad)
+}
 button {
   border-radius: var(--border-m);
   display: flex;

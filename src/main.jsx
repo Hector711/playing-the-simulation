@@ -24,7 +24,7 @@ import '@/css/page-community.css';
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
 import '@/css/comp-avatar.css';
-
+import '@/css/comp-line-months.css';
 import '@/css/comp-new-post.css';
 import '@/css/comp-dnd-kit.css';
 import '@/css/comp-select-filter.css';

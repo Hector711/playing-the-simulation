@@ -3,6 +3,7 @@ import ModelMainPro from '@/layouts/ModelMainPro';
 import Edit from '@/icons/Edit.jsx';
 import Edit2 from '@/icons/Edit2.jsx';
 import { usePlanning } from '@/context/PlanningContext';
+import LineMonths from '@/components/LineMonths';
 
 export default function PlanningPage() {
   const {
@@ -22,32 +23,10 @@ export default function PlanningPage() {
 
   return (
     <ModelMainPro title='Planificación' className='plan-page'>
-      {/* CABECERA */}
-      {/* <header className='plan-page'>
-        <h4>VISIÓN A LARGO PLAZO</h4>
-
-        <button id='edit'>
-          <Edit2 />
-        </button>
-
-        <div id='goals-container'>
-          <div className='goals'>
-            <h5>Salud</h5> <p>Alcanzar los 80 kg</p>
-          </div>
-          <div className='goals'>
-            <h5>Social</h5> <p>Conseguir 100 seguidores en YouTube</p>
-          </div>
-          <div className='goals'>
-            <h5>Profesional</h5> <p>Ganar 5k € mensuales</p>
-          </div>
-        </div>
-      </header>
-      <hr /> */}
-      {/* RUTA ANUAL */}
+      <header></header>
       <section className='plan-page' id='anual-route'>
-        <LineRoute />
+        <LineMonths />
       </section>
-      {/* TAREAS MENSUALES */}
       {
         <section id='month-grid' className='plan-page'>
           <div id='tasks'>
@@ -87,8 +66,6 @@ export default function PlanningPage() {
                 <button>Abrir Fianza</button>
               </>
             )}
-
-            {console.log(monthBail)}
           </div>
         </section>
       }
@@ -96,88 +73,4 @@ export default function PlanningPage() {
   );
 }
 
-function LineRoute() {
-  const { setMonthToShow } = usePlanning();
-  return (
-    <div id='route'>
-      <div id='route-container'>
-        <div id='line'></div>
-        <div id='dots'>
-          {yearMonths.map(({ month, time }, i) => (
-            <MonthDot
-              key={i}
-              month={month}
-              time={time}
-              onClick={() => {
-                setMonthToShow(month);
-              }}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
-function MonthDot({ month, time, onClick }) {
-  return (
-    <div className={`dot ${time}`}>
-      <span>
-        <button className={time} onClick={onClick}>
-          {month}
-        </button>
-      </span>
-    </div>
-  );
-}
-
-const yearMonths = [
-  {
-    month: 'ENE',
-    time: 'past',
-  },
-  {
-    month: 'FEB',
-    time: 'past',
-  },
-  {
-    month: 'MAR',
-    time: 'past',
-  },
-  {
-    month: 'ABR',
-    time: 'past',
-  },
-  {
-    month: 'MAY',
-    time: 'past',
-  },
-  {
-    month: 'JUN',
-    time: 'past',
-  },
-  {
-    month: 'JUL',
-    time: 'future',
-  },
-  {
-    month: 'AGO',
-    time: 'future',
-  },
-  {
-    month: 'SEP',
-    time: 'future',
-  },
-  {
-    month: 'OCT',
-    time: 'future',
-  },
-  {
-    month: 'NOV',
-    time: 'future',
-  },
-  {
-    month: 'DIC',
-    time: 'future',
-  },
-];

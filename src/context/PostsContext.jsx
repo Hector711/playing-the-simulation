@@ -28,6 +28,7 @@ export function PostsProvider({ children }) {
         isLoading,
         isError,
         error,
+        posts
       }}
     >
       {children}

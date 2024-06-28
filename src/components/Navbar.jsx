@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import NavLinkButton from '@/components/NavLinkButton';
-import Game from '@/icons/Game';
+// import gambito from '@/icons/gambito.png';
 
 function Navbar() {
   return (
@@ -11,15 +11,18 @@ function Navbar() {
           <NavLink to='/home'>
             <h1 className='main-title'>Playing The Simulation</h1>
           </NavLink>
-          <NavLinkButton to='/classroom'>Classroom</NavLinkButton>
+          <NavLinkButton to='/classroom'>Road To 100k</NavLinkButton>
+          <NavLinkButton to='/019'>0.19</NavLinkButton>
+          <NavLinkButton to='/bonus'>Bonus</NavLinkButton>
           <NavLinkButton to='/members'>Miembros</NavLinkButton>
-          <NavLinkButton to='/calendar'>Calendario</NavLinkButton>
           <NavLinkButton to='/archives'>Biblioteca</NavLinkButton>
+          <NavLinkButton to='/calendar'>Calendario</NavLinkButton>
+          <NavLinkButton to='/community'>Comunidad</NavLinkButton>
         </div>
         <div id='nav-right'>
-          <NavLinkButton to='/community'>
-            <Game />
-          </NavLinkButton>
+          <NavLink to='/game'>
+            {/* <img src={gambito} alt="" id='gambito'/> */}
+          </NavLink>
         </div>
       </div>
     </nav>

@@ -42,19 +42,23 @@ header#profile {
   div#profile-info {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: var(--gap-s);
     height: max-content;
-    width: 100%;
+    width: max-content;
     padding-block: 12px;
     div {
       display: flex;
+
       svg.icons {
         width: 20px;
         height: 20px;
         margin-right: 5px;
         color: var(--orange-0);
+      }
+      span{
+        color: var(--white-1);
       }
     }
   }

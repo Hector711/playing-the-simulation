@@ -9,14 +9,15 @@
     Arial,
     sans-serif;
 
-  --width: 1200px;
+  --width: 1400px;
+  --pad: 2rem;
 
   --border-s: 5px;
   --border-m: 8px;
   --border-l: 30px;
 
-  --left-aside: 230px;
-  --right-aside: 280px;
+  --left-aside: 240px;
+  --right-aside: 320px;
 
   --gap-s: 8px;
   --gap-m: 10px;
@@ -26,10 +27,10 @@
   --pad-m: 1rem;
   --pad-l: 1.2rem;
 
-  --white-0: #f4f4f4de;
-  --white-1: #cbcbcbde;
-  --white-2: #909090de;
-  --white-3: #565656de;
+  --white-0: #f4f4f4;
+  --white-1: #cbcbcb;
+  --white-2: #909090;
+  --white-3: #565656;
 
   --black-0: #050505;
   --black-1: #121212;
@@ -38,7 +39,7 @@
   --blue-1: #1a1e23;
 
   --orange-0: #f6921b;
-  --orange-1: #f6941bbe;
+  --orange-1: #985809;
 
   color-scheme: light dark;
   color: var(--white-0);

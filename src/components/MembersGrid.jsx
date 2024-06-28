@@ -35,25 +35,23 @@ function MemberCard({
   business,
 }) {
   return (
-    <article kay={id} className='memberCard'>
-      <header className='memberCard'>
+    <article kay={id} className='member-cards'>
+      <header className='member-cards'>
         <NavLink to={url}>
           <Avatar src={img} business={business} />
         </NavLink>
         <NavLink to={url} className='user'>
           <div>
-            <h2 className='profile'>{fullName}</h2>
+            <h3 className='profile'>{fullName}</h3>
             <span>&#8226; @{username}</span>
           </div>
           {level === 10 ? <b>Final Boss</b> : <b>Nivel {level}</b>}
           <span> &#8226; {points} puntos</span>
         </NavLink>
       </header>
-
       <hr />
-
-      <section className='memberCard'>
-        <div id='left'>
+      <section className='member-cards'>
+        <div className='left'>
           <p>
             <Location />
             {location}
@@ -63,7 +61,7 @@ function MemberCard({
             {speciality}
           </p>
         </div>
-        <div id='business'>
+        <div className='right'>
           {business.length > 0
             ? business.map(({ name, url }, index) => (
                 <a href={url} key={index}>
@@ -77,7 +75,7 @@ function MemberCard({
         </div>
       </section>
 
-      <footer className='memberCard'>
+      <footer className='member-cards'>
         <p>{about}</p>
       </footer>
     </article>

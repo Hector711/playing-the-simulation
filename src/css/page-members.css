@@ -7,15 +7,17 @@ main#members {
   display: flex;
   flex-direction: column;
 }
-
 section#members-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 1em;
   margin-block: var(--gap-l);
 }
 
-article.memberCard {
+article.member-cards {
+  *{
+    /* border: 1px solid; */
+  }
   display: flex;
   flex-direction: column;
   background-color: var(--blue-1);
@@ -23,7 +25,7 @@ article.memberCard {
   padding: var(--pad-m);
   border: 0.5px solid var(--white-3);
   gap: var(--gap-s);
-  header.memberCard {
+  header.member-cards {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -50,35 +52,37 @@ article.memberCard {
     }
   }
 
-  section {
+  section.member-cards {
     display: flex;
-    padding: 10px 0 0 0;
-    display: flex;
-    align-items: flex-start;
-    div#left {
-      width: 50%;
-    }
+    padding: 0.7rem 0.5rem;
     p {
       display: flex;
       align-items: center;
-      font-size: 0.9rem;
       gap: var(--gap-s);
+      text-wrap: wrap;
+      padding-right: 0.2rem;
+      svg.icons{
+        align-self: flex-start;
+      }
     }
-    div#business {
+    div.left, div.right {
       width: 50%;
       display: flex;
       flex-direction: column;
-    }
-    p {
-      margin-block: 5px;
+      justify-content: flex-start;
+      gap: var(--gap-s);
     }
   }
-}
+  footer.member-cards {
+    margin-top: auto;
+    padding: 0.3rem 0.5rem;
 
-.profile-icons {
-  width: 22px;
-  height: 22px;
-}
-.business-icon {
-  color: var(--orange-0);
+  }
+  svg.icons {
+    width: 22px;
+    height: 22px;
+  }
+  svg.business-icon {
+    color: var(--orange-0);
+  }
 }

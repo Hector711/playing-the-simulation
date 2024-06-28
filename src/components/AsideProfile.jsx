@@ -8,8 +8,8 @@ import IconSave from '@/icons/IconSave';
 import IconGoals from '@/icons/IconGoals';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import Game from '@/icons/Game';
-import Alpha from '@/icons/Alpha';
-import Work from '@/icons/Work';
+import Business from '@/icons/Business';
+import Pig from '@/icons/Pig';
 
 export default function AsideProfile() {
   const { logout } = useAuth();
@@ -30,17 +30,30 @@ export default function AsideProfile() {
         </NavLink>
         <hr />
         <div id='profile-info'>
-          <div>
+          {/* <div>
             <Work />
             <h6>Full Stack Developer</h6>
+          </div> */}
+          <div>
+            <Business />
+            <h6>
+              Negocio &#8227; 
+              <span> Fase 0</span>
+            </h6>
           </div>
           <div>
-            <Alpha />
-            <h6>Negocio Fase 0</h6>
+            <Pig />
+            <h6>
+              Fianza &#8227;
+              <span> Activada &#183; 50€</span>
+            </h6>
           </div>
           <div>
             <Game />
-            <h6>Nivel 4 &#8226; 400 pts</h6>
+            <h6>
+              Nivel &#8227;
+              <span> 4 &#183; 400 pts</span>
+            </h6>
           </div>
         </div>
 

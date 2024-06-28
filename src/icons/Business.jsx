@@ -3,19 +3,19 @@ import * as React from 'react';
 export default function Business(props) {
   return (
     <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      className='profile-icons business-icon'
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className="icons business-icon"
       {...props}
     >
-      <path d='M0 0h24v24H0z' stroke='none' />
-      <path d='M11 6a5 3 0 1010 0 5 3 0 10-10 0' />
-      <path d='M11 6v4c0 1.657 2.239 3 5 3s5-1.343 5-3V6' />
-      <path d='M11 10v4c0 1.657 2.239 3 5 3s5-1.343 5-3v-4' />
-      <path d='M11 14v4c0 1.657 2.239 3 5 3s5-1.343 5-3v-4M7 9H4.5a1.5 1.5 0 000 3h1a1.5 1.5 0 010 3H3M5 15v1m0-8v1' />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
+      />
     </svg>
   );
 }
+

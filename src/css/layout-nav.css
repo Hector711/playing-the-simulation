@@ -22,6 +22,7 @@ nav#nav {
     text-wrap: nowrap;
     height: 100%;
     width: var(--left-aside) !important;
+    text-align: center;
   }
   h2 {
     height: 100%;
@@ -47,8 +48,8 @@ nav#nav {
   color: var(--white-1);
   justify-content: center;
   align-self: center;
-  width: var(--right-aside);
-  /* border: 1px solid ; */
+
+
   h2 {
     /* border: 2px solid var(--white-3); */
     padding: 0.5rem 3rem;
@@ -59,5 +60,10 @@ nav#nav {
   .icons {
     width: 30px;
     height: 30px;
+  }
+  #gambito {
+    width: 70px;
+    height: 70px;
+
   }
 }

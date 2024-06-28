@@ -5,7 +5,7 @@ export default function Location(props) {
     <svg
       viewBox='0 0 24 24'
       fill='currentColor'
-      className='profile-icons'
+      className='icons'
       {...props}
     >
       <path

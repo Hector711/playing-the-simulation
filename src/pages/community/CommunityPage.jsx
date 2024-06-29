@@ -1,12 +1,11 @@
 import React from 'react';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import ModelAsideRight from '@/layouts/ModelAsideRight';
-
+import YouTubeVideo from '@/components/YouTubeVideo';
 import LineLevels from '@/components/LineLevels';
 import { useCommunity } from '@/context/CommunityContext';
 import { MainTitle } from '@/pages/WellcomePage';
 import { useEffect } from 'react';
-import YouTube from 'react-youtube';
 
 export default function CommunityPage() {
   const { page, onChangePage } = useCommunity();
@@ -129,20 +128,7 @@ function RulesPage() {
     </>
   );
 }
-function YouTubeVideo({ url }) {
-  return (
-    <iframe
-      width='560'
-      height='315'
-      src={url}
-      title='YouTube video player'
-      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-      referrerPolicy='strict-origin-when-cross-origin'
-      allowFullScreen
-      id='video'
-    ></iframe>
-  );
-}
+
 function BailPage() {
   return (
     <section>

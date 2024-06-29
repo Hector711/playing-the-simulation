@@ -7,4 +7,4 @@ const levelsApi = axios.create({
 export const getLevels = async () => {
   const res = await levelsApi.get('/');
   return res.data;
-}
+};

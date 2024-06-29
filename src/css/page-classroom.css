@@ -55,12 +55,9 @@ main.max {
     main {
       grid-area: main;
       min-height: 500px;
-      
     }
   }
 }
-
-
 
 #cards-grid {
   display: grid;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {useCommunity} from '@/context/CommunityContext';
+import { useCommunity } from '@/context/CommunityContext';
 
 export default function LineLevels() {
   const { levels } = useCommunity();

@@ -10,7 +10,6 @@ nav#nav {
 }
 
 #nav-container {
-  
   display: flex;
   padding-block: 0.5rem;
   align-items: center;
@@ -65,6 +64,5 @@ nav#nav {
   #gambito {
     width: 70px;
     height: 70px;
-
   }
 }

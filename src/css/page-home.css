@@ -23,12 +23,11 @@ section.timeline {
 }
 
 aside#news {
-  
   header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     svg.icons {
       width: 25px;
       height: 25px;

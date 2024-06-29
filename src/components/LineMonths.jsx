@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { usePlanning } from '@/context/PlanningContext';
 
 export default function LineMonths() {
@@ -24,17 +24,13 @@ export default function LineMonths() {
   );
 }
 
-
-
 function MonthDot({ month, time, onClick }) {
   return (
-      <span>
-        <button className={time} onClick={onClick}>
-          <h3>
-          {month}
-          </h3>
-        </button>
-      </span>
+    <span>
+      <button className={time} onClick={onClick}>
+        <h3>{month}</h3>
+      </button>
+    </span>
   );
 }
 

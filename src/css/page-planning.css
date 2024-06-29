@@ -43,7 +43,6 @@ header.plan-page {
   }
 }
 
-
 section#month-grid {
   display: grid;
   grid-template-areas: 'tasks bail';

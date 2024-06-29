@@ -9,7 +9,11 @@ export default function ModelMain({ className, children, title, id, nav }) {
       {nav && (
         <nav>
           {nav.map((item, i) => (
-            <NavLink key={i} to={`/${item.page}/${item.slug}`} className={isActive}>
+            <NavLink
+              key={i}
+              to={`/${item.page}/${item.slug}`}
+              className={isActive}
+            >
               {item.title}
             </NavLink>
           ))}

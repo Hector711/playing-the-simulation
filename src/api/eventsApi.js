@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const postsApi = axios.create({
-  baseURL: 'http://localhost:3003/events'
+  baseURL: 'http://localhost:3003/events',
 });
 
 export const getEvents = async () => {

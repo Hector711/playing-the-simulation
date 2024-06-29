@@ -37,7 +37,7 @@ export default function AsideProfile() {
           <div>
             <Business />
             <h6>
-              Negocio &#8227; 
+              Negocio &#8227;
               <span> Fase 0</span>
             </h6>
           </div>

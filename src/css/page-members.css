@@ -15,7 +15,7 @@ section#members-grid {
 }
 
 article.member-cards {
-  *{
+  * {
     /* border: 1px solid; */
   }
   display: flex;
@@ -61,11 +61,12 @@ article.member-cards {
       gap: var(--gap-s);
       text-wrap: wrap;
       padding-right: 0.2rem;
-      svg.icons{
+      svg.icons {
         align-self: flex-start;
       }
     }
-    div.left, div.right {
+    div.left,
+    div.right {
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -76,7 +77,6 @@ article.member-cards {
   footer.member-cards {
     margin-top: auto;
     padding: 0.3rem 0.5rem;
-
   }
   svg.icons {
     width: 22px;

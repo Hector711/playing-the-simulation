@@ -33,9 +33,6 @@ import '@/css/comp-news.css';
 import '@/css/comp-aside-profile.css';
 import '@/css/comp-line-leves.css';
 
-
-
-
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700
 import '@fontsource-variable/comfortaa';

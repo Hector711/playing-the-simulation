@@ -10,35 +10,73 @@ aside.community {
     text-align: center;
   }
 }
-main#classroom {
-  display: flex;
-  flex-direction: column;
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-m);
-    margin-block: var(--gap-l);
-    h4 {
-      padding: 5px 5px;
-    }
-  }
 
-  #cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--gap-l);
+main.max {
+  border-radius: 10px;
+  background-color: var(--blue-1);
+  nav {
+    display: flex;
+    /* border-bottom: 2px solid var(--orange-2); */
+    gap: 5px;
+    background-color: var(--black-0);
+    a {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 0.4rem 1.2rem;
+      text-align: center;
+      background-color: var(--orange-2);
+      font-weight: 600;
+      color: var(--blue-1);
+    }
+    .active-link {
+      background-color: var(--orange-0);
+    }
+    .nav-slugs {
+      font-weight: 650;
+      font-size: 1.1rem;
+    }
   }
-  div.classroom-card {
-    border: 0.5px solid var(--white-3);
-    border-radius: var(--border-m);
-    overflow: hidden;
-    background-color: var(--blue-1);
-    h4 {
-      text-wrap: nowrap;
+  div#class-grid {
+    display: grid;
+    grid-template-areas: 'aside main';
+    grid-template-columns: var(--left-classes) 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    border: 0.5px solid var(--white-2);
+    border-radius: 0 10px 10px 10px;
+    aside {
+      grid-area: aside;
+      border-right: 1px solid var(--white-2);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-block: 1rem;
     }
-    h4,
-    p {
-      padding: var(--pad-s);
+    main {
+      grid-area: main;
+      min-height: 500px;
+      
     }
+  }
+}
+
+
+
+#cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--gap-l);
+}
+div.classroom-card {
+  border: 0.5px solid var(--white-3);
+  border-radius: var(--border-m);
+  overflow: hidden;
+  background-color: var(--blue-1);
+  h4 {
+    text-wrap: nowrap;
+  }
+  h4,
+  p {
+    padding: var(--pad-s);
   }
 }

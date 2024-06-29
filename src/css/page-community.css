@@ -1,10 +1,38 @@
 main#community {
-  margin-right: 1rem;
+  margin-right: 0rem;
 }
-article.community {
+article.community#start {
+  background-color: var(--blue-1);
+  border-radius: var(--border-m);
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 2rem 3rem;
+  h1 {
+    color: var(--white-0);
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    h3 {
+      color: var(--white-1);
+      font-size: 1rem;
+    }
+    svg.icons {
+      width: 40px;
+      height: 40px;
+      color: var(--white-1);
+    }
+  }
+
 }
+
 article.community#levels {
   gap: 2rem;
   header.community {
@@ -58,12 +86,22 @@ article.cards-levels {
 }
 
 aside#community {
-  button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  .community-links {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 55px;
+    border: 1px solid var(--black-0);
+    border-radius: var(--border-m);
+    box-shadow: 3px 3px 5px 0px var(--black-0);
+    background-color: var(--blue-0);
     svg.icons {
       width: 40px;
       height: 40px;
@@ -71,40 +109,8 @@ aside#community {
   }
 }
 
+
 article.community#introduction-page {
-  header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding-block: 2rem 0.5rem;
-    margin-block: 1rem;
-    #video{
-      background-color: var(--blue-1);
-      padding: 1rem;;
-      border: 5px solid ;
-    }
-    h1 {
-      color: var(--white-0);
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    div {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      gap: 0.5rem;
-      h3 {
-        color: var(--white-0);
-      }
-      svg.icons {
-        width: 40px;
-        height: 40px;
-        color: var(--white-0);
-      }
-    }
-  }
   section {
     display: flex;
     justify-content: center;

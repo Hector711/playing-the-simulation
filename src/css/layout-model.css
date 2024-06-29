@@ -1,5 +1,5 @@
 :root {
-  --left-classes: 350px;
+  --left-classes: 300px;
 }
 div#layout {
   display: grid;
@@ -21,7 +21,6 @@ aside.aside-left {
   grid-area: left;
   display: flex;
   flex-direction: column;
-  /* gap: var(--gap-s); */
   height: 85vh;
   position: relative;
   h2.impact {
@@ -51,60 +50,13 @@ main.pro {
     font-weight: 600;
   }
 }
-main.pro.left {
+main.left {
   grid-column: left / span 2;
 }
-* {
-  /* border: 1px solid; */
-}
+
 main.max {
   grid-column: left / span 3;
-  border-radius: 10px;
-  background-color: var(--blue-1);
-  nav {
-    display: flex;
-    /* border-bottom: 2px solid var(--orange-2); */
-    gap: 5px;
-    background-color: var(--black-0);
-    a {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      padding: 0.4rem 1.2rem;
-      text-align: center;
-      background-color: var(--orange-2);
-      font-weight: 600;
-      color: var(--blue-1);
-    }
-    .active-link {
-      background-color: var(--orange-0);
-    }
-    .nav-slugs {
-      font-weight: 650;
-      font-size: 1.1rem;
-    }
-  }
-  div#class-grid {
-    display: grid;
-    grid-template-areas: 'aside main';
-    grid-template-columns: var(--left-classes) 1fr;
-    padding: 1rem;
-    gap: 1rem;
-    border: 1px solid var(--orange-2);
-    border-radius: 0 10px 10px 10px ;
-    aside {
-      grid-area: aside;
-      border-right: 1px solid var(--white-2);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      padding-block: 1rem;
-    }
-    main {
-      grid-area: main;
-      min-height: 500px;
-      
-    }
-  }
+
 }
 
 aside.aside-right {
@@ -119,7 +71,6 @@ aside.aside-right {
 
 
 span.page-title {
-
   grid-column: aside /span 2 ;
   width: 100%;
   height: 500px;
@@ -128,5 +79,4 @@ span.page-title {
   align-items: center;
   font-size: 5rem;
   font-weight: 600;
-
 }

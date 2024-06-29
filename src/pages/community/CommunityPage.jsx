@@ -1,61 +1,54 @@
 import React from 'react';
-import ModelMainPro from '@/layouts/ModelMainPro';
+import ModelMain from '@/layouts/ModelMain';
 import ModelAsideRight from '@/layouts/ModelAsideRight';
 import YouTubeVideo from '@/components/YouTubeVideo';
 import LineLevels from '@/components/LineLevels';
 import { useCommunity } from '@/context/CommunityContext';
 import { MainTitle } from '@/pages/WellcomePage';
-import { useEffect } from 'react';
+import { useParams, NavLink } from 'react-router-dom';
 
 export default function CommunityPage() {
-  const { page, onChangePage } = useCommunity();
-
-  useEffect(() => {
-    console.log(page);
-  }, [page]);
-
+  const { slug } = useParams();
   const COMMUNITY_PAGES = {
-    Introducción: <IntroductionPage />,
-    Niveles: <LevelsPage />,
-    Normas: <RulesPage />,
-    Fianzas: <BailPage />,
-    Directos: <StreamingsPage />,
+    introduction: <IntroductionPage />,
+    levels: <LevelsPage />,
+    rules: <RulesPage />,
+    bail: <BailPage />,
+    streamings: <StreamingsPage />,
   };
   return (
     <>
-      <ModelMainPro title={page} className='left' id='community'>
-        {COMMUNITY_PAGES[page]}
-      </ModelMainPro>
-
+      <ModelMain title='' className='left' id='community'>
+        {slug ? (
+          COMMUNITY_PAGES[slug]
+        ) : (
+          <article className='community' id='start'>
+            <MainTitle />
+            <YouTubeVideo url='https://www.youtube.com/embed/cqPNrRBUSUg?si=vQS5oaum8JVBklyw' />
+          </article>
+        )}
+      </ModelMain>
       <ModelAsideRight id='community'>
-        {communityButtons.map(({ title, value }, index) => (
-          <CommunityButton
+        {communityLinks.map(({ title, slug }, index) => (
+          <NavLink
+            to={`/community/${slug}`}
             key={index}
-            title={title}
-            onClick={() => {
-              onChangePage(value);
-            }}
-          />
+            className='community-links'
+          >
+            <h5>{title}</h5>
+          </NavLink>
         ))}
       </ModelAsideRight>
     </>
   );
 }
 
-function CommunityButton({ title, onClick }) {
-  return (
-    <button className='community-button' onClick={onClick}>
-      <span>{title}</span>
-    </button>
-  );
-}
-
-const communityButtons = [
-  { title: 'Introducción', value: 'Introducción' },
-  { title: 'Niveles', value: 'Niveles' },
-  { title: 'Normas', value: 'Normas' },
-  { title: 'Sistema de Fianzas', value: 'Fianzas' },
-  { title: 'Directos', value: 'Directos' },
+const communityLinks = [
+  { title: 'Introducción', slug: 'introduction' },
+  { title: 'Niveles', slug: 'levels' },
+  { title: 'Sistema de Fianzas', slug: 'bail' },
+  { title: 'Normas', slug: 'rules' },
+  { title: 'Directos', slug: 'streamings' },
 ];
 
 function LevelsPage() {
@@ -87,26 +80,20 @@ function LevelsPage() {
 function IntroductionPage() {
   return (
     <article className='community' id='introduction-page'>
-      <header className='community'>
-        <MainTitle />
-      </header>
       <section>
-        <YouTubeVideo url='https://www.youtube.com/embed/cqPNrRBUSUg?si=vQS5oaum8JVBklyw' />
-        <section>
-          <YouTubeVideo url='https://youtube.com/embed/K5DP4p5otPo?si=sG5Jtji_Cwxj26nw' />
-          <p>
-            Canales de la comunidad:
-            <ul>
-              {categories.map(({ title, content }, i) => (
-                <li key={i}>
-                  <h4>{title}</h4> <p>{content}</p>
-                </li>
-              ))}
-            </ul>
-          </p>
-          <YouTubeVideo url='https://youtube.com/embed/-7Iv19JomWQ?si=YrBbRj-gfM0wKwSW' />
-          <YouTubeVideo url='https://youtube.com/embed/epJi4uLw27s?si=naWaFYdsw96ed6la' />
-        </section>
+        <YouTubeVideo url='https://youtube.com/embed/K5DP4p5otPo?si=sG5Jtji_Cwxj26nw' />
+        <p>
+          Canales de la comunidad:
+          <ul>
+            {categories.map(({ title, content }, i) => (
+              <li key={i}>
+                <h4>{title}</h4> <p>{content}</p>
+              </li>
+            ))}
+          </ul>
+        </p>
+        <YouTubeVideo url='https://youtube.com/embed/-7Iv19JomWQ?si=YrBbRj-gfM0wKwSW' />
+        <YouTubeVideo url='https://youtube.com/embed/epJi4uLw27s?si=naWaFYdsw96ed6la' />
       </section>
     </article>
   );

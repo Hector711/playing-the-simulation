@@ -38,6 +38,9 @@ importers:
       axios:
         specifier: ^1.7.2
         version: 1.7.2
+      bootstrap:
+        specifier: ^5.3.3
+        version: 5.3.3(@popperjs/core@2.11.8)
       dayjs:
         specifier: ^1.11.11
         version: 1.11.11
@@ -53,6 +56,9 @@ importers:
       react-big-calendar:
         specifier: ^1.13.0
         version: 1.13.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-bootstrap:
+        specifier: ^2.10.3
+        version: 2.10.3(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-calendly:
         specifier: ^4.3.1
         version: 4.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -526,6 +532,12 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
+  '@react-aria/ssr@3.9.4':
+    resolution: {integrity: sha512-4jmAigVq409qcJvQyuorsmBR4+9r3+JEC60wC+Y0MZV0HCtTmm8D9guYXlJMdx0SSkgj0hHAyFm/HvPNFofCoQ==}
+    engines: {node: '>= 12'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0-rc.1 || ^18.0.0
+
   '@remix-run/router@1.16.1':
     resolution: {integrity: sha512-es2g3dq6Nb07iFxGk5GuHN20RwBZOsuDQN7izWIisUcv9r+d2C5jQxqmgkdebXgReWfiyUabcki6Fg77mSNrig==}
     engines: {node: '>=14.0.0'}
@@ -534,6 +546,12 @@ packages:
     resolution: {integrity: sha512-f7aCv7c+nU/3mF7NWLtVVr0Ra80RqsO89hO72r+Y/nvQr5+q0UFGkocElTH6MJApvReVh6JHUFYn2cw1WdHF3w==}
     peerDependencies:
       react: '>=16.8.0'
+
+  '@restart/ui@1.6.9':
+    resolution: {integrity: sha512-mUbygUsJcRurjZCt1f77gg4DpheD1D+Sc7J3JjAkysUj7t8m4EBJVOqWC9788Qtbc69cJ+HlJc6jBguKwS8Mcw==}
+    peerDependencies:
+      react: '>=16.14.0'
+      react-dom: '>=16.14.0'
 
   '@rollup/rollup-android-arm-eabi@4.18.0':
     resolution: {integrity: sha512-Tya6xypR10giZV1XzxmH5wr25VcZSncG0pZIjfePT0OVBvqNEurzValetGNarVrGiq66EBVAFn15iYX4w6FKgQ==}
@@ -614,6 +632,9 @@ packages:
     resolution: {integrity: sha512-UOo5FdvOL0+eIVTgS4tIdbW+TtnBLWg1YBCcU2KWM7nuNwRz9bksDX1bekJJCpu25N1DVWaCwnT39dVQxzqS8g==}
     cpu: [x64]
     os: [win32]
+
+  '@swc/helpers@0.5.11':
+    resolution: {integrity: sha512-YNlnKRWF2sVojTpIyzwou9XoTNbzbzONwRhOoniEioF1AtaitTvVZblaQRrAzChWQ1bLYyYSWzM18y4WwgzJ+A==}
 
   '@tanstack/query-core@5.45.0':
     resolution: {integrity: sha512-RVfIZQmFUTdjhSAAblvueimfngYyfN6HlwaJUPK71PKd7yi43Vs1S/rdimmZedPWX/WGppcq/U1HOj7O7FwYxw==}
@@ -851,6 +872,11 @@ packages:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
 
+  bootstrap@5.3.3:
+    resolution: {integrity: sha512-8HLCdWgyoMguSO9o+aH+iuZ+aht+mzW0u3HIMzVu7Srrpv7EBBxTnrFlSCskwdY1+EOFQSm7uMJhNQHkdPcmjg==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.8
+
   brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
 
@@ -896,6 +922,9 @@ packages:
   chokidar@3.6.0:
     resolution: {integrity: sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==}
     engines: {node: '>= 8.10.0'}
+
+  classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
 
   clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
@@ -1816,6 +1845,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prop-types-extra@1.1.1:
+    resolution: {integrity: sha512-59+AHNnHYCdiC+vMwY52WmvP5dM3QLeoumYuEyceQDi9aEhtwN9zIQ2ZNo25sMyXnbh32h+P1ezDsUpUH3JAew==}
+    peerDependencies:
+      react: '>=0.14.0'
+
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
 
@@ -1834,6 +1868,16 @@ packages:
     peerDependencies:
       react: ^16.14.0 || ^17 || ^18
       react-dom: ^16.14.0 || ^17 || ^18
+
+  react-bootstrap@2.10.3:
+    resolution: {integrity: sha512-cc1KAaQyj6Gr3AfA0eRRiUMSlRi3brDVcjc/o0E9y9XNW7ISo8TITrq8G8G3QTFe7VIhCiDt38k99AEFoLOolw==}
+    peerDependencies:
+      '@types/react': '>=16.14.8'
+      react: '>=16.14.0'
+      react-dom: '>=16.14.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   react-calendly@4.3.1:
     resolution: {integrity: sha512-poyUH3NOUOlsotr8ho5WzbsbPuRAppaY+Jvu+C/PkwTP6WT807pNFI8+HrbbuRknXZbd75zpzysOJQvcu3P8Pg==}
@@ -2144,6 +2188,11 @@ packages:
     resolution: {integrity: sha512-svtcfoTADIB0nT9nltgjujTi7BzVmwjZClOmskKu/E8FW9BXzg9os8OLr4f8Dlnk0rYWJIWr4wv9eKUXiQvQwQ==}
     peerDependencies:
       react: '>=15.0.0'
+
+  uncontrollable@8.0.4:
+    resolution: {integrity: sha512-ulRWYWHvscPFc0QQXvyJjY6LIXU56f0h8pQFvhxiKk5V1fcI8gp9Ht9leVAhrVjzqMw0BgjspBINx9r6oyJUvQ==}
+    peerDependencies:
+      react: '>=16.14.0'
 
   update-browserslist-db@1.0.16:
     resolution: {integrity: sha512-KVbTxlBYlckhF5wgfyZXTWnMn7MMZjMu9XG8bPlliUOP9ThaF4QnhP8qrjrH7DRzHfSk0oQv1wToW+iA5GajEQ==}
@@ -2663,12 +2712,31 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
+  '@react-aria/ssr@3.9.4(react@18.3.1)':
+    dependencies:
+      '@swc/helpers': 0.5.11
+      react: 18.3.1
+
   '@remix-run/router@1.16.1': {}
 
   '@restart/hooks@0.4.16(react@18.3.1)':
     dependencies:
       dequal: 2.0.3
       react: 18.3.1
+
+  '@restart/ui@1.6.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@babel/runtime': 7.24.7
+      '@popperjs/core': 2.11.8
+      '@react-aria/ssr': 3.9.4(react@18.3.1)
+      '@restart/hooks': 0.4.16(react@18.3.1)
+      '@types/warning': 3.0.3
+      dequal: 2.0.3
+      dom-helpers: 5.2.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      uncontrollable: 8.0.4(react@18.3.1)
+      warning: 4.0.3
 
   '@rollup/rollup-android-arm-eabi@4.18.0':
     optional: true
@@ -2717,6 +2785,10 @@ snapshots:
 
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
+
+  '@swc/helpers@0.5.11':
+    dependencies:
+      tslib: 2.6.3
 
   '@tanstack/query-core@5.45.0': {}
 
@@ -2997,6 +3069,10 @@ snapshots:
 
   binary-extensions@2.3.0: {}
 
+  bootstrap@5.3.3(@popperjs/core@2.11.8):
+    dependencies:
+      '@popperjs/core': 2.11.8
+
   brace-expansion@1.1.11:
     dependencies:
       balanced-match: 1.0.2
@@ -3055,6 +3131,8 @@ snapshots:
       readdirp: 3.6.0
     optionalDependencies:
       fsevents: 2.3.3
+
+  classnames@2.5.1: {}
 
   clsx@1.2.1: {}
 
@@ -4016,6 +4094,12 @@ snapshots:
 
   prettier@3.3.2: {}
 
+  prop-types-extra@1.1.1(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+      react-is: 16.13.1
+      warning: 4.0.3
+
   prop-types@15.8.1:
     dependencies:
       loose-envify: 1.4.0
@@ -4048,6 +4132,25 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       react-overlays: 5.2.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       uncontrollable: 7.2.1(react@18.3.1)
+
+  react-bootstrap@2.10.3(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      '@babel/runtime': 7.24.7
+      '@restart/hooks': 0.4.16(react@18.3.1)
+      '@restart/ui': 1.6.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/react-transition-group': 4.4.10
+      classnames: 2.5.1
+      dom-helpers: 5.2.1
+      invariant: 2.2.4
+      prop-types: 15.8.1
+      prop-types-extra: 1.1.1(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-transition-group: 4.4.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      uncontrollable: 7.2.1(react@18.3.1)
+      warning: 4.0.3
+    optionalDependencies:
+      '@types/react': 18.3.3
 
   react-calendly@4.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
@@ -4460,6 +4563,10 @@ snapshots:
       invariant: 2.2.4
       react: 18.3.1
       react-lifecycles-compat: 3.0.4
+
+  uncontrollable@8.0.4(react@18.3.1):
+    dependencies:
+      react: 18.3.1
 
   update-browserslist-db@1.0.16(browserslist@4.23.1):
     dependencies:

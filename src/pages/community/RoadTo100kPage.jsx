@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ClassCard from '@/components/ClassCard';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import { useClassroom } from '@/context/ClassroomContext';
-import ClassCard from '@/components/ClassCard';
 
-export default function Classroom() {
+export default function RoadTo100kPage() {
+  const [ show , setShow ] = useState([]);
   const { isLoading, classes, isError, error } = useClassroom();
 
   if (isLoading) {
@@ -26,25 +27,20 @@ export default function Classroom() {
     }
   };
 
+
+
   return (
     <>
       <ModelAsideLeft id='classroom' className='community' title='Secciones'>
         <div className='filter-buttons'>
-          <button value='Introducción' onClick={scrollToSection}>
-            Introducción
-          </button>
-          <button value='Bonus' onClick={scrollToSection}>
-            Bonus
-          </button>
-          <button value='De 0 a 10k' onClick={scrollToSection}>
-            De 0 a 10k
-          </button>
-          <button value='Ideas / Retos' onClick={scrollToSection}>
-            Ideas / Retos
-          </button>
-          <button value='Desbloqueables' onClick={scrollToSection}>
-            Desbloqueables
-          </button>
+
+          {/* {
+            subjects.map((subject, index) => (
+              <button key={index} value={subject} onClick={scrollToSection}>
+                {subject}
+              </button>
+            ))
+          } */}
         </div>
       </ModelAsideLeft>
       <ModelMainPro
@@ -52,9 +48,8 @@ export default function Classroom() {
         pageTitle='Classroom'
         title='Todo el contenido '
       >
-        {Object.entries(groupedByLevel).map(([level, classes]) => (
-          <section key={level} id={level}>
-            <h4>{level}</h4>
+
+       
             <div id='cards-grid'>
               {classes.map((card, index) => (
                 <ClassCard
@@ -65,9 +60,36 @@ export default function Classroom() {
                 />
               ))}
             </div>
-          </section>
-        ))}
+
       </ModelMainPro>
     </>
   );
 }
+
+
+const subjects = [
+  'Equipo',
+  'Marketing',
+  'Inversion y gestion financiera',
+  'Sistemas',
+  'Sistemas',
+  'Validación',
+  'Ventas',
+  'Habilidades Imprescindibles',
+  'Core de negocio',
+  'Contabilidad',
+  'Como crear y validar ideas',
+  'Marca Persoal / Empresarial',
+  'Como crear contenido de valor',
+  'Mentalidad',
+  'Inversión',
+  'Productividad',
+  'Escalado',
+  'Escalado Fiscalidad',
+];
+const businessPhases = [
+  'Fase 0',
+  'Fase 1',
+  'Fase 2',
+  'Fase 3',
+]

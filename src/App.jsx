@@ -30,6 +30,7 @@ import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
 import ArchivesPage from '@/pages/community/ArchivesPage';
 import CalendarPage from '@/pages/community/CalendarPage';
+import RoadTo100kPage from '@/pages/community/RoadTo100kPage';
 
 const queryClient = new QueryClient();
 
@@ -77,6 +78,10 @@ function App() {
                             <Route
                               path='/classroom'
                               element={<ClassroomPage />}
+                            />
+                            <Route
+                              path='/roadto100k'
+                              element={<RoadTo100kPage />}
                             />
                             <Route path='/members' element={<MembersPage />} />
                             <Route

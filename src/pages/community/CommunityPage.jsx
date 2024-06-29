@@ -1,11 +1,12 @@
 import React from 'react';
 import ModelMainPro from '@/layouts/ModelMainPro';
 import ModelAsideRight from '@/layouts/ModelAsideRight';
-import Game from '@/icons/Game';
+
 import LineLevels from '@/components/LineLevels';
 import { useCommunity } from '@/context/CommunityContext';
 import { MainTitle } from '@/pages/WellcomePage';
 import { useEffect } from 'react';
+import YouTube from 'react-youtube';
 
 export default function CommunityPage() {
   const { page, onChangePage } = useCommunity();
@@ -18,6 +19,8 @@ export default function CommunityPage() {
     Introducción: <IntroductionPage />,
     Niveles: <LevelsPage />,
     Normas: <RulesPage />,
+    Fianzas: <BailPage />,
+    Directos: <StreamingsPage />,
   };
   return (
     <>
@@ -52,6 +55,8 @@ const communityButtons = [
   { title: 'Introducción', value: 'Introducción' },
   { title: 'Niveles', value: 'Niveles' },
   { title: 'Normas', value: 'Normas' },
+  { title: 'Sistema de Fianzas', value: 'Fianzas' },
+  { title: 'Directos', value: 'Directos' },
 ];
 
 function LevelsPage() {
@@ -87,16 +92,22 @@ function IntroductionPage() {
         <MainTitle />
       </header>
       <section>
-        <iframe
-          width='560'
-          height='315'
-          src='https://www.youtube.com/embed/cqPNrRBUSUg?si=0_HE5hE3zEbjx8Az'
-          title='YouTube video player'
-          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-          referrerPolicy='strict-origin-when-cross-origin'
-          allowFullScreen
-          id='video'
-        ></iframe>
+        <YouTubeVideo url='https://www.youtube.com/embed/cqPNrRBUSUg?si=vQS5oaum8JVBklyw' />
+        <section>
+          <YouTubeVideo url='https://youtube.com/embed/K5DP4p5otPo?si=sG5Jtji_Cwxj26nw' />
+          <p>
+            Canales de la comunidad:
+            <ul>
+              {categories.map(({ title, content }, i) => (
+                <li key={i}>
+                  <h4>{title}</h4> <p>{content}</p>
+                </li>
+              ))}
+            </ul>
+          </p>
+          <YouTubeVideo url='https://youtube.com/embed/-7Iv19JomWQ?si=YrBbRj-gfM0wKwSW' />
+          <YouTubeVideo url='https://youtube.com/embed/epJi4uLw27s?si=naWaFYdsw96ed6la' />
+        </section>
       </section>
     </article>
   );
@@ -118,6 +129,45 @@ function RulesPage() {
     </>
   );
 }
+function YouTubeVideo({ url }) {
+  return (
+    <iframe
+      width='560'
+      height='315'
+      src={url}
+      title='YouTube video player'
+      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+      referrerPolicy='strict-origin-when-cross-origin'
+      allowFullScreen
+      id='video'
+    ></iframe>
+  );
+}
+function BailPage() {
+  return (
+    <section>
+      <YouTubeVideo url='https://youtube.com/embed/1rs38CE7wnA?si=yxvcHfXe8zQ07D99' />
+      <p>
+        Pasos a seguir para cumplir tus objetivos del mes: Paso 1. Apunta tus
+        objetivos del mes Paso 2. Ve a esta página web Paso 3. Escoge la fianza
+        mas acorde a tus objetivos y haz el pago Paso 4. Ve al apartado de
+        fianzas en los canales de la comunidad y rellena la plantilla del
+        comentario fijado Paso 5. Crea el drive abierto donde subirás tus
+        pruebas comprobables y medibles y adjúntalo en tu comentario. A final de
+        mes se te contactará por privado
+        https://carlos-adams.com/sistema-de-fianzas/
+      </p>
+      <YouTubeVideo url='https://youtube.com/embed/7pGuBEsHwNE?si=xrHM_IJwyoLq7rvW' />
+    </section>
+  );
+}
+function StreamingsPage() {
+  return (
+    <section>
+      <YouTubeVideo url='https://youtube.com/embed/1rs38CE7wnA?si=yxvcHfXe8zQ07D99' />
+    </section>
+  );
+}
 
 const communityRules = [
   { rule: 'No se permitirán sindicalistas, ni socialistas.' },
@@ -129,6 +179,41 @@ const communityRules = [
     rule: 'Los post de categoria Afterwork se eliminarán una determinada cantidad de tiempo, y no aportarán puntos para subir de nivel.',
   },
   { rule: '' },
+];
+const categories = [
+  {
+    title: 'Anuncios',
+    content: 'Todas los anuncios importantes estarán aquí.',
+  },
+  {
+    title: 'Wins',
+    content:
+      'Poned vuestros historias de éxito gracias a la comunidad en estos años y las que vendrán a partir de ahora. Poned imágenes también.',
+  },
+  {
+    title: 'La Oficina',
+    content:
+      'A diferencia de 🍺 Afterwork en 👔 La oficina pondremos todos los aportes de valor a la comunidad.',
+  },
+  {
+    title: 'Afterwork',
+    content:
+      'En esta canal podrás charlar de cualquier cosa. Adiós a los insulsos, aquí estarán emprendedores y gente de tu misma ciudad.',
+  },
+  {
+    title: 'Intros',
+    content: 'En esta canal todos han de hacer su presentación.',
+  },
+  {
+    title: 'Retos',
+    content:
+      'Aquí todos pueden publicar sus retos ademas de los retos oficiales de la comunidad.',
+  },
+  {
+    title: 'Elevator Pitch (Proyectos)',
+    content:
+      'Publica un elevator pitch de tu proyecto y presenta a la comunidad.',
+  },
 ];
 
 const businessPhases = [

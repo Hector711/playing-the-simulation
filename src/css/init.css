@@ -14,7 +14,7 @@
 
   --border-s: 5px;
   --border-m: 8px;
-  --border-l: 30px;
+  --border-l: 20px;
 
   --left-aside: 240px;
   --right-aside: 320px;
@@ -35,11 +35,13 @@
   --black-0: #050505;
   --black-1: #121212;
 
-  --blue-0: #111822;
-  --blue-1: #1a1e23;
+  --blue-0: #141e25;
+  --blue-1: #141921
+  ;
 
   --orange-0: #f6921b;
   --orange-1: #985809;
+  --orange-2: #a76719;
 
   color-scheme: light dark;
   color: var(--white-0);

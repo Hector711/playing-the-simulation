@@ -11,7 +11,7 @@ export default function HomePage() {
   console.log('Cookies User', Cookies.get('user'));
   return (
     <>
-      <ModelMain id='timeline'>
+      <ModelMain id='timeline' className='home'>
         <NewPost />
         <hr className='home' />
         <Timeline />

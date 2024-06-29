@@ -25,7 +25,7 @@ function MemberCard({
   fullName,
   speciality,
   about,
-  img,
+  avatar,
   id,
   location,
   username,
@@ -38,7 +38,7 @@ function MemberCard({
     <article kay={id} className='member-cards'>
       <header className='member-cards'>
         <NavLink to={url}>
-          <Avatar src={img} business={business} />
+          <Avatar src={avatar} business={business} />
         </NavLink>
         <NavLink to={url} className='user'>
           <div>

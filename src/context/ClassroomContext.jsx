@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getClasses } from '@/api/classesApi';
 
@@ -13,6 +13,7 @@ export const useClassroom = () => {
 };
 
 export function ClassroomProvider({ children }) {
+  const [roadClasses, setRoadClasses] = useState([])
   const {
     isLoading,
     data: classes,
@@ -22,8 +23,14 @@ export function ClassroomProvider({ children }) {
     queryKey: ['classes'],
     queryFn: getClasses,
   });
+  
+  function getRoadClasses() {
+    const roadClasses = classes?.roadto100k;
+    setRoadClasses(roadClasses);
+  }
+
   return (
-    <ClassroomContext.Provider value={{ isLoading, classes, isError, error }}>
+    <ClassroomContext.Provider value={{ isLoading, getRoadClasses, isError, error }}>
       {children}
     </ClassroomContext.Provider>
   );

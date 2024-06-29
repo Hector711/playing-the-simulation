@@ -25,6 +25,7 @@ import MessagesPage from '@/pages/profile/MessagesPage';
 import PlanningPage from '@/pages/profile/PlanningPage';
 import SavedPage from '@/pages/profile/SavedPage';
 //  Community Pages
+import PlaygroundPage from '@/pages/community/PlaygroundPage';
 import ClassroomPage from '@/pages/community/ClassroomPage';
 import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
@@ -80,7 +81,23 @@ function App() {
                               element={<ClassroomPage />}
                             />
                             <Route
+                              path='/classroom/:slug'
+                              element={<ClassroomPage />}
+                            />
+                            <Route
+                              path='/playground'
+                              element={<PlaygroundPage />}
+                            />
+                            <Route
+                              path='/playground/:slug'
+                              element={<PlaygroundPage />}
+                            />
+                            <Route
                               path='/roadto100k'
+                              element={<RoadTo100kPage />}
+                            />
+                            <Route
+                              path='/roadto100k/:slug'
                               element={<RoadTo100kPage />}
                             />
                             <Route path='/members' element={<MembersPage />} />
@@ -94,6 +111,10 @@ function App() {
                             />
                             <Route
                               path='/community'
+                              element={<CommunityPage />}
+                            />
+                            <Route
+                              path='/community/:slug'
                               element={<CommunityPage />}
                             />
                             <Route path='*' element={<h1>NOT FOUND</h1>} />

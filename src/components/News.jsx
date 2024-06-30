@@ -2,7 +2,6 @@ import React from 'react';
 import ModelAsideRight from '@/layouts/ModelAsideRight';
 import Post from '@/components/Post';
 import Newspaper from '@/icons/Newspaper';
-import { usePosts } from '@/context/PostsContext';
 
 export default function News() {
   return (

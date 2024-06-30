@@ -93,11 +93,11 @@ function App() {
                               element={<PlaygroundPage />}
                             />
                             <Route
-                              path='/roadto100k'
+                              path='/road-to-100k'
                               element={<RoadTo100kPage />}
                             />
                             <Route
-                              path='/roadto100k/:slug'
+                              path='/road-to-100k/:slug'
                               element={<RoadTo100kPage />}
                             />
                             <Route path='/members' element={<MembersPage />} />

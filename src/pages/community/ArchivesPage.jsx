@@ -81,7 +81,7 @@ export default function ArchivesPage(props) {
           </button>
         </div>
       </ModelAsideLeft>
-      <ModelMain title='Publicaciones de la comunidad'></ModelMain>
+      <ModelMain title='Publicaciones de la comunidad' className='pro'></ModelMain>
     </>
   );
 }

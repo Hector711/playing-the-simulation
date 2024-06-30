@@ -13,3 +13,4 @@ export default function ModelAsideLeft({ children, id, title, className }) {
     </aside>
   );
 }
+

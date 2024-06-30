@@ -22,7 +22,7 @@ export default function PlanningPage() {
   }, [monthToShow]);
 
   return (
-    <ModelMain title='Planificación' className='plan-page'>
+    <ModelMain title='Planificación' className='plan-page pro'>
       <header></header>
       <section className='plan-page' id='anual-route'>
         <LineMonths />

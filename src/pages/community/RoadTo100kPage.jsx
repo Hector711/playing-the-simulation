@@ -13,10 +13,10 @@ export default function RoadTo100kPage() {
     return <div>Error: {error.message}</div>;
   }
   const navRoad = [
-    { title: 'Fase 0', page: 'roadto100k', slug: 'phase-0' },
-    { title: 'Fase 1 (5k€)', page: 'roadto100k', slug: 'phase-1' },
-    { title: 'Fase 2 (10k€)', page: 'roadto100k', slug: 'phase-2' },
-    { title: 'Fase 3 (100k€)', page: 'roadto100k', slug: 'phase-3' },
+    { title: 'Fase 0', page: 'road-to-100k', slug: 'phase-0' },
+    { title: 'Fase 1 (5k€)', page: 'road-to-100k', slug: 'phase-1' },
+    { title: 'Fase 2 (10k€)', page: 'road-to-100k', slug: 'phase-2' },
+    { title: 'Fase 3 (100k€)', page: 'road-to-100k', slug: 'phase-3' },
   ];
 
   const PHASE_SLUG = {
@@ -47,7 +47,7 @@ export default function RoadTo100kPage() {
       <div id='class-grid'>
         {slug ? (
           <>
-            <aside>
+            <aside id='left'>
               {slug &&
                 PHASE_SLUG[slug].map((subject, i) => (
                   <button key={i}>{subject}</button>
@@ -56,12 +56,14 @@ export default function RoadTo100kPage() {
             <main>
               <h3>Clase</h3>
             </main>
-            <div id='extras'>
+            <aside id='right'>
               <h3>Commentarios</h3>
-            </div>
+            </aside>
           </>
         ) : (
-          <span className='page-title'>De 0 a 100k</span>
+          <span className='page-title'>De 0 a 100k
+          <img src="https://i.ibb.co/BqGN8Y5/Captura-de-pantalla-2024-06-30-a-las-6-34-52-p-m.png"  alt="" />
+          </span>
         )}
       </div>
     </ModelMain>

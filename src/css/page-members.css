@@ -15,9 +15,6 @@ section#members-grid {
 }
 
 article.member-cards {
-  * {
-    /* border: 1px solid; */
-  }
   display: flex;
   flex-direction: column;
   background-color: var(--blue-1);

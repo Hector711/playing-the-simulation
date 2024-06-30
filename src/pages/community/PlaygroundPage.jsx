@@ -8,16 +8,19 @@ export default function PlaygroundPage() {
 
   const navRoad = [
     { title: 'Bonus', page: 'playground', slug: 'bonus' },
-    { title: 'Brainstorming', page: 'playground', slug: 'ideas' },
+    { title: 'Retos', page: 'playground', slug: 'retos' },
+    { title: 'Brainstorming', page: 'playground', slug: 'brainstorming' },
     {
-      title: 'Proyectos de la Comunidad',
+      title: 'Elevator Pitchs',
       page: 'playground',
-      slug: 'community-proyects',
+      slug: 'elevator-pitchs',
     },
   ];
   const PHASE_SLUG = {
     bonus: ['Validación'],
-    ideas: ['Core de negocio'],
+    brainstorming: ['Core de negocio'],
+    retos: ['Validación', 'Core de negocio'],
+    'elevator-pitchs': ['Validación', 'Core de negocio'],
   };
 
   return (

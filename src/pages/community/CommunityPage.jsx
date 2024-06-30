@@ -151,56 +151,43 @@ const communityRules = [
   { rule: 'Los post de categoria Afterwork no aportarán puntos.' },
   {
     rule: 'Los post de categoria Afterwork se eliminarán una determinada cantidad de tiempo, y no aportarán puntos para subir de nivel.',
-  },
-  { rule: '' },
+  }
 ];
 const categories = [
   {
-    title: 'Anuncios',
-    content: 'Todas los anuncios importantes estarán aquí.',
+    title: 'Afterwork',
+    content:
+    'Charla informal.',
   },
   {
     title: 'Wins',
     content:
-      'Poned vuestros historias de éxito gracias a la comunidad en estos años y las que vendrán a partir de ahora. Poned imágenes también.',
+    'Sección dedicada a los meritos, logros, informes de ejecución y demás historias de exitos. Aportará puntos extras.',
   },
   {
-    title: 'La Oficina',
+    title: 'Biblioteca',
     content:
-      'A diferencia de 🍺 Afterwork en 👔 La oficina pondremos todos los aportes de valor a la comunidad.',
-  },
-  {
-    title: 'Afterwork',
-    content:
-      'En esta canal podrás charlar de cualquier cosa. Adiós a los insulsos, aquí estarán emprendedores y gente de tu misma ciudad.',
-  },
-  {
-    title: 'Intros',
-    content: 'En esta canal todos han de hacer su presentación.',
+    'Todos los aportes de valor a la comunidad. Aportará puntos extras.',
   },
   {
     title: 'Retos',
     content:
-      'Aquí todos pueden publicar sus retos ademas de los retos oficiales de la comunidad.',
+    'Aquí todos pueden publicar sus retos ademas de los retos oficiales de la comunidad.',
   },
   {
     title: 'Elevator Pitch (Proyectos)',
     content:
-      'Publica un elevator pitch de tu proyecto y presenta a la comunidad.',
+    'Publica un elevator pitch de tu proyecto y presenta a la comunidad.',
   },
+  {
+    title:'Brainstorming',
+    content:'Publica tus ideas y recibe feedback de la comunidad.',
+  }
 ];
 
-const businessPhases = [
-  {
-    phase: 1,
-    revenue: '0-5.000€',
-  },
-  {
-    phase: 2,
-    revenue: '5.000-10.000€',
-  },
-  {
-    phase: 3,
-    revenue: '10.000-100.000€',
-  },
-];
+
+
+// {
+//   title: 'Noticias',
+//   content: 'Todas los tipos de anuncios irán aqui: nuevo contenido, nuevos eventos, avisos, etc.',
+// },

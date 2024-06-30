@@ -72,6 +72,7 @@ export default function AsideProfile() {
             </NavLink>
           );
         })}
+        <NavLink>Nuevo Post</NavLink>
       </section>
       <footer id='logout'>
         <NavLink

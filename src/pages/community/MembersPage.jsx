@@ -57,7 +57,7 @@ export default function MembersPage() {
           )}
         </div>
       </ModelAsideLeft>
-      <ModelMain id='members' title='Miembros de la comunidad'>
+      <ModelMain id='members' title='Miembros de la comunidad' className='pro'>
         <MembersGrid />
       </ModelMain>
     </>

@@ -20,11 +20,11 @@ function Navbar() {
           <NavLink to='/home'>
             <h1 className='main-title'>Playing The Simulation</h1>
           </NavLink>
-          <NavLinkButton to='/roadto100k'>Road To 100k</NavLinkButton>
-          <NavLinkButton to='/classroom'>Classroom</NavLinkButton>
-          <NavLinkButton to='/playground'>Playground</NavLinkButton>
-          <NavLinkButton to='/members'>Miembros</NavLinkButton>
-          <NavLinkButton to='/archives'>Biblioteca</NavLinkButton>
+          {navLinks.map((link, i) => (
+            <NavLinkButton key={i} to={link.page}>
+              {link.title}
+            </NavLinkButton>
+          ))}
         </div>
         <div id='nav-right'>
           <NavLinkButton to='/community'>Comunidad</NavLinkButton>
@@ -44,3 +44,10 @@ function NavLinkButton({ children, to }) {
     </NavLink>
   );
 }
+const navLinks = [
+  {title: 'Road To 100k', page: '/road-to-100k'},
+  {title: 'Classroom', page: '/classroom'},
+  {title: 'Playground', page: '/playground'},
+  {title: 'Members', page: '/members'},
+  {title: 'Biblioteca', page: '/archives'},
+]

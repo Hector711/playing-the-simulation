@@ -56,7 +56,6 @@ main.left {
 
 main.max {
   grid-column: left / span 3;
-  
 }
 main {
   nav#main-nav {
@@ -68,11 +67,11 @@ main {
       text-align: center;
       background-color: var(--white-2);
       font-weight: 600;
-      color: var(--white-3)
+      color: var(--white-3);
     }
     .active-link {
       background-color: var(--orange-0);
-      color: var(--black-0)
+      color: var(--black-0);
     }
     .nav-slugs {
       font-weight: 650;
@@ -80,7 +79,6 @@ main {
     }
   }
 }
-
 
 aside.aside-right {
   background-color: var(--blue-1);

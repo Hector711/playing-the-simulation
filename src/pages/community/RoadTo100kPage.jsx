@@ -57,8 +57,7 @@ export default function RoadTo100kPage() {
               <h3>Clase</h3>
             </main>
             <div id='extras'>
-                <h3>Commentarios</h3>
-                
+              <h3>Commentarios</h3>
             </div>
           </>
         ) : (

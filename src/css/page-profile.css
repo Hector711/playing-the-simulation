@@ -216,10 +216,7 @@ header.profile-page {
       background-color: var(--white-0);
       color: var(--black-1);
     }
-   
   }
-
-  
 
   hr {
     border: 1px solid var(--white-3);
@@ -288,7 +285,7 @@ h3.section {
   color: var(--white-2);
 }
 
-aside.profile.page{ 
+aside.profile.page {
   padding: 1rem;
   #video {
     grid-area: video;

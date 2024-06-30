@@ -14,7 +14,7 @@ export default function ModelMain({ className, children, title, id, nav }) {
               to={`/${item.page}/${item.slug}`}
               className={isActive}
             >
-              {item.title}  
+              {item.title}
             </NavLink>
           ))}
         </nav>

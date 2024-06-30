@@ -9,7 +9,11 @@ export default function PlaygroundPage() {
   const navRoad = [
     { title: 'Bonus', page: 'playground', slug: 'bonus' },
     { title: 'Brainstorming', page: 'playground', slug: 'ideas' },
-    { title: 'Proyectos de la Comunidad', page: 'playground', slug: 'community-proyects' },
+    {
+      title: 'Proyectos de la Comunidad',
+      page: 'playground',
+      slug: 'community-proyects',
+    },
   ];
   const PHASE_SLUG = {
     bonus: ['Validación'],

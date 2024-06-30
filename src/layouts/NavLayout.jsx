@@ -35,11 +35,11 @@ function Navbar() {
 }
 
 function NavLinkButton({ children, to }) {
-  const getClassName = ({ isActive }) => 
+  const getClassName = ({ isActive }) =>
     `${isActive ? 'active-link' : 'inactive-link'} white-hover`;
 
   return (
-    <NavLink to={to} className={getClassName} >
+    <NavLink to={to} className={getClassName}>
       <h2>{children}</h2>
     </NavLink>
   );

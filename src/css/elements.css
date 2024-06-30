@@ -76,13 +76,12 @@ a {
 .white-hover:hover {
   color: var(--white-0);
 }
-.orange-hover{
+.orange-hover {
   color: inherit;
 }
-.orange-hover:hover{
+.orange-hover:hover {
   color: var(--orange-0);
 }
-
 
 div#nav-container,
 div#layout {

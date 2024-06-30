@@ -1,10 +1,5 @@
 :root {
-  font-family:
-  'Onest Variable',
-  'Figtree Variable',
-  Avenir,
-    Helvetica,
-    Arial,
+  font-family: 'Onest Variable', 'Figtree Variable', Avenir, Helvetica, Arial,
     sans-serif;
 
   --width: 1400px;

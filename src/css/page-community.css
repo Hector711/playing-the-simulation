@@ -33,18 +33,8 @@ article.community#start {
   }
 }
 
-article.community#levels {
-  gap: 2rem;
-  header.community {
-    padding: var(--pad-s) 0;
-    border-radius: var(--border-m);
-    margin-top: 1rem;
-    h4 {
-      font-weight: 600;
-      font-size: 1.4rem;
-    }
-  }
-  section.community {
+main#levels-page {
+  section#levels-container {
     display: flex;
     gap: var(--gap-l);
     flex-direction: column;
@@ -52,13 +42,13 @@ article.community#levels {
   }
 }
 
-article.cards-levels {
+article.level-cards {
   border: 0.5px solid var(--white-3);
   box-shadow: 1px 2px 4px 0 var(--white-3);
   border-radius: var(--border-s);
   padding: var(--pad-m);
   background-color: var(--blue-1);
-  header.cards-levels {
+  header.level-cards {
     display: flex;
     align-items: center;
     margin-bottom: var(--gap-m);
@@ -73,7 +63,7 @@ article.cards-levels {
       font-size: 1.1rem;
     }
   }
-  section.cards-levels {
+  section.level-cards {
     display: flex;
     h6 {
       font-size: 0.95rem;
@@ -82,6 +72,7 @@ article.cards-levels {
       font-size: 0.95rem;
       color: var(--white-1);
     }
+    
   }
 }
 
@@ -128,5 +119,19 @@ aside#community {
   }
   h2 {
     padding: 0.5rem 0;
+  }
+}
+hr#extra {
+  margin-block: 1rem
+}
+
+
+aside#community {
+  background-color: var(--blue-1);
+  border-radius: var(--border-m);
+  border: 0.5px solid var(--white-3);
+  h2.impact {
+
+    text-align: center;
   }
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import ModelMain from '@/layouts/ModelMain';
 import Edit from '@/icons/Edit.jsx';
-import Edit2 from '@/icons/Edit2.jsx';
 import { usePlanning } from '@/context/PlanningContext';
 import LineMonths from '@/components/LineMonths';
 
@@ -34,9 +33,8 @@ export default function PlanningPage() {
               <h2 className='impact orange'>
                 Tareas de {convertMonthName(monthToShow)}
               </h2>
-              {/* <Edit /> */}
               <button>
-                <Edit2 />
+                <Edit />
               </button>
             </div>
             <dl>
@@ -56,14 +54,13 @@ export default function PlanningPage() {
               <>
                 <h3 id='amount'>{monthBail.quantity}</h3>
                 <h3>Limite: 1 de agosto</h3>
-                <button>Presentar Informe</button>
-              </>
+                <a href="https://carlos-adams.com/sistema-de-fianzas/" target='_blank'>Presentar Informe</a>              </>
             ) : (
               <>
                 <h3>Fianza no presentada</h3>
-                <label htmlFor=''>Cantidad:</label>
-                <input type='text' />
-                <button>Abrir Fianza</button>
+                {/* <label htmlFor=''>Cantidad:</label>
+                <input type='text' /> */}
+                <a href="https://carlos-adams.com/sistema-de-fianzas/" target='_blank'>Abrir Fianza</a>
               </>
             )}
           </div>

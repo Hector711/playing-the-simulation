@@ -4,18 +4,18 @@ export default function Edit(props) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
-      strokeWidth={1.5}
+      fill='none'
       stroke='currentColor'
+      strokeWidth={1.5}
+      strokeLinecap='round'
+      strokeLinejoin='round'
       className='edit-icon'
       {...props}
     >
-      <path
-        strokeLinecap='round'
-        strokeLinejoin='round'
-        d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10'
-      />
+      <path d='M0 0h24v24H0z' stroke='none' />
+      <path d='M7 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-1' />
+      <path d='M20.385 6.585a2.1 2.1 0 00-2.97-2.97L9 12v3h3l8.385-8.415zM16 5l3 3' />
     </svg>
   );
 }

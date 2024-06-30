@@ -55,8 +55,7 @@ export default function CalendarPage() {
         </div>
       </ModelAsideLeft>
       <ModelMain id='calendar'>
-        {/* <h2>Calendario</h2>
-        <hr /> */}
+        {/* <h2>Calendario</h2> <hr /> */}
         <Calendar
           // La forma es en la que nosotros vamos a poder convertir las fechas a un formato que el calendario pueda entender
           localizer={localizer}

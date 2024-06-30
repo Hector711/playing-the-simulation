@@ -14,9 +14,9 @@ export default function RoadTo100kPage() {
   }
   const navRoad = [
     { title: 'Fase 0', page: 'road-to-100k', slug: 'phase-0' },
-    { title: 'Fase 1 (5k€)', page: 'road-to-100k', slug: 'phase-1' },
-    { title: 'Fase 2 (10k€)', page: 'road-to-100k', slug: 'phase-2' },
-    { title: 'Fase 3 (100k€)', page: 'road-to-100k', slug: 'phase-3' },
+    { title: 'Fase 1 (1k)', page: 'road-to-100k', slug: 'phase-1' },
+    { title: 'Fase 2 (10k)', page: 'road-to-100k', slug: 'phase-2' },
+    { title: 'Fase 3 (100k)', page: 'road-to-100k', slug: 'phase-3' },
   ];
 
   const PHASE_SLUG = {

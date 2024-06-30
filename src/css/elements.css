@@ -11,7 +11,6 @@ h1.main-title {
   font-family: 'palo';
   color: white;
 }
-
 /* NAVBAR LINKS, ASIDE LINKS */
 h2 {
   font-size: 1.05rem;
@@ -67,14 +66,24 @@ ul {
   list-style: none;
 }
 
-/* a {
+a {
   color: inherit;
   text-decoration: inherit;
 }
+.white-hover {
+  color: inherit;
+}
+.white-hover:hover {
+  color: var(--white-0);
+}
+.orange-hover{
+  color: inherit;
+}
+.orange-hover:hover{
+  color: var(--orange-0);
+}
 
-a:hover {
-  color: var(--white-1);
-} */
+
 div#nav-container,
 div#layout {
   padding-inline: var(--pad);

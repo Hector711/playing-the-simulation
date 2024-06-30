@@ -13,6 +13,12 @@ import Pig from '@/icons/Pig';
 
 export default function AsideProfile() {
   const { logout } = useAuth();
+  const asideProfileLinks = [
+    { to: '/notifications', title: 'Notificaciones', icon: IconNotifications },
+    { to: '/messages', title: 'Mensajes', icon: IconMessages },
+    { to: '/saved', title: 'Guardados', icon: IconSave },
+  ];
+
   return (
     <ModelAsideLeft>
       <header id='profile'>
@@ -30,10 +36,6 @@ export default function AsideProfile() {
         </NavLink>
         <hr />
         <div id='profile-info'>
-          {/* <div>
-            <Work />
-            <h6>Full Stack Developer</h6>
-          </div> */}
           <div>
             <Business />
             <h6>
@@ -56,22 +58,21 @@ export default function AsideProfile() {
             </h6>
           </div>
         </div>
-
         <NavLink id='goals-link' to='/planning'>
           <IconGoals />
           <h2>Planificación</h2>
         </NavLink>
       </header>
       <section id='profile-links'>
-        <NavLink className='aside-link' to='/notifications'>
-          <IconNotifications className='aside-icons' /> <h2>Notificaciones</h2>
-        </NavLink>
-        <NavLink className='aside-link' to='/messages'>
-          <IconMessages className='aside-icons' /> <h2>Mensajes</h2>
-        </NavLink>
-        <NavLink className='aside-link' to='/saved'>
-          <IconSave className='aside-icons' /> <h2>Guardados</h2>
-        </NavLink>
+        {asideProfileLinks.map(({ to, title, icon: Icon }) => {
+          return (
+            <NavLink className='aside-link orange-hover' to={to}>
+              <Icon className='aside-icons'/>
+              <h2>{title}</h2>
+            </NavLink>
+          );
+        })}
+  
       </section>
       <footer id='logout'>
         <NavLink

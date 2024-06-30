@@ -29,11 +29,12 @@ export default function CommunityPage() {
         )}
       </ModelMain>
       <ModelAsideRight id='community'>
+        <h2 className='impact'>Comunidad</h2>
         {communityLinks.map(({ title, slug }, index) => (
           <NavLink
             to={`/community/${slug}`}
             key={index}
-            className='community-links'
+            className='community-links orange-hover'
           >
             <h5>{title}</h5>
           </NavLink>

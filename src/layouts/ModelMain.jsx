@@ -7,14 +7,14 @@ export default function ModelMain({ className, children, title, id, nav }) {
   return (
     <main className={className} id={id}>
       {nav && (
-        <nav>
+        <nav id='main-nav'>
           {nav.map((item, i) => (
             <NavLink
               key={i}
               to={`/${item.page}/${item.slug}`}
               className={isActive}
             >
-              {item.title}
+              {item.title}  
             </NavLink>
           ))}
         </nav>

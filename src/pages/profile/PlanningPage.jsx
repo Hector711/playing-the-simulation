@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ModelMainPro from '@/layouts/ModelMainPro';
+import ModelMain from '@/layouts/ModelMain';
 import Edit from '@/icons/Edit.jsx';
 import Edit2 from '@/icons/Edit2.jsx';
 import { usePlanning } from '@/context/PlanningContext';
@@ -22,7 +22,7 @@ export default function PlanningPage() {
   }, [monthToShow]);
 
   return (
-    <ModelMainPro title='Planificación' className='plan-page'>
+    <ModelMain title='Planificación' className='plan-page'>
       <header></header>
       <section className='plan-page' id='anual-route'>
         <LineMonths />
@@ -69,6 +69,6 @@ export default function PlanningPage() {
           </div>
         </section>
       }
-    </ModelMainPro>
+    </ModelMain>
   );
 }

@@ -216,23 +216,10 @@ header.profile-page {
       background-color: var(--white-0);
       color: var(--black-1);
     }
-    a#video {
-      grid-area: video;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      border: 2px solid var(--black-1);
-      box-shadow: 2px 4px 2px 0px black;
-      .icons {
-        width: 70px;
-        height: 70px;
-      }
-    }
+   
   }
+
+  
 
   hr {
     border: 1px solid var(--white-3);
@@ -299,4 +286,25 @@ div#container-grid {
 }
 h3.section {
   color: var(--white-2);
+}
+
+aside.profile.page{ 
+  padding: 1rem;
+  #video {
+    grid-area: video;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid var(--white-3);
+    border-radius: 5px;
+    box-shadow: 2px 4px 2px 0px black;
+    .icons {
+      width: 70px;
+      height: 70px;
+    }
+  }
 }

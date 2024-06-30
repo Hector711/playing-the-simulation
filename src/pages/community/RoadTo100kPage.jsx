@@ -56,6 +56,10 @@ export default function RoadTo100kPage() {
             <main>
               <h3>Clase</h3>
             </main>
+            <div id='extras'>
+                <h3>Commentarios</h3>
+                
+            </div>
           </>
         ) : (
           <span className='page-title'>De 0 a 100k</span>

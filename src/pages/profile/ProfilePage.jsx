@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ModelAsideRight from '@/layouts/ModelAsideRight';
-import ModelMainPro from '@/layouts/ModelMainPro';
+import ModelMain from '@/layouts/ModelMain';
 import Avatar from '@/components/Avatar';
 import AddUser from '@/icons/AddUser';
 import LinkedIn from '@/icons/LinkedIn';
@@ -13,6 +13,7 @@ import Location from '@/icons/Location';
 import Game from '@/icons/Game';
 import { PopupModal } from 'react-calendly';
 import { useEffect } from 'react';
+import YoutubeVideo from '@/components/YouTubeVideo';
 
 export default function ProfilePage() {
   const [state, setState] = useState({
@@ -42,7 +43,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      <ModelMainPro className='left' id='profile'>
+      <ModelMain className='left' id='profile'>
         {state.addPopUp && (
           <div id='blur'>
             <article className='add-pop-up'>
@@ -143,14 +144,16 @@ export default function ProfilePage() {
               <h5>Agregar</h5>
               <AddUser />
             </button>
-            <a
+
+            {/* <YoutubeVideo url='https://www.youtube.com/embed/GzARMgH2gec?si=Dua6afMJQ-Azffja' /> */}
+            {/* <a
               href='https://hector-minimalist-cv.netlify.app/'
               target='_blank'
-              id='video'
+             
             >
               <h5>Video Presentación</h5>
               <YouTube />
-            </a>
+            </a> */}
           </div>
           {/* SCORE */}
           <div id='score' className='mini-section'>
@@ -205,9 +208,12 @@ export default function ProfilePage() {
         <section id='posts' className='profile-page'>
           <h3 className='section impact'>Posts</h3>
         </section>
-      </ModelMainPro>
+      </ModelMain>
 
-      <ModelAsideRight />
+      <ModelAsideRight className='profile-page'>
+        <h3>Presentación</h3>
+        <YoutubeVideo url='https://www.youtube.com/embed/GzARMgH2gec?si=Dua6afMJQ-Azffja' />
+      </ModelAsideRight>
     </>
   );
 }

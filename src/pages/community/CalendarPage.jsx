@@ -1,5 +1,5 @@
 import React from 'react';
-import ModelMainPro from '@/layouts/ModelMainPro';
+import ModelMain from '@/layouts/ModelMain';
 import ModelAsideLeft from '../../layouts/ModelAsideLeft';
 import { Calendar, dayjsLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
@@ -54,7 +54,7 @@ export default function CalendarPage() {
           <button>Otros</button>
         </div>
       </ModelAsideLeft>
-      <ModelMainPro id='calendar'>
+      <ModelMain id='calendar'>
         {/* <h2>Calendario</h2>
         <hr /> */}
         <Calendar
@@ -74,7 +74,7 @@ export default function CalendarPage() {
           }}
           components={components}
         />
-      </ModelMainPro>
+      </ModelMain>
     </>
   );
 }

@@ -8,7 +8,8 @@ export default function PlaygroundPage() {
 
   const navRoad = [
     { title: 'Bonus', page: 'playground', slug: 'bonus' },
-    { title: 'Ideas', page: 'playground', slug: 'ideas' },
+    { title: 'Brainstorming', page: 'playground', slug: 'ideas' },
+    { title: 'Proyectos de la Comunidad', page: 'playground', slug: 'community-proyects' },
   ];
   const PHASE_SLUG = {
     bonus: ['Validación'],
@@ -27,7 +28,6 @@ export default function PlaygroundPage() {
                 ))}
             </aside>
             <main>
-              {' '}
               <h3>Clase</h3>
             </main>
           </>

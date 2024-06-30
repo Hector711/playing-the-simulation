@@ -64,9 +64,9 @@ export default function AsideProfile() {
         </NavLink>
       </header>
       <section id='profile-links'>
-        {asideProfileLinks.map(({ to, title, icon: Icon }) => {
+        {asideProfileLinks.map(({ to, title, icon: Icon }, i) => {
           return (
-            <NavLink className='aside-link orange-hover' to={to}>
+            <NavLink className='aside-link orange-hover' to={to} key={i}>
               <Icon className='aside-icons'/>
               <h2>{title}</h2>
             </NavLink>

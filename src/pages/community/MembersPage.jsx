@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
-import ModelMainPro from '@/layouts/ModelMainPro';
+import ModelMain from '@/layouts/ModelMain';
 import MembersGrid from '@/components/MembersGrid';
 import Select from 'react-select';
 import { useMembers } from '@/context/MembersContext';
@@ -57,9 +57,9 @@ export default function MembersPage() {
           )}
         </div>
       </ModelAsideLeft>
-      <ModelMainPro id='members' title='Miembros de la comunidad'>
+      <ModelMain id='members' title='Miembros de la comunidad'>
         <MembersGrid />
-      </ModelMainPro>
+      </ModelMain>
     </>
   );
 }

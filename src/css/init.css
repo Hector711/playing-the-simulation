@@ -1,10 +1,8 @@
 :root {
   font-family:
-    'Onest Variable',
-    'Figtree Variable',
-    /* 'Comfortaa Variable', */ Inter,
-    system-ui,
-    Avenir,
+  'Onest Variable',
+  'Figtree Variable',
+  Avenir,
     Helvetica,
     Arial,
     sans-serif;
@@ -32,7 +30,7 @@
   --white-2: #909090;
   --white-3: #565656;
 
-  --black-0: #050505;
+  --black-0: #0c0c0c;
   --black-1: #121212;
 
   --blue-0: #121417;

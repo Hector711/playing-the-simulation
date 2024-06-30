@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ModelMainPro from '@/layouts/ModelMainPro';
+import ModelMain from '@/layouts/ModelMain';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import Select from 'react-select';
 
@@ -81,7 +81,7 @@ export default function ArchivesPage(props) {
           </button>
         </div>
       </ModelAsideLeft>
-      <ModelMainPro title='Publicaciones de la comunidad'></ModelMainPro>
+      <ModelMain title='Publicaciones de la comunidad'></ModelMain>
     </>
   );
 }

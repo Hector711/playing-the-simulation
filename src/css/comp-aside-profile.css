@@ -91,9 +91,29 @@ section#profile-links {
     display: flex;
     border-radius: var(--border-m);
     background-color: var(--blue-1);
-    /* color: var(--orange-0); */
+  }
+  svg#goals-icon {
+    width: 30px;
+    height: 30px;
+  }
+  svg.icons {
+    width: 25px;
+    height: 25px;
   }
 }
+#new-post-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: var(--border-m);
+  background-color: var(--blue-1);
+  gap: 10px;
+  border: 3px solid var(--white-3);
+  color: var(--white-1);
+  margin-bottom: 0.8rem;
+}
+
 footer#logout {
   position: absolute;
   bottom: 0;
@@ -105,12 +125,9 @@ footer#logout {
     border-radius: var(--border-m);
     padding: 10px;
   }
-}
-.aside-icons {
-  width: 25px;
-  height: 25px;
-}
-#goals-icon {
-  width: 30px;
-  height: 30px;
+  svg.icons {
+    width: 20px;
+    height: 20px;
+    color: var(--white-2);
+  }
 }

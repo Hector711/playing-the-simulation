@@ -1,16 +1,13 @@
-main#community {
-  margin-right: 0rem;
-}
-article.community#start {
-  background-color: var(--blue-1);
-  border-radius: var(--border-m);
+main.community-page {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding-block: 2rem 3rem;
-  border: 0.5px solid var(--white-3);
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
   h1 {
     color: var(--white-0);
     font-size: 3rem;
@@ -32,66 +29,18 @@ article.community#start {
     }
   }
 }
-
-main#levels-page {
-  section#levels-container {
-    display: flex;
-    gap: var(--gap-l);
-    flex-direction: column;
-    border-radius: var(--border-m);
-  }
-}
-
-article.level-cards {
-  border: 0.5px solid var(--white-3);
-  box-shadow: 1px 2px 4px 0 var(--white-3);
-  border-radius: var(--border-s);
-  padding: var(--pad-m);
+article.community-page {
   background-color: var(--blue-1);
-  header.level-cards {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--gap-m);
-    h5 {
-      font-weight: 700;
-      color: var(--orange-0);
-    }
-    span {
-      color: var(--white-2);
-      width: 200px;
-      height: 10%;
-      font-size: 1.1rem;
-    }
-  }
-  section.level-cards {
-    display: flex;
-    h6 {
-      font-size: 0.95rem;
-    }
-    span {
-      font-size: 0.95rem;
-      color: var(--white-1);
-    }
-    
-  }
-}
-
-article.community#introduction-page {
-  section {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    flex-direction: column;
-    padding: 1rem;
-    div {
-      max-width: 600px;
-      p {
-        font-size: 1rem;
-        text-wrap: pretty;
-        text-align: center;
-      }
-    }
-  }
+  border-radius: var(--border-m);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 0.5px solid var(--white-3);
+  width: max-content;
+ 
 }
 
 aside#community {

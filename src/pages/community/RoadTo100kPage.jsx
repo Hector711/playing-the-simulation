@@ -13,28 +13,28 @@ export default function RoadTo100kPage() {
     return <div>Error: {error.message}</div>;
   }
   const navRoad = [
-    { title: 'Fase 0', page: 'road-to-100k', slug: 'phase-0' },
-    { title: 'Fase 1 (1k)', page: 'road-to-100k', slug: 'phase-1' },
-    { title: 'Fase 2 (10k)', page: 'road-to-100k', slug: 'phase-2' },
-    { title: 'Fase 3 (100k)', page: 'road-to-100k', slug: 'phase-3' },
+    { title: 'Fase 0', page: 'road-to-100k', slug: 'fase-0' },
+    { title: 'Fase 1 (1k)', page: 'road-to-100k', slug: 'fase-1' },
+    { title: 'Fase 2 (10k)', page: 'road-to-100k', slug: 'fase-2' },
+    { title: 'Fase 3 (100k)', page: 'road-to-100k', slug: 'fase-3' },
   ];
 
   const PHASE_SLUG = {
-    'phase-0': [
+    'fase-0': [
       'Validación',
       'Productividad',
       'Habilidades Imprescindibles',
       'Como crear y validar ideas',
     ],
-    'phase-1': ['Core de negocio', 'Equipo', 'Marketing', 'Sistemas'],
-    'phase-2': [
+    'fase-1': ['Core de negocio', 'Equipo', 'Marketing', 'Sistemas'],
+    'fase-2': [
       'Ventas',
       'Contabilidad',
       'Marca Persoal / Empresarial',
       'Como crear contenido de valor',
       'Mentalidad',
     ],
-    'phase-3': [
+    'fase-3': [
       'Inversión',
       'Escalado',
       'Inversion y gestion financiera',

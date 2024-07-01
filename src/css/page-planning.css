@@ -108,6 +108,21 @@ section#month-grid {
     button:hover {
       background-color: var(--orange-1);
     }
+    span.status {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      h5 {
+        text-wrap: nowrap;
+        
+      }
+      svg.icons {
+        width: 40px;
+        height: 40px;
+        color: var(--orange-0);
+      }
+    }
   }
 }
 .orange {

@@ -554,7 +554,7 @@
             {
               "id": 1,
               "title": "Presentación en video",
-              "status": "pending"
+              "status": "completed"
             }
           ],
           "bail": {}
@@ -565,7 +565,7 @@
             {
               "id": 2,
               "title": "Presentación en video",
-              "status": "pending"
+              "status": "completed"
             }
           ],
           "bail": {}
@@ -576,7 +576,7 @@
             {
               "id": 3,
               "title": "Presentación en video",
-              "status": "pending"
+              "status": "completed"
             }
           ],
           "bail": {}
@@ -587,7 +587,7 @@
             {
               "id": 4,
               "title": "Presentación en video",
-              "status": "pending"
+              "status": "completed"
             }
           ],
           "bail": {}
@@ -638,7 +638,7 @@
           ],
           "bail": {
             "quantity": "100€",
-            "status": "completed"
+            "status": "pending"
           }
         },
         {

@@ -3,6 +3,7 @@ import ModelMain from '@/layouts/ModelMain';
 import Edit from '@/icons/Edit.jsx';
 import { usePlanning } from '@/context/PlanningContext';
 import LineMonths from '@/components/LineMonths';
+import Check from '@/icons/Check';
 
 export default function PlanningPage() {
   const {
@@ -53,14 +54,34 @@ export default function PlanningPage() {
             {monthBail && Object.keys(monthBail).length > 0 ? (
               <>
                 <h3 id='amount'>{monthBail.quantity}</h3>
-                <h3>Limite: 1 de agosto</h3>
-                <a href="https://carlos-adams.com/sistema-de-fianzas/" target='_blank'>Presentar Informe</a>              </>
+                {monthBail && monthBail.status === 'completed' ? (
+                  <span className='status'>
+                    <h5>
+                    Fianza Completada
+                    </h5>
+                    <Check />
+                  </span>
+                ) : (
+                  <>
+                    <h3>Limite: 1 de agosto</h3>
+                    <a
+                      href='https://carlos-adams.com/sistema-de-fianzas/'
+                      target='_blank'
+                    >
+                      Presentar Informe
+                    </a>
+                  </>
+                )}
+              </>
             ) : (
               <>
                 <h3>Fianza no presentada</h3>
-                {/* <label htmlFor=''>Cantidad:</label>
-                <input type='text' /> */}
-                <a href="https://carlos-adams.com/sistema-de-fianzas/" target='_blank'>Abrir Fianza</a>
+                <a
+                  href='https://carlos-adams.com/sistema-de-fianzas/'
+                  target='_blank'
+                >
+                  Abrir Fianza
+                </a>
               </>
             )}
           </div>

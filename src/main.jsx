@@ -21,6 +21,10 @@ import '@/css/page-classroom.css';
 import '@/css/page-members.css';
 import '@/css/page-calendar.css';
 import '@/css/page-community.css';
+import '@/css/page-rules.css';
+import '@/css/page-levels.css';
+import '@/css/page-introduction.css';
+import '@/css/page-bails-system.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';

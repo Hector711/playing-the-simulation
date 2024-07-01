@@ -1,6 +1,5 @@
 import React from 'react';
 import ModelMain from '@/layouts/ModelMain';
-import ModelAsideLeft from '../../layouts/ModelAsideLeft';
 import { Calendar, dayjsLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import dayjs from 'dayjs';
@@ -45,15 +44,6 @@ export default function CalendarPage() {
   };
   return (
     <>
-      <ModelAsideLeft id='calendar' title='Eventos' className='community'>
-        <div className='filter-buttons'>
-          <button>Streamings</button>
-          <button>Reuniones Grupales</button>
-          <button>Castillo</button>
-          <button>Racks Labs</button>
-          <button>Otros</button>
-        </div>
-      </ModelAsideLeft>
       <ModelMain id='calendar'>
         {/* <h2>Calendario</h2> <hr /> */}
         <Calendar

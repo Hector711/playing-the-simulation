@@ -17,7 +17,7 @@ function Navbar() {
     <nav id='nav'>
       <div id='nav-container'>
         <div id='nav-left'>
-          <NavLink to='/home'>
+          <NavLink to='/inicio'>
             <h1 className='main-title'>Playing The Simulation</h1>
           </NavLink>
           {navLinks.map((link, i) => (
@@ -48,6 +48,6 @@ const navLinks = [
   {title: 'Road To 100k', page: '/road-to-100k'},
   {title: 'Classroom', page: '/classroom'},
   {title: 'Playground', page: '/playground'},
-  {title: 'Members', page: '/members'},
-  {title: 'Biblioteca', page: '/archives'},
+  {title: 'Members', page: '/miembros'},
+  {title: 'Biblioteca', page: '/biblioteca'},
 ]

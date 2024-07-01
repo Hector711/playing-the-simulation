@@ -10,6 +10,8 @@ import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import Game from '@/icons/Game';
 import Business from '@/icons/Business';
 import Pig from '@/icons/Pig';
+import Dots from '@/icons/Dots';
+import Pencil from '@/icons/NewPost';
 
 export default function AsideProfile() {
   const { logout } = useAuth();
@@ -67,14 +69,14 @@ export default function AsideProfile() {
         {asideProfileLinks.map(({ to, title, icon: Icon }, i) => {
           return (
             <NavLink className='aside-link orange-hover' to={to} key={i}>
-              <Icon className='aside-icons' />
+              <Icon />
               <h2>{title}</h2>
             </NavLink>
           );
         })}
-        <NavLink>Nuevo Post</NavLink>
       </section>
       <footer id='logout'>
+        <NewPostLink />
         <NavLink
           id='logout'
           to='/'
@@ -82,9 +84,22 @@ export default function AsideProfile() {
             logout();
           }}
         >
-          <h6>Cerrar Sesión</h6>
+          <Dots />
         </NavLink>
       </footer>
     </ModelAsideLeft>
+  );
+}
+
+function NewPostLink() {
+  return (
+    <NavLink
+      to='/home/new-post'
+      className='aside-link orange-hover'
+      id='new-post-link'
+    >
+      <Pencil />
+      <span className='impact'>Nuevo Post</span>
+    </NavLink>
   );
 }

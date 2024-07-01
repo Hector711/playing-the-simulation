@@ -16,7 +16,7 @@ div#route {
     }
     div#line {
       width: 100%;
-      height: 3px;
+      height: 4px;
       background-color: var(--white-3);
     }
     div#dots {
@@ -34,6 +34,9 @@ div#route {
         }
         button.past {
           background-color: var(--white-3);
+        }
+        button.past:hover  {
+          background-color: var(--white-2);
         }
         button.future:hover {
           background-color: var(--white-1);

@@ -53,23 +53,23 @@ function App() {
                             {/* Profile Pages */}
                             <Route element={<LeftHomeLayout />}>
                               <Route element={<RightHomeLayout />}>
-                                <Route path='/home' element={<HomePage />} />
+                                <Route path='/inicio' element={<HomePage />} />
                                 <Route
-                                  path='/notifications'
+                                  path='/notificaciones'
                                   element={<NotificationsPage />}
                                 />
                                 <Route
-                                  path='/messages'
+                                  path='/mensajes'
                                   element={<MessagesPage />}
                                 />
-                                <Route path='/saved' element={<SavedPage />} />
+                                <Route path='/guardados' element={<SavedPage />} />
                               </Route>
                               <Route
-                                path='/planning'
+                                path='/planificacion'
                                 element={<PlanningPage />}
                               />
                             </Route>
-                            <Route path='/profile' element={<ProfilePage />} />
+                            <Route path='/mi-perfil' element={<ProfilePage />} />
                             <Route
                               path='/profile/:id'
                               element={<ProfilePage />}
@@ -100,21 +100,21 @@ function App() {
                               path='/road-to-100k/:slug'
                               element={<RoadTo100kPage />}
                             />
-                            <Route path='/members' element={<MembersPage />} />
+                            <Route path='/miembros' element={<MembersPage />} />
                             <Route
-                              path='/calendar'
+                              path='/eventos'
                               element={<CalendarPage />}
                             />
                             <Route
-                              path='/archives'
+                              path='/biblioteca'
                               element={<ArchivesPage />}
                             />
                             <Route
-                              path='/community'
+                              path='/comunidad'
                               element={<CommunityPage />}
                             />
                             <Route
-                              path='/community/:slug'
+                              path='/comunidad/:slug'
                               element={<CommunityPage />}
                             />
                             <Route path='*' element={<h1>NOT FOUND</h1>} />

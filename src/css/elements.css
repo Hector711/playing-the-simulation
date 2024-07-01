@@ -13,17 +13,10 @@ h1.main-title {
 }
 /* NAVBAR LINKS, ASIDE LINKS */
 h2 {
-  font-size: 1.05rem;
+  font-size: 1.10rem;
   font-weight: 450;
 }
-/* TITULO DE ASIDES */
-/* h2.impact {
-  font-size: 1.1rem !important;
-  color: var(--white-1);
-} */
-h2.impact.home {
-  display: flex;
-}
+/* TITULO DE SECCIONES */
 .impact {
   font-family: 'Heading';
   text-transform: uppercase;
@@ -36,15 +29,15 @@ h3 {
 
 /* TITULOS DE POST Y CURSOS */
 h4 {
-  font-size: 1.2rem;
+  font-size: 0.97rem;
   font-weight: 800;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
 }
 h6 {
-  font-size: 0.95rem;
+  font-size: 0.90rem;
   font-weight: 550;
   color: var(--white-2) !important;
 }

@@ -24,7 +24,7 @@ export default function AsideProfile() {
   return (
     <ModelAsideLeft>
       <header id='profile'>
-        <NavLink to='/profile' id='profile-link'>
+        <NavLink to='/mi-perfil' id='profile-link'>
           <img
             id='cover'
             src='https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg'

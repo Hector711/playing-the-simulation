@@ -10,12 +10,15 @@ import LevelsPage from '@/pages/community/LevelsPage';
 import RulesPage from '@/pages/community/RulesPage';
 import BailsSystemPage from '@/pages/community/BailsSystemPage';
 import CalendarPage from '@/pages/community/CalendarPage';
+import CategoriesPage from '@/pages/community/CategoriesPage';
+import { Link } from 'react-router-dom';
 
 export default function CommunityPage() {
   const { slug } = useParams();
   const COMMUNITY_PAGES = {
     introduccion: <IntroductionPage />,
     niveles: <LevelsPage />,
+    categorias: <CategoriesPage />,
     normas: <RulesPage />,
     'sistema-de-fianzas': <BailsSystemPage />,
     eventos: <CalendarPage />,
@@ -25,7 +28,7 @@ export default function CommunityPage() {
   return (
     <>
       <ModelAsideLeft id='community'>
-        <NavLink to='/community' className=''>
+        <NavLink to='/comunidad' className=''>
           <h2 className='impact'>Comunidad</h2>
         </NavLink>
         {communityLinks.map(({ title, slug }, index) => (
@@ -45,23 +48,25 @@ export default function CommunityPage() {
           <header className='community-page'>
             <MainTitle />
           </header>
-          <article className='community-page'>
+          <section >
             <YouTubeVideo url='https://www.youtube.com/embed/cqPNrRBUSUg?si=vQS5oaum8JVBklyw' />
-          </article>
+          </section>
         </ModelMain>
       )}
-      <ModelAsideRight id='community'>
+      <ModelAsideRight id='community-right'>
         <h2 className='impact'>Contacto</h2>
-        {contacts.map(({ name, role, url }, index) => (
-          <article>
-            <header>
-              <h4>{name}</h4>
-            </header>
-            <section>
-              <h3>{role}</h3>
-              <button>Enviar Mensaje</button>
-            </section>
-          </article>
+        {contacts.map(({ name, role, url, message }, i) => (
+          <Link key={i}>
+            <article className='contact-card'>
+              <header>
+                <h4>{name}</h4>
+                <h6>{role}</h6>
+              </header>
+              <section>
+                {message && <p>{message}</p>}
+              </section>
+            </article>
+          </Link>
         ))}
       </ModelAsideRight>
     </>
@@ -70,22 +75,32 @@ export default function CommunityPage() {
 
 const contacts = [
   {
+    name: 'Carlos Adams',
+    role: 'Final Boss',
+    message:
+      'Deja aquí tu duda para que Carlos la resuelva en la reunión grupal de cada domingo.',
+    url: '',
+  },
+  {
     name: 'Lucas Alessandro',
     role: 'Community Manager',
     url: '',
+    message: 'Dudas sobre la comunidad, eventos, fianza, etc',
   },
   {
     name: 'Héctor Guerra',
     role: 'Diseñador de Aplicación',
     url: '',
+    message: 'Dudas sobre la aplicación, reporte de errores, sugerencias, etc.',
   },
 ];
 
 const communityLinks = [
   { title: 'Introducción', slug: 'introduccion' },
-  { title: 'Niveles', slug: 'niveles' },
-  { title: 'Sistema de Fianzas', slug: 'sistema-de-fianzas' },
   { title: 'Normas', slug: 'normas' },
+  { title: 'Niveles', slug: 'niveles' },
+  { title: 'Categorias', slug: 'categorias' },
+  { title: 'Sistema de Fianzas', slug: 'sistema-de-fianzas' },
   { title: 'Eventos', slug: 'eventos' },
   { title: 'Directos', slug: 'diretos' },
 ];

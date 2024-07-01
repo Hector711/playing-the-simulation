@@ -25,7 +25,7 @@
   --white-2: #909090;
   --white-3: #565656;
 
-  --black-0: #0c0c0c;
+  --black-0: #000000;
   --black-1: #121212;
 
   --blue-0: #121417;
@@ -38,15 +38,4 @@
   color-scheme: light dark;
   color: var(--white-0);
   background-color: var(--black-0);
-}
-
-* {
-  /* border: 1px solid ; */
-  /* padding: 10px !important */
-}
-.tasks {
-  border: 3px solid #555454;
-  border-radius: 5px;
-  margin: 3px;
-  padding: 5px;
 }

@@ -109,7 +109,7 @@ section#profile-links {
   border-radius: var(--border-m);
   background-color: var(--blue-1);
   gap: 10px;
-  border: 3px solid var(--white-3);
+  border: 2px solid var(--white-3);
   color: var(--white-1);
   margin-bottom: 0.8rem;
 }

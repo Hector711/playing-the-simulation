@@ -27,7 +27,7 @@ function Navbar() {
           ))}
         </div>
         <div id='nav-right'>
-          <NavLinkButton to='/community'>Comunidad</NavLinkButton>
+          <NavLinkButton to='/comunidad'>Comunidad</NavLinkButton>
         </div>
       </div>
     </nav>

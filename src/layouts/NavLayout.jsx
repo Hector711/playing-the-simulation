@@ -14,7 +14,7 @@ export default function NavLayout() {
 
 function Navbar() {
   return (
-    <nav id='nav'>
+    <nav id='nav' className='blurr-nav'>
       <div id='nav-container'>
         <div id='nav-left'>
           <NavLink to='/inicio'>

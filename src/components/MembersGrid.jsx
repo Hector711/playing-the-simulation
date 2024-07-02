@@ -35,7 +35,7 @@ function MemberCard({
   business,
 }) {
   return (
-    <article kay={id} className='member-cards'>
+    <article kay={id} className='member-cards blurr'>
       <header className='member-cards'>
         <NavLink to={url}>
           <Avatar src={avatar} business={business} />

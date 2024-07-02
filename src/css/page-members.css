@@ -17,7 +17,7 @@ section#members-grid {
 article.member-cards {
   display: flex;
   flex-direction: column;
-  background-color: var(--blue-1);
+  /* background-color: var(--blue-1); */
   border-radius: var(--border-m);
   padding: var(--pad-m);
   border: 0.5px solid var(--white-3);

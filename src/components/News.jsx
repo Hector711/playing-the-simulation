@@ -5,7 +5,7 @@ import Newspaper from '@/icons/Newspaper';
 
 export default function News() {
   return (
-    <ModelAsideRight id='news'>
+    <ModelAsideRight id='news' className='blurr'>
       <header>
         <Newspaper />
         <h2 className='impact'>Noticias</h2>

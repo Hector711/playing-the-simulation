@@ -61,7 +61,8 @@ aside#community {
     height: 55px;
     border: 1px solid var(--black-0);
     border-radius: var(--border-m);
-    box-shadow: 3px 3px 5px 0px var(--black-0);
+    /* box-shadow: 3px 3px 5px 0px var(--white-3); */
+    border: 1px solid var(--white-3);
     background-color: var(--blue-0);
     svg.icons {
       width: 40px;
@@ -78,7 +79,7 @@ hr#extra {
 
 
 aside#community {
-  background-color: var(--blue-1);
+  /* background-color: var(--blue-1); */
   border-radius: var(--border-m);
   border: 0.5px solid var(--white-3);
   h2.impact {

@@ -47,16 +47,16 @@ export default function RoadTo100kPage() {
       <div id='class-grid'>
         {slug ? (
           <>
-            <aside id='left'>
+            <aside id='left' className='blurr'>
               {slug &&
                 PHASE_SLUG[slug].map((subject, i) => (
                   <button key={i}>{subject}</button>
                 ))}
             </aside>
-            <main>
+            <main className='blurr'>
               <h3>Clase</h3>
             </main>
-            <aside id='right'>
+            <aside id='right' className='blurr'>
               <h3>Commentarios</h3>
             </aside>
           </>

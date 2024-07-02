@@ -16,14 +16,14 @@ import Pencil from '@/icons/NewPost';
 export default function AsideProfile() {
   const { logout } = useAuth();
   const asideProfileLinks = [
-    { to: '/notifications', title: 'Notificaciones', icon: IconNotifications },
-    { to: '/messages', title: 'Mensajes', icon: IconMessages },
-    { to: '/saved', title: 'Guardados', icon: IconSave },
+    { to: '/notificaciones', title: 'Notificaciones', icon: IconNotifications },
+    { to: '/mensajes', title: 'Mensajes', icon: IconMessages },
+    { to: '/guardados', title: 'Guardados', icon: IconSave },
   ];
 
   return (
     <ModelAsideLeft>
-      <header id='profile'>
+      <header id='profile' className='blurr'>
         <NavLink to='/mi-perfil' id='profile-link'>
           <img
             id='cover'
@@ -60,7 +60,7 @@ export default function AsideProfile() {
             </h6>
           </div>
         </div>
-        <NavLink id='goals-link' to='/planning'>
+        <NavLink id='goals-link' to='/planificacion'>
           <IconGoals />
           <h2>Planificación</h2>
         </NavLink>
@@ -68,7 +68,7 @@ export default function AsideProfile() {
       <section id='profile-links'>
         {asideProfileLinks.map(({ to, title, icon: Icon }, i) => {
           return (
-            <NavLink className='aside-link orange-hover' to={to} key={i}>
+            <NavLink className='aside-link orange-hover blurr' to={to} key={i}>
               <Icon />
               <h2>{title}</h2>
             </NavLink>
@@ -94,8 +94,8 @@ export default function AsideProfile() {
 function NewPostLink() {
   return (
     <NavLink
-      to='/home/new-post'
-      className='aside-link orange-hover'
+      to='/inicio/nuevo-post'
+      className='aside-link orange-hover blurr'
       id='new-post-link'
     >
       <Pencil />

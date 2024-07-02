@@ -1,7 +1,7 @@
 aside.community {
   border: 0.5px solid var(--white-3);
   height: max-content;
-  background-color: var(--blue-1);
+  /* background-color: var(--blue-1); */
   border-radius: var(--border-m);
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@ main.max {
     }
     aside, main {
       padding: var(--pad-s);
-      background-color: var(--blue-1);
+      /* background-color: var(--blue-1); */
       border-radius: var(--border-m);
     }
   }

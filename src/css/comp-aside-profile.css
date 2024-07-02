@@ -1,7 +1,8 @@
 header#profile {
   height: max-content;
   border-radius: var(--border-m);
-  background-color: var(--blue-1);
+  /* background-color: var(--blue-1); */
+
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -34,7 +35,7 @@ header#profile {
   }
   #profile-link:hover {
     text-decoration: underline;
-    background-color: #26262651;
+    background-color: #7e7e7e21;
   }
   hr {
     width: 100%;
@@ -90,7 +91,7 @@ section#profile-links {
     align-items: center;
     display: flex;
     border-radius: var(--border-m);
-    background-color: var(--blue-1);
+    /* background-color: var(--blue-1); */
   }
   svg#goals-icon {
     width: 30px;
@@ -107,7 +108,7 @@ section#profile-links {
   align-items: center;
   padding: 10px 16px;
   border-radius: var(--border-m);
-  background-color: var(--blue-1);
+  /* background-color: var(--blue-1); */
   gap: 10px;
   border: 2px solid var(--white-3);
   color: var(--white-1);

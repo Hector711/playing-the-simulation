@@ -16,7 +16,7 @@ export default function Login() {
   });
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/home');
+      navigate('/inicio');
     }
   }, [isAuthenticated]);
 

@@ -27,8 +27,8 @@ export default function CommunityPage() {
 
   return (
     <>
-      <ModelAsideLeft id='community'>
-        <NavLink to='/comunidad' className=''>
+      <ModelAsideLeft id='community' className='blurr'>
+        <NavLink to='/comunidad' >
           <h2 className='impact'>Comunidad</h2>
         </NavLink>
         {communityLinks.map(({ title, slug }, index) => (

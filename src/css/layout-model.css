@@ -89,10 +89,9 @@ main {
 }
 
 aside.aside-right {
-
   grid-area: right;
   border-radius: var(--border-m);
-  border: 0.5px solid var(--white-3);
+  /* border: 0.5px solid var(--white-3); */
   h2.impact {
     padding: 15px;
     text-align: center;

@@ -17,7 +17,7 @@ export default function MembersPage() {
 
   return (
     <>
-      <ModelAsideLeft id='members' className='community' title='Filtro'>
+      <ModelAsideLeft id='members' className='community blurr' title='Filtro'>
         <div className='select-filter'>
           <Select
             styles={colourStyles}

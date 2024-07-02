@@ -35,7 +35,7 @@ export default function CommunityPage() {
           <NavLink
             to={`/comunidad/${slug}`}
             key={index}
-            className='community-links orange-hover'
+            className='community-links orange-hover blurr shadoww'
           >
             <h5>{title}</h5>
           </NavLink>
@@ -57,7 +57,7 @@ export default function CommunityPage() {
         <h2 className='impact'>Contacto</h2>
         {contacts.map(({ name, role, url, message }, i) => (
           <Link key={i}>
-            <article className='contact-card'>
+            <article className='contact-card blurr shadoww'>
               <header>
                 <h4>{name}</h4>
                 <h6>{role}</h6>

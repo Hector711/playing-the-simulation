@@ -29,14 +29,13 @@ main.community-page {
     }
   }
   div#video-container {
-    background-color: var(--white-2);
+    /* background-color: var(--white-2); */
     border-radius: var(--border-m);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 0.5rem;
-    border: 0.5px solid var(--white-3);
     width: max-content;
     #video {
       border-radius: var(--border-s);
@@ -60,7 +59,6 @@ aside#community {
     flex-direction: column;
     height: 55px;
     border-radius: var(--border-m);
-    /* background-color: var(--blue-0); */
     svg.icons {
       width: 40px;
       height: 40px;
@@ -75,14 +73,6 @@ hr#extra {
 }
 
 
-aside#community {
-  /* background-color: var(--blue-1); */
-  border-radius: var(--border-m);
-  border: 0.5px solid var(--white-3);
-  h2.impact {
-    text-align: center;
-  }
-}
 
 aside#community-right {
   padding:  0.5rem 1.5rem;

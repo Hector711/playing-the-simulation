@@ -1,8 +1,5 @@
 header#profile {
   height: max-content;
-  border-radius: var(--border-m);
-  /* background-color: var(--blue-1); */
-
   align-items: center;
   flex-direction: column;
   display: flex;
@@ -51,7 +48,6 @@ header#profile {
     padding-block: 12px;
     div {
       display: flex;
-
       svg.icons {
         width: 20px;
         height: 20px;
@@ -90,8 +86,6 @@ section#profile-links {
     padding: 10px 16px;
     align-items: center;
     display: flex;
-    border-radius: var(--border-m);
-    /* background-color: var(--blue-1); */
   }
   svg#goals-icon {
     width: 30px;
@@ -107,10 +101,7 @@ section#profile-links {
   justify-content: flex-start;
   align-items: center;
   padding: 10px 16px;
-  border-radius: var(--border-m);
-  /* background-color: var(--blue-1); */
   gap: 10px;
-  border: 2px solid var(--white-3);
   color: var(--white-1);
   margin-bottom: 0.8rem;
 }
@@ -120,10 +111,10 @@ footer#logout {
   bottom: 0;
   width: 100%;
   #logout {
-    border: 0.5px solid var(--white-3);
     display: flex;
     justify-content: center;
     border-radius: var(--border-m);
+    border: 0.5px solid var(--white-3);
     padding: 10px;
   }
   svg.icons {

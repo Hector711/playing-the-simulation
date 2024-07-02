@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function YouTubeVideo({ url }) {
   return (
-    <div id='video-container'>
+    <div id='video-container' className='blurr shadoww'>
       <iframe
         width='560'
         height='315'

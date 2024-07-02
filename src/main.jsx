@@ -25,6 +25,7 @@ import '@/css/page-rules.css';
 import '@/css/page-levels.css';
 import '@/css/page-introduction.css';
 import '@/css/page-bails-system.css';
+import '@/css/page-archives.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';

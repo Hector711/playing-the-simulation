@@ -35,15 +35,19 @@ export default function Classroom() {
       <div id='class-grid'>
         {slug ? (
           <>
-            <aside>
+            <aside id='left' className='blurr'>
+              <h3 className='impact'>Clases</h3>
               {slug &&
                 PHASE_SLUG[slug].map((subject, i) => (
                   <button key={i}>{subject}</button>
                 ))}
             </aside>
-            <main>
+            <main className='blurr'>
               <h3>Clase</h3>
             </main>
+            <aside id='right' className='blurr'>
+              <h3>Commentarios</h3>
+            </aside>
           </>
         ) : (
           <span className='page-title'>Desbloqueables</span>

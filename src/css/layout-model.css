@@ -91,7 +91,6 @@ main {
 aside.aside-right {
   grid-area: right;
   border-radius: var(--border-m);
-  /* border: 0.5px solid var(--white-3); */
   h2.impact {
     padding: 15px;
     text-align: center;
@@ -99,8 +98,6 @@ aside.aside-right {
 }
 
 span.page-title {
-  /* TEMA 1 */
-  /* background-color: var(--blue-1); */
   grid-column: aside / span 3;
   width: 100%;
   height: 500px;

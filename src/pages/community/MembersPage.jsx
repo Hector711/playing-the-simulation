@@ -17,7 +17,7 @@ export default function MembersPage() {
 
   return (
     <>
-      <ModelAsideLeft id='members' className='community blurr' title='Filtro'>
+      <ModelAsideLeft id='members-page' className='blurr' title='Filtro'>
         <div className='select-filter'>
           <Select
             styles={colourStyles}
@@ -57,7 +57,7 @@ export default function MembersPage() {
           )}
         </div>
       </ModelAsideLeft>
-      <ModelMain id='members' title='Miembros de la comunidad' className='pro'>
+      <ModelMain id='members-page' title='Miembros de la comunidad' className='pro'>
         <MembersGrid />
       </ModelMain>
     </>

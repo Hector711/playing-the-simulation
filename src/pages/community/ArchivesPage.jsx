@@ -10,7 +10,7 @@ export default function ArchivesPage(props) {
   const handleSelectChange = option => {
     setSelectedValue(option.value);
   };
-
+  
   const handleSubjectFilterChange = event => {
     const valueFilter = event.target.value;
     setFilter(valueFilter);
@@ -40,7 +40,7 @@ export default function ArchivesPage(props) {
 
   return (
     <>
-      <ModelAsideLeft id='classroom' title='Filtro' className='community'>
+      <ModelAsideLeft id='archives-page' title='Filtro' className='blurr'>
         <div className='select-filter'>
           <Select
             {...props}

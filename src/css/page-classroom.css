@@ -1,7 +1,5 @@
 aside.community {
-  border: 0.5px solid var(--white-3);
   height: max-content;
-  /* background-color: var(--blue-1); */
   border-radius: var(--border-m);
   display: flex;
   flex-direction: column;
@@ -19,7 +17,7 @@ main.max {
   div#class-grid {
     display: grid;
     grid-template-areas: 'aside main extras';
-    grid-template-columns: var(--left-aside) 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     gap: var(--gap-l);
     aside#left {
       grid-area: aside;

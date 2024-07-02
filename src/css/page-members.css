@@ -1,11 +1,5 @@
-aside#members {
-  span.pts {
-    color: var(--white-2);
-  }
-}
-main#members {
-  display: flex;
-  flex-direction: column;
+aside#members-page {
+  height: max-content;
 }
 section#members-grid {
   display: grid;
@@ -13,12 +7,9 @@ section#members-grid {
   grid-gap: 1em;
   margin-block: var(--gap-l);
 }
-
 article.member-cards {
   display: flex;
   flex-direction: column;
-  /* background-color: var(--blue-1); */
-  border-radius: var(--border-m);
   padding: var(--pad-m);
   border: 0.5px solid var(--white-3);
   gap: var(--gap-s);

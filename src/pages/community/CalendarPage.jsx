@@ -44,13 +44,13 @@ export default function CalendarPage() {
   };
   return (
     <>
-      <ModelMain id='calendar'>
+      <ModelMain id='calendar-page' className='community-common' title='Calendario de eventos'>
         {/* <h2>Calendario</h2> <hr /> */}
         <Calendar
           // La forma es en la que nosotros vamos a poder convertir las fechas a un formato que el calendario pueda entender
           localizer={localizer}
           events={eventsObject && eventsObject}
-          className='calendar'
+          className='calendar  blurr shadoww'
           // views={['month', 'week', 'day']}
           // defaultView={'month'}
           // view={'month'}

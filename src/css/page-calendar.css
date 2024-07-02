@@ -1,12 +1,8 @@
-main#calendar {
+main#calendar-page {
   .calendar {
     padding: 2rem;
     width: 100%;
-    height: 75vh;
-    background-color: var(--blue-1);
-    border-radius: var(--border-m);
-    border: 1px solid var(--white-3);
-    box-shadow: 7px 6px 10px 0px #565656;
+    height: 500px;
   }
 }
 

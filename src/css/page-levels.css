@@ -31,11 +31,10 @@ article.level-cards {
   }
 }
 
-main.levels-page {
+main#levels-page {
   section#levels-container {
     display: flex;
     gap: var(--gap-l);
     flex-direction: column;
-    border-radius: var(--border-m);
   }
 }

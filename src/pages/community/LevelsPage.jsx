@@ -5,7 +5,7 @@ import ModelMain from '@/layouts/ModelMain';
 export default function LevelsPage() {
   const { levels } = useCommunity();
   return (
-    <ModelMain className='home levels-page' title='Niveles' >
+    <ModelMain id='levels-page' className='community-common ' title='Niveles' >
       <LineLevels />
       <hr id='extra'/>
       <section className='community' id='levels-container'>

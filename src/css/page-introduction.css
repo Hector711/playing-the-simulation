@@ -1,20 +1,18 @@
-main.introduction-page {
-  display: flex;
-  gap: 1rem;
-  margin-left: 1.3rem;
+main#introduction-page {
   header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    hr {
-      width: 100%;
-    }
   }
   section {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
   }
 
 }

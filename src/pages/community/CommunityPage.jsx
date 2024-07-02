@@ -27,7 +27,7 @@ export default function CommunityPage() {
 
   return (
     <>
-      <ModelAsideLeft id='community' className='blurr'>
+      <ModelAsideLeft id='community-page-left' className='community-common blurr'>
         <NavLink to='/comunidad' >
           <h2 className='impact'>Comunidad</h2>
         </NavLink>
@@ -44,7 +44,7 @@ export default function CommunityPage() {
       {slug ? (
         COMMUNITY_PAGES[slug]
       ) : (
-        <ModelMain className='home community-page'>
+        <ModelMain id='community-page' >
           <header className='community-page'>
             <MainTitle />
           </header>
@@ -53,11 +53,11 @@ export default function CommunityPage() {
           </section>
         </ModelMain>
       )}
-      <ModelAsideRight id='community-right'>
+      <ModelAsideRight id='community-page-right'>
         <h2 className='impact'>Contacto</h2>
         {contacts.map(({ name, role, url, message }, i) => (
           <Link key={i}>
-            <article className='contact-card blurr shadoww'>
+            <article className='contact-cards blurr shadoww'>
               <header>
                 <h4>{name}</h4>
                 <h6>{role}</h6>

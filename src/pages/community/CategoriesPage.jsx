@@ -7,7 +7,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function CategoriesPage() {
   return (
-    <ModelMain id='community'>
+    <ModelMain id='categories-page' className='community-common' title='Categorias de post'>
       <CategoriesList />
     </ModelMain>
   );

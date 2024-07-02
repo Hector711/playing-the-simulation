@@ -2,7 +2,7 @@ import ModelMain from '@/layouts/ModelMain';
 
 export default function RulesPage() {
   return (
-    <ModelMain className='home community-page' title='Normas de la comunidad'>
+    <ModelMain id='rules-page' className='community-common' title='Normas de la comunidad'>
       <article className='community' id='rules-page'>
         <h3>Normas a seguir en la comunidad</h3>
         <ul>

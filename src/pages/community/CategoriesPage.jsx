@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Accordion from '@mui/material/Accordion';
 import ModelMain from '@/layouts/ModelMain';
@@ -5,6 +6,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Dot from '@/icons/Dot';
+import AccordionsContainer from '@/components/AccordionsContainer';
 
 export default function CategoriesPage() {
   return (
@@ -13,7 +15,9 @@ export default function CategoriesPage() {
       className='community-common'
       title='Categorias de post'
     >
-      <CategoriesList />
+      <AccordionsContainer>
+        <CategoriesList />
+      </AccordionsContainer>
     </ModelMain>
   );
 }
@@ -34,7 +38,7 @@ function CategoriesList() {
           >
             <h3>{title}</h3> <span>&#160; {description}</span>
           </AccordionSummary>
-          <AccordionDetails className='list-container'>
+          <AccordionDetails className='list-container items-categories'>
             {content.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -85,13 +89,12 @@ const categories = [
   {
     title: '⚔️ Retos:',
     description: 'Propuestas de retos.',
-    content: ['Todos los retos se almacenarán en el Playground.', 'Lo'],
+    content: ['Todos los retos se almacenarán en el Playground.'],
     points: [
       'x1 en likes y comentarios.',
       'x2 en likes y comentarios todos los Informes de Ejecución Asociados / 🏆 Wins.',
       'Los puntos que dan los retos serán definidos por los administradores y podrá ayudarse de la comunidad.',
     ],
-
   },
   {
     title: '🛗 Elevator Pitch:',

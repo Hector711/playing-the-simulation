@@ -1,0 +1,24 @@
+div#content-grid {
+  display: grid;
+  grid-template-areas: 'aside main extras';
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: var(--gap-l);
+  padding: 0.3rem 0rem;
+  aside.left {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    grid-area: main;
+    min-height: 500px;
+    padding: var(--pad-m);
+  }
+  aside.right {
+    grid-area: extras;
+  }
+  aside, main {
+    /* background-color: var(--blue-1); */
+    border-radius: var(--border-m);
+  }
+}

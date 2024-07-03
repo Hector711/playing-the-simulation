@@ -25,13 +25,13 @@ import MessagesPage from '@/pages/profile/MessagesPage';
 import PlanningPage from '@/pages/profile/PlanningPage';
 import SavedPage from '@/pages/profile/SavedPage';
 //  Community Pages
-import PlaygroundPage from '@/pages/community/PlaygroundPage';
-import ClassroomPage from '@/pages/community/ClassroomPage';
 import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
 import ArchivesPage from '@/pages/community/ArchivesPage';
-import CalendarPage from '@/pages/community/CalendarPage';
-import RoadTo100kPage from '@/pages/community/RoadTo100kPage';
+// Content Pages
+import PlaygroundPage from '@/pages/content/PlaygroundPage';
+import ClassroomPage from '@/pages/content/ClassroomPage';
+import RoadTo100kPage from '@/pages/content/RoadTo100kPage';
 
 const queryClient = new QueryClient();
 
@@ -101,10 +101,6 @@ function App() {
                               element={<RoadTo100kPage />}
                             />
                             <Route path='/miembros' element={<MembersPage />} />
-                            <Route
-                              path='/eventos'
-                              element={<CalendarPage />}
-                            />
                             <Route
                               path='/biblioteca'
                               element={<ArchivesPage />}

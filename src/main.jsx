@@ -27,6 +27,7 @@ import '@/css/page-introduction.css';
 import '@/css/page-bails-system.css';
 import '@/css/page-archives.css';
 import '@/css/page-categories.css';
+import '@/css/page-bails.css';
 // Components
 import '@/css/comp-footer.css';
 import '@/css/comp-post.css';
@@ -38,6 +39,8 @@ import '@/css/comp-select-filter.css';
 import '@/css/comp-news.css';
 import '@/css/comp-aside-profile.css';
 import '@/css/comp-line-leves.css';
+import '@/css/comp-content-grid.css';
+import '@/css/comp-accordions.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

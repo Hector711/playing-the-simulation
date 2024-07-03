@@ -1,9 +1,5 @@
 article.level-cards {
-  border: 0.5px solid var(--white-3);
-  box-shadow: 1px 2px 4px 0 var(--white-3);
-  border-radius: var(--border-s);
   padding: var(--pad-m);
-  background-color: var(--blue-1);
   header.level-cards {
     display: flex;
     align-items: center;

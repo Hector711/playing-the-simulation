@@ -64,6 +64,21 @@ export default function MembersPage() {
   );
 }
 
+function FilterButton({ value, onClick, speciality, level, points }) {
+  return (
+    <button value={value} onClick={onClick} >
+      {level ? (
+        <>
+          {level}
+          <span className='pts'>&nbsp;&#8226;&nbsp; {points} </span>
+        </>
+      ) : (
+        <>{speciality}</>
+      )}
+    </button>
+  );
+}
+
 const areaFilterButtons = [
   { value: 'Administrador', area: 'Administradores' },
   { value: 'Ventas', area: 'Ventas' },
@@ -105,17 +120,3 @@ const colourStyles = {
   multiValueLabel: styles => ({ ...styles, color: '#111822' }),
 };
 
-function FilterButton({ value, onClick, speciality, level, points }) {
-  return (
-    <button value={value} onClick={onClick}>
-      {level ? (
-        <>
-          {level}
-          <span className='pts'>&nbsp;&#8226;&nbsp; {points} </span>{' '}
-        </>
-      ) : (
-        <>{speciality}</>
-      )}
-    </button>
-  );
-}

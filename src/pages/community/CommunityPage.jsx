@@ -35,7 +35,7 @@ export default function CommunityPage() {
           <NavLink
             to={`/comunidad/${slug}`}
             key={index}
-            className='community-links orange-hover blurr shadoww'
+            className='aside-buttons orange-hover blurr shadoww'
           >
             <h5>{title}</h5>
           </NavLink>

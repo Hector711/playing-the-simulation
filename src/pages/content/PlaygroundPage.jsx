@@ -23,7 +23,7 @@ export default function PlaygroundPage() {
     bonus: <BonusPage />,
     brainstorming: ['Core de negocio'],
     retos: ['Validación', 'Core de negocio'],
-    'elevator-pitch': ['Validación', 'Core de negocio'],
+    'elevator-pitch': ['Validación', 'Core de negocio']
   };
 
   return (

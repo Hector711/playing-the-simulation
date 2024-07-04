@@ -7,7 +7,7 @@ export default function LevelsPage() {
   return (
     <ModelMain id='levels-page' className='community-common ' title='Niveles' >
       <LineLevels />
-      <hr id='extra'/>
+      <hr />
       <section className='community' id='levels-container'>
         {levels.map(({ level, points, description, reward }, i) => (
           <article key={i} className='level-cards blurr shadoww'>

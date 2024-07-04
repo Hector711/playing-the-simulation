@@ -6,7 +6,7 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/es';
 dayjs.locale('es');
 import { useQuery } from '@tanstack/react-query';
-import { getEvents } from '../../api/eventsApi';
+import { getEvents } from '@/api/eventsApi';
 
 export default function CalendarPage() {
   const {

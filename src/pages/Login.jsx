@@ -21,14 +21,14 @@ export default function Login() {
   }, [isAuthenticated]);
 
   return (
-    <div className='login'>
+    <div className='login '>
       <h3>Iniciar Sesión</h3>
       {signinErrors.map((error, i) => (
         <div className='errors' key={i}>
           {error}
         </div>
       ))}
-      <form onSubmit={onSubmit} className='login'>
+      <form onSubmit={onSubmit} className='login blurr'>
         <input
           type='email'
           {...register('email', { required: true })}

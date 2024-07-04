@@ -44,6 +44,7 @@ section.wellcome {
   width: 50%;
   height: 100%;
 }
+/* LOGIN  */
 div.login {
   h3 {
     font-size: 1.5rem;
@@ -54,6 +55,7 @@ div.login {
     font-weight: 800;
     width: 100%;
     padding: var(--pad-m);
+    /* background-color: red; */
   }
   div.errors {
     padding: var(--pad-s) var(--pad-s);
@@ -64,7 +66,7 @@ div.login {
   form.login {
     display: flex;
     flex-direction: column;
-    background-color: var(--blue-1);
+    /* background-color: var(--blue-1); */
     padding: var(--pad-m);
     width: 300px;
     max-width: 500px;

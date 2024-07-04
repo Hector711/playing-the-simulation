@@ -1,9 +1,11 @@
 article.level-cards {
-  padding: var(--pad-m);
+  display: flex;
+  align-items: center;
+  padding: var(--pad-s) 1.5rem;
   header.level-cards {
     display: flex;
     align-items: center;
-    margin-bottom: var(--gap-m);
+
     h5 {
       font-weight: 700;
       color: var(--orange-0);

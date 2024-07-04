@@ -13,7 +13,7 @@ export default function ClassroomPage() {
     navigate('/classroom/de-0-a-100');
   }, []); // Dependencia para asegurar que navigate esté definido
 
-  const CLASSROOM_SLUG = {
+  const CLASSROOM_SLUGS = {
     'de-0-a-100': <De0A100Page />,
     desbloqueables: <DesbloqueablesPage />,
   };
@@ -24,9 +24,9 @@ export default function ClassroomPage() {
 
   return (
     <ModelMain className='max' id='road-to-100k' nav={navClassroom}>
-      {CLASSROOM_SLUG && (
+      {CLASSROOM_SLUGS && (
         <div>
-          {CLASSROOM_SLUG[slug]}
+          {CLASSROOM_SLUGS[slug]}
         </div>
 
         // <>

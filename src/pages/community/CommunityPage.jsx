@@ -102,5 +102,4 @@ const communityLinks = [
   { title: 'Categorias', slug: 'categorias' },
   { title: 'Sistema de Fianzas', slug: 'sistema-de-fianzas' },
   { title: 'Eventos', slug: 'eventos' },
-  { title: 'Directos', slug: 'diretos' },
 ];

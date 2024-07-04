@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 // import { useClassroom } from '@/context/ClassroomContext';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import ModelMain from '@/layouts/ModelMain';
 
 import ContentGrid from '@/components/ContentGrid';
@@ -8,6 +8,7 @@ import AccordionsContainer from '@/components/AccordionsContainer';
 import BonusPage from '@/pages/classroom/BonusPage';
 export default function PlaygroundPage() {
   const { slug } = useParams();
+  const navigate = useNavigate();
 
   const navRoad = [
     { title: 'Bonus', page: 'playground', slug: 'bonus' },
@@ -19,7 +20,10 @@ export default function PlaygroundPage() {
       slug: 'elevator-pitch',
     },
   ];
-  const PHASE_SLUG = {
+  useEffect(() => {
+    navigate('/playground/bonus')
+  }, []);
+  const PLAYGROUND_SLUGS = {
     bonus: <BonusPage />,
     brainstorming: ['Core de negocio'],
     retos: ['Validación', 'Core de negocio'],
@@ -29,22 +33,21 @@ export default function PlaygroundPage() {
   return (
     <ModelMain className='max' id='road-to-100k' nav={navRoad}>
       <ContentGrid>
-        {slug ? (
+        {slug && (
           <>
-            <aside className='left'>
-              <AccordionsContainer>
-                <BonusPage />
-              </AccordionsContainer>
-              {/* {slug && PHASE_SLUG[slug]} */}
-            </aside>
-            <main>
-              <h3>Clase</h3>
-            </main>
-            <aside className='right'>ded</aside>
+          {PLAYGROUND_SLUGS[slug]}
           </>
-        ) : (
-          <span className='page-title'>Playground</span>
-        )}
+            // <aside className='left'>
+            //   <AccordionsContainer>
+            //     <BonusPage />
+            //   </AccordionsContainer>
+            //   {/* {slug && PHASE_SLUG[slug]} */}
+            // </aside>
+            // <main>
+            //   <h3>Clase</h3>
+            // </main>
+            // <aside className='right'>ded</aside>
+        ) }
       </ContentGrid>
     </ModelMain>
   );

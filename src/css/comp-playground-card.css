@@ -1,0 +1,69 @@
+div.playground-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  
+}
+div.category-bonus {
+  div.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 1rem 0 1.1rem;
+  }
+  h3 {
+    text-transform: uppercase;
+    padding: 0 1rem 0.1rem .5rem;
+  }
+}
+article.playground-cards {
+  display: grid;
+  grid-template-areas:
+    'header aside'
+    'section aside'
+    'footer footer';
+    grid-template-columns: 3fr max-content;
+  min-height: 150px;
+  padding: 1rem;
+ 
+  .icons {
+    width: 20px;
+    height: 20px;
+  }
+  section {
+    grid-area: section;
+  }
+  footer {
+    grid-area: footer;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-between;
+    button {
+      display: flex;
+      gap: 5px
+    }
+  }
+  header{
+    grid-area: header
+  }
+  div.points {
+    display: flex;
+    gap: 0.5rem;
+    padding: 4px 10px;
+    border: 0.5px solid var(--white-3);
+    border-radius: 5px;
+    width: max-content;
+  }
+  aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+;
+  }
+}
+.completed {
+  color: var(--orange-0);
+  /* color: rgb(24, 185, 24); */
+}

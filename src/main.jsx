@@ -15,9 +15,14 @@ import '@/css/page-home.css';
 import '@/css/page-planning.css';
 import '@/css/page-profile.css';
 import '@/css/page-messages.css';
-import '@/css/page-road.css';
-// Community Pages
+// Playground Pages
+import '@/css/page-bonus.css';
+
+// Classroom Pages
 import '@/css/page-classroom.css';
+
+
+// Community Pages
 import '@/css/page-members.css';
 import '@/css/page-calendar.css';
 import '@/css/page-community.css';
@@ -41,6 +46,7 @@ import '@/css/comp-aside-profile.css';
 import '@/css/comp-line-leves.css';
 import '@/css/comp-content-grid.css';
 import '@/css/comp-accordions.css';
+import '@/css/comp-playground-card.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

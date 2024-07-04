@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 // import { useClassroom } from '@/context/ClassroomContext';
 import { useParams, useNavigate } from 'react-router-dom';
 import ModelMain from '@/layouts/ModelMain';
@@ -21,80 +21,34 @@ export default function PlaygroundPage() {
     },
   ];
   useEffect(() => {
-    navigate('/playground/bonus')
+    navigate('/playground/bonus');
   }, []);
   const PLAYGROUND_SLUGS = {
     bonus: <BonusPage />,
     brainstorming: ['Core de negocio'],
     retos: ['Validación', 'Core de negocio'],
-    'elevator-pitch': ['Validación', 'Core de negocio']
+    'elevator-pitch': ['Validación', 'Core de negocio'],
   };
 
   return (
-    <ModelMain className='max' id='road-to-100k' nav={navRoad}>
-      <ContentGrid>
-        {slug && (
-          <>
-          {PLAYGROUND_SLUGS[slug]}
-          </>
-            // <aside className='left'>
-            //   <AccordionsContainer>
-            //     <BonusPage />
-            //   </AccordionsContainer>
-            //   {/* {slug && PHASE_SLUG[slug]} */}
-            // </aside>
-            // <main>
-            //   <h3>Clase</h3>
-            // </main>
-            // <aside className='right'>ded</aside>
-        ) }
-      </ContentGrid>
+    <ModelMain className='max' id='bonus-page' nav={navRoad}>
+      <section id='bonus-page'>
+      {slug && (
+        <>{PLAYGROUND_SLUGS[slug]}</>
+        // <aside className='left'>
+        //   <AccordionsContainer>
+        //     <BonusPage />
+        //   </AccordionsContainer>
+        //   {/* {slug && PHASE_SLUG[slug]} */}
+        // </aside>
+        // <main>
+        //   <h3>Clase</h3>
+        // </main>
+        // <aside className='right'>ded</aside>
+      )}
+
+      </section>
+      {/* <ContentGrid></ContentGrid> */}
     </ModelMain>
   );
 }
-
-
-const retosPage = {
-  basic: [
-    {
-      title: 'Foto de perfil profesional',
-      points: 5,
-      description: 'Graba un video breve hablando a cámara presentandote',
-    },
-    {
-      title: 'Presentación escrita',
-      points: 10,
-      description: 'Presentate ante la comunidad',
-    },
-    {
-      title: 'Presentación en video',
-      points: 40,
-      description: 'Graba un video breve hablando a cámara presentandote',
-    },
-    {
-      title: 'Completar Minimal CV',
-      points: 10,
-      description: 'Graba un video breve hablando a cámara presentandote',
-    },
-  ],
-  intermedio: [
-    {
-      title: 'Bonus Marronero',
-      points: 10,
-      description: 'Presentate ante la comunidad',
-    },
-    {
-      title: 'Auditoria personal',
-      points: 10,
-      description: 'Graba un video breve hablando a cámara presentandote',
-    },
-  ],
-  pro: [
-    {
-      title: 'Bonus de las galletas',
-      points: 10,
-      description: 'Presentate ante la comunidad',
-    },
-    
-  ],
-};

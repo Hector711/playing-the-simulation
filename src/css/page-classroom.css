@@ -4,7 +4,7 @@ main.max {
   gap: 0.8rem;
 }
 
-div.classroom-card {
+/* div.classroom-card {
   border: 0.5px solid var(--white-3);
   border-radius: var(--border-m);
   overflow: hidden;
@@ -16,14 +16,15 @@ div.classroom-card {
   p {
     padding: var(--pad-s);
   }
-}
+} */
 
+
+/* CLASSROOM CARDS */
 #cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--gap-l);
 }
-
 div.classroom-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

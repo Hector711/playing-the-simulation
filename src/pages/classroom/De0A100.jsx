@@ -3,7 +3,7 @@ import ModelMain from '@/layouts/ModelMain';
 import { useClassroom } from '@/context/ClassroomContext';
 import { useParams } from 'react-router-dom';
 
-export default function RoadTo100kPage() {
+export default function De0A100c() {
   const { slug } = useParams();
   const { isLoading, isError, error } = useClassroom();
 

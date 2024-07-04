@@ -45,7 +45,6 @@ function NavLinkButton({ children, to }) {
   );
 }
 const navLinks = [
-  {title: 'Road To 100k', page: '/road-to-100k'},
   {title: 'Classroom', page: '/classroom'},
   {title: 'Playground', page: '/playground'},
   {title: 'Members', page: '/miembros'},

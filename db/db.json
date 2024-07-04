@@ -39,24 +39,9 @@
       ],
       "business": [
         {
-          "name": "Project 1",
+          "name": "Neo",
           "url": "https://example.com/project1",
           "description": "This is project 1"
-        },
-        {
-          "name": "Project 1",
-          "url": "https://example.com/project1",
-          "description": "This is project 1"
-        },
-        {
-          "name": "Project 2",
-          "url": "https://example.com/project2",
-          "description": "This is project 2"
-        },
-        {
-          "url": "https://example.com/project3",
-          "name": "Project 3",
-          "description": "This is project 3"
         }
       ],
       "posts": [
@@ -109,17 +94,17 @@
       "business": [
         {
           "url": "https://example.com/project1",
-          "name": "Project 1",
+          "name": "Racks",
           "description": "This is project 1"
         },
         {
           "url": "https://example.com/project1",
-          "name": "Project 1",
+          "name": "Racks Labs",
           "description": "This is project 1"
         },
         {
           "url": "https://example.com/project2",
-          "name": "Project 2",
+          "name": "Ergonomics",
           "description": "This is project 2"
         }
       ],
@@ -214,18 +199,7 @@
           "url": "https://www.linkedin.com/in/ana_jimenez"
         }
       ],
-      "business": [
-        {
-          "url": "https://example.com/ana_project1",
-          "name": "Proyecto de Diseño 1",
-          "description": "Este es el proyecto 1 de diseño"
-        },
-        {
-          "url": "https://example.com/ana_project2",
-          "name": "Proyecto de Diseño 2",
-          "description": "Este es el proyecto 2 de diseño"
-        }
-      ],
+      "business": [],
       "posts": [
         9,
         10,
@@ -276,11 +250,6 @@
           "url": "https://example.com/carlos_project1",
           "name": "Campaña de Marketing 1",
           "description": "Esta es la campaña 1 de marketing"
-        },
-        {
-          "url": "https://example.com/carlos_project2",
-          "name": "Campaña de Marketing 2",
-          "description": "Esta es la campaña 2 de marketing"
         }
       ],
       "posts": [
@@ -375,18 +344,7 @@
           "url": "https://www.linkedin.com/in/javier_lopez"
         }
       ],
-      "business": [
-        {
-          "url": "https://example.com/javier_project1",
-          "name": "Proyecto Arquitectura 1",
-          "description": "Este es el proyecto 1 de arquitectura"
-        },
-        {
-          "url": "https://example.com/javier_project2",
-          "name": "Proyecto Arquitectura 2",
-          "description": "Este es el proyecto 2 de arquitectura"
-        }
-      ],
+      "business": [],
       "posts": [
         16,
         17,

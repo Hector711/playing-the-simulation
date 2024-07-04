@@ -23,3 +23,23 @@ div.classroom-card {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--gap-l);
 }
+
+div.classroom-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+article.classroom-card {
+  min-height: 260px;
+  overflow: hidden;
+  h4 {
+    text-wrap: nowrap;
+  }
+  h4,
+  p {
+    padding: var(--pad-s);
+  }
+   section {
+    padding: var(--pad-s);
+  }
+}

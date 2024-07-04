@@ -28,10 +28,9 @@ import SavedPage from '@/pages/profile/SavedPage';
 import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
 import ArchivesPage from '@/pages/community/ArchivesPage';
-// Content Pages
-import PlaygroundPage from '@/pages/content/PlaygroundPage';
-import ClassroomPage from '@/pages/content/ClassroomPage';
-import RoadTo100kPage from '@/pages/content/RoadTo100kPage';
+// Classroom Pages
+import PlaygroundPage from '@/pages/classroom/PlaygroundPage';
+import ClassroomPage from '@/pages/classroom/ClassroomPage';
 
 const queryClient = new QueryClient();
 
@@ -62,14 +61,20 @@ function App() {
                                   path='/mensajes'
                                   element={<MessagesPage />}
                                 />
-                                <Route path='/guardados' element={<SavedPage />} />
+                                <Route
+                                  path='/guardados'
+                                  element={<SavedPage />}
+                                />
                               </Route>
                               <Route
                                 path='/planificacion'
                                 element={<PlanningPage />}
                               />
                             </Route>
-                            <Route path='/mi-perfil' element={<ProfilePage />} />
+                            <Route
+                              path='/mi-perfil'
+                              element={<ProfilePage />}
+                            />
                             <Route
                               path='/profile/:id'
                               element={<ProfilePage />}
@@ -85,20 +90,16 @@ function App() {
                               element={<ClassroomPage />}
                             />
                             <Route
+                              path='/classroom/de-0-100/:slug'
+                              element={<ClassroomPage />}
+                            />
+                            <Route
                               path='/playground'
                               element={<PlaygroundPage />}
                             />
                             <Route
                               path='/playground/:slug'
                               element={<PlaygroundPage />}
-                            />
-                            <Route
-                              path='/road-to-100k'
-                              element={<RoadTo100kPage />}
-                            />
-                            <Route
-                              path='/road-to-100k/:slug'
-                              element={<RoadTo100kPage />}
                             />
                             <Route path='/miembros' element={<MembersPage />} />
                             <Route

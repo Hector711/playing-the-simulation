@@ -5,7 +5,7 @@ import ModelMain from '@/layouts/ModelMain';
 
 import ContentGrid from '@/components/ContentGrid';
 import AccordionsContainer from '@/components/AccordionsContainer';
-import BonusPage from '@/pages/content/BonusPage';
+import BonusPage from '@/pages/classroom/BonusPage';
 export default function PlaygroundPage() {
   const { slug } = useParams();
 

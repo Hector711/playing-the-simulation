@@ -16,21 +16,20 @@ export default function PlaygroundCard({
   points,
 }) {
   return (
-    <NavLink to={slug}>
-      <article className='playground-cards blurr shadoww'>
+    <NavLink to={slug} className='playground-cards blurr'>
+      <article>
         <header>
           <h4>{title}</h4>
         </header>
         <section>
-        <div className='points'>
-            <p>{points} puntos</p>
-          </div>
-          {/* <h6>{description}</h6> */}
+          <p>{description}</p>
         </section>
         <aside>
           <Completed completed={completed} />
-          
         </aside>
+        <div className='points'>
+          <p>{points} pts</p>
+        </div>
         <footer>
           <button>
             {likes}

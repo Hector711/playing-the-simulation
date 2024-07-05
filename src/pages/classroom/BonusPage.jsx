@@ -1,11 +1,5 @@
 import React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { NavLink } from 'react-router-dom';
 import PlaygroundCard from '@/components/PlaygroundCard';
-// import Dot from '@/icons/Dot';
 
 export default function BonusPage() {
   const arrayEntries = Object.entries(bonusPage);
@@ -24,37 +18,14 @@ export default function BonusPage() {
           </div>
         </div>
 
-        // <Accordion
-        //   // defaultExpanded
-        //   className='accordions'
-        //   key={level}
-        // >
-        //   <AccordionSummary
-        //     expandIcon={<ExpandMoreIcon className='arrow-icons' />}
-        //     aria-controls='panel-1-content'
-        //     id='panel-1-header'
-        //   >
-        //     <h3>{level.charAt(0).toUpperCase() + level.slice(1)}</h3>
-        //   </AccordionSummary>
-        //   <AccordionDetails className='list-container items-content'>
-        //     {items.map((item, i) => (
-        //       <ul key={i}>
-        //         <li>
-        //           <NavLink className='item-links blurr' to={`/playground/bonus/${items.item_id}`}>
-        //             <h5>{item.title}</h5>
-        //           </NavLink>
-        //         </li>
-        //       </ul>
-        //     ))}
-        //   </AccordionDetails>
-        // </Accordion>
+
       ))}
     </>
   );
 }
 
 const bonusPage = {
-  basic: [
+  básico: [
     {
       title: 'Foto de perfil profesional',
       points: 5,

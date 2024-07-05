@@ -17,53 +17,73 @@ div.category-bonus {
     padding: 0 1rem 0.1rem .5rem;
   }
 }
-article.playground-cards {
-  display: grid;
-  grid-template-areas:
+.playground-cards {
+  * {
+    /* border: 1px solid ; */
+  }
+  /* border: 1px solid  red; */
+  article {
+    display: grid;
+    grid-template-areas:
     'header aside'
-    'section aside'
+    'section points'
     'footer footer';
-    grid-template-columns: 3fr max-content;
-  min-height: 150px;
-  padding: 1rem;
- 
-  .icons {
-    width: 20px;
-    height: 20px;
-  }
-  section {
-    grid-area: section;
-  }
-  footer {
-    grid-area: footer;
-    display: flex;
-    align-self: flex-end;
-    justify-content: space-between;
-    button {
+    grid-template-columns: 1fr auto;
+    min-height: 150px;
+    height: 100%;
+    padding: 0.9rem;
+    .icons {
+      width: 20px;
+      height: 20px;
+    }
+    section {
+      grid-area: section;
+      width: 95%;
+      p {
+        color: var(--white-2);
+        font-weight: 600;
+        line-height: 1.1rem;
+        font-size: 0.85rem;
+      }
+    }
+    footer {
+      grid-area: footer;
       display: flex;
-      gap: 5px
+      align-self: flex-end;
+      justify-content: space-around;
+      button {
+        display: flex;
+        gap: 5px
+      }
+    }
+    header{
+      grid-area: header
+    }
+    div.points {
+      grid-area: points;
+      display: flex;
+      gap: 0.5rem;
+      padding: 2px 8px;
+      border: 0.5px solid var(--white-3);
+      border-radius: 5px;
+      width: max-content;
+      height: max-content;
+      p {
+        font-size: 0.75rem;
+      }
+    }
+    aside{
+      grid-area: aside;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    button {
+      
     }
   }
-  header{
-    grid-area: header
-  }
-  div.points {
-    display: flex;
-    gap: 0.5rem;
-    padding: 4px 10px;
-    border: 0.5px solid var(--white-3);
-    border-radius: 5px;
-    width: max-content;
-  }
-  aside{
-    grid-area: aside;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-;
-  }
 }
-.completed {
+  .completed {
   color: var(--orange-0);
   /* color: rgb(24, 185, 24); */
 }

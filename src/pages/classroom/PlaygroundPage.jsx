@@ -6,6 +6,9 @@ import ModelMain from '@/layouts/ModelMain';
 import ContentGrid from '@/components/ContentGrid';
 import AccordionsContainer from '@/components/AccordionsContainer';
 import BonusPage from '@/pages/classroom/BonusPage';
+import RetosPage from '@/pages/classroom/RetosPage';
+import BrainstormingPage from '@/pages/classroom/BrainstormingPage';
+import ElevatorPitchPage from '@/pages/classroom/ElevatorPitchPage';
 export default function PlaygroundPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -25,9 +28,9 @@ export default function PlaygroundPage() {
   }, []);
   const PLAYGROUND_SLUGS = {
     bonus: <BonusPage />,
-    brainstorming: ['Core de negocio'],
-    retos: ['Validación', 'Core de negocio'],
-    'elevator-pitch': ['Validación', 'Core de negocio'],
+    retos: <RetosPage />,
+    brainstorming: <BrainstormingPage />,
+    'elevator-pitch': <ElevatorPitchPage />,
   };
 
   return (
@@ -48,7 +51,6 @@ export default function PlaygroundPage() {
       )}
 
       </section>
-      {/* <ContentGrid></ContentGrid> */}
     </ModelMain>
   );
 }

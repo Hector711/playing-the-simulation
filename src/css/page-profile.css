@@ -86,8 +86,8 @@ header.profile-page {
   height: max-content;
   padding-inline: 3rem;
   padding-block: 70px 20px;
-  background-color: var(--blue-1);
-  border: 1px solid var(--white-3);
+  /* background-color: var(--blue-1); */
+  /* border: 1px solid var(--white-3); */
   display: grid;
   grid-template-areas:
     'avatar empty'
@@ -247,7 +247,7 @@ header.profile-page {
 }
 
 section.profile-page {
-  background-color: var(--blue-1);
+  /* background-color: var(--blue-1); */
   border-radius: var(--border-m);
   border: 1px solid var(--white-3);
   padding-inline: 3rem;

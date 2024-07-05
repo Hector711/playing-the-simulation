@@ -43,7 +43,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      <ModelMain className='left' id='profile'>
+      <ModelMain className='left ' id='profile'>
         {state.addPopUp && (
           <div id='blur'>
             <article className='add-pop-up'>
@@ -86,7 +86,7 @@ export default function ProfilePage() {
           open={state.calendlyPopUp}
           rootElement={document.getElementById('root')}
         />
-        <header className='profile-page'>
+        <header className='profile-page blurr'>
           <img
             id='cover'
             src='https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg'
@@ -173,7 +173,7 @@ export default function ProfilePage() {
           </div>
         </header>
         <hr />
-        <section id='wins' className='profile-page'>
+        <section id='wins' className='profile-page blurr'>
           <div id='business' className='mini-section'>
             <h3 className='section impact'>Negocios y proyectos</h3>
             <div id='container-grid'>
@@ -205,7 +205,7 @@ export default function ProfilePage() {
           </div>
         </section>
         <hr />
-        <section id='posts' className='profile-page'>
+        <section id='posts' className='profile-page blurr'>
           <h3 className='section impact'>Posts</h3>
         </section>
       </ModelMain>

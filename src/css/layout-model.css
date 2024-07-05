@@ -113,6 +113,13 @@ span.page-title {
     object-fit: contain;
   }
 }
-section.accordions-container {
 
+
+
+
+
+/* para playground and classroom */
+section#content-model {
+  padding-top: 0.5rem;
 }
+/* Es el contenedor de los cards de playground */

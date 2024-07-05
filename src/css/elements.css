@@ -29,8 +29,9 @@ h3 {
 
 /* TITULOS DE POST Y CURSOS */
 h4 {
-  font-size: 0.97rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white-0);
 }
 h5 {
   font-size: 0.95rem;

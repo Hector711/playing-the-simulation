@@ -34,8 +34,9 @@ export default function PlaygroundPage() {
   };
 
   return (
-    <ModelMain className='max' id='bonus-page' nav={navRoad}>
-      <section id='bonus-page'>
+    <ModelMain className='max' id='playground-page' nav={navRoad}>
+      <ModelContent >
+
       {slug && (
         <>{PLAYGROUND_SLUGS[slug]}</>
         // <aside className='left'>
@@ -50,7 +51,17 @@ export default function PlaygroundPage() {
         // <aside className='right'>ded</aside>
       )}
 
-      </section>
+      </ModelContent>
     </ModelMain>
   );
+}
+
+// classroom & playground
+function ModelContent({children}) {
+   return (
+    <section id='content-model'>
+      {children}
+    </section>
+      
+   )
 }

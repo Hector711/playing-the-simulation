@@ -32,7 +32,10 @@ export default function ProjectCard({
           {/* <Avatar src={img} business='true' /> */}
         </section>
         <section className='autor'>
-          <h6>por {autor}</h6>
+          <p>
+            Por 
+            <span> {autor}</span>
+          </p>
         </section>
         <footer>
           <button>

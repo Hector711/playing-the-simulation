@@ -19,7 +19,7 @@ export default function PlaygroundCard({
   points,
   autor,
   comments,
-  participants
+  participants,
 }) {
   return (
     <NavLink to={slug} className='playground-cards blurr'>
@@ -29,9 +29,10 @@ export default function PlaygroundCard({
         </header>
         {autor ? (
           <section className='autor'>
-            {/* <Avatar src={img} business='true' /> */}
-            <p>por</p>
-            <h6>{autor}</h6>
+            <p>
+              Por
+              <span> {autor}</span>
+            </p>
           </section>
         ) : (
           <section className='description'>
@@ -44,12 +45,9 @@ export default function PlaygroundCard({
             <button>
               <AddUser />
             </button>
-          
           )}
         </aside>
-        <div className='points'>
-          {points && <p>{points} pts</p> }
-        </div>
+        <div className='points'>{points && <p>{points} pts</p>}</div>
         <footer>
           <button>
             {likes}
@@ -70,7 +68,6 @@ export default function PlaygroundCard({
               {participants}
               <Participants />
             </button>
-          
           )}
         </footer>
       </article>

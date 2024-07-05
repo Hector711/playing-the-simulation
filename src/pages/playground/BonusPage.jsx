@@ -8,8 +8,8 @@ export default function BonusPage() {
       {arrayEntries.map(([category, items]) => (
         <div key={category} className='category-bonus'>
           <div className='header'>
-          <h3>{category}</h3>
-          <hr />
+            <h3>{category}</h3>
+            <hr />
           </div>
           <div className='playground-cards-grid'>
             {items.map((item, i) => (
@@ -17,8 +17,6 @@ export default function BonusPage() {
             ))}
           </div>
         </div>
-
-
       ))}
     </>
   );
@@ -35,7 +33,7 @@ const bonusPage = {
       completed: true,
       comments: 5,
       likes: 12,
-      points: 5
+      points: 5,
     },
     {
       title: 'Presentación escrita',
@@ -46,7 +44,7 @@ const bonusPage = {
       completed: false,
       comments: 5,
       likes: 12,
-      points: 5
+      points: 5,
     },
     {
       title: 'Presentación en video',
@@ -57,18 +55,19 @@ const bonusPage = {
       completed: true,
       comments: 5,
       likes: 12,
-      points: 30
+      points: 30,
     },
     {
       title: 'Completar Minimal CV',
       points: 10,
-      description: 'Completa tu CV para mostrar a la comunidad tu recorrido profesional.',
+      description:
+        'Completa tu CV para mostrar a la comunidad tu recorrido profesional.',
       item_id: 'completar-minimal-cv',
       timesCompleted: 23,
       completed: true,
       comments: 5,
       likes: 12,
-      points: 15
+      points: 15,
     },
   ],
   intermedio: [
@@ -81,7 +80,7 @@ const bonusPage = {
       completed: true,
       comments: 5,
       likes: 12,
-      points: 50
+      points: 50,
     },
     {
       title: 'Auditoria personal',
@@ -92,7 +91,7 @@ const bonusPage = {
       completed: true,
       comments: 5,
       likes: 12,
-      points: 20
+      points: 20,
     },
   ],
   pro: [
@@ -105,7 +104,7 @@ const bonusPage = {
       completed: true,
       comments: 5,
       likes: 12,
-      points: 50
+      points: 50,
     },
   ],
 };

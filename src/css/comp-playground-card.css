@@ -13,7 +13,7 @@ div.category-bonus {
   }
   h3 {
     text-transform: uppercase;
-    padding: 0 1rem 0.1rem .5rem;
+    padding: 0 1rem 0.1rem 0.5rem;
   }
 }
 .playground-cards {
@@ -23,9 +23,9 @@ div.category-bonus {
   article {
     display: grid;
     grid-template-areas:
-    'header aside'
-    'section points'
-    'footer footer';
+      'header aside'
+      'section points'
+      'footer footer';
     grid-template-columns: 1fr auto;
     min-height: 150px;
     height: 100%;
@@ -48,7 +48,7 @@ div.category-bonus {
       grid-area: section;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.3rem;
       .avatar {
         width: 25px;
         height: 25px;
@@ -62,11 +62,11 @@ div.category-bonus {
       justify-content: space-around;
       button {
         display: flex;
-        gap: 5px
+        gap: 5px;
       }
     }
-    header{
-      grid-area: header
+    header {
+      grid-area: header;
     }
     div.points {
       grid-area: points;
@@ -85,18 +85,30 @@ div.category-bonus {
         height: max-content;
       }
     }
-    aside{
+    aside {
       grid-area: aside;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
     button {
-      
     }
   }
 }
-  .completed {
+
+div.category-bonus {
+  div.header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 1rem 0 1.1rem;
+  }
+  h3 {
+    text-transform: uppercase;
+    padding: 0 1rem 0.1rem 0.5rem;
+  }
+}
+.completed {
   color: var(--orange-0);
   /* color: rgb(24, 185, 24); */
 }

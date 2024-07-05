@@ -1,11 +1,11 @@
 import React from 'react';
-import PlaygroundCard from '@/components/PlaygroundCard';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function ElevatorPitchPage() {
   return (
-    <div className='playground-cards-grid'>
+    <div className='projects-cards-grid'>
       {elevatorPitchObject.map((item, i) => (
-        <PlaygroundCard key={i} {...item} />
+        <ProjectCard key={i} {...item} />
       ))}
     </div>
   );

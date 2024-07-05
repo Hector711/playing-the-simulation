@@ -1,12 +1,12 @@
 import React from 'react';
-import PlaygroundCard from '@/components/PlaygroundCard';
+import ProjectCard from '@/components/ProjectCard';
 
 export default function BrainstormingPage() {
   return (
     <>
-      <div className='playground-cards-grid'>
+      <div className='projects-cards-grid'>
         {brainstormingObject.map((item, i) => (
-          <PlaygroundCard key={i} {...item} />
+          <ProjectCard key={i} {...item} />
         ))}
       </div>
     </>
@@ -16,13 +16,12 @@ export default function BrainstormingPage() {
 const brainstormingObject = [
   {
     title: 'El indicador Bernardos',
-    description: '.',
+    description:
+      'Muchos ya lo conoceréis, pero para los que no, hoy os traigo al conocido como 𝙄𝙣𝙙𝙞𝙘𝙖𝙙𝙤𝙧 𝘽𝙚𝙧𝙣𝙖𝙧𝙙𝙤𝙨 junto a una 𝐩𝐫𝐨𝐩𝐮𝐞𝐬𝐭𝐚 rápida para aquellos que estéis aprendiendo automatización de IA.',
     item_id: 'foto-de-perfil-profesional',
-    projectDescription: 'Una IA que indica cuando invertir.',
     likes: 12,
     comments: 5,
+    participants: 5,
     autor: 'Pablo Rodríguez',
-    participants: 4,
-    img: 'https://assets.skool.com/f/7721e90de3474cab8d6c9cd957b37f80/7da054815ed24d08b06d1fff10844ebe42ca811f5f9f4a4d9d81fcd425b9396f-sm.jpg'
-  }
+  },
 ];

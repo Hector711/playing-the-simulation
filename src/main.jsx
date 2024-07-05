@@ -45,6 +45,7 @@ import '@/css/comp-line-leves.css';
 import '@/css/comp-content-grid.css';
 import '@/css/comp-accordions.css';
 import '@/css/comp-playground-card.css';
+import '@/css/comp-project-card.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

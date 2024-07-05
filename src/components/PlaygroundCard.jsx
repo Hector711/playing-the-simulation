@@ -29,7 +29,8 @@ export default function PlaygroundCard({
         </header>
         {autor ? (
           <section className='autor'>
-            <Avatar src={img} business='true' />
+            {/* <Avatar src={img} business='true' /> */}
+            <p>por</p>
             <h6>{autor}</h6>
           </section>
         ) : (

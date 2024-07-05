@@ -126,20 +126,13 @@ export default function ProfilePage() {
               <a
                 href='https://hector-minimalist-cv.netlify.app/'
                 target='_blank'
-                id='portfolio'
+                id='cv'
               >
-                Portafolio
+                <h5>Minimal CV</h5>
               </a>
             </div>
           </div>
           <div id='right-info'>
-            <a
-              href='https://hector-minimalist-cv.netlify.app/'
-              target='_blank'
-              id='cv'
-            >
-              <h5>Minimal CV</h5>
-            </a>
             <button id='add' onClick={onAddPopUp}>
               <h5>Agregar</h5>
               <AddUser />

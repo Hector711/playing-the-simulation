@@ -36,7 +36,7 @@ const elevatorPitchObject = [
     img: '',
   },
   {
-    title: 'Reto del comerciante',
+    title: 'Mi Triple A',
     points: 40,
     description: 'Graba un video breve hablando a cámara presentandote.',
     item_id: 'presentacion-en-video',

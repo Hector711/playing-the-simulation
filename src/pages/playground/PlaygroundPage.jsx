@@ -5,10 +5,10 @@ import ModelMain from '@/layouts/ModelMain';
 
 import ContentGrid from '@/components/ContentGrid';
 import AccordionsContainer from '@/components/AccordionsContainer';
-import BonusPage from '@/pages/classroom/BonusPage';
-import RetosPage from '@/pages/classroom/RetosPage';
-import BrainstormingPage from '@/pages/classroom/BrainstormingPage';
-import ElevatorPitchPage from '@/pages/classroom/ElevatorPitchPage';
+import BonusPage from '@/pages/playground/BonusPage';
+import RetosPage from '@/pages/playground/RetosPage';
+import BrainstormingPage from '@/pages/playground/BrainstormingPage';
+import ElevatorPitchPage from '@/pages/playground/ElevatorPitchPage';
 export default function PlaygroundPage() {
   const { slug } = useParams();
   const navigate = useNavigate();

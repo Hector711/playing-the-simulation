@@ -27,10 +27,12 @@ import SavedPage from '@/pages/profile/SavedPage';
 //  Community Pages
 import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
-import ArchivesPage from '@/pages/community/ArchivesPage';
+import BibliotecaPage from '@/pages/community/BibliotecaPage';
 // Classroom Pages
-import PlaygroundPage from '@/pages/classroom/PlaygroundPage';
 import ClassroomPage from '@/pages/classroom/ClassroomPage';
+// PLAYGROUND PAGES
+import PlaygroundPage from '@/pages/playground/PlaygroundPage';
+
 
 const queryClient = new QueryClient();
 
@@ -104,7 +106,7 @@ function App() {
                             <Route path='/miembros' element={<MembersPage />} />
                             <Route
                               path='/biblioteca'
-                              element={<ArchivesPage />}
+                              element={<BibliotecaPage />}
                             />
                             <Route
                               path='/comunidad'

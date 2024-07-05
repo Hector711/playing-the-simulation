@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Avatar({ src, business }) {
-  if (business.length > 0) {
+  if (business && business.length > 0 ) {
     return (
       <img alt='Foto de perfil' src={src} className='avatar entrepeneur' />
     );

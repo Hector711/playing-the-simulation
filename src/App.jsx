@@ -25,13 +25,14 @@ import MessagesPage from '@/pages/profile/MessagesPage';
 import PlanningPage from '@/pages/profile/PlanningPage';
 import SavedPage from '@/pages/profile/SavedPage';
 //  Community Pages
-import PlaygroundPage from '@/pages/community/PlaygroundPage';
-import ClassroomPage from '@/pages/community/ClassroomPage';
 import CommunityPage from '@/pages/community/CommunityPage';
 import MembersPage from '@/pages/community/MembersPage';
-import ArchivesPage from '@/pages/community/ArchivesPage';
-import CalendarPage from '@/pages/community/CalendarPage';
-import RoadTo100kPage from '@/pages/community/RoadTo100kPage';
+import BibliotecaPage from '@/pages/community/BibliotecaPage';
+// Classroom Pages
+import ClassroomPage from '@/pages/classroom/ClassroomPage';
+// PLAYGROUND PAGES
+import PlaygroundPage from '@/pages/playground/PlaygroundPage';
+
 
 const queryClient = new QueryClient();
 
@@ -62,14 +63,20 @@ function App() {
                                   path='/mensajes'
                                   element={<MessagesPage />}
                                 />
-                                <Route path='/guardados' element={<SavedPage />} />
+                                <Route
+                                  path='/guardados'
+                                  element={<SavedPage />}
+                                />
                               </Route>
                               <Route
                                 path='/planificacion'
                                 element={<PlanningPage />}
                               />
                             </Route>
-                            <Route path='/mi-perfil' element={<ProfilePage />} />
+                            <Route
+                              path='/mi-perfil'
+                              element={<ProfilePage />}
+                            />
                             <Route
                               path='/profile/:id'
                               element={<ProfilePage />}
@@ -85,6 +92,10 @@ function App() {
                               element={<ClassroomPage />}
                             />
                             <Route
+                              path='/classroom/de-0-100/:slug'
+                              element={<ClassroomPage />}
+                            />
+                            <Route
                               path='/playground'
                               element={<PlaygroundPage />}
                             />
@@ -92,22 +103,10 @@ function App() {
                               path='/playground/:slug'
                               element={<PlaygroundPage />}
                             />
-                            <Route
-                              path='/road-to-100k'
-                              element={<RoadTo100kPage />}
-                            />
-                            <Route
-                              path='/road-to-100k/:slug'
-                              element={<RoadTo100kPage />}
-                            />
                             <Route path='/miembros' element={<MembersPage />} />
                             <Route
-                              path='/eventos'
-                              element={<CalendarPage />}
-                            />
-                            <Route
                               path='/biblioteca'
-                              element={<ArchivesPage />}
+                              element={<BibliotecaPage />}
                             />
                             <Route
                               path='/comunidad'

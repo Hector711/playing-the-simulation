@@ -1,52 +1,10 @@
-aside.community {
-  height: max-content;
-  border-radius: var(--border-m);
-  display: flex;
-  flex-direction: column;
-  a {
-    text-transform: uppercase;
-    text-align: center;
-  }
-}
-
 main.max {
-  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  div#class-grid {
-    display: grid;
-    grid-template-areas: 'aside main extras';
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: var(--gap-l);
-    aside#left {
-      grid-area: aside;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    main {
-      grid-area: main;
-      min-height: 500px;
-      padding: var(--pad-m);
-    }
-    aside#right {
-      grid-area: extras;
-    }
-    aside, main {
-      padding: var(--pad-s);
-      /* background-color: var(--blue-1); */
-      border-radius: var(--border-m);
-    }
-  }
 }
 
-#cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: var(--gap-l);
-}
-div.classroom-card {
+/* div.classroom-card {
   border: 0.5px solid var(--white-3);
   border-radius: var(--border-m);
   overflow: hidden;
@@ -58,5 +16,31 @@ div.classroom-card {
   p {
     padding: var(--pad-s);
   }
-}
+} */
 
+
+/* CLASSROOM CARDS */
+#cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--gap-l);
+}
+div.classroom-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+article.classroom-card {
+  min-height: 260px;
+  overflow: hidden;
+  h4 {
+    text-wrap: nowrap;
+  }
+  h4,
+  p {
+    padding: var(--pad-s);
+  }
+   section {
+    padding: var(--pad-s);
+  }
+}

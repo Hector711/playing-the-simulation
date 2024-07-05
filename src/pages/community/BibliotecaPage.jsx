@@ -3,7 +3,7 @@ import ModelMain from '@/layouts/ModelMain';
 import ModelAsideLeft from '@/layouts/ModelAsideLeft';
 import Select from 'react-select';
 
-export default function ArchivesPage(props) {
+export default function BibliotecaPage(props) {
   const [selectedValue, setSelectedValue] = useState(null);
   const [filter, setFilter] = useState(null);
   const [allPosts, setAllPosts] = useState([]);

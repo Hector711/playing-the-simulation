@@ -1,6 +1,6 @@
 main#rules-page {
- 
-  header {
+  
+  /* header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,17 +8,24 @@ main#rules-page {
     hr {
       width: 100%;
     }
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    #video-container {
-      overflow: hidden;
-    }
-  }
+  } */
+  
+}
+section#rules-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+article.wide-items {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.2rem;
+  span {
+    font-weight: bold;
+    color: var(--orange-0);
+  }
+  h5 {
+    font-weight: 600;
+  }
 }

@@ -3,7 +3,6 @@ div.playground-cards-grid {
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 1rem;
   padding: 1rem;
-  
 }
 div.category-bonus {
   div.header {
@@ -19,9 +18,8 @@ div.category-bonus {
 }
 .playground-cards {
   * {
-    /* border: 1px solid ; */
+    /* border: 1px solid; */
   }
-  /* border: 1px solid  red; */
   article {
     display: grid;
     grid-template-areas:
@@ -38,12 +36,23 @@ div.category-bonus {
     }
     section {
       grid-area: section;
-      width: 95%;
+      width: 97%;
       p {
         color: var(--white-2);
         font-weight: 600;
         line-height: 1.1rem;
         font-size: 0.85rem;
+      }
+    }
+    section.autor {
+      grid-area: section;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .avatar {
+        width: 25px;
+        height: 25px;
+        border-width: 1px;
       }
     }
     footer {
@@ -62,14 +71,18 @@ div.category-bonus {
     div.points {
       grid-area: points;
       display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 0.5rem;
-      padding: 2px 8px;
-      border: 0.5px solid var(--white-3);
-      border-radius: 5px;
       width: max-content;
       height: max-content;
+      height: 100%;
       p {
+        border: 0.5px solid var(--white-3);
+        border-radius: 5px;
+        padding: 2px 8px;
         font-size: 0.75rem;
+        height: max-content;
       }
     }
     aside{

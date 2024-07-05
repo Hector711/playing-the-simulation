@@ -4,6 +4,7 @@ import IconLike from '@/icons/IconLike';
 import IconComment from '@/icons/IconComment';
 import Checks from '@/icons/Checks';
 import Completed from '@/icons/Completed';
+import Avatar from '@/components/Avatar';
 
 export default function PlaygroundCard({
   title,
@@ -14,6 +15,7 @@ export default function PlaygroundCard({
   timesCompleted,
   completed,
   points,
+  autor,
 }) {
   return (
     <NavLink to={slug} className='playground-cards blurr'>
@@ -21,9 +23,18 @@ export default function PlaygroundCard({
         <header>
           <h4>{title}</h4>
         </header>
-        <section>
-          <p>{description}</p>
-        </section>
+        {autor ? (
+          <section className='autor'>
+            <Avatar src={img}
+              business='true'
+            />
+            <h6>{autor}</h6>
+          </section>
+        ) : (
+          <section className='description'>
+            <p>{description}</p>
+          </section>
+        )}
         <aside>
           <Completed completed={completed} />
         </aside>

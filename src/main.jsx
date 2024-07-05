@@ -17,11 +17,9 @@ import '@/css/page-profile.css';
 import '@/css/page-messages.css';
 // Playground Pages
 import '@/css/page-bonus.css';
-
+import '@/css/page-retos.css';
 // Classroom Pages
 import '@/css/page-classroom.css';
-
-
 // Community Pages
 import '@/css/page-members.css';
 import '@/css/page-calendar.css';

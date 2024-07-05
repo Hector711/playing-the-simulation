@@ -33,6 +33,7 @@ const bonusPage = {
       item_id: 'foto-de-perfil-profesional',
       timesCompleted: 23,
       completed: true,
+      comments: 5,
       likes: 12,
       points: 5
     },
@@ -43,10 +44,9 @@ const bonusPage = {
       item_id: 'presentacion-escrita',
       timesCompleted: 23,
       completed: false,
+      comments: 5,
       likes: 12,
       points: 5
-
-
     },
     {
       title: 'Presentación en video',
@@ -55,10 +55,9 @@ const bonusPage = {
       item_id: 'presentacion-en-video',
       timesCompleted: 23,
       completed: true,
+      comments: 5,
       likes: 12,
       points: 30
-
-
     },
     {
       title: 'Completar Minimal CV',
@@ -67,10 +66,9 @@ const bonusPage = {
       item_id: 'completar-minimal-cv',
       timesCompleted: 23,
       completed: true,
+      comments: 5,
       likes: 12,
       points: 15
-
-
     },
   ],
   intermedio: [
@@ -80,11 +78,10 @@ const bonusPage = {
       description: 'Presentate ante la comunidad.',
       item_id: 'bonus-marronero',
       timesCompleted: 23,
-      completed: true ,
+      completed: true,
+      comments: 5,
       likes: 12,
       points: 50
-
-
     },
     {
       title: 'Auditoria personal',
@@ -92,11 +89,10 @@ const bonusPage = {
       description: 'Graba un video breve hablando a cámara presentandote.',
       item_id: 'auditoria-personal',
       timesCompleted: 23,
-      completed: true ,
+      completed: true,
+      comments: 5,
       likes: 12,
       points: 20
-
-
     },
   ],
   pro: [
@@ -106,11 +102,10 @@ const bonusPage = {
       description: 'Presentate ante la comunidad.',
       item_id: 'bonus-de-las-galletas',
       timesCompleted: 23,
-      completed: true ,
+      completed: true,
+      comments: 5,
       likes: 12,
       points: 50
-
-
     },
   ],
 };

@@ -5,6 +5,8 @@ import IconComment from '@/icons/IconComment';
 import Checks from '@/icons/Checks';
 import Completed from '@/icons/Completed';
 import Avatar from '@/components/Avatar';
+import Participants from '@/icons/Participants';
+import AddUser from '@/icons/AddUser';
 
 export default function PlaygroundCard({
   title,
@@ -16,6 +18,8 @@ export default function PlaygroundCard({
   completed,
   points,
   autor,
+  comments,
+  participants
 }) {
   return (
     <NavLink to={slug} className='playground-cards blurr'>
@@ -25,9 +29,7 @@ export default function PlaygroundCard({
         </header>
         {autor ? (
           <section className='autor'>
-            <Avatar src={img}
-              business='true'
-            />
+            <Avatar src={img} business='true' />
             <h6>{autor}</h6>
           </section>
         ) : (
@@ -36,10 +38,16 @@ export default function PlaygroundCard({
           </section>
         )}
         <aside>
-          <Completed completed={completed} />
+          {completed !== undefined && <Completed completed={completed} />}
+          {participants !== undefined && (
+            <button>
+              <AddUser />
+            </button>
+          
+          )}
         </aside>
         <div className='points'>
-          <p>{points} pts</p>
+          {points && <p>{points} pts</p> }
         </div>
         <footer>
           <button>
@@ -47,13 +55,22 @@ export default function PlaygroundCard({
             <IconLike />
           </button>
           <button>
-            {likes}
+            {comments}
             <IconComment />
           </button>
-          <button>
-            {timesCompleted}
-            <Checks />
-          </button>
+          {timesCompleted !== undefined && (
+            <button>
+              {timesCompleted}
+              <Checks />
+            </button>
+          )}
+          {participants !== undefined && (
+            <button>
+              {participants}
+              <Participants />
+            </button>
+          
+          )}
         </footer>
       </article>
     </NavLink>

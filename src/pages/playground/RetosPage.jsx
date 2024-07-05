@@ -15,16 +15,17 @@ export default function RetosPage() {
 
 const retosObject = [
   {
-    title: 'Reto de Aproximación en frío',
+    title: 'Reto aproximación en frío',
     points: 5,
     description: 'Sube una foto de perfil profesional.',
     item_id: 'foto-de-perfil-profesional',
     timesCompleted: 23,
     completed: true,
     likes: 12,
+    comments: 5,
     points: 5,
     autor: 'Héctor Guerra',
-    img: 'https://i.ibb.co/s5smtmL/profile-pic.jpg'
+    img: 'https://i.ibb.co/s5smtmL/profile-pic.jpg',
   },
   {
     title: 'Reto de la Exposición Progresiva',
@@ -33,10 +34,11 @@ const retosObject = [
     item_id: 'presentacion-escrita',
     timesCompleted: 23,
     completed: false,
+    comments: 5,
     likes: 12,
     points: 5,
-    autor: 'Pedro Márquez',
-    img: ''
+    autor: 'Héctor Guerra',
+    img: 'https://i.ibb.co/s5smtmL/profile-pic.jpg',
   },
   {
     title: 'Reto del comerciante',
@@ -45,49 +47,24 @@ const retosObject = [
     item_id: 'presentacion-en-video',
     timesCompleted: 23,
     completed: true,
+    comments: 5,
     likes: 12,
     points: 30,
     autor: 'Raul González',
-    img: ''
-
+    img: '',
   },
   {
-    title: 'Completar Minimal CV',
+    title: 'Reto de declarar todo a hacienda',
     points: 10,
     description:
-      'Completa tu CV para mostrar a la comunidad tu recorrido profesional.',
-    item_id: 'completar-minimal-cv',
-    timesCompleted: 23,
-    completed: true,
-    likes: 12,
-    points: 15,
-    autor: 'José Salamanca',
-    img: ''
-
-  },
-  {
-    title: 'Bonus Marronero',
-    points: 10,
-    description: 'Presentate ante la comunidad.',
-    item_id: 'bonus-marronero',
-    timesCompleted: 23,
-    completed: true,
-    likes: 12,
-    points: 50,
-    autor: 'Alessandro Gómez',
-    img: ''
-  },
-  {
-    title: 'Declarar todo a hacienda',
-    points: 10,
-    description: 'Presentate ante la comunidad.',
+      'Venga chavales a ver quien tiene huevos de declarar todo a hacienda (inclyendo criptomonedas) jajajj venga, el último es podemita.',
     item_id: 'bonus-de-las-galletas',
     timesCompleted: 23,
     completed: true,
+    comments: 5,
     likes: 12,
     points: 50,
     autor: 'Pedro Sánchez',
-    img: ''
-
+    img: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Pedro_Sánchez_in_2023.jpg',
   },
 ];

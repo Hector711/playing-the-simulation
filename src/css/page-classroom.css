@@ -33,6 +33,21 @@ div.classroom-cards-grid {
 article.classroom-card {
   min-height: 260px;
   overflow: hidden;
+  header{
+    position: relative
+  }
+  div.text {
+    position: absolute;
+    margin: 20% 18%;
+    width: 65%;
+    height: 30%;
+    background-color: #1a1b23;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 10px;
+  }
   h4 {
     text-wrap: nowrap;
   }

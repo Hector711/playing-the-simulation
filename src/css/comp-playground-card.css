@@ -1,13 +1,8 @@
-* {
-  /* border: 0.5px solid var(--white-3); */
-}
 div.playground-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
   gap: 1rem;
-  /* padding: 1rem 0; */
 }
-
 
 .playground-cards {
   article {
@@ -65,8 +60,8 @@ div.playground-cards-grid {
     div.points {
       grid-area: points;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-end;
+      align-items: flex-start;
       gap: 0.5rem;
       width: max-content;
       height: max-content;

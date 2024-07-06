@@ -7,13 +7,12 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { deletePost } from '@/api/postsApi';
 
 const navHomePage = [
-  { title: 'Anuncios', slug: '' },
   { title: 'Afterwork', slug: '' },
   { title: 'Wins', slug: '' },
   { title: 'Biblioteca', slug: '' },
   { title: 'Retos', slug: '' },
   { title: 'Elevator Pitch', slug: '' },
-  { title: 'Brainstorming', slug: '' },
+
 ];
 
 export default function HomePage() {

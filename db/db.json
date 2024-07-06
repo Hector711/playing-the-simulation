@@ -9,7 +9,7 @@
       "speciality": "Full Stack Web Developer",
       "area": "Programación",
       "about": "Experto en el diseño de soluciones escalables en la nube.",
-      "avatar": "https://via.placeholder.com/150",
+      "avatar": "https://i.ibb.co/s5smtmL/profile-pic.jpg",
       "cover": "https://via.placeholder.com/150",
       "cvUrl": "https://example.com/john_doe_cv",
       "videoUrl": "https://example.com/john_doe_video",
@@ -119,14 +119,14 @@
     },
     {
       "id": 1,
-      "username": "laura-fernandez",
-      "fullName": "Laura Fernández",
+      "username": "mohamed-mchichou",
+      "fullName": "Mohamed Mchichou",
       "points": 20,
       "level": 3,
       "speciality": "SEO",
       "area": "SEO",
-      "about": "Apasionada por la optimización de motores de búsqueda.",
-      "avatar": "https://via.placeholder.com/150",
+      "about": "Emprendedor e ingeniero: IA, programacion y buenas habilidades comunicativas",
+      "avatar": "https://assets.skool.com/f/108c574cf1ff4226b7cb5cd87b4e5877/cfa0817798164c51ac16994e093e071ef3ccdd7978ec47c487ae99d114b7f45a-md.jpg",
       "cover": "https://via.placeholder.com/150",
       "cvUrl": "https://example.com/laura_fernandez_cv",
       "videoUrl": "https://example.com/laura_fernandez_video",
@@ -317,6 +317,321 @@
       "area": "Arquitectura",
       "about": "Diseño y desarrollo de arquitecturas robustas y escalables.",
       "avatar": "https://via.placeholder.com/150",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "brayan-rodriguez",
+      "fullName": "Brayan Rodríguez",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "May be not, may not tomorrow, but one day Marketing digital 🇮🇨",
+      "avatar": "https://assets.skool.com/f/61578ba098624c2eabc047f689a1c8b3/5366b9d2bd7a4250a9af5076f309c9c8188a46f4f29542d7bba97a3254ff46e6-md.jpg",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "pedro-pulido",
+      "fullName": "Pedro Pulido",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "Solo trabajo duru y capitalismo puro. 💸👋",
+      "avatar": "https://assets.skool.com/f/460f6df377724642b7b51841b2b66d94/6194248d133b4007a25398e54df7c47ab1283434dee64add8e569b5ff5979860-md.jpg",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Medrid, España.",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "jose-manuel",
+      "fullName": "Jose manuel Guaita",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "Consultoria de IA, ayudo a negocios a optimizar procesos de ventas y automatizar procesos repetitivos.",
+      "avatar": "https://assets.skool.com/f/9a4210d427b1447daf676444e473c2b2/bd14cfd5613742b7a5d7f51ba06b6f7d64832c2ae3ee488492e5b56e1a9e6dcf-md.jpg",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "javi-garcía",
+      "fullName": "Javi García",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "Hola me llamo Javi, solo dar las gracias a Carlos por la oportunidad que nos ha dado por haber creado está familia.",
+      "avatar": "https://assets.skool.com/f/4509cd78631645a1909a600715a57e92/7c95375a0af241728e09f116a5389cca41208c92f3884d65af3aba1d2f85b6d1",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "max-sclifos",
+      "fullName": "Max Sclifos",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "Moldavo de 22 años / Jugador de poker amateur / Técnico de maquinas hospitalarias/ Futuro owner de más de 4 hijos.",
+      "avatar": "https://assets.skool.com/f/abe77d203c634f28903aeeca44e8eeb5/78cf35389a494f53a04b42d846513721ba8535e57cce4980bcc9a183bb2982ef-md.jpg",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "beñat-lomas",
+      "fullName": "Beñat Lomás",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "Ingeniero & MBA AI Automation Agency Ajedrecista",
+      "avatar": "https://assets.skool.com/f/9fbadc748687490abb5969e1699fb85e/96dfd9a02865435b959bb271fd9b077271ef4cbec11646cba585f427c1c7fd16-md.jpg",
+      "cover": "https://via.placeholder.com/150",
+      "cvUrl": "https://example.com/javier_lopez_cv",
+      "videoUrl": "https://example.com/javier_lopez_video",
+      "webPageUrl": "https://example.com/javier_lopez_portfolio",
+      "location": "Santiago, Chile",
+      "rrss": [
+        {
+          "name": "LinkedIn",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "GitHub",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Twitter",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "Instagram",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        },
+        {
+          "name": "YouTube",
+          "url": "https://www.linkedin.com/in/javier_lopez"
+        }
+      ],
+      "business": [],
+      "posts": [
+        16,
+        17,
+        18
+      ],
+      "savedPosts": []
+    },
+    {
+      "id": 5,
+      "username": "cristian-aguerri",
+      "fullName": "Cristian Aguerri",
+      "points": 65,
+      "level": 4,
+      "speciality": "Arquitecto de Soluciones",
+      "area": "Arquitectura",
+      "about": "Me apasionan las tecnologías, la música, el deporte y aprender nuevas habilidades.",
+      "avatar": "https://assets.skool.com/f/368eb793ecf844e2b690c97cf9ba311c/906c7453443542e4b9858bfa2a0e7412661f9de0441742e7a6992fda080c6f3c-md.jpg",
       "cover": "https://via.placeholder.com/150",
       "cvUrl": "https://example.com/javier_lopez_cv",
       "videoUrl": "https://example.com/javier_lopez_video",

@@ -1,11 +1,17 @@
 import React from 'react';
 
 export default function Avatar({ src, business }) {
-  if (business && business.length > 0 ) {
+  if (business && business.length > 0) {
     return (
-      <img alt='Foto de perfil' src={src} className='avatar entrepeneur' />
+      <figure className='avatar-container entrepeneur'>
+        <img alt='Foto de perfil' src={src} className='avatar ' />
+      </figure>
     );
   } else {
-    return <img alt='Foto de perfil' src={src} className='avatar employee' />;
+    return (
+      <figure className='avatar-container employee'>
+        <img alt='Foto de perfil' src={src} className='avatar ' />
+      </figure>
+    );
   }
 }

@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 // import { useClassroom } from '@/context/ClassroomContext';
 import { useParams, useNavigate } from 'react-router-dom';
 import ModelMain from '@/layouts/ModelMain';
-
 import ContentGrid from '@/components/ContentGrid';
 import AccordionsContainer from '@/components/AccordionsContainer';
 import BonusPage from '@/pages/playground/BonusPage';
 import RetosPage from '@/pages/playground/RetosPage';
 import BrainstormingPage from '@/pages/playground/BrainstormingPage';
 import ElevatorPitchPage from '@/pages/playground/ElevatorPitchPage';
+import ModelContent from '@/layouts/ModelContent';
+
 export default function PlaygroundPage() {
   const { slug } = useParams();
   const navigate = useNavigate();
@@ -56,12 +57,3 @@ export default function PlaygroundPage() {
   );
 }
 
-// classroom & playground
-function ModelContent({children}) {
-   return (
-    <section id='content-model'>
-      {children}
-    </section>
-      
-   )
-}

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate, NavLink } from 'react-router-dom';
 import De0A100Page from '@/pages/classroom/De0A100Page';
 import DesbloqueablesPage from '@/pages/classroom/DesbloqueablesPage';
+import ModelContent from '@/layouts/ModelContent';
 
 export default function ClassroomPage() {
   const navigate = useNavigate();
@@ -23,11 +24,11 @@ export default function ClassroomPage() {
   ];
 
   return (
-    <ModelMain className='max' id='road-to-100k' nav={navClassroom}>
+    <ModelMain className='max' id='de0a100' nav={navClassroom}>
       {CLASSROOM_SLUGS && (
-        <div>
+        <ModelContent>
           {CLASSROOM_SLUGS[slug]}
-        </div>
+        </ModelContent>
 
         // <>
         //   <aside id='left' className='blurr'>

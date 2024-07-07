@@ -13,25 +13,26 @@ export const useClassroom = () => {
 };
 
 export function ClassroomProvider({ children }) {
-  const [roadClasses, setRoadClasses] = useState([]);
-  const {
-    isLoading,
-    data: classes,
-    isError,
-    error,
-  } = useQuery({
-    queryKey: ['classes'],
-    queryFn: getClasses,
-  });
+  
+  // const [roadClasses, setRoadClasses] = useState([]);
+  // const {
+  //   isLoading,
+  //   data: classes,
+  //   isError,
+  //   error,
+  // } = useQuery({
+  //   queryKey: ['classes'],
+  //   queryFn: getClasses,
+  // });
 
-  function getRoadClasses() {
-    const roadClasses = classes?.roadto100k;
-    setRoadClasses(roadClasses);
-  }
+  // function getRoadClasses() {
+  //   const roadClasses = classes?.roadto100k;
+  //   setRoadClasses(roadClasses);
+  // }
 
   return (
     <ClassroomContext.Provider
-      value={{ isLoading, getRoadClasses, isError, error }}
+      value={{  }}
     >
       {children}
     </ClassroomContext.Provider>

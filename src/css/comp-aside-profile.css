@@ -23,7 +23,7 @@ header#profile {
       object-fit: cover;
       overflow: hidden;
     }
-    img.avatar {
+    figure.avatar-container {
       z-index: 999;
       position: relative;
       width: 75px;

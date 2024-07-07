@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import ModelMain from '@/layouts/ModelMain';
 import { useParams } from 'react-router-dom';
 import { useNavigate, NavLink } from 'react-router-dom';
@@ -9,6 +9,8 @@ import ModelContent from '@/layouts/ModelContent';
 export default function ClassroomPage() {
   const navigate = useNavigate();
   const { slug } = useParams();
+  const [cardMode, setCardMode] = useState(true);
+
   useEffect(() => {
     // Redirige a '/classroom/de-0-a-100' al montar el componente
     navigate('/classroom/de-0-a-100');
@@ -21,13 +23,20 @@ export default function ClassroomPage() {
   const navClassroom = [
     { title: 'De 0 a 100', page: 'classroom', slug: 'de-0-a-100' },
     { title: 'Desbloqueables', page: 'classroom', slug: 'desbloqueables' },
+    { title: 'Community Hacker', page: 'classroom', slug: 'community-hacker' },
   ];
 
   return (
     <ModelMain className='max' id='de0a100' nav={navClassroom}>
       {CLASSROOM_SLUGS && (
         <ModelContent>
-          {CLASSROOM_SLUGS[slug]}
+          {cardMode ? (
+            CLASSROOM_SLUGS[slug]
+          ) : (
+            <>
+              <h3>Clase</h3>
+            </>
+          )}
         </ModelContent>
 
         // <>
@@ -49,5 +58,3 @@ export default function ClassroomPage() {
     </ModelMain>
   );
 }
-
-

@@ -19,9 +19,9 @@ const elevatorPitchObject = [
     item_id: 'foto-de-perfil-profesional',
     likes: 12,
     comments: 5,
-    points: 5,
+    points: 57,
     autor: 'Carlos Adams',
-    img: 'https://assets.skool.com/f/7721e90de3474cab8d6c9cd957b37f80/7da054815ed24d08b06d1fff10844ebe42ca811f5f9f4a4d9d81fcd425b9396f-sm.jpg',
+
   },
   {
     title: 'Strategy Pulse',
@@ -31,9 +31,9 @@ const elevatorPitchObject = [
     likes: 12,
     comments: 5,
 
-    points: 5,
+    points: 50,
     autor: 'Pedro Márquez',
-    img: '',
+
   },
   {
     title: 'Nebula Realms Studios',
@@ -44,6 +44,6 @@ const elevatorPitchObject = [
     comments: 5,
     points: 30,
     autor: 'Raul González',
-    img: '',
+    
   },
 ];

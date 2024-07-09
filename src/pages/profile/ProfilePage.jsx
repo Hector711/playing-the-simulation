@@ -14,78 +14,15 @@ import Game from '@/icons/Game';
 import { PopupModal } from 'react-calendly';
 import { useEffect } from 'react';
 import YoutubeVideo from '@/components/YouTubeVideo';
+import { useProfile } from '@/context/ProfileContext';
 
 export default function ProfilePage() {
-  const [state, setState] = useState({
-    addPopUp: false,
-    calendlyPopUp: false,
-  });
-  const onAddPopUp = () => {
-    setState({
-      ...state,
-      addPopUp: true,
-    });
-  };
-  const onCalendlyPopUp = () => {
-    setState({
-      ...state,
-      addPopUp: false,
-      calendlyPopUp: true,
-    });
-  };
-  const onCloseAll = () => {
-    setState({
-      addPopUp: false,
-      calendlyPopUp: false,
-    });
-  };
-  useEffect(() => {}, [state]);
+  const { state, onAddPopUp, onCalendlyPopUp, onCloseAll } = useProfile();
 
   return (
-    <>
-      <ModelMain className='left ' id='profile'>
-        {state.addPopUp && (
-          <div id='blur'>
-            <article className='add-pop-up'>
-              <button onClick={onCloseAll} id='close'>
-                <Close />
-              </button>
-              <header>
-                <h3>Agregar a un usuario</h3>
-              </header>
-              <section>
-                <p>
-                  Para poder agregar a un contacto debes realizar una llamada de
-                  mínimo 30 minutos con el/ella.
-                </p>
-              </section>
-              <div>
-                <button id='calendly-button' onClick={onCalendlyPopUp}>
-                  <p>Reservar llamada en</p>
-                  <span>Calendly</span>
-                </button>
-              </div>
-            </article>
-          </div>
-        )}
-        <PopupModal
-          url='https://calendly.com/hector-guerra/llamada-1-a-1'
-          pageSettings={{
-            backgroundColor: '28282a',
-            hideEventTypeDetails: false,
-            hideLandingPageDetails: true,
-            primaryColor: '',
-            textColor: '3133c5',
-          }}
-          onModalClose={() =>
-            setState({
-              addPopUp: false,
-              calendlyPopUp: false,
-            })
-          }
-          open={state.calendlyPopUp}
-          rootElement={document.getElementById('root')}
-        />
+    <div id='profile-page'>
+      <ModelMain className='profile-page' id='profile'>
+        <CalendlyPopUp />
         <header className='profile-page blurr'>
           <img
             id='cover'
@@ -137,16 +74,6 @@ export default function ProfilePage() {
               <h5>Agregar</h5>
               <AddUser />
             </button>
-
-            {/* <YoutubeVideo url='https://www.youtube.com/embed/GzARMgH2gec?si=Dua6afMJQ-Azffja' /> */}
-            {/* <a
-              href='https://hector-minimalist-cv.netlify.app/'
-              target='_blank'
-             
-            >
-              <h5>Video Presentación</h5>
-              <YouTube />
-            </a> */}
           </div>
           {/* SCORE */}
           <div id='score' className='mini-section'>
@@ -178,22 +105,11 @@ export default function ProfilePage() {
                 <h6>Negocio 2</h6>
                 <p>Descripción del proyecto 1</p>
               </a>
-              <a href='' className='cards business'>
-                <h6>Negocio 3</h6>
-                <p>Descripción del proyecto 1</p>
-              </a>
               <a href='' className='cards projects'>
                 <h6>Proyecto 1</h6>
                 <p>Descripción del proyecto 1</p>
               </a>
-              <a href='' className='cards projects'>
-                <h6>Proyecto 1</h6>
-                <p>Descripción del proyecto 1</p>
-              </a>
-              <a href='' className='cards projects'>
-                <h6>Proyecto 1</h6>
-                <p>Descripción del proyecto 1</p>
-              </a>
+             
             </div>
           </div>
         </section>
@@ -207,35 +123,86 @@ export default function ProfilePage() {
         <h3>Presentación</h3>
         <YoutubeVideo url='https://www.youtube.com/embed/GzARMgH2gec?si=Dua6afMJQ-Azffja' />
       </ModelAsideRight>
-    </>
+    </div>
   );
 }
 
-const CustomButtonExample = ({ utm, prefill, url }) => {
-  const [isOpen, setIsOpen] = useState(false);
+// const CustomButtonExample = ({ utm, prefill, url }) => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   return (
+//     <div>
+//       <button id='calendly-button' onClick={() => setIsOpen(true)}>
+//         <p>Reservar llamada en</p>
+//         <span>Calendly</span>
+//       </button>
+//       <PopupModal
+//         url={url}
+//         pageSettings={{
+//           backgroundColor: '28282a',
+//           hideEventTypeDetails: false,
+//           hideLandingPageDetails: true,
+//           primaryColor: '',
+//           textColor: '3133c5',
+//         }}
+//         // sirve para diferenciar de donde viene el usuario que se registra en calendly (opcional)
+//         utm={utm}
+//         prefill={prefill}
+//         onModalClose={() => setIsOpen(false)}
+//         open={isOpen}
+//         rootElement={document.getElementById('root')}
+//       />
+//     </div>
+//   );
+// };
 
-  return (
-    <div>
-      <button id='calendly-button' onClick={() => setIsOpen(true)}>
-        <p>Reservar llamada en</p>
-        <span>Calendly</span>
-      </button>
-      <PopupModal
-        url={url}
-        pageSettings={{
-          backgroundColor: '28282a',
-          hideEventTypeDetails: false,
-          hideLandingPageDetails: true,
-          primaryColor: '',
-          textColor: '3133c5',
-        }}
-        // sirve para diferenciar de donde viene el usuario que se registra en calendly (opcional)
-        utm={utm}
-        prefill={prefill}
-        onModalClose={() => setIsOpen(false)}
-        open={isOpen}
-        rootElement={document.getElementById('root')}
-      />
-    </div>
-  );
-};
+
+function CalendlyPopUp() {
+  const { state, onCalendlyPopUp, setState, onCloseAll } = useProfile();
+  useEffect(() => {}, [state]);
+  return(
+    <>
+    {state.addPopUp && (
+          <div id='blur'>
+            <article className='add-pop-up'>
+              <button onClick={onCloseAll} id='close'>
+                <Close />
+              </button>
+              <header>
+                <h3>Agregar a un usuario</h3>
+              </header>
+              <section>
+                <p>
+                  Para poder agregar a un contacto debes realizar una llamada de
+                  mínimo 30 minutos con el/ella.
+                </p>
+              </section>
+              <div>
+                <button id='calendly-button' onClick={onCalendlyPopUp}>
+                  <p>Reservar llamada en</p>
+                  <span>Calendly</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        )}
+        <PopupModal
+          url='https://calendly.com/hector-guerra/llamada-1-a-1'
+          pageSettings={{
+            backgroundColor: '28282a',
+            hideEventTypeDetails: false,
+            hideLandingPageDetails: true,
+            primaryColor: '',
+            textColor: '3133c5',
+          }}
+          onModalClose={() =>
+            setState({
+              addPopUp: false,
+              calendlyPopUp: false,
+            })
+          }
+          open={state.calendlyPopUp}
+          rootElement={document.getElementById('root')}
+        />
+    </>
+  )
+}

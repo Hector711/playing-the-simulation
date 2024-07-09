@@ -50,7 +50,6 @@ main.pro {
 main.left {
   grid-column: left / span 2;
 }
-
 main.max {
   grid-column: left / span 3;
 }

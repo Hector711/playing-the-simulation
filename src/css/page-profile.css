@@ -1,6 +1,16 @@
 :root {
   --calendly: #016dff;
 }
+* {
+  border: 1px solid;
+}
+div#profile-page {
+  grid-area: left / span 3;
+  display: grid;
+  background-color: #883f3f;
+  grid-template-areas: 'left main right';
+  grid-template-columns: var(--left-aside) 1fr var(--right-aside);
+}
 main#profile {
   display: flex;
   flex-direction: column;
@@ -146,7 +156,7 @@ header.profile-page {
       a {
         display: flex;
         align-items: center;
-        padding: 0.35rem;
+        padding: 0.25rem;
         border-radius: var(--border-m);
         width: max-content;
         height: max-content;

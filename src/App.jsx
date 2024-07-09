@@ -9,6 +9,7 @@ import { MembersProvider } from '@/context/MembersContext';
 import { ClassroomProvider } from '@/context/ClassroomContext';
 import { PostsProvider } from '@/context/PostsContext';
 import { CommunityProvider } from '@/context/CommunityContext';
+import { ProfileProvider } from '@/context/ProfileContext';
 // Protected Route
 import ProtectedRoute from '@/ProtectedRoute';
 // Basics
@@ -46,6 +47,7 @@ function App() {
               <PostsProvider>
                 <CommunityProvider>
                   <MembersProvider>
+                  <ProfileProvider>
                     <BrowserRouter>
                       <Routes>
                         <Route path='/' element={<WellcomePage />} />
@@ -121,6 +123,7 @@ function App() {
                         </Route>
                       </Routes>
                     </BrowserRouter>
+                  </ProfileProvider>
                   </MembersProvider>
                 </CommunityProvider>
               </PostsProvider>

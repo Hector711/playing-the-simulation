@@ -44,6 +44,5 @@ const elevatorPitchObject = [
     comments: 5,
     points: 30,
     autor: 'Raul González',
-    
   },
 ];

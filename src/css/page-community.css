@@ -14,9 +14,6 @@ main.community-common {
       width: 100%;
     }
   }
-  #video-container {
-    overflow: hidden;
-  }
 }
 main#community-page {
   display: flex;

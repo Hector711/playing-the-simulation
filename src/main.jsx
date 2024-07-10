@@ -27,7 +27,6 @@ import '@/css/page-community.css';
 import '@/css/page-rules.css';
 import '@/css/page-levels.css';
 import '@/css/page-introduction.css';
-import '@/css/page-bails-system.css';
 import '@/css/page-archives.css';
 import '@/css/page-categories.css';
 import '@/css/page-bails.css';
@@ -46,6 +45,9 @@ import '@/css/comp-content-grid.css';
 import '@/css/comp-accordions.css';
 import '@/css/comp-playground-card.css';
 import '@/css/comp-project-card.css';
+import '@/css/comp-calendly-popup.css';
+import '@/css/comp-calendly-popup.css';
+import '@/css/comp-youtube-video.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

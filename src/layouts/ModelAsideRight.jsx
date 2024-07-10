@@ -5,11 +5,13 @@ export default function ModelAsideRight({ children, title, className, id }) {
     <aside className={`aside-right ${className}`} id={id}>
       {title && (
         <>
-          <h2 className='impact'>{title}</h2>
-          <hr />
+          <header>
+            <h3 className='impact'>{title}</h3>
+          </header>
+          {/* <hr /> */}
         </>
       )}
-      {children}
+      <section>{children}</section>
     </aside>
   );
 }

@@ -1,2 +1,17 @@
-header {
+aside#news {
+  /* header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    svg.icons {
+      width: 25px;
+      height: 25px;
+      color: var(--orange-0) !important;
+    }
+    h2 {
+      color: var(--orange-0) !important;
+      padding: 1rem 0.5rem;
+    }
+  } */
 }

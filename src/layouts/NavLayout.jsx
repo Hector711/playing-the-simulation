@@ -27,6 +27,7 @@ function Navbar() {
           ))}
         </div>
         <div id='nav-right'>
+
           <NavLinkButton to='/comunidad'>Comunidad</NavLinkButton>
         </div>
       </div>
@@ -44,6 +45,7 @@ function NavLinkButton({ children, to }) {
     </NavLink>
   );
 }
+
 const navLinks = [
   {title: 'Classroom', page: '/classroom'},
   {title: 'Playground', page: '/playground'},

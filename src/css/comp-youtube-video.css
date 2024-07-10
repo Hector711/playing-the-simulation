@@ -1,0 +1,10 @@
+figure.video-container {
+  width: 100%;
+  height: max-content;
+  overflow: hidden;
+}
+.video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}

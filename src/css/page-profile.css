@@ -1,15 +1,15 @@
 :root {
   --calendly: #016dff;
 }
-* {
-  border: 1px solid;
-}
 div#profile-page {
   grid-area: left / span 3;
   display: grid;
-  background-color: #883f3f;
-  grid-template-areas: 'left main right';
-  grid-template-columns: var(--left-aside) 1fr var(--right-aside);
+  grid-template-areas: 'left right';
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+main#profile-page-left {
+  grid-area: left;
 }
 main#profile {
   display: flex;
@@ -18,77 +18,6 @@ main#profile {
   gap: var(--gap-l);
   height: max-content;
 }
-div#blur {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  -moz-backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: center;
-  padding-top: 30vh;
-  article.add-pop-up {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    background-color: #ffffff;
-    color: var(--black-0);
-    border-radius: var(--border-m);
-    padding: 3rem 2rem;
-    height: max-content;
-    width: 45rem;
-    position: relative;
-    button#close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      svg#close {
-        width: 30px;
-        height: 30px;
-        stroke: var(--calendly);
-      }
-    }
-    header {
-      h3 {
-        text-align: center;
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: var(--black-1);
-        color: var(--calendly);
-      }
-    }
-    section {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      p {
-        text-align: center;
-      }
-    }
-    button#calendly-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid var(--calendly);
-      box-shadow: 3px 2px 5px 0 var(--calendly);
-      background-color: var;
-      color: #28282a;
-      gap: 0.5rem;
-      span {
-        color: var(--calendly);
-        font-size: 1.5rem;
-        font-family: Gilroy;
-      }
-    }
-  }
-}
-
 header.profile-page {
   overflow: hidden;
   border-radius: var(--border-m);
@@ -96,8 +25,6 @@ header.profile-page {
   height: max-content;
   padding-inline: 3rem;
   padding-block: 70px 20px;
-  /* background-color: var(--blue-1); */
-  /* border: 1px solid var(--white-3); */
   display: grid;
   grid-template-areas:
     'avatar empty'
@@ -124,11 +51,10 @@ header.profile-page {
     height: 150px;
     margin-block: 1rem;
     overflow: hidden;
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    
     }
   }
   div#left-info {
@@ -206,8 +132,9 @@ header.profile-page {
       align-items: center;
       gap: 0.5rem;
       color: var(--calendly);
-      border: 0.5px solid var(--calendly);
-      box-shadow: 2px 2px 1px 0px var(--calendly);
+      border: 1px solid var(--calendly);
+      box-shadow: 1px 1px 2px 0px var(--calendly);
+      background-color: var(--white-0);
       svg.icons {
         width: 25px;
         color: var(--calendly);
@@ -234,7 +161,6 @@ header.profile-page {
       color: var(--black-1);
     }
   }
-
   hr {
     border: 1px solid var(--white-3);
     width: 100%;
@@ -250,7 +176,6 @@ header.profile-page {
   h3 {
     font-size: 1.2rem;
   }
-
   p,
   span {
     font-size: 1.1rem;
@@ -272,11 +197,6 @@ section.profile-page {
   display: flex;
   flex-direction: column;
   gap: var(--gap-m);
-}
-
-section.profile-page#wins {
-}
-section.profile-page#posts {
 }
 
 div#container-grid {
@@ -302,30 +222,7 @@ h3.section {
   color: var(--white-2);
 }
 
-aside.profile.page {
-  padding: 1rem;
-  *{
-
-  }
+aside.profile-page#right {
   
-  border: 1px solid red !important;
-  /* iframe.video {
-    grid-area: video;
-    width: 100%;
-    object-fit: contain;
-
-    height: max-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    border: 1px solid var(--white-3);
-    border-radius: 5px;
-    box-shadow: 2px 4px 2px 0px black;
-    .icons {
-      width: 70px;
-      height: 70px;
-    }
-  } */
+  
 }

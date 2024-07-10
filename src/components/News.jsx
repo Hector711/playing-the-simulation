@@ -5,12 +5,14 @@ import Newspaper from '@/icons/Newspaper';
 
 export default function News() {
   return (
-    <ModelAsideRight id='news' className='blurr'>
+    <ModelAsideRight id='news' className='blurr' title='Noticias'>
       <header>
-        <Newspaper />
-        <h2 className='impact'>Noticias</h2>
-      </header>
+        <div>
+          <Newspaper />
+          <h2 className='impact'>Noticias</h2>
+        </div>
       <hr />
+      </header>
       <section id='news'></section>
     </ModelAsideRight>
   );

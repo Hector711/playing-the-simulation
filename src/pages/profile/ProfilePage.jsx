@@ -14,14 +14,22 @@ import YoutubeVideo from '@/components/YouTubeVideo';
 import { useProfile } from '@/context/ProfileContext';
 import CalendlyPopUp from '@/components/CalendlyPopUp';
 
+const SOCIAL_LINKS = [
+  { icon: <X /> },
+  { icon: <LinkedIn /> },
+  { icon: <YouTube /> },
+  { icon: <Instagram /> },
+  { icon: <GitHub /> },
+];
+
 export default function ProfilePage() {
   const { onAddPopUp } = useProfile();
 
   return (
     <div id='profile-page'>
-      <ModelMain className='profile-page' id='profile-page-left'>
+      <ModelMain className='profile-page' id='main-profile'>
         <CalendlyPopUp />
-        <header className='profile-page blurr'>
+        <header className='main-profile blurr'>
           <img
             id='cover'
             src='https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg'
@@ -43,21 +51,11 @@ export default function ProfilePage() {
               <p> Nivel 4 &#8226; 200 pts</p>
             </div>
             <div id='rrss'>
-              <a href='' target='_blank'>
-                <LinkedIn />
-              </a>
-              <a href='' target='_blank'>
-                <X />
-              </a>
-              <a href='' target='_blank'>
-                <GitHub />
-              </a>
-              <a href='' target='_blank'>
-                <Instagram />
-              </a>
-              <a href='' target='_blank'>
-                <YouTube />
-              </a>
+              {SOCIAL_LINKS.map((social, i) => (
+                <a href='' target='_blank' key={i}>
+                  {social.icon}
+                </a>
+              ))}
               <a
                 href='https://hector-minimalist-cv.netlify.app/'
                 target='_blank'
@@ -90,66 +88,65 @@ export default function ProfilePage() {
             </div>
           </div>
         </header>
-        <hr />
         <section id='wins' className='profile-page blurr'>
           <div id='business' className='mini-section'>
             <h3 className='section impact'>Negocios y proyectos</h3>
             <div id='container-grid'>
               <a href='' className='cards business'>
                 <h6>Negocio 1</h6>
-                <p>Descripción del proyecto 1</p>
-              </a>
-              <a href='' className='cards business'>
-                <h6>Negocio 2</h6>
-                <p>Descripción del proyecto 1</p>
+                <p>Descripción del negocio.</p>
               </a>
               <a href='' className='cards projects'>
                 <h6>Proyecto 1</h6>
-                <p>Descripción del proyecto 1</p>
+                <p>Descripción del proyecto.</p>
               </a>
             </div>
           </div>
         </section>
-        <hr />
+
         <section id='posts' className='profile-page blurr'>
           <h3 className='section impact'>Posts</h3>
         </section>
       </ModelMain>
 
-      <ModelAsideRight className='profile-page blurr' id='right' title='Presentación'>
+      <ModelAsideRight
+        className='profile-page blurr'
+        id='right'
+        title='Presentación'
+      >
         {/* <h3 className='impact'>Presentación</h3> */}
         <YoutubeVideo url='https://www.youtube.com/embed/GzARMgH2gec?si=Dua6afMJQ-Azffja' />
-          <p>
-            𝙄𝙣𝙩𝙧𝙤𝙙𝙪𝙘𝙘𝙞𝙤́𝙣:
-            <br />
-            Héctor Guerra Madrid, España 🇪🇸
-            <br />
-            <br />
-            𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞𝙤́𝙣 𝙋𝙧𝙤𝙛𝙚𝙨𝙞𝙤𝙣𝙖𝙡:
-            <br />
-            Full Stack Web Developer (Junior) Tengo intenciones de crear mi
-            propio negocio en los próximas semanas / meses. Busco gente con la
-            que colaborar y currar a tope.
-            <br />
-            <br />
-            𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙮 𝙃𝙖𝙗𝙞𝙡𝙞𝙙𝙖𝙙𝙚𝙨:
-            <br />
-            He estado trabajando en la hostelería de bartender y camarero, pero
-            hace menos de un año empece a estudiar programación y estoy a punto
-            de tener mi primer empleo. Full Stack (soy un friki)
-            <br />
-            <br />
-            𝙊𝙗𝙟𝙚𝙩𝙞𝙫𝙤𝙨 𝙚𝙣 𝙡𝙖 𝘾𝙤𝙢𝙪𝙣𝙞𝙙𝙖𝙙:
-            <br />
-            Busco aprender, AYUDAR y encontrar a personas que se encuentren en
-            mi mismo camino. Si necesitas ayuda sobre programacion IM YOUR MAN!
-            <br />
-            <br />
-            𝙄𝙣𝙩𝙚𝙧𝙚𝙨𝙚𝙨 𝙋𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙚𝙨:
-            <br />
-            Desarrollo personal, filosofía, IA, deporte, de todo… digo que si a
-            todo!
-          </p>
+        <p>
+          𝙄𝙣𝙩𝙧𝙤𝙙𝙪𝙘𝙘𝙞𝙤́𝙣:
+          <br />
+          Héctor Guerra. Madrid, España 🇪🇸
+          <br />
+          <br />
+          𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞𝙤́𝙣 𝙋𝙧𝙤𝙛𝙚𝙨𝙞𝙤𝙣𝙖𝙡:
+          <br />
+          Full Stack Web Developer (Junior) Tengo intenciones de crear mi propio
+          negocio en los próximas semanas / meses. Busco gente con la que
+          colaborar y currar a tope.
+          <br />
+          <br />
+          𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙮 𝙃𝙖𝙗𝙞𝙡𝙞𝙙𝙖𝙙𝙚𝙨:
+          <br />
+          He estado trabajando en la hostelería de bartender y camarero, pero
+          hace menos de un año empece a estudiar programación y estoy a punto de
+          tener mi primer empleo. Full Stack (soy un friki)
+          <br />
+          <br />
+          𝙊𝙗𝙟𝙚𝙩𝙞𝙫𝙤𝙨 𝙚𝙣 𝙡𝙖 𝘾𝙤𝙢𝙪𝙣𝙞𝙙𝙖𝙙:
+          <br />
+          Busco aprender, AYUDAR y encontrar a personas que se encuentren en mi
+          mismo camino. Si necesitas ayuda sobre programacion IM YOUR MAN!
+          <br />
+          <br />
+          𝙄𝙣𝙩𝙚𝙧𝙚𝙨𝙚𝙨 𝙋𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙚𝙨:
+          <br />
+          Desarrollo personal, filosofía, IA, deporte, de todo… digo que si a
+          todo!
+        </p>
       </ModelAsideRight>
     </div>
   );

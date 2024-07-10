@@ -8,30 +8,26 @@ div#profile-page {
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
 }
-main#profile-page-left {
+main#main-profile {
   grid-area: left;
-}
-main#profile {
   display: flex;
   flex-direction: column;
-  height: max-content;
-  gap: var(--gap-l);
-  height: max-content;
+  gap: 1rem;
 }
-header.profile-page {
+
+header.main-profile {
+  padding: 0.5rem;
   overflow: hidden;
   border-radius: var(--border-m);
   position: relative;
   height: max-content;
-  padding-inline: 3rem;
-  padding-block: 70px 20px;
+  padding-inline: 2.5rem;
+  padding-block: 70px 30px;
   display: grid;
   grid-template-areas:
     'avatar empty'
     'left-info right-info'
-    'left-info right-info'
-    'score score'
-    'projects projects';
+    'score score';
   grid-template-columns: 1fr auto;
   img#cover {
     position: absolute;
@@ -61,6 +57,7 @@ header.profile-page {
     grid-area: left-info;
     display: flex;
     flex-direction: column;
+    gap: 0.2rem;
     svg.icons {
       width: 25px;
       height: 25px;
@@ -83,11 +80,14 @@ header.profile-page {
         display: flex;
         align-items: center;
         padding: 0.25rem;
-        border-radius: var(--border-m);
+        border-radius: var(--border-s);
         width: max-content;
         height: max-content;
         background-color: var(--white-0);
         color: var(--black-1);
+      }
+      a#cv {
+        padding: 0.3rem 0.6rem;
       }
       a#portfolio {
         padding: 0.4rem 0.9rem;
@@ -101,11 +101,9 @@ header.profile-page {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    hr {
-      order: 1;
-    }
+    gap: 0.7rem;
+    padding-top: 1.5rem;
     div {
-      order: 2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -119,15 +117,9 @@ header.profile-page {
   }
   div#right-info {
     grid-area: right-info;
-    display: grid;
-    grid-template-areas:
-      'cv add'
-      'video video';
-    grid-template-rows: auto 1fr;
+    display: flex;
     gap: 1rem;
-    align-items: flex-start;
     button#add {
-      grid-area: add;
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -148,7 +140,7 @@ header.profile-page {
     }
     a,
     button {
-      padding: 0.4rem 0.9rem;
+      padding: 0.25rem 0.7rem;
       border-radius: var(--border-m);
       width: max-content;
       height: max-content;
@@ -183,16 +175,12 @@ header.profile-page {
   div#projects {
     grid-area: projects;
   }
-  .mini-section {
-    margin-block: 1rem;
-  }
 }
 
 section.profile-page {
-  /* background-color: var(--blue-1); */
   border-radius: var(--border-m);
   border: 1px solid var(--white-3);
-  padding-inline: 3rem;
+  padding-inline: 2.5rem;
   padding-block: 2rem;
   display: flex;
   flex-direction: column;

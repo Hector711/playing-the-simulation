@@ -5,13 +5,10 @@ import Newspaper from '@/icons/Newspaper';
 
 export default function News() {
   return (
-    <ModelAsideRight id='news' className='blurr' title='Noticias'>
-      <header>
-        <div>
+    <ModelAsideRight id='news' className='blurr' >
+      <header id='header-news'>
           <Newspaper />
           <h2 className='impact'>Noticias</h2>
-        </div>
-      <hr />
       </header>
       <section id='news'></section>
     </ModelAsideRight>

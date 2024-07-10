@@ -27,9 +27,11 @@ main#community-page {
     padding: 2rem;
   }
   h1 {
-    color: var(--white-0);
-    font-size: 3rem;
-    font-weight: 700;
+    /* font-size: 3rem; */
+    font-size:calc(1.4rem + 2vw);
+    line-height: 1;
+    height: var(--height-text-wellcome);
+    text-wrap: nowrap;
   }
   div {
     display: flex;
@@ -45,6 +47,10 @@ main#community-page {
       height: 40px;
       color: var(--white-1);
     }
+  }
+  section {
+    width: 100%;
+    height: max-content;
   }
   
 }
@@ -77,25 +83,14 @@ aside#community-page-left {
 hr#extra {
   margin-block: 1rem
 }
-
-
-
-
 aside#community-page-right {
-  padding:  0.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   height: max-content;
-  h2 {
-    padding: 0.3rem;
-  }
 }
-.shadoww {
-  box-shadow: 2px 2px 1px 0px #282828;
-  border: 0.5px solid var(--white-3);
-}
+
 article.contact-cards {
   width: 100%;
   display: flex;

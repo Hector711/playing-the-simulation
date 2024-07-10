@@ -57,6 +57,10 @@
   border-radius: var(--border-m);
   
 }
+.shadoww {
+  box-shadow: 2px 2px 1px 0px #282828;
+  border: 0.5px solid var(--white-3);
+}
 
 
 body {

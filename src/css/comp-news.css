@@ -1,4 +1,19 @@
 aside#news {
+  height: 75vh;
+  header#header-news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    svg.icons, h2 {
+      color: var(--orange-0);
+    }
+    svg.icons {
+      width: 25px;
+      height: 25px;
+      
+    }
+  }
   /* header {
     display: flex;
     flex-direction: column;

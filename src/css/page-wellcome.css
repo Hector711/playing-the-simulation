@@ -9,20 +9,25 @@ div#wellcome-body {
   width: 100%;
   height: 98vh;
   padding-inline: 7%;
+  *{ 
+    /* border: 1px solid; */
+  }
 }
 header.wellcome {
   height: 100%;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1.7rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 5rem;
   h1 {
-    font-size: 3.5rem;
-    text-shadow: 1px 3px 10px #9d9d9d;
+    font-size:calc(2rem + 2vw);
+    text-shadow: 2px 2px 8px #707070;
     line-height: 1;
     height: var(--height-text-wellcome);
+    text-wrap: nowrap;
   }
   div {
     display: flex;
@@ -31,8 +36,8 @@ header.wellcome {
     flex-direction: column;
   }
   svg.icons {
-    width: 80px;
-    height: 110px;
+    width: 55px;
+    height: 90px;
     color: var(--white-0);
   }
 }
@@ -41,7 +46,10 @@ section.wellcome {
   align-items: center;
   justify-content: center;
   gap: 60px;
-  width: 50%;
+
+  min-width: max-content;
+  width: 100%;
+  max-width: 35vw;
   height: 100%;
 }
 /* LOGIN  */

@@ -31,13 +31,13 @@ const businessPhases = [
     description: 'Negocio en crecimiento',
     img: 'https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/ae12604bddc940d9842f742a636107db95079e35794c4175bee6a1db16b50104',
     slug: 'fase-2',
-    text: 'De 0 a 10k'
+    text: 'De 1k a 10k'
   },
   {
     title: 'Fase 3',
     description: 'Negocio en consolidación',
     img: 'https://assets.skool.com/f/abad99b8b10147208c25e16944beaa5b/ae12604bddc940d9842f742a636107db95079e35794c4175bee6a1db16b50104',
     slug: 'fase-3',
-    text: 'De 0 a 100k'
+    text: 'De 10k a 100k'
   },
 ];

@@ -116,38 +116,41 @@ export default function ProfilePage() {
       >
         {/* <h3 className='impact'>Presentación</h3> */}
         <YoutubeVideo url='https://www.youtube.com/embed/GzARMgH2gec?si=Dua6afMJQ-Azffja' />
-        <p>
-          𝙄𝙣𝙩𝙧𝙤𝙙𝙪𝙘𝙘𝙞𝙤́𝙣:
-          <br />
-          Héctor Guerra. Madrid, España 🇪🇸
-          <br />
-          <br />
-          𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞𝙤́𝙣 𝙋𝙧𝙤𝙛𝙚𝙨𝙞𝙤𝙣𝙖𝙡:
-          <br />
-          Full Stack Web Developer (Junior) Tengo intenciones de crear mi propio
-          negocio en los próximas semanas / meses. Busco gente con la que
-          colaborar y currar a tope.
-          <br />
-          <br />
-          𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙮 𝙃𝙖𝙗𝙞𝙡𝙞𝙙𝙖𝙙𝙚𝙨:
-          <br />
-          He estado trabajando en la hostelería de bartender y camarero, pero
-          hace menos de un año empece a estudiar programación y estoy a punto de
-          tener mi primer empleo. Full Stack (soy un friki)
-          <br />
-          <br />
-          𝙊𝙗𝙟𝙚𝙩𝙞𝙫𝙤𝙨 𝙚𝙣 𝙡𝙖 𝘾𝙤𝙢𝙪𝙣𝙞𝙙𝙖𝙙:
-          <br />
-          Busco aprender, AYUDAR y encontrar a personas que se encuentren en mi
-          mismo camino. Si necesitas ayuda sobre programacion IM YOUR MAN!
-          <br />
-          <br />
-          𝙄𝙣𝙩𝙚𝙧𝙚𝙨𝙚𝙨 𝙋𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙚𝙨:
-          <br />
-          Desarrollo personal, filosofía, IA, deporte, de todo… digo que si a
-          todo!
-        </p>
+        <ul>
+          {presentation.map(({title, text}, i) => (
+            <li key={i}>
+              <h5>{title}</h5>
+              <p>{text}</p>
+              <br />
+            </li>
+          ))}
+        </ul>
       </ModelAsideRight>
     </div>
   );
 }
+
+
+
+const presentation = [
+  {
+    title: "𝙄𝙣𝙩𝙧𝙤𝙙𝙪𝙘𝙘𝙞𝙤́𝙣:",
+    text: "Héctor Guerra. Madrid, España 🇪🇸"
+  },
+  {
+    title: "𝙄𝙣𝙛𝙤𝙧𝙢𝙖𝙘𝙞𝙤́𝙣 𝙋𝙧𝙤𝙛𝙚𝙨𝙞𝙤𝙣𝙖𝙡:",
+    text: "Full Stack Web Developer (Junior) Tengo intenciones de crear mi propio negocio en los próximas semanas / meses. Busco gente con la que colaborar y currar a tope."
+  },
+  {
+    title: "𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙞𝙖 𝙮 𝙃𝙖𝙗𝙞𝙡𝙞𝙙𝙖𝙙𝙚𝙨:",
+    text: "He estado trabajando en la hostelería de bartender y camarero, pero hace menos de un año empece a estudiar programación y estoy a punto de tener mi primer empleo. Full Stack (soy un friki)"
+  },
+  {
+    title: "𝙊𝙗𝙟𝙚𝙩𝙞𝙫𝙤𝙨 𝙚𝙣 𝙡𝙖 𝘾𝙤𝙢𝙪𝙣𝙞𝙙𝙖𝙙:",
+    text: "Busco aprender, AYUDAR y encontrar a personas que se encuentren en mi mismo camino. Si necesitas ayuda sobre programacion IM YOUR MAN!"
+  },
+  {
+    title: "𝙄𝙣𝙩𝙚𝙧𝙚𝙨𝙚𝙨 𝙋𝙚𝙧𝙨𝙤𝙣𝙖𝙡𝙚𝙨:",
+    text: "Desarrollo personal, filosofía, IA, deporte, de todo… digo que si a todo!"
+  }
+];

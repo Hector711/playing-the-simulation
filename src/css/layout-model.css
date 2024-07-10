@@ -94,7 +94,7 @@ aside.aside-right {
   gap: 1rem;
   height: max-content;
   header.aside-header {
-    padding: 1rem 1rem 0rem;
+    padding: 1rem 1.5rem 0rem;
     h3 {
       color: var(--white-2);
     }
@@ -103,7 +103,7 @@ aside.aside-right {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 0 1rem 1rem;
+    padding: 0 1.5rem 1rem;
   }
 }
 

@@ -19,6 +19,7 @@ main#community-page {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-left: 1rem;
   header {
     display: flex;
     flex-direction: column;
@@ -27,7 +28,6 @@ main#community-page {
     padding: 2rem;
   }
   h1 {
-    /* font-size: 3rem; */
     font-size:calc(1.4rem + 2vw);
     line-height: 1;
     height: var(--height-text-wellcome);
@@ -49,10 +49,9 @@ main#community-page {
     }
   }
   section {
-    width: 100%;
+    width: 80%;
     height: max-content;
   }
-  
 }
 
 aside#community-page-left {

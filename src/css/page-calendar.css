@@ -7,12 +7,12 @@ main#calendar-page {
 }
 
 div.reunion-grupal {
-  background-color: red;
+  /* background-color: red; */
 }
 
 .rbc-calendar {
   color: var(--white-1);
-  border: 3px solid red;
+  /* border: 3px solid red; */
   text-transform: uppercase;
 }
 .rbc-month-view {

@@ -10,7 +10,41 @@ export default function News() {
           <Newspaper />
           <h2 className='impact'>Noticias</h2>
       </header>
-      <section id='news'></section>
+      <section className='aside-section'>
+
+      </section>
+
     </ModelAsideRight>
   );
 }
+
+const news = [
+  {
+    id: 1,
+    user: 'Carlos Adams',
+    img: '',
+    title: '',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac purus sit amet nunc.',
+    date: '2021-08-10',
+    typ: '!'
+  },
+  {
+    id: 2,
+    title: 'José Torres se unió a la comunidad!',
+    content: 'Dale la bienvenida!',
+    date: '2021-08-10',
+    typ: '!!'
+  },
+  {
+    id: 3,
+    title: 'Noticiario del mes',
+    content: 'El noticiario de julio ya está disponible!',
+    date: '!!!',
+  },
+  {
+    id: 4,
+    title: '',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac purus sit amet nunc.',
+    date: '2021-08-10',
+  }
+]

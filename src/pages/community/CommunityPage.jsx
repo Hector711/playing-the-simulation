@@ -54,7 +54,6 @@ export default function CommunityPage() {
         </ModelMain>
       )}
       <ModelAsideRight id='community-page-right' title='Contacto'>
-        {/* <h2 className='impact'>Contacto</h2> */}
         {contacts.map(({ name, role, url, message }, i) => (
           <Link key={i}>
             <article className='contact-cards blurr shadoww'>

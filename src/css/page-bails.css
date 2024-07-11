@@ -12,6 +12,9 @@ main#bails-page {
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    figure.video-container {
+      width: 80%;
+    }
   }
 
 }

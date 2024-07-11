@@ -5,42 +5,6 @@ main.plan-page {
 header.plan-page {
   display: flex;
   flex-direction: column;
-  padding: 1.4rem;
-  background-color: var(--blue-1);
-  border-radius: var(--border-m);
-  margin-block: 1rem 1.5rem;
-  border: 1px solid var(--white-3);
-  position: relative;
-
-  h4 {
-    text-align: center;
-
-    margin-bottom: 1rem;
-    color: var(--orange-0);
-  }
-  button#edit {
-    position: absolute;
-    right: 14px;
-    top: 14px;
-  }
-
-  div#goals-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    div.goals {
-      text-align: center;
-      border: 1px solid var(--white-3);
-      gap: 10px;
-      border-radius: var(--border-s);
-      padding: 7px 10px;
-      width: 100%;
-      background-color: var(--white-3);
-      h5 {
-        color: var(--orange-0);
-      }
-    }
-  }
 }
 
 section#month-grid {
@@ -51,7 +15,6 @@ section#month-grid {
   gap: var(--gap-l);
 
   div#tasks {
-    background-color: var(--blue-1);
     grid-area: tasks;
     padding: 5px 10px 20px 18px;
     border-radius: var(--border-m);
@@ -82,7 +45,6 @@ section#month-grid {
   }
   div#bail {
     grid-area: bail;
-    background-color: var(--blue-1);
     border-radius: var(--border-m);
     padding: 0 0 2rem;
     display: flex;

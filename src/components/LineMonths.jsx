@@ -4,8 +4,8 @@ import { usePlanning } from '@/context/PlanningContext';
 export default function LineMonths() {
   const { setMonthToShow } = usePlanning();
   return (
-    <div id='route'>
-      <div id='route-container'>
+    <div id='route' className='blurr'>
+      <div id='route-container' >
         <div id='line'></div>
         <div id='dots'>
           {yearMonths.map(({ month, time }, i) => (

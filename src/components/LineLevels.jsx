@@ -3,7 +3,6 @@ import { useCommunity } from '@/context/CommunityContext';
 
 export default function LineLevels() {
   const { levels } = useCommunity();
-
   return (
     <div id='line-levels'>
       <div id='line-container'>

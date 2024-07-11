@@ -3,6 +3,7 @@ import ModelMain from '@/layouts/ModelMain';
 import Edit from '@/icons/Edit.jsx';
 import { usePlanning } from '@/context/PlanningContext';
 import LineMonths from '@/components/LineMonths';
+import LineBusinessPhase from '@/components/LineBusinessPhase';
 import Check from '@/icons/Check';
 
 export default function PlanningPage() {
@@ -23,13 +24,15 @@ export default function PlanningPage() {
 
   return (
     <ModelMain title='Planificación' className='plan-page pro'>
-      <header></header>
+      <section>
+       <LineBusinessPhase /> 
+      </section>
       <section className='plan-page' id='anual-route'>
         <LineMonths />
       </section>
       {
-        <section id='month-grid' className='plan-page'>
-          <div id='tasks'>
+        <section className='plan-page' id='month-grid' >
+          <div id='tasks' className='blurr'>
             <div id='header-tasks'>
               <h2 className='impact orange'>
                 Tareas de {convertMonthName(monthToShow)}
@@ -49,7 +52,7 @@ export default function PlanningPage() {
               ))}
             </dl>
           </div>
-          <div id='bail'>
+          <div id='bail' className='blurr'>
             <h2 className='impact orange'>Fianza</h2>
             {monthBail && Object.keys(monthBail).length > 0 ? (
               <>

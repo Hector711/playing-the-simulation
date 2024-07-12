@@ -48,6 +48,7 @@ import '@/css/comp-project-card.css';
 import '@/css/comp-calendly-popup.css';
 import '@/css/comp-calendly-popup.css';
 import '@/css/comp-youtube-video.css';
+import '@/css/comp-line-business.css';
 
 // TYPOGRAFÍAS
 // 'Comfortaa Variable' : Supports weights 300-700

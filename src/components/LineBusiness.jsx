@@ -1,8 +1,8 @@
 import React from 'react';
 
-export default function LineBusinessPhase() {
+export default function LineBusiness() {
   return (
-    <div id='route' className='blurr'>
+    <div id='route-business' className='blurr'>
       <div id='route-container'>
         <div id='line'></div>
         <div id='dots'>
@@ -20,7 +20,7 @@ export default function LineBusinessPhase() {
 
 function Phase({ phase }) {
   return (
-    <div className='blurr dot'>
+    <div className='phase blurr dot'>
       <span>
         <button >
           {phase}

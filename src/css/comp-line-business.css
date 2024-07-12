@@ -1,5 +1,23 @@
-div#route {
+div#route-business {
+  padding: 20px;
+  border-radius: var(--border-l);
+  height: 43px;
+  margin-block: 4.6rem 1rem;
+}
+div.phase {
+  button {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--orange-0) !important
+  }
+}
+div.text {
+  padding: 1rem;
+  height: 12rem;
+}
 
+
+div#route-business {
   padding: 20px;
   border-radius: var(--border-l);
   height: 43px;

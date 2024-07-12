@@ -3,7 +3,7 @@ import ModelMain from '@/layouts/ModelMain';
 import Edit from '@/icons/Edit.jsx';
 import { usePlanning } from '@/context/PlanningContext';
 import LineMonths from '@/components/LineMonths';
-import LineBusinessPhase from '@/components/LineBusinessPhase';
+import LineBusiness from '@/components/LineBusiness';
 import Check from '@/icons/Check';
 
 export default function PlanningPage() {
@@ -25,8 +25,16 @@ export default function PlanningPage() {
   return (
     <ModelMain title='Planificación' className='plan-page pro'>
       <section>
-       <LineBusinessPhase /> 
+       <LineBusiness /> 
+       <div className='blurr text'>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur labore illo, soluta laborum asperiores facilis assumenda nisi corrupti tempore voluptates autem ducimus aliquid reprehenderit, qui ab aut consequuntur dolor impedit.
+        </p>
+       </div>
       </section>
+      <br />
+      <hr />
+      <br />
       <section className='plan-page' id='anual-route'>
         <LineMonths />
       </section>

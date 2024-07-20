@@ -66,6 +66,9 @@ export default function ProfilePage() {
             </div>
           </div>
           <div id='right-info'>
+            <div id='points-add' className=' '>
+              +10 pts
+            </div>
             <button id='add' onClick={onAddPopUp}>
               <h5>Agregar</h5>
               <AddUser />

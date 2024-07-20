@@ -27,7 +27,7 @@ export default function AsideProfile() {
         <NavLink to='/mi-perfil' id='profile-link'>
           <img
             id='cover'
-            src='https://i.ibb.co/wJZg9tG/Angel-Caido-5-MB.jpg'
+            src='https://i.ibb.co/frmtYRP/Angel-Caido-5-MB.jpg'
             alt=''
           />
           <Avatar

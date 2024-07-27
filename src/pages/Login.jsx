@@ -1,49 +1,46 @@
-import React, { useEffect } from 'react';
-import { useForm } from 'react-hook-form';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '@/context/AuthContext';
+import {supabase} from '@/api/supabase';
 
 export default function Login() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const { signin, isAuthenticated, errors: signinErrors } = useAuth();
   const navigate = useNavigate();
-  const onSubmit = handleSubmit(data => {
-    signin(data);
+  const [error, setError] = useState(null);
+  const [form, setForm] = useState({
+    email: '',
+    password: ''
   });
-  useEffect(() => {
-    if (isAuthenticated) {
+
+  const handlesubmit = async e => {
+    try {
+      e.preventDefault();
+      const {data, error:supabaseError} = await supabase.auth.signInWithPassword({
+        email: form.email,
+        password: form.password
+      });
       navigate('/inicio');
+      if (supabaseError) throw supabaseError;
+      console.log(data, supabaseError)
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error.message);
+      setError(error.message);    
     }
-  }, [isAuthenticated]);
+  };
 
   return (
     <div className='login '>
       <h3>Iniciar Sesión</h3>
-      {signinErrors.map((error, i) => (
-        <div className='errors' key={i}>
-          {error}
-        </div>
-      ))}
-      <form onSubmit={onSubmit} className='login blurr'>
+      <form action='' onSubmit={handlesubmit}>
         <input
           type='email'
-          {...register('email', { required: true })}
           placeholder='Email'
+          onChange={e => setForm({...form, email: e.target.value})}
         />
-        {errors.email && <p className='errors show'>Email is required</p>}
         <input
           type='password'
-          {...register('password', { required: true })}
           placeholder='Password'
+          onChange={e => setForm({...form, password: e.target.value})}
         />
-        {errors.password && <p className='errors show'>Password is required</p>}
-        <button type='submit' className='submit'>
-          Iniciar Sesión
-        </button>
+        <button>Send</button>
       </form>
       <p className='register'>
         ¿Quieres unirte? &nbsp;

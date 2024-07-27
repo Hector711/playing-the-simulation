@@ -1,8 +1,8 @@
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 // Contextos
-import { AuthProvider } from '@/context/AuthContext';
 import { TaskProvider } from '@/context/TaskContext';
 import { PlanningProvider } from '@/context/PlanningContext';
 import { MembersProvider } from '@/context/MembersContext';
@@ -10,8 +10,6 @@ import { ClassroomProvider } from '@/context/ClassroomContext';
 import { PostsProvider } from '@/context/PostsContext';
 import { CommunityProvider } from '@/context/CommunityContext';
 import { ProfileProvider } from '@/context/ProfileContext';
-// Protected Route
-import ProtectedRoute from '@/ProtectedRoute';
 // Basics
 import WellcomePage from '@/pages/WellcomePage';
 import HomePage from '@/pages/HomePage';
@@ -33,104 +31,105 @@ import BibliotecaPage from '@/pages/community/BibliotecaPage';
 import ClassroomPage from '@/pages/classroom/ClassroomPage';
 // PLAYGROUND PAGES
 import PlaygroundPage from '@/pages/playground/PlaygroundPage';
-
+import { supabase } from '@/api/supabase';
 
 const queryClient = new QueryClient();
 
 function App() {
+
+  useEffect(() => {
+    supabase.auth.onAuthStateChange((event, session) => {
+      console.log(event, session)
+    })
+  }, [])
+
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <TaskProvider>
-          <PlanningProvider>
-            <ClassroomProvider>
-              <PostsProvider>
-                <CommunityProvider>
-                  <MembersProvider>
+      <TaskProvider>
+        <PlanningProvider>
+          <ClassroomProvider>
+            <PostsProvider>
+              <CommunityProvider>
+                <MembersProvider>
                   <ProfileProvider>
                     <BrowserRouter>
                       <Routes>
                         <Route path='/' element={<WellcomePage />} />
-                        <Route element={<ProtectedRoute />}>
-                          <Route element={<NavLayout />}>
-                            {/* Profile Pages */}
-                            <Route element={<LeftHomeLayout />}>
-                              <Route element={<RightHomeLayout />}>
-                                <Route path='/inicio' element={<HomePage />} />
-                                <Route
-                                  path='/notificaciones'
-                                  element={<NotificationsPage />}
-                                />
-                                <Route
-                                  path='/mensajes'
-                                  element={<MessagesPage />}
-                                />
-                                <Route
-                                  path='/guardados'
-                                  element={<SavedPage />}
-                                />
-                              </Route>
+
+                        <Route element={<NavLayout />}>
+                          {/* Profile Pages */}
+                          <Route element={<LeftHomeLayout />}>
+                            <Route element={<RightHomeLayout />}>
+                              <Route path='/inicio' element={<HomePage />} />
                               <Route
-                                path='/planificacion'
-                                element={<PlanningPage />}
+                                path='/notificaciones'
+                                element={<NotificationsPage />}
+                              />
+                              <Route
+                                path='/mensajes'
+                                element={<MessagesPage />}
+                              />
+                              <Route
+                                path='/guardados'
+                                element={<SavedPage />}
                               />
                             </Route>
                             <Route
-                              path='/mi-perfil'
-                              element={<ProfilePage />}
+                              path='/planificacion'
+                              element={<PlanningPage />}
                             />
-                            <Route
-                              path='/profile/:id'
-                              element={<ProfilePage />}
-                            />
-                            {/* <Route path='/post/:id' element={<PostPage />} /> */}
-                            {/* Community Pages */}
-                            <Route
-                              path='/classroom'
-                              element={<ClassroomPage />}
-                            />
-                            <Route
-                              path='/classroom/:slug'
-                              element={<ClassroomPage />}
-                            />
-                            <Route
-                              path='/classroom/de-0-100/:slug'
-                              element={<ClassroomPage />}
-                            />
-                            <Route
-                              path='/playground'
-                              element={<PlaygroundPage />}
-                            />
-                            <Route
-                              path='/playground/:slug'
-                              element={<PlaygroundPage />}
-                            />
-                            <Route path='/miembros' element={<MembersPage />} />
-                            <Route
-                              path='/biblioteca'
-                              element={<BibliotecaPage />}
-                            />
-                            <Route
-                              path='/comunidad'
-                              element={<CommunityPage />}
-                            />
-                            <Route
-                              path='/comunidad/:slug'
-                              element={<CommunityPage />}
-                            />
-                            <Route path='*' element={<h1>NOT FOUND</h1>} />
                           </Route>
+                          <Route path='/mi-perfil' element={<ProfilePage />} />
+                          <Route
+                            path='/profile/:id'
+                            element={<ProfilePage />}
+                          />
+                          {/* <Route path='/post/:id' element={<PostPage />} /> */}
+                          {/* Community Pages */}
+                          <Route
+                            path='/classroom'
+                            element={<ClassroomPage />}
+                          />
+                          <Route
+                            path='/classroom/:slug'
+                            element={<ClassroomPage />}
+                          />
+                          <Route
+                            path='/classroom/de-0-100/:slug'
+                            element={<ClassroomPage />}
+                          />
+                          <Route
+                            path='/playground'
+                            element={<PlaygroundPage />}
+                          />
+                          <Route
+                            path='/playground/:slug'
+                            element={<PlaygroundPage />}
+                          />
+                          <Route path='/miembros' element={<MembersPage />} />
+                          <Route
+                            path='/biblioteca'
+                            element={<BibliotecaPage />}
+                          />
+                          <Route
+                            path='/comunidad'
+                            element={<CommunityPage />}
+                          />
+                          <Route
+                            path='/comunidad/:slug'
+                            element={<CommunityPage />}
+                          />
+                          <Route path='*' element={<h1>NOT FOUND</h1>} />
                         </Route>
                       </Routes>
                     </BrowserRouter>
                   </ProfileProvider>
-                  </MembersProvider>
-                </CommunityProvider>
-              </PostsProvider>
-            </ClassroomProvider>
-          </PlanningProvider>
-        </TaskProvider>
-      </AuthProvider>
+                </MembersProvider>
+              </CommunityProvider>
+            </PostsProvider>
+          </ClassroomProvider>
+        </PlanningProvider>
+      </TaskProvider>
       <ReactQueryDevtools />
     </QueryClientProvider>
   );

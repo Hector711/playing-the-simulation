@@ -1,6 +1,6 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useAuth } from '@/context/AuthContext';
+import { NavLink, useNavigate } from 'react-router-dom';
+
 import Avatar from '@/components/Avatar';
 import IconNotifications from '@/icons/IconNotifications';
 import IconMessages from '@/icons/IconMessages';
@@ -14,7 +14,8 @@ import Dots from '@/icons/Dots';
 import Pencil from '@/icons/NewPost';
 
 export default function AsideProfile() {
-  const { logout } = useAuth();
+  const navigate = useNavigate();
+
   const asideProfileLinks = [
     { to: '/notificaciones', title: 'Notificaciones', icon: IconNotifications },
     { to: '/mensajes', title: 'Mensajes', icon: IconMessages },
@@ -81,7 +82,7 @@ export default function AsideProfile() {
           id='logout'
           to='/'
           onClick={() => {
-            logout();
+            navigate('/wellcome');
           }}
         >
           <Dots />

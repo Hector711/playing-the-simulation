@@ -69,62 +69,46 @@ export default function NewPost() {
 
   return (
     <div id='new-post'>
-      {!state ? (
-        <button onClick={toggleNewPostForm} id='open'>
-          <h2 className='impact'>Nuevo Post</h2>
-        </button>
-      ) : (
-        <>
-          <div id='header'>
-            <h2 className='impact'>Nuevo Post</h2>
-            <button onClick={toggleNewPostForm} id='close'>
-              <Close />
-            </button>
-          </div>
-
-          {/* FORMULARIO */}
-          <form onSubmit={handleSubmit}>
-            <label htmlFor='title' className='hidden'></label>
-            <input type='text' placeholder='Tiulo' id='title' name='title' />
-            <Textarea />
-            <div id='options'>
-              <button>
-                <Clip />
-              </button>
-              <button>
-                <Poll />
-              </button>
-              <button>
-                <Gif />
-              </button>
-            </div>
-            <div id='selects'>
-              <label htmlFor='category' className='hidden'></label>
-              <Select
-                options={category}
-                className='selects'
-                id='category'
-                styles={colourStyles}
-                placeholder='Categoría'
-                name='category'
-              />
-              <label htmlFor='label' className='hidden'></label>
-              <Select
-                closeMenuOnSelect={false}
-                defaultValue='Etiquetas'
-                isMulti
-                options={labels}
-                styles={colourStyles}
-                className='selects'
-                id='label'
-                placeholder='Etiquetas'
-                name='label'
-              />
-            </div>
-            <button id='send'>Enviar</button>
-          </form>
-        </>
-      )}
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='title' className='hidden'></label>
+        <input type='text' placeholder='Tiulo' id='title' name='title' />
+        <Textarea />
+        <div id='options'>
+          <button>
+            <Clip />
+          </button>
+          <button>
+            <Poll />
+          </button>
+          <button>
+            <Gif />
+          </button>
+        </div>
+        <div id='selects'>
+          <label htmlFor='category' className='hidden'></label>
+          <Select
+            options={category}
+            className='selects'
+            id='category'
+            styles={colourStyles}
+            placeholder='Categoría'
+            name='category'
+          />
+          <label htmlFor='label' className='hidden'></label>
+          <Select
+            closeMenuOnSelect={false}
+            defaultValue='Etiquetas'
+            isMulti
+            options={labels}
+            styles={colourStyles}
+            className='selects'
+            id='label'
+            placeholder='Etiquetas'
+            name='label'
+          />
+        </div>
+        <button id='send'>Enviar</button>
+      </form>
     </div>
   );
 }

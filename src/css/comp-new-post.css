@@ -7,7 +7,6 @@ div#new-post {
   flex-direction: column;
   gap: var(--gap-s);
   padding: 10px;
-  background-color: var(--blue-1);
   border-radius: var(--border-m);
   button#open {
     background-color: var(--black-1);
@@ -18,19 +17,28 @@ div#new-post {
       padding: 0.6rem 0.7rem;
     }
   }
-  div#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    h2 {
-      padding: 0.6rem 0.7rem;
-    }
-    button#close {
-      padding: 10px;
-      border-radius: var(--border-s);
-      width: max-content;
-    }
-  }
+  
+}
+
+#new-post-accordion {
+  padding:0 !important ;
+  margin:0 !important ;
+  /* border: 1px solid white !important; */
+  /* *{
+    padding:0 !important ;
+    margin:0 !important ;
+  } */
+}
+#new-post-accordion-header {
+  /* padding:0 !important ;
+  margin:0 !important ; */
+}
+#new-post-accordion-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.list-container {
+ 
 }
 
 form {

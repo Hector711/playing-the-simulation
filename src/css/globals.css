@@ -1,0 +1,104 @@
+html {
+  letter-spacing: -0.015rem;
+}
+body {
+  position: relative;
+  margin: 0;
+  min-width: 320px;
+}
+/* TITULO PRINCIPAL */
+h1.main-title {
+  font-family: 'palo';
+  color: white;
+}
+/* NAVBAR LINKS, ASIDE LINKS */
+h2 {
+  font-size: 1.10rem;
+  font-weight: 450;
+}
+/* TITULO DE SECCIONES */
+.impact {
+  font-family: 'Heading';
+  text-transform: uppercase;
+}
+/* MESES DE PLANIFICACION */
+h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* TITULOS DE POST Y CURSOS */
+h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white-0);
+}
+h5 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+h6 {
+  font-size: 0.90rem;
+  font-weight: 550;
+  color: var(--white-2) !important;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+  word-wrap: break-word;
+  padding-inline: auto;
+}
+span {
+  font-size: 0.9rem;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.white-hover {
+  color: inherit;
+}
+.white-hover:hover {
+  color: var(--white-0);
+}
+.orange-hover {
+  color: inherit;
+}
+.orange-hover:hover {
+  color: var(--orange-0);
+}
+
+div#nav-container,
+div#layout {
+  padding-inline: var(--pad);
+}
+button {
+  border-radius: var(--border-m);
+  display: flex;
+  border: 1px solid transparent;
+  padding: 0.3em 0.6em;
+  /* transition: border-color 0.25s; */
+  cursor: pointer;
+  justify-content: center;
+  text-wrap: nowrap;
+}
+
+hr {
+  border: 0.5px solid var(--white-3);
+}
+
+button.submit {
+  background-color: var(--white-1);
+  color: var(--black-0);
+}
+button.submit:hover {
+  box-shadow: 3px 2px 5px 1px var(--black-0);
+}

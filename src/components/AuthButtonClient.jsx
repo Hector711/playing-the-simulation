@@ -1,8 +1,8 @@
 "use client";
 
-import { GitHubIcon } from "./icons";
+import GitHubIcon from "@/icons/GitHubIcon";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { useRouter } from "next/navigation";
+import { useRouter, redirect } from "next/navigation";
 
 export default function AuthButton({ session }) {
   const router = useRouter();

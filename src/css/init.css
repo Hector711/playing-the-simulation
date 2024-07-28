@@ -1,0 +1,77 @@
+:root {
+  font-family: 'Onest Variable', 'Figtree Variable', Avenir, Helvetica, Arial,
+    sans-serif;
+
+  --width: 1400px;
+  --pad: 2rem;
+
+  --border-s: 5px;
+  --border-m: 8px;
+  --border-l: 20px;
+
+  --left-aside: 240px;
+  --right-aside: 320px;
+
+  --gap-s: 8px;
+  --gap-m: 10px;
+  --gap-l: 15px;
+
+  --pad-s: 0.8rem;
+  --pad-m: 1rem;
+  --pad-l: 1.2rem;
+
+  --white-0: #f4f4f4;
+  --white-1: #a8a8a8;
+  --white-2: #909090;
+  --white-3: #565656;
+
+  /* --black-0: #000000; */
+  --black-0: #131416;
+  --black-1: #121212;
+
+  /* --blue-0: #2c4874; */
+  --blue-0: #121417;
+  --blue-1: #121417;
+
+  --orange-0: #f6921b;
+  --orange-1: #985809;
+  --orange-2: #a76719;
+
+  color-scheme: light dark;
+  color: var(--white-0);
+  background-color: #000000;
+}
+.blurr-nav {
+   box-shadow: 0px 0px 4px 1px var(--blue-1);
+   background-color: #121417ac;
+   backdrop-filter: blur(3px);
+  border-bottom: 0.5px solid var(--white-3);
+  -webkit-backdrop-filter: blur(5px);
+}
+.blurr{
+  box-shadow: 0px 0px 4px 1px var(--blue-1);
+  background-color: #121417c1;
+  backdrop-filter: blur(3px);
+  border: 0.5px solid var(--white-3);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--border-m);
+  
+}
+.shadoww {
+  box-shadow: 2px 2px 1px 0px #282828;
+  border: 0.5px solid var(--white-3);
+}
+
+
+body {
+  min-height: 100vh;
+  background-image: url("../../public/background.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.github-icon {
+ stroke: white;
+ width: 18px;
+ height: 18px;
+
+}

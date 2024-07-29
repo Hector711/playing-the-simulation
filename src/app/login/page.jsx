@@ -1,4 +1,4 @@
-import '@/css/login.module.scss';
+import './module.scss';
 import { AuthButtonServer } from "@/components/AuthButtonServer";
 import Game from '@/icons/Game';
 

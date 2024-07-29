@@ -1,14 +1,11 @@
-// :root {
-//   --height-text-wellcome: 3rem;
-//   --red-0: #961616;
-// }
-div#wellcome-body {
+#wellcome-body {
   display: flex;
   align-items: center;
   width: 100%;
   height: 98vh;
   padding-inline: 7%;
 
+  border: 1px solid red !important;
 }
 header.wellcome {
   height: 100%;

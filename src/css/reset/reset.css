@@ -11,12 +11,12 @@
 /* PTS Typography */
 @font-face {
   font-family: 'Palo';
-  src: url(/src/css/fonts/Palo\ Compressed\ Extrabold.otf);
+  src: url(../fonts/palo-compressed-extrabold.otf);
 }
 /* PTS Typography */
 @font-face {
   font-family: 'Heading';
-  src: url(/src/css/fonts/Heading\ Now\ Trial\ 95\ Medium.ttf);
+  src: url(../fonts/heading-now-trial-95-medium.ttf);
 }
 
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {

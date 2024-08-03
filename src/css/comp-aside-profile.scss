@@ -1,0 +1,127 @@
+@import 'variables';
+
+header#profile {
+  height: max-content;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  overflow: hidden;
+  #profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: max-content;
+    gap: $gap-s;
+    padding-block: 35px 10px;
+    #cover {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 70px;
+      background-color: $orange-0;
+      object-fit: cover;
+      overflow: hidden;
+    }
+    figure.avatar-container {
+      z-index: 999;
+      position: relative;
+      width: 75px;
+      height: 75px;
+    }
+  }
+  #profile-link:hover {
+    text-decoration: underline;
+    background-color: #7e7e7e21;
+  }
+  hr {
+    width: 100%;
+  }
+  div#profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $gap-s;
+    height: max-content;
+    width: max-content;
+    padding-block: 12px;
+    div {
+      display: flex;
+      svg.icons {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        color: $orange-0;
+      }
+      span {
+        color: $white-1;
+      }
+    }
+  }
+
+  #goals-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background-color: $orange-0;
+    width: 100%;
+    color: $blue-1;
+    h2 {
+      font-weight: 750;
+      text-align: center;
+      font-size: 1.2rem !important;
+    }
+  }
+}
+
+section#profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+  margin-top: $gap-s;
+  .aside-link {
+    gap: $gap-m;
+    padding: 10px 16px;
+    align-items: center;
+    display: flex;
+  }
+  svg#goals-icon {
+    width: 30px;
+    height: 30px;
+  }
+  svg.icons {
+    width: 25px;
+    height: 25px;
+  }
+}
+#new-post-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  color: $white-1;
+  margin-bottom: 0.8rem;
+}
+
+footer#logout {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  #logout {
+    display: flex;
+    justify-content: center;
+    border-radius: $border-m;
+    border: 0.5px solid $white-3;
+    padding: 10px;
+  }
+  svg.icons {
+    width: 20px;
+    height: 20px;
+    color: $white-2;
+  }
+}

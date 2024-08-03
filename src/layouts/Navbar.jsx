@@ -22,7 +22,7 @@ export default function Navbar() {
           ))}
         </div>
         <div id="nav-right">
-          {/* <NavLinkButton href='/comunidad'>Comunidad</NavLinkButton> */}
+          <NavLinkButton href='/comunidad'>Comunidad</NavLinkButton>
         </div>
       </div>
     </nav>

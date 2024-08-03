@@ -18,7 +18,7 @@ header.wellcome {
     font-size:calc(2rem + 2vw);
     text-shadow: 2px 2px 8px #707070;
     line-height: 1;
-    height: var(--height-text-wellcome);
+    // height: $height-text-wellcome;
     text-wrap: nowrap;
   }
   div {
@@ -30,7 +30,7 @@ header.wellcome {
   svg.icons {
     width: 55px;
     height: 90px;
-    color: var(--white-0);
+    color: $white-0;
   }
 }
 section.wellcome {
@@ -48,43 +48,42 @@ section.wellcome {
 div.login {
   h3 {
     font-size: 1.5rem;
-    height: var(--height-text-wellcome);
+    // height: $height-text-wellcome;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
     width: 100%;
-    padding: var(--pad-m);
-    /* background-color: red; */
+    padding: $pad-m;
   }
   div.errors {
-    padding: var(--pad-s) var(--pad-s);
-    background-color: var(--red-0);
-    border-radius: var(--border-s);
-    margin: var(--pad-s) var(--pad-m);
+    padding: $pad-s $pad-s;
+    // background-color: $red-0;
+    border-radius: $border-s;
+    margin: $pad-s $pad-m;
   }
   form.login {
     display: flex;
     flex-direction: column;
     /* background-color: var(--blue-1); */
-    padding: var(--pad-m);
+    padding: $pad-m;
     width: 300px;
     max-width: 500px;
     height: max-content;
-    border-radius: var(--border-m);
+    border-radius: $border-m;
     c input {
-      padding: var(--pad-s);
+      padding: $pad-s;
     }
   }
   p.register {
     display: flex;
     justify-content: center;
-    padding: var(--pad-s);
+    padding: $pad-s;
   }
   p.errors {
-    padding-inline: var(--pad-s);
-    background-color: var(--red-0);
-    border-radius: var(--border-s);
+    padding-inline: $pad-s;
+    // background-color: $red-0;
+    border-radius: $border-s;
     height: 23px;
   }
   #join-link {

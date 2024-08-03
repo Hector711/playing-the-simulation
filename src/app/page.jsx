@@ -14,11 +14,13 @@ export default async function Home() {
   const { data: posts } = await supabase.from("posts").select();
   if (!session) {
     redirect("/login");
+  } else {
+    redirect("/inicio");
   }
 
   return (
     <>
-      <div id='body-grid'>
+      {/* <div id='body-grid'>
         <ModelLeft>
           <AsideProfile />
         </ModelLeft>
@@ -30,7 +32,7 @@ export default async function Home() {
           </div>
         </main>
         <ModelRight>Right</ModelRight>
-      </div>
+      </div> */}
     </>
   );
 }

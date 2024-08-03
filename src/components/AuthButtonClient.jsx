@@ -2,7 +2,7 @@
 
 import GitHubIcon from "@/icons/GitHubIcon";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { useRouter, redirect } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default function AuthButton({ session }) {
   const router = useRouter();
@@ -19,12 +19,14 @@ export default function AuthButton({ session }) {
       console.log(error);
     }
     console.log(data);
+    router.refresh();
   };
   const handleSignOut = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
       console.log(error);
     }
+    router.push("/login");
     router.refresh();
   };
   console.log("session:", session);
@@ -41,7 +43,7 @@ export default function AuthButton({ session }) {
           Iniciar sesion con Github
         </button>
       ) : (
-        <button onClick={handleSignOut}>Cerrar Sesión</button>
+        <button onClick={handleSignOut} className="blurr" id="logout">Cerrar Sesión</button>
       )}
     </>
   );

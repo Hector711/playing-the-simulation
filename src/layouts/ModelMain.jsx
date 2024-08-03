@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function ModelMain({ className, children, title, id, nav }) {
   
@@ -8,13 +8,12 @@ export default function ModelMain({ className, children, title, id, nav }) {
       {nav && (
         <nav id='main-nav'>
           {nav.map((item, i) => (
-            <NavLink
+            <Link
               key={i}
-              to={`/${item.page}/${item.slug}`}
-              className={isActive}
+              href={`/${item.page}/${item.slug}`}
             >
               {item.title}
-            </NavLink>
+            </Link>
           ))}
         </nav>
       )}

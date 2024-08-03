@@ -1,10 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { AuthButtonServer } from "@/components/AuthButtonServer";
 import { redirect } from "next/navigation";
-import ModelLeft from "@/layouts/ModelLeft";
-import AsideProfile from "@/components/AsideProfile";
-import ModelRight from "@/layouts/ModelRight";
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
@@ -17,22 +13,9 @@ export default async function Home() {
   } else {
     redirect("/inicio");
   }
-
   return (
-    <>
-      {/* <div id='body-grid'>
-        <ModelLeft>
-          <AsideProfile />
-        </ModelLeft>
-        <main className="flex flex-col items-center justify-center h-screen">
-          <AuthButtonServer />
-          <div>
-            <pre>{JSON.stringify(posts, null, 2)}</pre>
-            <h1>Hello World</h1>
-          </div>
-        </main>
-        <ModelRight>Right</ModelRight>
-      </div> */}
-    </>
+    <div>
+      <h1>Home</h1>
+    </div>
   );
 }

@@ -1,0 +1,18 @@
+figure.avatar-container {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+figure.employee {
+  border: 4px solid var(--white-2);
+}
+figure.entrepeneur {
+  border: 4px solid var(--orange-0);
+}

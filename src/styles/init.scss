@@ -6,52 +6,22 @@
   Helvetica,
   Arial,
   sans-serif;
-  color-scheme: light dark;
   color: $white-0;
   background-color: #000000;
 }
-
-.blurr-nav {
-   box-shadow: 0px 0px 4px 1px $blue-1;
-   background-color: #121417ac;
-   backdrop-filter: blur(3px);
-  border-bottom: 0.5px solid $white-3;
-  -webkit-backdrop-filter: blur(5px);
-}
-.blurr{
-  box-shadow: 0px 0px 4px 1px $blue-1;
-  background-color: #121417c1;
-  backdrop-filter: blur(3px);
-  border: 0.5px solid $white-3;
-  -webkit-backdrop-filter: blur(5px);
-  border-radius: $border-m;
-  
-}
-.shadoww {
-  box-shadow: 2px 2px 1px 0px #282828;
-  border: 0.5px solid $white-3;
-}
-
 body {
   min-height: 100vh;
   background-image: url("../../public/background.png");
   background-size: 100%;
   background-repeat: no-repeat;
-}
-.github-icon {
- stroke: white;
- width: 18px;
- height: 18px;
-
-}
-html {
-  letter-spacing: -0.015rem;
-}
-body {
   position: relative;
   margin: 0;
   min-width: 320px;
+  div#body {
+    margin-top: $height-navbar;
+  }
 }
+
 /* TITULO PRINCIPAL */
 h1.main-title {
   font-family: 'Palo';
@@ -146,3 +116,30 @@ button.submit:hover {
 }
 
 
+.github-icon {
+ stroke: white;
+ width: 18px;
+ height: 18px;
+
+}
+
+.blurr-nav {
+   box-shadow: 0px 0px 4px 1px $blue-1;
+   background-color: #121417ac;
+   backdrop-filter: blur(3px);
+  border-bottom: 0.5px solid $white-3;
+  -webkit-backdrop-filter: blur(5px);
+}
+.blurr{
+  box-shadow: 0px 0px 4px 1px $blue-1;
+  background-color: #121417c1;
+  backdrop-filter: blur(3px);
+  border: 0.5px solid $white-3;
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: $border-m;
+  
+}
+.shadoww {
+  box-shadow: 2px 2px 1px 0px #282828;
+  border: 0.5px solid $white-3;
+}

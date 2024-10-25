@@ -1,4 +1,4 @@
-export interface IconsProps {
+export interface IconProps {
   className?: string;
   id?: string
   completed?: boolean

@@ -2,8 +2,12 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth } from '@/app/firebase/config'
 
 export default function Navbar() {
+  const [user] = useAuthState(auth)
+  if(!user) return null
   return (
     <nav id='nav' className='blurr-nav'>
       <div id='nav-container'>

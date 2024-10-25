@@ -1,4 +1,6 @@
-export default function Game(props) {
+import type { IconProps } from '@/types'
+
+export default function GameIcon(props: IconProps) {
   return (
     <svg
       viewBox='0 0 24 24'

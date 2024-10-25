@@ -12,7 +12,7 @@ const SignUp = () => {
     try {
         const res = await createUserWithEmailAndPassword(email, password)
         console.log({res})
-        sessionStorage.setItem('user', true)
+        // sessionStorage.setItem('user', true)
         setEmail('');
         setPassword('')
 

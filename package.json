@@ -10,25 +10,23 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/auth-helpers-nextjs": "^0.10.0",
-    "@supabase/supabase-js": "^2.45.4",
     "firebase": "^10.14.1",
-    "next": "14.2.15",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "15.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-firebase-hooks": "^5.1.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.17.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.15",
-    "globals": "^15.8.0",
-    "postcss": "^8",
+    "globals": "^15.11.0",
+    "postcss": "^8.4.47",
     "postcss-import": "^16.1.0",
-    "sass": "^1.77.8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "sass": "^1.80.4",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   }
 }

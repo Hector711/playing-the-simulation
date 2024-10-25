@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
+import Navbar from '@/components/Navbar';
 
 // INIT
 import "@/styles/reset/reset.scss";
 import "@/styles/init.scss";
+import '@/styles/comp-aside-profile.scss';
+import '@/styles/layout-models.scss';
+import '@/styles/layout-navbar.scss';
+import '@/styles/comp-news.scss';
+import '@/styles/comp-avatar.scss';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        {children}
+        <div id='layout'>
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
 }
+
+
+
+

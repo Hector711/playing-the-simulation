@@ -1,9 +1,13 @@
 header#profile {
-  height: max-content;
+  height: auto;
+  // background-color: #8c0f0f;
   align-items: center;
   flex-direction: column;
   display: flex;
-  overflow: hidden;
+  overflow: hidden;   
+
+  // * {
+  // }
   #profile-link {
     display: flex;
     flex-direction: column;
@@ -110,6 +114,9 @@ footer#logout {
   position: absolute;
   bottom: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
   #logout {
     display: flex;
     justify-content: center;

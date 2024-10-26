@@ -13,7 +13,6 @@ export default function HomePage() {
     <>
       <ModelLeft>
         <AsideProfile />
-      <LogOutButton />
       </ModelLeft>
 
       <ModelMain id='timeline' className='home'>

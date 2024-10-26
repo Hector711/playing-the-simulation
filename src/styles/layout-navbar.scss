@@ -1,11 +1,12 @@
 nav#nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   height: $height-navbar;
   // border: 0.5px solid white;
+  z-index: 999;
 }
 
 #nav-container {

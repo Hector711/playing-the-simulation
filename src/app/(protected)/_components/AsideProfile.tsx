@@ -71,8 +71,8 @@ export default function AsideProfile() {
         })}
       </section>
       <footer id='logout'>
-        <NewPostLink />
         <LogOutButton />
+        <NewPostLink />
       </footer>
     </>
   );

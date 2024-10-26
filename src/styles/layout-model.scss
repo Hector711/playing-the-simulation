@@ -1,8 +1,4 @@
 div#home-page {
-  // border: 1px solid red;
-  // * {
-  //   border: 1px solid white;
-  // }
   display: grid;
   grid-template-areas:
     'left main right'
@@ -24,6 +20,8 @@ aside.aside-left {
   flex-direction: column;
   height: 85vh;
   position: relative;
+    // border: 1px solid red;
+
   h2.impact {
     text-align: center;
     padding: 15px;

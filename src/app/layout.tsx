@@ -4,12 +4,16 @@ import Navbar from '@/components/Navbar';
 // INIT
 import "@/styles/reset/reset.scss";
 import "@/styles/init.scss";
-import '@/styles/comp-aside-profile.scss';
+// LAYOUT
 import '@/styles/layout-models.scss';
 import '@/styles/layout-navbar.scss';
+// PAGES
+import '@/styles/page-wellcome.scss';
+// COMPONENTS
+import '@/styles/comp-aside-profile.scss';
 import '@/styles/comp-news.scss';
 import '@/styles/comp-avatar.scss';
-import '@/styles/page-wellcome.scss';
+import '@/styles/comp-login.scss';
 
 export const metadata: Metadata = {
   title: "Playing The Simulation",

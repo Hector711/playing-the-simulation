@@ -15,7 +15,6 @@ const SignUp = () => {
         // sessionStorage.setItem('user', true)
         setEmail('');
         setPassword('')
-
     } catch(e){
         console.error(e)
     }

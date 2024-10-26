@@ -1,7 +1,7 @@
-'use client'
+'use client';
 import { useState } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
-import { auth } from '@/app/firebase/config'
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { auth } from '@/app/firebase/config';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
@@ -15,37 +15,39 @@ export default function LogIn() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  console.log({errors})
+
 
   const handleSignIn = async () => {
     try {
-        const res = await signInWithEmailAndPassword(form.email, form.password);
-        console.log({res});
-        // sessionStorage.setItem('user', true)
-        setForm({ email: '', password: '' });
-        router.push('/')
-    }catch(e){
-        console.error(e)
+      const res = await signInWithEmailAndPassword(form.email, form.password);
+      console.log({ res });
+      // sessionStorage.setItem('user', true)
+      setForm({ email: '', password: '' });
+      router.push('/');
+    } catch (e) {
+      console.error(e);
     }
   };
 
-  const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => 
+  const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm({ ...form, email: e.target.value });
 
-  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => 
+  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) =>
     setForm({ ...form, password: e.target.value });
 
   return (
-    
-      <div className='login '>
+    <div id='login'>
       <h3>Iniciar Sesión</h3>
-      <form action='' onSubmit={handleSubmit(handleSignIn)}>
+      <form action='' onSubmit={handleSubmit(handleSignIn)} id='login-form'>
         <input
           type='email'
           placeholder='Email'
           {...register('email', { required: true })}
           onChange={onChangeEmail}
         />
-        {errors.email && <p>{String(errors.email.message)}</p>}
+        {errors.email && <p className='errors'>{String(errors.email.type)}</p>
+        }
         <input
           type='password'
           placeholder='Password'
@@ -58,23 +60,13 @@ export default function LogIn() {
           })}
           onChange={onChangePassword}
         />
-        {errors.password && <p>{String(errors.password.message)}</p>}
+        {errors.password && <p className='errors'>{String(errors.password.type)}</p>}
         <button type='submit'>Enviar</button>
       </form>
       <p className='register'>
         ¿Quieres unirte? &nbsp;
-        <Link href='/registrate'>
-        Registrate
-        </Link>
-        <a
-          href='https://www.skool.com/playing-the-simulation-7538/about'
-          id='join-link'
-        >
-          Clicka aqui
-        </a>
+        <Link href='/registrate' id='join-link'>Registrate aqui</Link>
       </p>
-
     </div>
-
   );
 }

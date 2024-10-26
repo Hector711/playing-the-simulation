@@ -1,6 +1,6 @@
-import { IconsProps } from '@/types';
+import { IconProps } from '@/types';
 
-export default function GitHub(props: IconsProps) {
+export default function GitHubIcon(props: IconProps) {
   return (
     <svg viewBox='0 0 98 98' className='icons' {...props}>
       <path

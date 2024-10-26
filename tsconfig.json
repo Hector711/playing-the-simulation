@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/AsideProfile.jsx",
-    "src/icons/YouTube.tsx"
+    "src/icons/YouTubeIcon.tsx"
   ],
   "exclude": [
     "node_modules"

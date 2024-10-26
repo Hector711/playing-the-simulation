@@ -2,13 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useAuthState } from 'react-firebase-hooks/auth'
-import { auth } from '@/app/firebase/config'
-import { Props } from '@/types';
 
 export default function Navbar() {
-  const [user] = useAuthState(auth)
-  if(!user) return null
   return (
     <nav id='nav' className='blurr-nav'>
       <div id='nav-container'>
@@ -23,7 +18,6 @@ export default function Navbar() {
           ))}
         </div>
         <div id='nav-right'>
-
           <NavLinkButton href='/comunidad'>Comunidad</NavLinkButton>
         </div>
       </div>
@@ -31,9 +25,8 @@ export default function Navbar() {
   );
 }
 
-function NavLinkButton({ children, href }: Props & { href: string }) {
+function NavLinkButton({ children, href }: { children: React.ReactNode, href: string }) {
   const isActive = usePathname() === href;
-
   return (
     <Link href={href} className={isActive ? 'active-link' : 'inactive-link'}>
       <h2>{children}</h2>
@@ -44,6 +37,6 @@ function NavLinkButton({ children, href }: Props & { href: string }) {
 const navLinks = [
   {title: 'Classroom', page: '/classroom'},
   {title: 'Playground', page: '/playground'},
-  {title: 'Members', page: '/miembros'},
-  {title: 'Biblioteca', page: '/biblioteca'},
+  {title: 'Members', page: '/members'},
+  {title: 'Biblioteca', page: '/library'},
 ]

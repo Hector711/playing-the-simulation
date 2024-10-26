@@ -6,12 +6,12 @@ import Avatar from "@/components/Avatar";
 import IconNotifications from "@/icons/IconNotifications";
 import IconMessages from "@/icons/IconMessages";
 import IconSave from "@/icons/IconSave";
-import IconGoals from "@/icons/IconGoals";
+import IconGoals from "@/icons/GoalsIcon";
 import Game from "@/icons/Game";
 import Business from "@/icons/Business";
-import Pig from "@/icons/Pig";
-import Dots from "@/icons/Dots";
-import Pencil from "@/icons/NewPost";
+import Pig from "@/icons/PigIcon";
+import Dots from "@/icons/DotsIcon";
+import Pencil from "@/icons/NewPostIcon";
 import {AuthButtonServer} from "@/components/AuthButtonServer";
 
 export default function AsideProfile() {

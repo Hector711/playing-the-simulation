@@ -1,6 +1,6 @@
-import { IconsProps } from '@/types';
+import { IconProps } from '@/types';
 
-export default function GitHubIcon(props: IconsProps) {
+export default function GitHubIcon(props: IconProps) {
   return (
     <svg
       aria-hidden="true"

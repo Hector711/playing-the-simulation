@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Avatar from '@/components/Avatar';
+import Avatar from '@/app/(protected)/_components/Avatar';
 import NotificationsIcon from '@/icons/NotificationsIcon';
 import MessagesIcon from '@/icons/MessagesIcon';
 import SaveIcon from '@/icons/SaveIcon';
@@ -9,6 +9,7 @@ import BusinessIcon from '@/icons/BusinessIcon';
 import PigIcon from '@/icons/PigIcon';
 import NewPostIcon from '@/icons/NewPostIcon';
 import LogOutButton from './LogOutButton';
+
 export default function AsideProfile() {
   const asideProfileLinks = [
     { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },

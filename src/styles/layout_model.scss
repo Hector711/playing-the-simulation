@@ -4,8 +4,9 @@ div#home-page {
     'left main right'
     'left main right';
   grid-template-columns: $left-aside 1fr $right-aside;
+  grid-template-rows: auto auto 1000px;
   gap: $gap-l;
-  height: max-content;
+
   justify-content: center;
   margin-inline: auto;
   max-width: $width;
@@ -94,7 +95,7 @@ aside.aside-right {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  height: max-content;
+  // height: max-content;
   header.aside-header {
     padding: 1rem 1.5rem 0rem;
     h3 {

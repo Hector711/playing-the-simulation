@@ -3,16 +3,19 @@ import type { Metadata } from 'next';
 import '@/styles/reset/reset.scss';
 import '@/styles/init.scss';
 // LAYOUT
-import '@/styles/layout-navbar.scss';
-import '@/styles/layout-model.scss';
-import '@/styles/layout-models.scss';
+import '@/styles/layout_navbar.scss';
+import '@/styles/layout_model.scss';
+import '@/styles/layout_models.scss';
 // PAGES
-import '@/styles/page-wellcome.scss';
+import '@/styles/page_wellcome.scss';
+import '@/styles/page_home.scss';
 // COMPONENTS
-import '@/styles/comp-aside-profile.scss';
-import '@/styles/comp-news.scss';
-import '@/styles/comp-avatar.scss';
-import '@/styles/comp-login.scss';
+import '@/styles/comp_aside_profile.scss';
+import '@/styles/comp_news.scss';
+import '@/styles/comp_avatar.scss';
+import '@/styles/comp_login.scss';
+import '@/styles/comp_post.scss';
+import '@/styles/comp_new_post.scss';
 
 export const metadata: Metadata = {
   title: 'Playing The Simulation',

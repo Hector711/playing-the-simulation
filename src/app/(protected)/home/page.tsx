@@ -2,11 +2,11 @@
 // import AccordionSummary from '@mui/material/AccordionSummary';
 // import AccordionDetails from '@mui/material/AccordionDetails';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import LogOutButton from '../_components/LogOutButton';
 import ModelMain from '@/layouts/ModelMain';
 import ModelLeft from '@/layouts/ModelLeft';
 import ModelRight from '@/layouts/ModelRight';
 import AsideProfile from '../_components/AsideProfile';
+import News from '@/app/(protected)/_components/News';
 
 export default function HomePage() {
   return (
@@ -49,7 +49,9 @@ export default function HomePage() {
         </Accordion> */}
         <hr className='home' />
       </ModelMain>
-      <ModelRight></ModelRight>
+      <ModelRight>
+        <News />
+      </ModelRight>
     </>
   );
 }

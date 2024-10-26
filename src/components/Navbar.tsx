@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '@/app/firebase/config'
+import { Props } from '@/types';
 
 export default function Navbar() {
   const [user] = useAuthState(auth)
@@ -30,9 +31,8 @@ export default function Navbar() {
   );
 }
 
-function NavLinkButton({ children, href }: { children: React.ReactNode, href: string }) {
-  const pathname = usePathname();
-  const isActive = pathname === href;
+function NavLinkButton({ children, href }: Props & { href: string }) {
+  const isActive = usePathname() === href;
 
   return (
     <Link href={href} className={isActive ? 'active-link' : 'inactive-link'}>

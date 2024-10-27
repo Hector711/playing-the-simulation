@@ -1,11 +1,5 @@
-import { getFirestore, collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
-import { app } from '@/app/_firebase/config';
-
-async function getCollection(collectionName: string) {
-  const db = getFirestore(app);
-  const dataCollection = collection(db, collectionName);
-  return dataCollection;
-}
+import { getDocs, query, orderBy, limit } from 'firebase/firestore';
+import getCollection from '@/app/_firebase/getCollection';
 
 export async function getDocuments(collectionName: string) {
   const newsCollection = await getCollection(collectionName);
@@ -29,5 +23,3 @@ export async function fetchItems() {
   const data = querySnapshot.docs.map(doc => doc.data());
   return data;
 };
-
-

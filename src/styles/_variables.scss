@@ -34,3 +34,12 @@ $orange-2: #a76719;
 
 $red-0: #961616;
 $height-text-wellcome: 3rem;
+
+@mixin button-link {
+
+      background-color: $orange-0;
+    color: $black-1;
+  padding: 0.2rem 1.3rem;
+  border-radius: $border-l;
+  font-weight: 500;
+}

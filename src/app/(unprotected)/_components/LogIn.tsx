@@ -1,10 +1,11 @@
 'use client';
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/firebase/config';
+import { auth } from '@/app/_firebase/config';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
+import { EventType } from '@/types';
 
 export default function LogIn() {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -15,14 +16,12 @@ export default function LogIn() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log({errors})
-
+  console.log({ errors });
 
   const handleSignIn = async () => {
     try {
       const res = await signInWithEmailAndPassword(form.email, form.password);
       console.log({ res });
-      // sessionStorage.setItem('user', true)
       setForm({ email: '', password: '' });
       router.push('/');
     } catch (e) {
@@ -30,24 +29,20 @@ export default function LogIn() {
     }
   };
 
-  const onChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setForm({ ...form, email: e.target.value });
-
-  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) =>
-    setForm({ ...form, password: e.target.value });
+  const handleOnChange = (e: EventType) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   return (
-    <div id='login'>
-      <h3>Iniciar Sesión</h3>
+    <>
       <form action='' onSubmit={handleSubmit(handleSignIn)} id='login-form'>
         <input
           type='email'
           placeholder='Email'
           {...register('email', { required: true })}
-          onChange={onChangeEmail}
+          onChange={handleOnChange}
         />
-        {errors.email && <p className='errors'>{String(errors.email.type)}</p>
-        }
+        {errors.email && <p className='errors'>{String(errors.email.type)}</p>}
         <input
           type='password'
           placeholder='Password'
@@ -58,15 +53,19 @@ export default function LogIn() {
               message: 'La contraseña debe tener al menos 6 caracteres',
             },
           })}
-          onChange={onChangePassword}
+          onChange={handleOnChange}
         />
-        {errors.password && <p className='errors'>{String(errors.password.type)}</p>}
+        {errors.password && (
+          <p className='errors'>{String(errors.password.type)}</p>
+        )}
         <button type='submit'>Enviar</button>
       </form>
       <p className='register'>
         ¿Quieres unirte? &nbsp;
-        <Link href='/registrate' id='join-link'>Registrate aqui</Link>
+        <Link href='/signup' id='join-link'>
+          Registrate aqui
+        </Link>
       </p>
-    </div>
+    </>
   );
 }

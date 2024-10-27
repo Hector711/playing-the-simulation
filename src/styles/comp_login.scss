@@ -1,5 +1,11 @@
-div#login {
-
+div.unprotected#login-page{
+  justify-content: center;
+  // border: 1px solid red;
+  // * {
+  //   border: 1px solid blue;
+  // }
+}
+div.form-container {
   border-radius: $border-m;
   display: flex;
   flex-direction: column;
@@ -17,6 +23,10 @@ div#login {
     padding: $pad-m;
   }
 }
+
+div#sign-up {
+  height: 80dvh;
+}
 form#login-form {
   display: flex;
   flex-direction: column;
@@ -30,6 +40,7 @@ form#login-form {
   input {
     padding: $pad-s;
     border-radius: $border-s;
+    color: $black-0;
   }
   button {
     background-color: rgb(136, 135, 135);

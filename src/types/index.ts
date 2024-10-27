@@ -5,7 +5,7 @@ export interface IconProps {
   subscribed?: boolean;
 }
 
-export type Props = {
+export type PropsTypes = {
   className?: string;
   children?: React.ReactNode;
   title?: string;
@@ -33,3 +33,5 @@ export interface PostTypes {
     title: string;
   };
 }
+
+export type EventType = React.ChangeEvent<HTMLInputElement>;

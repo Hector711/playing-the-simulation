@@ -1,16 +1,8 @@
-// :root {
-//   transition: all 0.5s ease-in-out;
-// }
-div#wellcome-body {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 80dvh;
-  padding-inline: 7%;
+div.unprotected#wellcome-page {
+  gap: 2rem;
+  justify-content: center;
 }
 header.wellcome {
-  height: 100%;
-  width: 100%;
   flex-direction: column;
   gap: 1.7rem;
   display: flex;
@@ -36,14 +28,28 @@ header.wellcome {
     color: $white-0;
   }
 }
+
 section.wellcome {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
-
+  flex-direction: column;
   min-width: max-content;
   width: 100%;
   max-width: 35vw;
-  height: 100%;
+  gap: 2rem;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  a.link {
+    @include button-link;
+  }
+  a#guest-link {
+    background-color: $white-1;
+    color: $black-1;
+  }
 }
+

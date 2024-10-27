@@ -4,8 +4,9 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/app/_firebase/config';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import LogIn from '@/components/LogIn';
 import { MainTitle } from '@/components/Maintitle';
+import Link from 'next/link';
+import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 
 export default function WellcomePage() {
   const [user] = useAuthState(auth);
@@ -18,13 +19,17 @@ export default function WellcomePage() {
   }, [user, router]);
 
   return (
-    <div id='wellcome-body'>
-      <header className='wellcome'>
-        <MainTitle />
+    <UnprotectedDiv id='wellcome-page'>
+        <header className='wellcome'>
+          <MainTitle />
       </header>
       <section className='wellcome'>
-        <LogIn />
-      </section>
-    </div>
+        <div>
+          <Link href='/login' className='link'>Iniciar sesion</Link>
+          <Link href='/signup' className='link'>Registrarse</Link>
+        </div>
+        <Link href='/home' className='link' id='guest-link'>Entrar como invitado</Link>
+        </section>
+    </UnprotectedDiv>
   );
 }

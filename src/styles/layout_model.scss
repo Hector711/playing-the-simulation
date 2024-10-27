@@ -6,12 +6,11 @@ div#home-page {
   grid-template-columns: $left-aside 1fr $right-aside;
   grid-template-rows: auto auto 1000px;
   gap: $gap-l;
-
   justify-content: center;
   margin-inline: auto;
   max-width: $width;
   width: 100%;
-  margin-top: 90px;
+  margin-top: calc($height-navbar + $gap-l);
   margin-bottom: 150px;
 }
 
@@ -21,8 +20,6 @@ aside.aside-left {
   flex-direction: column;
   height: 85vh;
   position: relative;
-    // border: 1px solid red;
-
   h2.impact {
     text-align: center;
     padding: 15px;

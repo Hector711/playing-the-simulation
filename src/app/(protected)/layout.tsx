@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <>
       <Navbar />
-      <div id='home-page'>{children}</div>
+      {children}
     </>
   );
 }

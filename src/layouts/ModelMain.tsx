@@ -1,7 +1,7 @@
-import { Props } from '@/types';
+import { PropsTypes } from '@/types';
 import MiniNav from '@/components/MiniNav';
 
-export default function ModelMain({ className, children, title, id, nav }: Props) {
+export default function ModelMain({ className, children, title, id, nav }: PropsTypes) {
 
   return (
     <main className={className} id={id}>

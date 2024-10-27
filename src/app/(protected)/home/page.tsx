@@ -8,9 +8,11 @@ import ModelRight from '@/layouts/ModelRight';
 import AsideProfile from '../_components/AsideProfile';
 import News from '@/app/(protected)/_components/News';
 import Timeline from '@/app/(protected)/_components/Timeline';
+import ProtectedDiv from '@/app/(protected)/_components/ProtectedDiv';
+
 export default function HomePage() {
   return (
-    <>
+    <ProtectedDiv>
       <ModelLeft>
         <AsideProfile />
       </ModelLeft>
@@ -46,14 +48,14 @@ export default function HomePage() {
               <button type='submit'>Crear Post</button>
             </form>
           </AccordionDetails>
-        </Accordion> */}
+        </Accordion>*/}
         {/* <hr className='home' /> */}
         <Timeline />
       </ModelMain>
       <ModelRight>
         <News />
       </ModelRight>
-    </>
+    </ProtectedDiv>
   );
 }
 

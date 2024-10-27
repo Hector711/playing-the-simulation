@@ -5,7 +5,7 @@ import { auth } from '@/app/_firebase/config';
 import { EventType } from '@/types';
 import { useForm } from 'react-hook-form';
 import { createUserDocWithUid } from '@/app/_firebase/users';
-
+import Spinner from '@/components/Spinner';
 export default function SignUp() {
   const [form, setForm] = useState({ email: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +20,7 @@ export default function SignUp() {
 
   const handleSignUp = async () => {
     setIsLoading(true);
-
+    await new Promise(resolve => setTimeout(resolve, 1000));
     try {
       const res = await createUserWithEmailAndPassword(
         form.email,
@@ -70,7 +70,7 @@ export default function SignUp() {
           <p className='errors'>{String(errors.password.type)}</p>
         )}
         <button type='submit' disabled={isLoading}>
-          {isLoading ? <span className='spinner'></span> : 'Registrarse'}
+          {isLoading ? <Spinner /> : 'Registrarse'}
         </button>
       </form>
     </>

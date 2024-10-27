@@ -18,6 +18,7 @@ import '@/styles/comp_login.scss';
 import '@/styles/comp_post.scss';
 import '@/styles/comp_new_post.scss';
 import '@/styles/comp_first_form.scss';
+import '@/styles/comp_spinner.scss';
 
 export const metadata: Metadata = {
   title: 'Playing The Simulation',

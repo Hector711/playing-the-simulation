@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { fetchItems } from '@/app/firebase/getDocuments';
+import { fetchItems } from '@/app/_firebase/getDocuments';
 import { DocumentData } from 'firebase/firestore';
 import Post from './Post';
 

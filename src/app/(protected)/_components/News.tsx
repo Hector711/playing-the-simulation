@@ -1,8 +1,9 @@
 import ModelRight from '@/layouts/ModelRight';
 import NewspaperIcon from '@/icons/NewspaperIcon';
-import { getDocuments } from '@/app/firebase/getDocuments';
+import { getDocuments } from '@/app/_firebase/getDocuments';
 import AdminPost from './AdminPost';
 import NoticiaPost from './NoticiaPost';
+
 export default async function News() {
   const news = await getDocuments('news');
 

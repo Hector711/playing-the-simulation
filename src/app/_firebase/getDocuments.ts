@@ -1,5 +1,5 @@
 import { getFirestore, collection, getDocs, query, orderBy, limit } from 'firebase/firestore';
-import { app } from '@/app/firebase/config';
+import { app } from '@/app/_firebase/config';
 
 async function getCollection(collectionName: string) {
   const db = getFirestore(app);

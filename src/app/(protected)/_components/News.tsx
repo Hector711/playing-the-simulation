@@ -1,4 +1,3 @@
-import React from 'react';
 import ModelRight from '@/layouts/ModelRight';
 import NewspaperIcon from '@/icons/NewspaperIcon';
 import { getDocuments } from '@/app/firebase/getDocuments';

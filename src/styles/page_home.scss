@@ -5,20 +5,10 @@ hr.home {
 main#timeline {
   gap: var(--gap-s);
 }
-section.timeline {
-  header.timeline {
-    display: flex;
-    justify-content: space-between;
-    button {
-      padding: var(--pad-s) 35px;
-      /* border: 0.6px solid var(--white-3) ; */
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  }
-  hr.timeline {
-    height: 100%;
-  }
+div#timeline {
+  display: flex;
+  flex-direction: column;
+  gap: $gap-m;
+
 }
 

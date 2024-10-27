@@ -7,7 +7,7 @@ import ModelLeft from '@/layouts/ModelLeft';
 import ModelRight from '@/layouts/ModelRight';
 import AsideProfile from '../_components/AsideProfile';
 import News from '@/app/(protected)/_components/News';
-
+import Timeline from '@/app/(protected)/_components/Timeline';
 export default function HomePage() {
   return (
     <>
@@ -47,7 +47,8 @@ export default function HomePage() {
             </form>
           </AccordionDetails>
         </Accordion> */}
-        <hr className='home' />
+        {/* <hr className='home' /> */}
+        <Timeline />
       </ModelMain>
       <ModelRight>
         <News />

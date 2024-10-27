@@ -1,7 +1,6 @@
 import React from 'react';
 import ModelRight from '@/layouts/ModelRight';
 import NewspaperIcon from '@/icons/NewspaperIcon';
-import Post from '@/app/(protected)/_components/Post';
 import { getDocuments } from '@/app/firebase/getDocuments';
 import AdminPost from './AdminPost';
 import NoticiaPost from './NoticiaPost';
@@ -15,14 +14,14 @@ export default async function News() {
         <h2 className='impact'>Noticias</h2>
       </header>
       <section className='news-container'>
-        {news.map((item: any) => {
-          if (item.type === 'noticia') {
+        {news.map((item: any, index: number) => {
+          if (item.type === 'Noticia') {
             return (
-              <NoticiaPost {...item} />
+              <NoticiaPost {...item} key={index} />
             );
-          } else if (item.type === 'admin') {
+          } else if (item.type === 'Admin') {
             return (
-              <AdminPost {...item} />
+              <AdminPost {...item} key={index} />
             );
           } 
         })}

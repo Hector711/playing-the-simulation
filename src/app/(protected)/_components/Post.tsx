@@ -21,24 +21,24 @@ const LABELS_CODES = {
 };
 
 export default function Post({
-  labels,
+  // labels,
   id,
-  createdAt,
+  // createdAt,
   user,
   post,
-  upvotes,
+  // upvotes,
 }: PostTypes) {
   // Asegúrate de que 'labels' es una de las claves válidas
-  const labelKey = labels as keyof typeof LABELS_CODES;
+  // const labelKey = labels as keyof typeof LABELS_CODES;
 
   return (
     <article className='post' id={id}>
-      <div className='post' id='top'>
+      {/* <div className='post' id='top'>
         <a href='' className='underlined' id=''>
           {LABELS_CODES[labelKey]}
         </a>
       </div>
-      <hr />
+      <hr /> */}
 
       <header className='post'>
         <Avatar
@@ -50,25 +50,23 @@ export default function Post({
           <span>Hace 2 h</span>
         </div>
         <button id='save'>
-          <SaveIcon className='post-icons' />
+          <SaveIcon />
         </button>
       </header>
 
       <section className='post'>
-        <Link href={`/post/${id}`}>
-          <h4>{post.title}</h4>
-          <p>{post.content}</p>
-        </Link>
+        <h4>{post.title}</h4>
+        <p>{post.content}</p>
       </section>
-      <hr />
-      <footer className='post'>
+      {/* <hr /> */}
+      {/* <footer className='post'>
         <button>
-          <LikeIcon className='post-icons' /> {upvotes}
+          <LikeIcon /> {upvotes}
         </button>
         <button>
-          <SendIcon className='post-icons' />
+          <SendIcon />
         </button>
-      </footer>
+      </footer> */}
     </article>
   );
 }

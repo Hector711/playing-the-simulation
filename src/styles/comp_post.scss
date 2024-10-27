@@ -1,17 +1,27 @@
 article.post {
   background-color: $blue-1;
   border-radius: $border-m;
-  padding: 10px 19px;
+  padding: 18px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 8px;
   border: 0.5px solid $white-3;
+  .icons {
+    color: $orange-0;
+    width: 22px;
+    height: 22px;
+    // background-color: red;
+  }
+  * {
+    // border: 1px solid rgb(243, 241, 241);
+  }
 }
 
 div.post#top {
   display: flex;
   gap: $gap-s;
   align-items: center;
+  // background-color: red;
   #post-type {
     border: 1px solid $white-2;
     padding: 5px 15px;
@@ -39,11 +49,6 @@ header.post {
   }
   #save {
     margin-left: auto;
-    .post-icons {
-      color: $orange-0;
-      width: 30px;
-      height: 30px;
-    }
   }
   span {
     color: $white-2;
@@ -53,30 +58,23 @@ header.post {
 section.post {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 footer.post {
   display: flex;
   justify-content: space-around;
+  // background-color: red;
   button {
     display: flex;
     gap: 8px;
     font-size: 0.9rem;
     align-items: center;
   }
-  .post-icons {
-    color: $orange-0;
-    width: 25px;
-    height: 25px;
-  }
+  
 }
 
-section#timeline {
-  display: flex;
-  flex-direction: column;
-  gap: $gap-m;
-}
+
 
 #avatar {
   background-color: #bbc9e5;

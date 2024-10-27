@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import Avatar from '@/app/(protected)/_components/Avatar';
-import NotificationsIcon from '@/icons/NotificationsIcon';
-import MessagesIcon from '@/icons/MessagesIcon';
+// import MessagesIcon from '@/icons/MessagesIcon';
+// import NotificationsIcon from '@/icons/NotificationsIcon';
 import SaveIcon from '@/icons/SaveIcon';
 import GoalsIcon from '@/icons/GoalsIcon';
 import GameIcon from '@/icons/GameIcon';
 import BusinessIcon from '@/icons/BusinessIcon';
 import PigIcon from '@/icons/PigIcon';
-import NewPostIcon from '@/icons/NewPostIcon';
+// import NewPostIcon from '@/icons/NewPostIcon';
 import LogOutButton from './LogOutButton';
 
 export default function AsideProfile() {
   const asideProfileLinks = [
-    { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },
-    { to: '/messages', title: 'Mensajes', icon: MessagesIcon },
+    // { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },
+    // { to: '/messages', title: 'Mensajes', icon: MessagesIcon },
     { to: '/saved', title: 'Guardados', icon: SaveIcon },
   ];
 
@@ -73,21 +73,21 @@ export default function AsideProfile() {
       </section>
       <footer id='logout'>
         <LogOutButton />
-        <NewPostLink />
+        {/* <NewPostLink /> */}
       </footer>
     </>
   );
 }
 
-function NewPostLink() {
-  return (
-    <Link
-      href='/home/new-post'
-      className='aside-link orange-hover blurr'
-      id='new-post-link'
-    >
-      <NewPostIcon />
-      <span className='impact'>Nuevo Post</span>
-    </Link>
-  );
-}
+// function NewPostLink() {
+//   return (
+//     <Link
+//       href='/home/new-post'
+//       className='aside-link orange-hover blurr'
+//       id='new-post-link'
+//     >
+//       <NewPostIcon />
+//       <span className='impact'>Nuevo Post</span>
+//     </Link>
+//   );
+// }

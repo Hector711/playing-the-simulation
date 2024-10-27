@@ -1,31 +1,45 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { fetchItems } from '@/app/_firebase/getDocuments';
-import { DocumentData } from 'firebase/firestore';
+import {
+  DocumentData
+} from 'firebase/firestore';
 import Post from './Post';
+import { useSearchParams } from 'next/navigation';
+import { fetchPostsPage } from '@/app/_firebase/posts';
 
 export default function Timeline() {
   const [items, setItems] = useState<DocumentData[]>([]);
+  const [page, setPage] = useState(1);
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchItems();
-      setItems(data);
-    };
+    const pageParam = searchParams.get('page');
+    if (pageParam) {
+      setPage(Number(pageParam));
+    }
+  }, [searchParams]);
 
-    fetchData();
-  }, []);
+  useEffect(() => {
+    async function loadData() {
+      const data: DocumentData[] = await fetchPostsPage(page);
+      console.log('data -->', data);
+      setItems(data);
+    }
+    loadData();
+  }, [page]);
+
+
 
   return (
     <div id='timeline'>
       {items.map((item, index) => (
-        <Post 
-          {...item} 
-          key={index} 
-          id={item.id} 
-          name={item.name} 
-          labels={item.labels} 
-          upvotes={item.upvotes} 
+        <Post
+          {...item}
+          key={index}
+          id={item.id}
+          name={item.name}
+          labels={item.labels}
+          upvotes={item.upvotes}
           createdAt={item.createdAt}
           user={item.user}
           post={item.post}
@@ -35,4 +49,6 @@ export default function Timeline() {
   );
 }
 
-{/* <pre className='text-xs w-20'>{JSON.stringify(item, null, 2)}</pre> */}
+{
+  /* <pre className='text-xs w-20'>{JSON.stringify(item, null, 2)}</pre> */
+}

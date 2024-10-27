@@ -6,10 +6,12 @@ import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const [user] = useAuthState(auth);
-  console.log({ user });
-
   const router = useRouter();
 
+  if (!user) {
+    return console.log('no user');
+  }
+  
   const handleLogOut = () => {
     const logout = auth.signOut();
     if (!logout) {

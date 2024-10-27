@@ -1,9 +1,9 @@
-import { getDocs, query, orderBy, limit } from 'firebase/firestore';
+import { getDocs, query, orderBy, limit, startAfter } from 'firebase/firestore';
 import getCollection from '@/app/_firebase/getCollection';
 
-export async function getDocuments(collectionName: string) {
-  const newsCollection = await getCollection(collectionName);
-  const q = query(newsCollection, orderBy('createdAt', 'desc'));
+export async function fetchNews(){
+  const newsCollection = await getCollection('news');
+  const q = query(newsCollection, orderBy('createdAt', 'desc'), limit(10));
   const newsSnapshot = await getDocs(q);
   const newsList = newsSnapshot.docs.map(doc => {
     return {
@@ -11,15 +11,5 @@ export async function getDocuments(collectionName: string) {
       ...doc.data(),
     };
   });
-  console.log({newsList});
-
   return newsList;
 }
-
-export async function fetchItems() {
-  const postsCollection = await getCollection('posts');
-  const q = query(postsCollection, orderBy('createdAt', 'desc'), limit(10));
-  const querySnapshot = await getDocs(q);
-  const data = querySnapshot.docs.map(doc => doc.data());
-  return data;
-};

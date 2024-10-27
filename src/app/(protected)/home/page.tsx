@@ -9,6 +9,8 @@ import AsideProfile from '../_components/AsideProfile';
 import News from '@/app/(protected)/_components/News';
 import Timeline from '@/app/(protected)/_components/Timeline';
 import ProtectedDiv from '@/app/(protected)/_components/ProtectedDiv';
+import Pagination from '@/app/(protected)/_components/Pagination';
+
 
 export default function HomePage() {
   return (
@@ -18,6 +20,7 @@ export default function HomePage() {
       </ModelLeft>
 
       <ModelMain id='timeline' className='home'>
+        
         {/* <Accordion className='accordions' id='new-post-accordion'>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon className='arrow-icons' />}
@@ -50,7 +53,11 @@ export default function HomePage() {
           </AccordionDetails>
         </Accordion>*/}
         {/* <hr className='home' /> */}
+
+
+
         <Timeline />
+        <Pagination />
       </ModelMain>
       <ModelRight>
         <News />

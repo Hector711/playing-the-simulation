@@ -153,3 +153,15 @@ div.unprotected {
   width: 100%;
   height: 90dvh;
 }
+#pagination-container {
+  background-color: $blue-1;
+  border-radius: $border-m;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px !important;
+  margin-top: 2rem;
+  * {
+    color: white;
+  }
+}

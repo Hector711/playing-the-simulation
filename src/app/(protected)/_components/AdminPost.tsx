@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Avatar from '@/app/(protected)/_components/Avatar';
+import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 
 interface AdminPostTypes {
   id: string;
@@ -17,15 +17,17 @@ interface AdminPostTypes {
 }
 
 export default function AdminPost({
-  user,
+    user,
     post,
 }: AdminPostTypes) {
   return (
     <article className='news-post'>
       <header>
-        <Avatar
+        <AvatarUser
+          alt={user.firstName}
           src='https://i.ibb.co/s5smtmL/profile-pic.jpg'
-          business={true}
+          size='news'
+          status='entrepeneur'
         />
         <Link href={''} id='url-profile'>
           <h4>{`${user.firstName} ${user.lastName}`}</h4>

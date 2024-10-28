@@ -1,11 +1,13 @@
 import React from 'react';
-import Avatar from '@/app/(protected)/_components/Avatar';
+import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 import Link from 'next/link';
 import LikeIcon from '@/icons/LikeIcon';
 import CommentIcon from '@/icons/CommentIcon';
 import SendIcon from '@/icons/SendIcon';
 import SaveIcon from '@/icons/SaveIcon';
-import { PostTypes } from '@/types';
+import { PostTypes, Timestamp } from '@/types';
+import { formatDistanceToNow } from 'date-fns';
+import { es } from 'date-fns/locale';
 
 const LABELS_CODES = {
   '9aeac4f45ffd43e6a9ffb99856017ff0': 'La Oficina 👔',
@@ -21,33 +23,39 @@ const LABELS_CODES = {
 };
 
 export default function Post({
-  // labels,
   id,
-  // createdAt,
   user,
   post,
-  // upvotes,
+  metadata,
+  labels,
 }: PostTypes) {
-  // Asegúrate de que 'labels' es una de las claves válidas
-  // const labelKey = labels as keyof typeof LABELS_CODES;
 
+  const timestamp = metadata?.createdAt;
+  function fechaRelativa(time: Timestamp) {
+    if (!time || typeof time.seconds !== 'number') {
+      return 'Fecha no disponible';
+    }
+    const milisegundos = time.seconds * 1000;
+    const fecha = new Date(milisegundos);
+    if (isNaN(fecha.getTime())) {
+      return 'Fecha no disponible';
+    }
+    return formatDistanceToNow(fecha, { addSuffix: true,  locale: es  });
+  }
   return (
     <article className='post' id={id}>
-      {/* <div className='post' id='top'>
-        <a href='' className='underlined' id=''>
-          {LABELS_CODES[labelKey]}
-        </a>
-      </div>
-      <hr /> */}
-
       <header className='post'>
-        <Avatar
-          src='https://firebasestorage.googleapis.com/v0/b/hacker-house-2024.appspot.com/o/users%2F1729731200000%2Fprofile.png?alt=media&token=64444444444444444444444444444444'
-          business='true'
-        />
+        <figure>
+          <AvatarUser
+            src={user.miniAvatar}
+          alt={user.firstName}
+          size='post'
+            status='employee'
+          />
+        </figure>
         <div id='urls-container'>
           <h4>{`${user.firstName} ${user.lastName}`}</h4>
-          <span>Hace 2 h</span>
+          <span>{fechaRelativa(timestamp)}</span>
         </div>
         <button id='save'>
           <SaveIcon />
@@ -58,15 +66,7 @@ export default function Post({
         <h4>{post.title}</h4>
         <p>{post.content}</p>
       </section>
-      {/* <hr /> */}
-      {/* <footer className='post'>
-        <button>
-          <LikeIcon /> {upvotes}
-        </button>
-        <button>
-          <SendIcon />
-        </button>
-      </footer> */}
+
     </article>
   );
 }

@@ -22,28 +22,25 @@ export default function Timeline() {
   useEffect(() => {
     async function loadData() {
       const data: DocumentData[] = await fetchPostsPage(page);
-      console.log('data -->', data);
       setItems(data);
     }
     loadData();
   }, [page]);
 
-
-
   return (
     <div id='timeline'>
       {items.map((item, index) => (
         <Post
-          {...item}
-          key={index}
-          id={item.id}
-          name={item.name}
-          labels={item.labels}
-          upvotes={item.upvotes}
-          createdAt={item.createdAt}
-          user={item.user}
-          post={item.post}
-        />
+        {...item}
+        key={index}
+        id={item.id}
+        name={item.name}
+        labels={item.labels}
+        upvotes={item.upvotes}
+        metadata={item.metadata}
+        user={item.user}
+        post={item.post}
+      />
       ))}
     </div>
   );

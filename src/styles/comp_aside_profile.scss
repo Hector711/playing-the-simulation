@@ -1,13 +1,9 @@
 header#profile {
   height: auto;
-  // background-color: #8c0f0f;
   align-items: center;
   flex-direction: column;
   display: flex;
   overflow: hidden;   
-
-  // * {
-  // }
   #profile-link {
     display: flex;
     flex-direction: column;
@@ -27,12 +23,7 @@ header#profile {
       object-fit: cover;
       overflow: hidden;
     }
-    figure.avatar-container {
-      z-index: 999;
-      position: relative;
-      width: 75px;
-      height: 75px;
-    }
+
   }
   #profile-link:hover {
     text-decoration: underline;

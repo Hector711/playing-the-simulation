@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Avatar from '@/app/(protected)/_components/Avatar';
+import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 // import MessagesIcon from '@/icons/MessagesIcon';
 // import NotificationsIcon from '@/icons/NotificationsIcon';
 import SaveIcon from '@/icons/SaveIcon';
@@ -11,6 +11,7 @@ import PigIcon from '@/icons/PigIcon';
 import LogOutButton from './LogOutButton';
 
 export default function AsideProfile() {
+
   const asideProfileLinks = [
     // { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },
     // { to: '/messages', title: 'Mensajes', icon: MessagesIcon },
@@ -26,9 +27,11 @@ export default function AsideProfile() {
             src='https://i.ibb.co/frmtYRP/Angel-Caido-5-MB.jpg'
             alt=''
           />
-          <Avatar
+          <AvatarUser
+            alt='Foto de perfil'
             src='https://i.ibb.co/s5smtmL/profile-pic.jpg'
-            business='yes'
+            size='user'
+            status='entrepeneur'
           />
           <h4>Héctor Guerra</h4>
         </Link>

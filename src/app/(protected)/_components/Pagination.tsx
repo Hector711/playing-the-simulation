@@ -13,7 +13,6 @@ export default function PaginationOutlined() {
   useEffect(() => {
     async function getTotalPages() {
       const totalPages = await countPages();
-      console.log('totalPages -->', totalPages);
       setTotalPages(totalPages);
     }
     getTotalPages();

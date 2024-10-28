@@ -23,6 +23,8 @@ body {
   }
 }
 
+
+
 /* TITULO PRINCIPAL */
 h1.main-title {
   font-family: 'Palo';
@@ -166,3 +168,37 @@ div.unprotected {
   }
 }
 
+
+
+
+.avatar-profile {
+  width: $avatar-profile !important;
+  height: $avatar-profile !important;
+}
+.avatar-user {
+  width: $avatar-user !important;
+  height: $avatar-user !important;
+}
+.avatar-post {
+  width: $avatar-post !important;
+  height: $avatar-post !important;
+}
+.avatar-news {
+  width: $avatar-news !important;
+  height: $avatar-news !important;
+}
+
+.ring-avatar {
+  z-index: 999;
+  border-radius: 50%;
+
+  &.entrepeneur{
+    border: 3px solid $orange-0;
+  }
+  &.investor{
+    border: 3px solid $purple-0;
+  }
+  &.employee{
+    border: 3px solid $blue-0;
+  }
+}

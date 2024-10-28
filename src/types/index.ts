@@ -13,25 +13,59 @@ export type PropsTypes = {
   nav?: { page: string; slug: string; title: string }[];
 };
 
+
+
+export type EventType = React.ChangeEvent<HTMLInputElement>;
+
+
 export interface PostTypes {
   id: string;
   name: string;
   labels: string;
   upvotes: number;
-  createdAt: {
-    seconds: number;
-    nanoseconds: number;
-  };
-  user: {
-    name: string;
-    lastName: string;
-    id: string;
-    firstName: string;
-  };
-  post: {
-    content: string;
-    title: string;
-  };
+  createdAt: Timestamp;
+  updatedAt: Timestamp;
+  contributors: Contributor[];
+  metadata: Metadata;
+  post: PostContent;
+  user: User;
 }
 
-export type EventType = React.ChangeEvent<HTMLInputElement>;
+export interface Timestamp {
+  seconds: number;
+  nanoseconds: number;
+}
+
+export interface Contributor {
+  firstName: string;
+  lastName: string;
+  id: string;
+  miniAvatar: string;
+  username: string;
+}
+
+export interface Metadata {
+  comments: number;
+  createdAt: Timestamp;
+  updatedAt: Timestamp;
+}
+
+export interface PostContent {
+  content: string;
+  title: string;
+}
+
+export interface User {
+  username: string;
+  id: string;
+  firstName: string;
+  lastName: string;
+  miniAvatar: string;
+  score: Score;
+}
+
+export interface Score {
+  lv: number;
+  pts: number;
+  role: number;
+}

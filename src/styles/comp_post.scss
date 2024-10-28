@@ -23,20 +23,26 @@ header.post {
   * {
     // border: 1px solid #f3f1f1;
   }
+  div#urls-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      color: $white-2;
+      font-size: 0.8rem;
+      line-height: 1.2;
+    }
+  }
   figure {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  div#urls-container {
-   
-  }
   #save {
     margin-left: auto;
   }
-  span {
-    color: $white-2;
-  }
+ 
 }
 
 section.post {

@@ -4,19 +4,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/app/_firebase/config';
 import { useRouter } from 'next/navigation';
 
-export default function Home() {
+export default function LogOutButton() {
   const [user] = useAuthState(auth);
   const router = useRouter();
 
-  if (!user) {
-    return console.log('no user');
-  }
-  
   const handleLogOut = () => {
-    const logout = auth.signOut();
-    if (!logout) {
-      console.log('logout error');
-    } else {
+    if (user) {
+      auth.signOut();
       router.push('/');
     }
   };

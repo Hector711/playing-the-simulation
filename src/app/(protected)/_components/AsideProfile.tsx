@@ -59,10 +59,10 @@ export default function AsideProfile() {
             </h6>
           </div>
         </div>
-        <Link href='/planning' id='goals-link'>
+        {/* <Link href='/planning' id='goals-link'>
           <GoalsIcon />
           <h2>Planificación</h2>
-        </Link>
+        </Link> */}
       </header>
       <section id='profile-links'>
         {asideProfileLinks.map(({ to, title, icon: Icon }, i) => {

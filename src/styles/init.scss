@@ -17,10 +17,10 @@ body {
   position: relative;
   margin: 0;
   min-width: 320px;
-  div#body {
-    margin-top: $height-navbar;
-    border: 1px solid red;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: $pad-inline-general;
 }
 
 
@@ -154,6 +154,7 @@ div.unprotected {
   flex-direction: column;
   width: 100%;
   height: 90dvh;
+  padding-inline: $pad-inline-general;
 }
 #pagination-container {
   background-color: $blue-1;

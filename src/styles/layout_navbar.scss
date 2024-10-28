@@ -5,8 +5,8 @@ nav#nav {
   display: flex;
   justify-content: center;
   height: $height-navbar;
-  // border: 0.5px solid white;
   z-index: 999;
+  padding-inline: $pad-inline-general;
 }
 
 #nav-container {
@@ -16,6 +16,7 @@ nav#nav {
   justify-content: space-between;
   width: 100%;
   max-width: $width;
+
   h1 {
     font-size: 28px;
     text-wrap: nowrap;

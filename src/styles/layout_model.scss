@@ -7,11 +7,10 @@ div.protected {
   grid-template-rows: auto auto 1000px;
   gap: $gap-l;
   justify-content: center;
-  margin-inline: auto;
   max-width: $width;
   width: 100%;
-  margin-top: calc($height-navbar + $gap-l);
-  margin-bottom: 150px;
+  margin-block: calc($height-navbar + $gap-l) 150px;
+  margin-inline: auto;
 }
 aside.aside-left {
   grid-area: left;

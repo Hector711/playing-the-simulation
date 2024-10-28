@@ -10,7 +10,7 @@
 //   const [cardMode, setCardMode] = useState(true);
 //   useEffect(() => {
 //     router.push('/classroom/de0a100');
-//   }, []); 
+//   }, []);
 
 //   const CLASSROOM_SLUGS = {
 //     de0a100: <De0A100Page />,
@@ -55,9 +55,6 @@
 //   );
 // }
 
-
 export default function page() {
-  return (
-    <div>page</div>
-  )
+  return <div>page</div>;
 }

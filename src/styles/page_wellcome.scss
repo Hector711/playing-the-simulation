@@ -10,7 +10,7 @@ header.wellcome {
   justify-content: center;
   padding-top: 5rem;
   h1 {
-    font-size:calc(2rem + 2vw);
+    font-size: calc(2rem + 2vw);
     text-shadow: 2px 2px 8px #707070;
     line-height: 1;
     height: $height-text-wellcome;
@@ -52,4 +52,3 @@ section.wellcome {
     color: $black-1;
   }
 }
-

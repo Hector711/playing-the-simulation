@@ -1,7 +1,7 @@
 div.unprotected#signup-page {
   gap: 2rem;
   padding-top: 8rem;
-  *{ 
+  * {
     // border: 1px solid red;
   }
 }
@@ -10,7 +10,6 @@ section#sign-up-form {
   flex-direction: column;
   align-items: center;
   width: 500px;
-
 }
 section#skool-question {
   div#skool-buttons {
@@ -19,7 +18,6 @@ section#skool-question {
     align-items: center;
     gap: 1rem;
   }
-  
 }
 
 form#skool-form {

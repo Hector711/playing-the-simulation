@@ -1,4 +1,3 @@
-
 interface NoticiaPost {
   id: string;
   type: string;
@@ -7,13 +6,13 @@ interface NoticiaPost {
   content: string;
 }
 
-export default function NoticiaPost({ title, content}: NoticiaPost) {
+export default function NoticiaPost({ title, content }: NoticiaPost) {
   return (
     <article className='news-post'>
       <section>
-          <h4>{title}</h4>
-          <p>{content}</p>
+        <h4>{title}</h4>
+        <p>{content}</p>
       </section>
     </article>
-  )
+  );
 }

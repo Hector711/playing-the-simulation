@@ -1,8 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import {
-  DocumentData
-} from 'firebase/firestore';
+import { DocumentData } from 'firebase/firestore';
 import Post from './Post';
 import { useSearchParams } from 'next/navigation';
 import { fetchPostsPage } from '@/app/_firebase/posts';
@@ -31,17 +29,17 @@ export default function Timeline() {
     <div id='timeline'>
       {items.map((item, index) => (
         <Post
-        {...item}
-        key={index}
-        id={item.id}
-        name={item.name}
-        labels={item.labels}
-        upvotes={item.upvotes}
-        contributors={item.contributors}
-        metadata={item.metadata}
-        user={item.user}
-        post={item.post}
-      />
+          {...item}
+          key={index}
+          id={item.id}
+          name={item.name}
+          labels={item.labels}
+          upvotes={item.upvotes}
+          contributors={item.contributors}
+          metadata={item.metadata}
+          user={item.user}
+          post={item.post}
+        />
       ))}
     </div>
   );

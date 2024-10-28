@@ -1,7 +1,12 @@
 import React from 'react';
 import { PropsTypes } from '@/types';
 
-export default function ModelAsideRight({ children, title, className, id }: PropsTypes) {
+export default function ModelAsideRight({
+  children,
+  title,
+  className,
+  id,
+}: PropsTypes) {
   return (
     <aside className={`aside-right ${className}`} id={id}>
       {title ? (

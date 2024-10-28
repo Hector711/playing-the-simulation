@@ -1,6 +1,6 @@
-'use client'
+'use client';
 
-import GameIcon from '@/icons/GameIcon'
+import GameIcon from '@/icons/GameIcon';
 
 export function MainTitle() {
   return (

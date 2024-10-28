@@ -3,15 +3,10 @@ import { IconProps } from '@/types';
 export default function DotIcon(props: IconProps) {
   const filledDot = false;
   return filledDot ? (
-    <svg
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className="icons"
-    {...props}
-  >
-    <path d="M0 0h24v24H0z" fill="none" />
-    <path d="M12 7a5 5 0 11-4.995 5.217L7 12l.005-.217A5 5 0 0112 7z" />
-  </svg>
+    <svg viewBox='0 0 24 24' fill='currentColor' className='icons' {...props}>
+      <path d='M0 0h24v24H0z' fill='none' />
+      <path d='M12 7a5 5 0 11-4.995 5.217L7 12l.005-.217A5 5 0 0112 7z' />
+    </svg>
   ) : (
     <svg
       viewBox='0 0 24 24'

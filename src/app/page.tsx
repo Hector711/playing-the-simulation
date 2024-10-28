@@ -20,16 +20,22 @@ export default function WellcomePage() {
 
   return (
     <UnprotectedDiv id='wellcome-page'>
-        <header className='wellcome'>
-          <MainTitle />
+      <header className='wellcome'>
+        <MainTitle />
       </header>
       <section className='wellcome'>
         <div>
-          <Link href='/login' className='link'>Iniciar sesion</Link>
-          <Link href='/signup' className='link'>Registrarse</Link>
+          <Link href='/login' className='link'>
+            Iniciar sesion
+          </Link>
+          <Link href='/signup' className='link'>
+            Registrarse
+          </Link>
         </div>
-        <Link href='/home' className='link' id='guest-link'>Entrar como invitado</Link>
-        </section>
+        <Link href='/home' className='link' id='guest-link'>
+          Entrar como invitado
+        </Link>
+      </section>
     </UnprotectedDiv>
   );
 }

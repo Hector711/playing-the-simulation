@@ -11,7 +11,6 @@ import PigIcon from '@/icons/PigIcon';
 import LogOutButton from './LogOutButton';
 
 export default function AsideProfile() {
-
   const asideProfileLinks = [
     // { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },
     // { to: '/messages', title: 'Mensajes', icon: MessagesIcon },

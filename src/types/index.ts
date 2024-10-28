@@ -13,10 +13,7 @@ export type PropsTypes = {
   nav?: { page: string; slug: string; title: string }[];
 };
 
-
-
 export type EventType = React.ChangeEvent<HTMLInputElement>;
-
 
 export interface PostTypes {
   id: string;

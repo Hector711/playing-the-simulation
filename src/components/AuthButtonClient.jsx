@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import GitHubIcon from "@/icons/GitHubIcon";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
-import { useRouter } from "next/navigation";
+import GitHubIcon from '@/icons/GitHubIcon';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useRouter } from 'next/navigation';
 
 export default function AuthButton({ session }) {
   const router = useRouter();
@@ -10,9 +10,9 @@ export default function AuthButton({ session }) {
 
   const handleSignIn = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "github",
+      provider: 'github',
       options: {
-        redirectTo: "http://localhost:3000/auth/callback",
+        redirectTo: 'http://localhost:3000/auth/callback',
       },
     });
     if (error) {
@@ -26,24 +26,26 @@ export default function AuthButton({ session }) {
     if (error) {
       console.log(error);
     }
-    router.push("/login");
+    router.push('/login');
     router.refresh();
   };
-  console.log("session:", session);
+  console.log('session:', session);
 
   return (
     <>
       {session === null ? (
         <button
-          type="button"
-          className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+          type='button'
+          className='text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2'
           onClick={handleSignIn}
         >
           <GitHubIcon />
           Iniciar sesion con Github
         </button>
       ) : (
-        <button onClick={handleSignOut} className="blurr" id="logout">Cerrar Sesión</button>
+        <button onClick={handleSignOut} className='blurr' id='logout'>
+          Cerrar Sesión
+        </button>
       )}
     </>
   );

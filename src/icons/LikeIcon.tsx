@@ -3,7 +3,6 @@ import { IconProps } from '@/types';
 export default function LikeIcon(props: IconProps) {
   return (
     <svg
-
       // width={24}
       // height={24}
       viewBox='0 0 24 24'

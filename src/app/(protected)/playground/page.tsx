@@ -1,5 +1,3 @@
 export default function PlaygroundPage() {
-  return (
-    <div>Classroom</div>
-  )
+  return <div>Classroom</div>;
 }

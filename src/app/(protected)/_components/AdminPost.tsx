@@ -16,10 +16,7 @@ interface AdminPostTypes {
   };
 }
 
-export default function AdminPost({
-    user,
-    post,
-}: AdminPostTypes) {
+export default function AdminPost({ user, post }: AdminPostTypes) {
   return (
     <article className='news-post'>
       <header>

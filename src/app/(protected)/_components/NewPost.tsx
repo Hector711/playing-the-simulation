@@ -11,8 +11,6 @@ export default function NewPost() {
     setState(prevState => !prevState);
   };
 
-
-
   const category = [
     { value: 'win', label: '🏆 WIN' },
     { value: 'biblioteca', label: '👔 Biblioteca' },
@@ -31,7 +29,7 @@ export default function NewPost() {
 
   return (
     <div id='new-post'>
-      <form >
+      <form>
         <label htmlFor='title' className='hidden'></label>
         <input type='text' placeholder='Tiulo' id='title' name='title' />
         <div id='options'>
@@ -42,18 +40,16 @@ export default function NewPost() {
             <PollIcon />
           </button>
           <button>
-            <GifIcon   />
+            <GifIcon />
           </button>
         </div>
         <div id='selects'>
           <label htmlFor='category' className='hidden'></label>
-          
-          <label htmlFor='label' className='hidden'></label>
 
+          <label htmlFor='label' className='hidden'></label>
         </div>
         <button id='send'>Enviar</button>
       </form>
     </div>
   );
 }
-

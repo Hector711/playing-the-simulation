@@ -3,7 +3,7 @@ header#profile {
   align-items: center;
   flex-direction: column;
   display: flex;
-  overflow: hidden;   
+  overflow: hidden;
   #profile-link {
     display: flex;
     flex-direction: column;
@@ -23,7 +23,6 @@ header#profile {
       object-fit: cover;
       overflow: hidden;
     }
-
   }
   #profile-link:hover {
     text-decoration: underline;

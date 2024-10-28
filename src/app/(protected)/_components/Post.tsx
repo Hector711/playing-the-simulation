@@ -22,14 +22,7 @@ const LABELS_CODES = {
   '5875bca6326c4f4d9e7833674e1f21f3': 'Trabajo (Oferta/Demanda) 💼',
 };
 
-export default function Post({
-  id,
-  user,
-  post,
-  metadata,
-  labels,
-}: PostTypes) {
-
+export default function Post({ id, user, post, metadata, labels }: PostTypes) {
   const timestamp = metadata?.createdAt;
   function fechaRelativa(time: Timestamp) {
     if (!time || typeof time.seconds !== 'number') {
@@ -40,7 +33,7 @@ export default function Post({
     if (isNaN(fecha.getTime())) {
       return 'Fecha no disponible';
     }
-    return formatDistanceToNow(fecha, { addSuffix: true,  locale: es  });
+    return formatDistanceToNow(fecha, { addSuffix: true, locale: es });
   }
   return (
     <article className='post' id={id}>
@@ -48,8 +41,8 @@ export default function Post({
         <figure>
           <AvatarUser
             src={user.miniAvatar}
-          alt={user.firstName}
-          size='post'
+            alt={user.firstName}
+            size='post'
             status='employee'
           />
         </figure>
@@ -66,7 +59,6 @@ export default function Post({
         <h4>{post.title}</h4>
         <p>{post.content}</p>
       </section>
-
     </article>
   );
 }

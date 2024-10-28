@@ -5,4 +5,3 @@ export default async function getCollection(collectionName: string) {
   const dataCollection = collection(db, collectionName);
   return dataCollection;
 }
-

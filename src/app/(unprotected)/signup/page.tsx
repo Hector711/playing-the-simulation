@@ -17,7 +17,7 @@ export default function SignUpPage() {
           <button onClick={() => setSkoolUser(true)}>Si</button>
           <button onClick={() => setSkoolUser(false)}>No</button>
         </div>
-      </section> 
+      </section>
       <section id='sign-up-form'>
         {skoolUser === null ? '' : skoolUser ? <SkoolForm /> : <SignUp />}
       </section>

@@ -16,14 +16,10 @@ export default async function News() {
       <section className='news-container'>
         {news.map((item: any, index: number) => {
           if (item.type === 'Noticia') {
-            return (
-              <NoticiaPost {...item} key={index} />
-            );
+            return <NoticiaPost {...item} key={index} />;
           } else if (item.type === 'Admin') {
-            return (
-              <AdminPost {...item} key={index} />
-            );
-          } 
+            return <AdminPost {...item} key={index} />;
+          }
         })}
       </section>
     </ModelRight>

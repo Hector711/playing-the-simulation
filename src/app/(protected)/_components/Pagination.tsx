@@ -18,15 +18,23 @@ export default function PaginationOutlined() {
     getTotalPages();
   }, []);
 
-  const handlePageChange = (event: React.ChangeEvent<unknown>, page: number) => {
+  const handlePageChange = (
+    event: React.ChangeEvent<unknown>,
+    page: number,
+  ) => {
     console.log(event);
     console.log(`Página seleccionada: ${page}`);
     router.push(`/home?page=${page}`);
   };
-  
+
   return (
     <Stack spacing={4} id='pagination-container'>
-      <Pagination count={totalPages} variant="outlined" color="primary" onChange={handlePageChange}/>
+      <Pagination
+        count={totalPages}
+        variant='outlined'
+        color='primary'
+        onChange={handlePageChange}
+      />
     </Stack>
   );
 }

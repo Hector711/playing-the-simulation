@@ -37,6 +37,7 @@ export default function Timeline() {
         name={item.name}
         labels={item.labels}
         upvotes={item.upvotes}
+        contributors={item.contributors}
         metadata={item.metadata}
         user={item.user}
         post={item.post}

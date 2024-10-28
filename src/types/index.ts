@@ -23,8 +23,6 @@ export interface PostTypes {
   name: string;
   labels: string;
   upvotes: number;
-  createdAt: Timestamp;
-  updatedAt: Timestamp;
   contributors: Contributor[];
   metadata: Metadata;
   post: PostContent;

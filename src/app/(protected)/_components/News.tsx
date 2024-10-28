@@ -14,7 +14,7 @@ export default async function News() {
       </header>
       <section className='news-container'>
         {news.map((item: any, index: number) => {
-          return <NewsCard {...item} key={index} />;  
+          return <NewsCard {...item} key={index} />;
         })}
       </section>
     </ModelRight>

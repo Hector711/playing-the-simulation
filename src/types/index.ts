@@ -73,7 +73,7 @@ export interface NewsCardTypes {
     lastName: string;
     username: string;
   };
-  createdAt?: any;
+  createdAt?: Timestamp;
   post: {
     title: string;
     content: string;

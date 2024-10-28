@@ -1,8 +1,7 @@
 import ModelRight from '@/layouts/ModelRight';
 import NewspaperIcon from '@/icons/NewspaperIcon';
 import { fetchNews } from '@/app/_firebase/getDocuments';
-import AdminPost from './AdminPost';
-import NoticiaPost from './NoticiaPost';
+import NewsCard from './NewsCard';
 
 export default async function News() {
   const news = await fetchNews();
@@ -15,11 +14,7 @@ export default async function News() {
       </header>
       <section className='news-container'>
         {news.map((item: any, index: number) => {
-          if (item.type === 'Noticia') {
-            return <NoticiaPost {...item} key={index} />;
-          } else if (item.type === 'Admin') {
-            return <AdminPost {...item} key={index} />;
-          }
+          return <NewsCard {...item} key={index} />;  
         })}
       </section>
     </ModelRight>

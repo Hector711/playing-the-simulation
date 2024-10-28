@@ -7,6 +7,7 @@ export default function MiniNav({
 }: {
   nav: { title: string; page: string; slug: string }[];
 }) {
+  const pathname = usePathname();
   return (
     <nav id='main-nav'>
       {nav.map((item, i) => (
@@ -14,7 +15,7 @@ export default function MiniNav({
           key={i}
           href={`/${item.page}/${item.slug}`}
           className={
-            usePathname() === `/${item.page}/${item.slug}`
+            pathname === `/${item.page}/${item.slug}`
               ? 'active-link'
               : 'inactive-link'
           }

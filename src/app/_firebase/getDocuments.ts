@@ -1,4 +1,4 @@
-import { getDocs, query, orderBy, limit, startAfter } from 'firebase/firestore';
+import { getDocs, query, orderBy, limit } from 'firebase/firestore';
 import getCollection from '@/app/_firebase/getCollection';
 
 export async function fetchNews() {

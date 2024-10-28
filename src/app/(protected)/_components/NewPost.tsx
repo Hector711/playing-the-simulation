@@ -1,31 +1,31 @@
-import { useState } from 'react';
-import CloseIcon from '@/icons/CloseIcon';
+// import { useState } from 'react';
+// import CloseIcon from '@/icons/CloseIcon';
 import PollIcon from '@/icons/PollIcon';
 import ClipIcon from '@/icons/ClipIcon';
 import GifIcon from '@/icons/GifIcon';
 
 export default function NewPost() {
-  const [state, setState] = useState(true);
+  // const [state, setState] = useState(true);
 
-  const toggleNewPostForm = () => {
-    setState(prevState => !prevState);
-  };
+  // const toggleNewPostForm = () => {
+  //   setState(prevState => !prevState);
+  // };
 
-  const category = [
-    { value: 'win', label: '🏆 WIN' },
-    { value: 'biblioteca', label: '👔 Biblioteca' },
-    { value: 'pitch', label: '🛗 Pitch Deck' },
-    { value: 'afterwork', label: '🍺 Afterwork' },
-  ];
+  // const category = [
+  //   { value: 'win', label: '🏆 WIN' },
+  //   { value: 'biblioteca', label: '👔 Biblioteca' },
+  //   { value: 'pitch', label: '🛗 Pitch Deck' },
+  //   { value: 'afterwork', label: '🍺 Afterwork' },
+  // ];
 
-  const labels = [
-    { value: 'informe', label: 'Informe Ejecución' },
-    { value: 'programacion', label: 'Programacion' },
-    { value: 'productividad', label: 'Productividad' },
-    { value: 'marketing', label: 'Marketing' },
-    { value: 'habilidades-sociales', label: 'Habilidades Sociales' },
-    { value: 'finanzas', label: 'Finanzas y Fiscalidad' },
-  ];
+  // const labels = [
+  //   { value: 'informe', label: 'Informe Ejecución' },
+  //   { value: 'programacion', label: 'Programacion' },
+  //   { value: 'productividad', label: 'Productividad' },
+  //   { value: 'marketing', label: 'Marketing' },
+  //   { value: 'habilidades-sociales', label: 'Habilidades Sociales' },
+  //   { value: 'finanzas', label: 'Finanzas y Fiscalidad' },
+  // ];
 
   return (
     <div id='new-post'>

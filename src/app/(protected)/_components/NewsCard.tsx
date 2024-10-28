@@ -1,20 +1,7 @@
 import Link from 'next/link';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
+import { NewsCardTypes } from '@/types';
 
-interface NewsCardTypes {
-  id: string;
-  type: string;
-  user?: {
-    firstName: string;
-    lastName: string;
-    username: string;
-  };
-  createdAt?: any;
-  post: {
-    title: string;
-    content: string;
-  };
-}
 
 
 export default function NewsCard({ type, user, post }: NewsCardTypes) {

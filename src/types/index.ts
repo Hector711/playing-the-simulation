@@ -64,3 +64,18 @@ export interface Score {
   pts: number;
   role: number;
 }
+
+export interface NewsCardTypes {
+  id: string;
+  type: string;
+  user?: {
+    firstName: string;
+    lastName: string;
+    username: string;
+  };
+  createdAt?: any;
+  post: {
+    title: string;
+    content: string;
+  };
+}

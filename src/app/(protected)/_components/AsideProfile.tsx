@@ -3,12 +3,13 @@ import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 // import MessagesIcon from '@/icons/MessagesIcon';
 // import NotificationsIcon from '@/icons/NotificationsIcon';
 import SaveIcon from '@/icons/SaveIcon';
-import GoalsIcon from '@/icons/GoalsIcon';
+// import GoalsIcon from '@/icons/GoalsIcon';
 import GameIcon from '@/icons/GameIcon';
 import BusinessIcon from '@/icons/BusinessIcon';
 import PigIcon from '@/icons/PigIcon';
 // import NewPostIcon from '@/icons/NewPostIcon';
 import LogOutButton from './LogOutButton';
+import Image from 'next/image';
 
 export default function AsideProfile() {
   const asideProfileLinks = [
@@ -21,7 +22,7 @@ export default function AsideProfile() {
     <>
       <header id='profile' className='blurr'>
         <Link href='/profile' id='profile-link'>
-          <img
+          <Image
             id='cover'
             src='https://i.ibb.co/frmtYRP/Angel-Caido-5-MB.jpg'
             alt=''

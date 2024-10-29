@@ -26,6 +26,8 @@ export default function AsideProfile() {
             id='cover'
             src='https://i.ibb.co/frmtYRP/Angel-Caido-5-MB.jpg'
             alt=''
+            width={800}
+            height={600}
           />
           <AvatarUser
             alt='Foto de perfil'

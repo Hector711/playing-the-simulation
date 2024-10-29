@@ -39,11 +39,11 @@ export interface Contributor {
   username: string;
 }
 
-export interface Metadata {
+export type Metadata = {
   comments: number;
   createdAt: Timestamp;
   updatedAt: Timestamp;
-}
+};
 
 export interface PostContent {
   content: string;

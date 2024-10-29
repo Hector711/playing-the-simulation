@@ -10,6 +10,9 @@ const nextConfig = {
     includePaths: [path.join(__dirname, 'src')],
     additionalData: `@use "@/styles/_variables.scss" as *;`,
   },
+  images: {
+    remotePatterns: [{ hostname: 'i.ibb.co', protocol: 'https' }],
+  },
 };
 
 export default nextConfig;

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { DocumentData } from 'firebase/firestore';
 import Post from './Post';
 import { useSearchParams } from 'next/navigation';
-import { fetchPostsPage } from '@/app/_firebase/posts';
+import { getPostsPerPage } from '@/app/_firebase/getPosts';
 
 export default function Timeline() {
   const [items, setItems] = useState<DocumentData[]>([]);
@@ -19,7 +19,7 @@ export default function Timeline() {
 
   useEffect(() => {
     async function loadData() {
-      const data: DocumentData[] = await fetchPostsPage(page);
+      const data: DocumentData[] = await getPostsPerPage(page);
       setItems(data);
     }
     loadData();

@@ -7,14 +7,14 @@ interface ErrorProps {
   reset: () => void;
 }
 
-export default function Error(props: ErrorProps) {
+export default function GlobalError(props: ErrorProps) {
   useEffect(() => {
     // Aqui puedes ejecutar servicios de observabilidad, servicios que monitoriean la aplicación.
     console.log(props.error);
   }, [props.error]);
 
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <main>
       <div>
         <h1 className='text-2xl font-bold text-red-500'>
           Ha ocurrido un Error 😢
@@ -26,6 +26,6 @@ export default function Error(props: ErrorProps) {
           Volver a intentarlo
         </button>
       </div>
-    </div>
+    </main>
   );
 }

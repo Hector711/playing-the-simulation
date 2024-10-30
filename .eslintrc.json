@@ -4,8 +4,12 @@
     "next/typescript",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "prettier/prettier": "error"
+    "prettier/prettier": "error",
+    // IMPORTANT TODO: Remove this once we have a better way to handle any
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

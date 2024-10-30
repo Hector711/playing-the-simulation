@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { getPostsPerPage } from '@/app/_firebase/getPosts';
 
 export default function Timeline() {
-  const [items, setItems] = useState<DocumentData[]>([]);
+  const [timelinePosts, setTimelinePosts] = useState<DocumentData[]>([]);
   const [page, setPage] = useState(1);
   const searchParams = useSearchParams();
 
@@ -20,14 +20,15 @@ export default function Timeline() {
   useEffect(() => {
     async function loadData() {
       const data: DocumentData[] = await getPostsPerPage(page);
-      setItems(data);
+      console.log(data);
+      setTimelinePosts(data);
     }
     loadData();
   }, [page]);
 
   return (
     <div id='timeline'>
-      {items.map((item, index) => (
+      {timelinePosts.map((item, index) => (
         <Post
           {...item}
           key={index}

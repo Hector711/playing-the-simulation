@@ -22,9 +22,9 @@ export default function PaginationOutlined() {
     event: React.ChangeEvent<unknown>,
     page: number,
   ) => {
-    console.log(event);
-    console.log(`Página seleccionada: ${page}`);
-    router.push(`/home?page=${page}`);
+    if (event) {
+      router.push(`/home?page=${page}`);
+    }
   };
 
   return (

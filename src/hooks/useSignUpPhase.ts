@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 
-type SignUpPhase = 0 | 1 | 2 | 10;
+type SignUpPhase = 0 | 1 | 2 | 3 | 10;
 
 type SignUpPhaseStore = {
   signUpPhase: SignUpPhase;

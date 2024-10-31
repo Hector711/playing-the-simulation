@@ -44,11 +44,10 @@ export async function POST(request: NextRequest) {
 export async function GET(request: NextRequest, response: Response) {
   try {
     const header = await headers();
-    // console.log({ cookie: header });
+
     const cookie = await cookies();
     const session = cookie.get('__session')?.value || '';
-    // console.log(cookie.getAll());
-    console.log({ session });
+
     // Validate if the cookie exist in the request
     if (!session) {
       return Response.json({ isLogged: false }, { status: 401 });
@@ -62,7 +61,7 @@ export async function GET(request: NextRequest, response: Response) {
     }
     const userID = verified.user_id;
     const user = await getUserWithID(userID);
-    // console.log({ user });
+
     if (!user) {
       console.log('No se ha podido obtener el usuario');
       return Response.json({ isLogged: false }, { status: 401 });

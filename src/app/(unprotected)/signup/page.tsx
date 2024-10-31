@@ -3,11 +3,13 @@
 'use client';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 import { useSignUpPhase } from '@/hooks/useSignUpPhase';
-import { SkoolUsernameForm } from './SkoolUsernameForm';
-
+import { UsernameForm } from './UsernameForm';
+import { CreateSkoolUser } from './CreateSkoolUser';
+import { ShowUserProfile } from './ShowUserProfile';
+import { useUserProfile } from '@/hooks/useUserProfile';
 export default function SignUpPage() {
   const { signUpPhase, setSignUpPhase } = useSignUpPhase();
-
+  const { userProfile } = useUserProfile();
   return (
     <UnprotectedDiv id='signup-page'>
       <header>
@@ -23,8 +25,10 @@ export default function SignUpPage() {
             </div>
           </div>
         )}
-        {signUpPhase === 1 && <SkoolUsernameForm />}
-        {signUpPhase === 2 && <SkoolUserProfileShow />}
+        {signUpPhase === 1 && <UsernameForm />}
+        {signUpPhase === 2 && <ShowUserProfile />}
+        {signUpPhase === 3 && <CreateSkoolUser />}
+
         {signUpPhase === 10 && (
           <>
             <p>
@@ -44,27 +48,5 @@ export default function SignUpPage() {
         </div>
       </section>
     </UnprotectedDiv>
-  );
-}
-
-import { useUserProfile } from '@/hooks/useUserProfile';
-
-
-export function SkoolUserProfileShow() {
-  const { userProfile } = useUserProfile();
-  return (
-    <>
-      <p>Es este tu usuario?</p>
-      <div>
-        <img src={userProfile?.avatar} alt='' />
-        <p>Username: {userProfile?.username}</p>
-        <p>Email: {userProfile?.email} </p>
-      </div>
-      <pre>{JSON.stringify(userProfile, null, 2)}</pre>
-      <div>
-        <button>Si</button>
-        <button>No</button>
-      </div>
-    </>
   );
 }

@@ -2,6 +2,7 @@
 
 import { doc, collection, setDoc, getDoc } from 'firebase/firestore';
 import { auth, db } from '@/app/_firebase/clientConfig';
+import { getAuth } from 'firebase-admin/auth';
 
 interface UserData {
   username: string;
@@ -42,7 +43,7 @@ export const getUser = async () => {
 
 // LLamamos esta funcion desde el middleware para obtener el usuario a partir de la cookie
 export const getUserWithID = async (id: string) => {
-  console.log('id -->', id);
+  // console.log('id -->', id);
   const userSnapshot = await getDoc(doc(db, 'users', id));
   const userData = userSnapshot.data();
   if (userData) {
@@ -52,7 +53,8 @@ export const getUserWithID = async (id: string) => {
       id: userSnapshot.id,
     };
   } else {
-    console.log('No se encontraron datos para este documento.');
+    // console.log('No se encontraron datos para este documento.');
   }
   return null;
 };
+

@@ -8,7 +8,7 @@ import { UserProfileTypes } from '@/types';
 import { useSignUpPhase } from '@/hooks/useSignUpPhase';
 
 // @hector-luengo-guerra-1936
-export function SkoolUsernameForm() {
+export  function UsernameForm() {
   const { register, handleSubmit, formState: { errors }, setError } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const { setUserProfile } = useUserProfile();
@@ -26,6 +26,7 @@ export function SkoolUsernameForm() {
         querySnapshot.forEach((doc) => {
           const data = doc.data() as UserProfileTypes;
           setUserProfile(data);
+          console.log('data -->', data);
           setSignUpPhase(2);
         });
       } 

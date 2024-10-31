@@ -39,7 +39,7 @@ export default function LoginForm() {
       }
       await axios.post(
         '/api/login',
-        {},
+        null,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ export default function LoginForm() {
           placeholder='Email'
           {...register('email', { required: true })}
         />
-        {errors.email && <p className='errors'>{String(errors.email.type)}</p>}
+        {errors.email && <p className='errors'>{String(errors.email.message)}</p>}
         <input
           type='password'
           placeholder='Password'
@@ -79,7 +79,7 @@ export default function LoginForm() {
           })}
         />
         {errors.password && (
-          <p className='errors'>{String(errors.password.type)}</p>
+          <p className='errors'>{String(errors.password.message)}</p>
         )}
         <button type='submit' disabled={isLoading}>
           {isLoading ? 'Cargando...' : 'Enviar'}

@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 export default function LogOutButton() {
   const [user] = useAuthState(auth);
   const router = useRouter();
+  // console.log({ auth });
 
   const handleLogOut = () => {
     if (user) {

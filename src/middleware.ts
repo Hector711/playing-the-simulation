@@ -4,7 +4,7 @@ import { type NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
 export async function middleware(request: NextRequest) {
-  console.log('\n\n');
+  console.log('\n\nNEW REQUEST ------');
   // console.log('request', request);
 
   // 1. Check if route is protected
@@ -35,6 +35,7 @@ export async function middleware(request: NextRequest) {
 
     const domain = new URL(request.url);
     const responseAPI = await fetch(`${domain.origin}/api/login`, {
+      method: 'GET',
       headers: {
         Cookie: `__session=${session?.value}`,
       },

@@ -81,3 +81,26 @@ export interface NewsCardTypes {
     content: string;
   };
 }
+
+export interface UserProfileTypes {
+  id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  location: string;
+  bio: string;
+  avatar: string;
+  miniAvatar: string;
+  role: string;
+  score: {
+    lv: number;
+    pts: number;
+    role: number;
+  };
+  username: string;
+  metadata: {
+    lastOffline: Timestamp;
+    createdAt: Timestamp;
+  };
+  label?: string; // Opcional si puede estar vacío
+}

@@ -9,6 +9,7 @@
 import { MainTitle } from '@/components/Maintitle';
 import Link from 'next/link';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
+import GuestLink from '@/app/(unprotected)/_components/GuestLink';
 
 export default function WellcomePage() {
   return (
@@ -25,9 +26,7 @@ export default function WellcomePage() {
             Registrarse
           </Link>
         </div>
-        <Link href='/home' className='link' id='guest-link'>
-          Entrar como invitado
-        </Link>
+        <GuestLink />
       </section>
     </UnprotectedDiv>
   );

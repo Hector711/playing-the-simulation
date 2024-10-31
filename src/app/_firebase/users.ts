@@ -9,7 +9,7 @@ interface UserData {
   lastName: string;
   email: string;
 }
-
+// SIGN UP: CREATING A USER DOCUMENT
 export async function createUserDocWithUid(
   uid: string | undefined,
   userData: UserData,
@@ -20,7 +20,7 @@ export async function createUserDocWithUid(
 }
 
 export const getUser = async () => {
-  await auth.authStateReady();
+  // await auth.authStateReady();
   const userId = auth.currentUser?.uid;
 
   if (!userId) {
@@ -37,5 +37,22 @@ export const getUser = async () => {
     };
   }
 
+  return null;
+};
+
+// LLamamos esta funcion desde el middleware para obtener el usuario a partir de la cookie
+export const getUserWithID = async (id: string) => {
+  console.log('id -->', id);
+  const userSnapshot = await getDoc(doc(db, 'users', id));
+  const userData = userSnapshot.data();
+  if (userData) {
+    console.log('Datos del usuario:', userData);
+    return {
+      ...userData,
+      id: userSnapshot.id,
+    };
+  } else {
+    console.log('No se encontraron datos para este documento.');
+  }
   return null;
 };

@@ -17,12 +17,6 @@ import {
 } from 'firebase/firestore';
 import { FirebaseError } from 'firebase/app';
 import axios from 'axios';
-import {
-  getAnalytics,
-  logEvent,
-  setUserId,
-  setUserProperties,
-} from 'firebase/analytics';
 
 export const loginUser = async (email: string, password: string) => {
   try {
@@ -38,8 +32,6 @@ export const loginUser = async (email: string, password: string) => {
         },
       },
     );
-    logEvent(getAnalytics(), 'login');
-
     return response;
   } catch (error) {
     console.error(error);
@@ -54,16 +46,6 @@ export const logoutUser = async () => {
     method: 'POST',
   });
 
-  setUserId(getAnalytics(), null);
-  setUserProperties(getAnalytics(), {
-    gender: null,
-    language: null,
-    region: null,
-    zone: null,
-    location: null,
-    birthDate: null,
-  });
-  logEvent(getAnalytics(), 'logout');
 
   return null;
 };
@@ -121,7 +103,6 @@ export const signUpUser = async (registerData: any) => {
       },
     );
 
-    logEvent(getAnalytics(), 'sign_up');
     return registerData;
   } catch (error) {
     signOut(auth);

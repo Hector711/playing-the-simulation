@@ -1,7 +1,8 @@
 'use client';
+
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/_firebase/config';
+import { auth } from '@/app/_firebase/clientConfig';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';
@@ -16,7 +17,6 @@ export default function LogIn() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  console.log({ errors });
 
   const handleSignIn = async () => {
     try {

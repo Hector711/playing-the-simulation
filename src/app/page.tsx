@@ -1,22 +1,14 @@
 'use client';
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/_firebase/config';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+// import { useAuthState } from 'react-firebase-hooks/auth';
+// import { auth } from '@/app/_firebase/clientConfig';
+// import { useRouter } from 'next/navigation';
+// import { useEffect } from 'react';
 import { MainTitle } from '@/components/Maintitle';
 import Link from 'next/link';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 
 export default function WellcomePage() {
-  const [user] = useAuthState(auth);
-  const router = useRouter();
-
-  useEffect(() => {
-    if (user) {
-      router.push('/home');
-    }
-  }, [user, router]);
 
   return (
     <UnprotectedDiv id='wellcome-page'>

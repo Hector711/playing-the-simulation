@@ -29,7 +29,7 @@ export default function AvatarComponent({
       <Avatar
         className={AVATAR_SIZE[size]}
         alt={alt || 'Foto de perfil'}
-        src={src || '/static/images/avatar/1.jpg'}
+        src={src || ''}
       />
     </div>
   );

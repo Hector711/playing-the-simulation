@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/_firebase/config';
+import { auth } from '@/app/_firebase/clientConfig';
 import { EventType } from '@/types';
 import { useForm } from 'react-hook-form';
 import { createUserDocWithUid } from '@/app/_firebase/users';
@@ -26,13 +26,18 @@ export default function SignUp() {
         form.email,
         form.password,
       );
-      // console.log({ res });
+
       const uid = res?.user?.uid;
       if (!uid) {
         throw new Error('No se pudo obtener el UID del usuario.');
       }
 
-      await createUserDocWithUid(uid, form);
+      await createUserDocWithUid(uid, {
+        email: form.email,
+        username: form.email,
+        firstName: '',
+        lastName: '',
+      });
       setForm({ email: '', password: '' });
     } catch (e) {
       console.error(e);

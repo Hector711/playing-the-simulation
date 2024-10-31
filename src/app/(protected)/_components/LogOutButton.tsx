@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/_firebase/config';
+import { auth } from '@/app/_firebase/clientConfig';
 import { useRouter } from 'next/navigation';
 
 export default function LogOutButton() {

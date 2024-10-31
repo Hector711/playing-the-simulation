@@ -1,3 +1,5 @@
+/** @format */
+
 import { collection } from 'firebase/firestore';
 import { db } from '@/app/_firebase/clientConfig';
 

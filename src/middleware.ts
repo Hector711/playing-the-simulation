@@ -1,3 +1,5 @@
+/** @format */
+
 import { type NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 
@@ -11,7 +13,7 @@ export async function middleware(request: NextRequest) {
   const isAuthenticationPath = authenticationPaths.includes(currentPath);
 
   const response = NextResponse.next();
-  const cookie = await cookies()
+  const cookie = await cookies();
   const session = cookie.get('__session');
 
   try {
@@ -20,8 +22,8 @@ export async function middleware(request: NextRequest) {
       if (!session) {
         return NextResponse.redirect(new URL('/login', request.url));
       }
-    } 
-    if(isAuthenticationPath) {
+    }
+    if (isAuthenticationPath) {
       console.log('is authentication route');
       if (!session) {
         console.log('no session');

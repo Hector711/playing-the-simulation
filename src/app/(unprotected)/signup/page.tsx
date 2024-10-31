@@ -1,3 +1,5 @@
+/** @format */
+
 'use client';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 import SignUp from '@/app/(unprotected)/_components/SignUp';

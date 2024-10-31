@@ -1,3 +1,5 @@
+/** @format */
+
 import { PropsTypes } from '@/types';
 import MiniNav from '@/components/MiniNav';
 

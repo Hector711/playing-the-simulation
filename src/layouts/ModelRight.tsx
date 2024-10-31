@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react';
 import { PropsTypes } from '@/types';
 

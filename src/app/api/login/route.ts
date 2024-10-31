@@ -1,3 +1,5 @@
+/** @format */
+
 import { auth } from '@/app/_firebase/adminConfig';
 import { cookies, headers } from 'next/headers';
 import { NextRequest } from 'next/server';
@@ -5,59 +7,59 @@ import { NextRequest } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
-    try {
-        const header = await headers()
-        const authorization = header.get('Authorization');
+  try {
+    const header = await headers();
+    const authorization = header.get('Authorization');
 
-        if (authorization?.startsWith('Bearer ')) {
-            const idToken = authorization.split('Bearer ')[1];
+    if (authorization?.startsWith('Bearer ')) {
+      const idToken = authorization.split('Bearer ')[1];
 
-            const decodedToken = await auth.verifyIdToken(idToken);
-            if (decodedToken) {
-                //Generate session cookie
-                const expiresIn = 60 * 60 * 24 * 5 * 1000;
-                const sessionCookie = await auth.createSessionCookie(idToken, {
-                    expiresIn,
-                });
+      const decodedToken = await auth.verifyIdToken(idToken);
+      if (decodedToken) {
+        //Generate session cookie
+        const expiresIn = 60 * 60 * 24 * 5 * 1000;
+        const sessionCookie = await auth.createSessionCookie(idToken, {
+          expiresIn,
+        });
 
-                const cookie = await cookies()
-                cookie.set('__session', sessionCookie, {
-                    maxAge: expiresIn,
-                    httpOnly: true,
-                    secure: true,
-                });
+        const cookie = await cookies();
+        cookie.set('__session', sessionCookie, {
+          maxAge: expiresIn,
+          httpOnly: true,
+          secure: true,
+        });
 
-                return Response.json('', { status: 200 });
-            }
-            return Response.json('', { status: 401 });
-        }
-
-        return Response.json('', { status: 401 });
-    } catch (error) {
-        console.error(error);
-        return Response.json('', { status: 401 });
+        return Response.json('', { status: 200 });
+      }
+      return Response.json('', { status: 401 });
     }
+
+    return Response.json('', { status: 401 });
+  } catch (error) {
+    console.error(error);
+    return Response.json('', { status: 401 });
+  }
 }
 
 export async function GET(request: NextRequest, response: Response) {
-    try {
-        const cookie = await cookies()
-        const session = cookie.get('__session')?.value || '';
-        console.log(cookie.getAll());
-        // Validate if the cookie exist in the request
-        if (!session) {
-            return Response.json({ isLogged: false }, { status: 401 });
-        }
-
-        const verified = await auth.verifySessionCookie(session, true);
-
-        if (!verified) {
-            return Response.json({ isLogged: false }, { status: 401 });
-        }
-
-        return Response.json({ isLogged: true }, { status: 200 });
-    } catch (error) {
-        console.error(error);
-        return Response.json({ isLogged: false }, { status: 500 });
+  try {
+    const cookie = await cookies();
+    const session = cookie.get('__session')?.value || '';
+    console.log(cookie.getAll());
+    // Validate if the cookie exist in the request
+    if (!session) {
+      return Response.json({ isLogged: false }, { status: 401 });
     }
+
+    const verified = await auth.verifySessionCookie(session, true);
+
+    if (!verified) {
+      return Response.json({ isLogged: false }, { status: 401 });
+    }
+
+    return Response.json({ isLogged: true }, { status: 200 });
+  } catch (error) {
+    console.error(error);
+    return Response.json({ isLogged: false }, { status: 500 });
+  }
 }

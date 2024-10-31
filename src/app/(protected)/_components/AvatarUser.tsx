@@ -1,3 +1,5 @@
+/** @format */
+
 import Avatar from '@mui/material/Avatar';
 
 interface AvatarTypes {

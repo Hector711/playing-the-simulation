@@ -1,3 +1,5 @@
+/** @format */
+
 'use server';
 
 import { signupformSchema } from './schema';
@@ -10,9 +12,10 @@ export async function signup(state, formData) {
     email: formData.get('email'),
     password: formData.get('password'),
   });
-  if (!validatedFields.success) return {
-    errors: validatedFields.error.flatten().fieldErrors,
-  };
+  if (!validatedFields.success)
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+    };
   const { name, email, password } = validatedFields.data;
   //  2. Create user
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -28,5 +31,4 @@ export async function signup(state, formData) {
   const user = data[0];
 
   //  3. Create session
-  
 }

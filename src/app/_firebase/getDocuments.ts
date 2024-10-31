@@ -1,3 +1,5 @@
+/** @format */
+
 import { getDocs, query, orderBy, limit } from 'firebase/firestore';
 import getCollection from '@/app/_firebase/getCollection';
 

@@ -1,3 +1,5 @@
+/** @format */
+
 import Link from 'next/link';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 // import MessagesIcon from '@/icons/MessagesIcon';

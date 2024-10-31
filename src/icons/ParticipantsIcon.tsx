@@ -1,3 +1,5 @@
+/** @format */
+
 import { IconProps } from '@/types';
 
 export default function ParticipantsIcon(props: IconProps) {

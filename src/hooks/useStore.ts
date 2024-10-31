@@ -1,3 +1,5 @@
+/** @format */
+
 import { create } from 'zustand';
 import { DocumentData } from 'firebase/firestore';
 

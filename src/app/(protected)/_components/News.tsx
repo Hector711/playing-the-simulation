@@ -1,3 +1,5 @@
+/** @format */
+
 import ModelRight from '@/layouts/ModelRight';
 import NewspaperIcon from '@/icons/NewspaperIcon';
 import { fetchNews } from '@/app/_firebase/getDocuments';

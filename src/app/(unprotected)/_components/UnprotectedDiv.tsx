@@ -1,3 +1,5 @@
+/** @format */
+
 import { PropsTypes } from '@/types';
 
 export default function UnprotectedDiv({ children, id }: PropsTypes) {

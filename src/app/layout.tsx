@@ -1,3 +1,5 @@
+/** @format */
+
 import type { Metadata } from 'next';
 // INIT
 import '@/styles/reset/reset.scss';

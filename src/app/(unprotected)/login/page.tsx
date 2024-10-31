@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react';
 import LoginForm from '@/app/(unprotected)/login/LoginForm';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';

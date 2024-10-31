@@ -1,3 +1,5 @@
+/** @format */
+
 import { doc, collection, setDoc, getDoc } from 'firebase/firestore';
 import { auth, db } from '@/app/_firebase/clientConfig';
 
@@ -18,22 +20,22 @@ export async function createUserDocWithUid(
 }
 
 export const getUser = async () => {
-    await auth.authStateReady();
-    const userId = auth.currentUser?.uid;
-    
-    if (!userId) {
-        return null;
-    }
+  await auth.authStateReady();
+  const userId = auth.currentUser?.uid;
 
-    const userQuerySnapshot = await getDoc(doc(db, 'users', userId));
-    const userData = userQuerySnapshot.data();
-
-    if (userData) {
-        return {
-            ...userData,
-            id: userQuerySnapshot.id,
-        };
-    }
-
+  if (!userId) {
     return null;
+  }
+
+  const userQuerySnapshot = await getDoc(doc(db, 'users', userId));
+  const userData = userQuerySnapshot.data();
+
+  if (userData) {
+    return {
+      ...userData,
+      id: userQuerySnapshot.id,
+    };
+  }
+
+  return null;
 };

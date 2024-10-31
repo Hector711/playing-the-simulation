@@ -1,8 +1,8 @@
 {
   "arrowParens": "avoid",
   "bracketSpacing": true,
-  "htmlWhitespaceSensitivity": "css",
-  "insertPragma": false,
+  "htmlWhitespaceSensitivity": "strict",
+  "insertPragma": true,
   "jsxSingleQuote": true,
   "printWidth": 80,
   "proseWrap": "always",
@@ -12,5 +12,13 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
-  "useTabs": false
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.json",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
 }

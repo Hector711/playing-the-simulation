@@ -1,3 +1,5 @@
+/** @format */
+
 'use client';
 
 // import { useAuthState } from 'react-firebase-hooks/auth';
@@ -9,7 +11,6 @@ import Link from 'next/link';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 
 export default function WellcomePage() {
-
   return (
     <UnprotectedDiv id='wellcome-page'>
       <header className='wellcome'>

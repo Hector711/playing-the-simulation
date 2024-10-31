@@ -1,6 +1,7 @@
+/** @format */
+
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation'; // Añade esta línea
-
 
 export async function createSession(userId: string) {
   const expires = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30);
@@ -10,7 +11,7 @@ export async function createSession(userId: string) {
 }
 
 export async function verifySession() {
-  const cookie = await cookies()
+  const cookie = await cookies();
   cookie.get('usuario')?.value;
 
   if (!cookie) {

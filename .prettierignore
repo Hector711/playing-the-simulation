@@ -13,3 +13,5 @@ reset.css
 **/*.png
 **/*.jpg
 **/*.jpeg
+src/styles/fonts/
+favicon.ico

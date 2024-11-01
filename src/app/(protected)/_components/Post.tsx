@@ -7,7 +7,8 @@ import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 // import CommentIcon from '@/icons/CommentIcon';
 // import SendIcon from '@/icons/SendIcon';
 import SaveIcon from '@/icons/SaveIcon';
-import { PostTypes, Timestamp } from '@/types';
+import { Timestamp } from '@/types';
+import { PostTypes } from '@/types/postsTypes';
 import { formatDistanceToNow } from 'date-fns';
 import { es } from 'date-fns/locale';
 

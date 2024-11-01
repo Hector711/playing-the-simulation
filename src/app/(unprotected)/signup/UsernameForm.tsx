@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/app/_firebase/_clientConfig';
 import { useUserProfile } from '@/hooks/userProfileHook';
-import { UserProfileTypes } from '@/types';
+import { UserProfileTypes } from '@/types/userTypes';
 import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 
 // @hector-luengo-guerra-1936

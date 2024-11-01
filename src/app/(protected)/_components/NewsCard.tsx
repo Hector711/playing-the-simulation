@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
-import { NewsCardTypes } from '@/types';
+import { NewsCardTypes } from '@/types/postsTypes';
 
 export default function NewsCard({ type, user, post }: NewsCardTypes) {
   if (type === 'Noticia') {

@@ -3,11 +3,7 @@
 'use client';
 
 import { useEffect } from 'react';
-
-interface ErrorProps {
-  error: Error;
-  reset: () => void;
-}
+import { ErrorProps } from '@/types/index';
 
 export default function GlobalError(props: ErrorProps) {
   useEffect(() => {

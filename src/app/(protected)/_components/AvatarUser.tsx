@@ -1,13 +1,8 @@
 /** @format */
 
 import Avatar from '@mui/material/Avatar';
+import { AvatarTypes } from '@/types/userTypes';
 
-interface AvatarTypes {
-  src: string;
-  size: 'profile' | 'post' | 'news' | 'user';
-  alt: string;
-  status: 'investor' | 'entrepeneur' | 'employee';
-}
 const AVATAR_SIZE = {
   profile: 'avatar-profile',
   post: 'avatar-post',

@@ -1,7 +1,7 @@
 /** @format */
 
 import { create } from 'zustand';
-import { UserProfileTypes } from '@/types';
+import { UserProfileTypes } from '@/types/userTypes';
 
 type UserProfileStore = {
   userProfile: UserProfileTypes | null;

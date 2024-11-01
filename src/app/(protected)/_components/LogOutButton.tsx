@@ -7,7 +7,7 @@ import { auth } from '@/app/_firebase/_clientConfig';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { useUserProfile } from '@/hooks/userProfileHook';
-import { UserProfileTypes } from '@/types';
+import { UserProfileTypes } from '@/types/userTypes';
 
 export default function LogOutButton() {
   const [user] = useAuthState(auth);

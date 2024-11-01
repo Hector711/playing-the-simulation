@@ -15,7 +15,7 @@ export async function middleware(request: NextRequest) {
     '/signup/username-form',
     '/signup/complete-user-profile',
     '/signup/show-user-profile',
-    '/signup/new-account'
+    '/signup/new-account',
   ];
   const currentPath = request.nextUrl.pathname;
   const isAuthenticationPath = authenticationPaths.includes(currentPath);

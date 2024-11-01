@@ -21,7 +21,6 @@ export function UsernameForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { setUserProfile } = useUserProfile();
 
-
   const findSkoolUser = async (data: any) => {
     setIsLoading(true);
     try {
@@ -51,7 +50,11 @@ export function UsernameForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(findSkoolUser)} id='skool-form' className='space-y-4'>
+      <form
+        onSubmit={handleSubmit(findSkoolUser)}
+        id='skool-form'
+        className='space-y-4'
+      >
         <p className='text-lg font-semibold'>Introduce tu username de Skool</p>
 
         <input
@@ -61,7 +64,9 @@ export function UsernameForm() {
           {...register('username', { required: 'El username es obligatorio' })}
         />
         {errors.username && (
-          <p className='text-red-500 text-sm'>{String(errors.username.message)}</p>
+          <p className='text-red-500 text-sm'>
+            {String(errors.username.message)}
+          </p>
         )}
 
         <button

@@ -10,9 +10,9 @@ type UserProfileStore = {
   loadUserProfile: () => void;
 };
 
-export const useUserProfile = create<UserProfileStore>((set) => ({
+export const useUserProfile = create<UserProfileStore>(set => ({
   userProfile: null,
-  setUserProfile: (profile) => {
+  setUserProfile: profile => {
     localStorage.setItem('userProfile', JSON.stringify(profile));
     set({ userProfile: profile });
   },

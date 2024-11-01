@@ -17,7 +17,6 @@ import { useUserProfile } from '@/hooks/userProfileHook';
 import { useEffect } from 'react';
 
 export default function AsideProfile() {
-
   const { userProfile, loadUserProfile } = useUserProfile();
 
   useEffect(() => {
@@ -70,7 +69,10 @@ export default function AsideProfile() {
             <GameIcon />
             <h6>
               Nivel &#8227;
-              <span> {userProfile?.score.lv} &#183; {userProfile?.score.pts} pts</span>
+              <span>
+                {' '}
+                {userProfile?.score.lv} &#183; {userProfile?.score.pts} pts
+              </span>
             </h6>
           </div>
         </div>

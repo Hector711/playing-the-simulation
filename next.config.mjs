@@ -18,8 +18,10 @@ const nextConfig = {
     additionalData: `@use "@/styles/_variables.scss" as *;`,
   },
   images: {
-    remotePatterns: [{ hostname: 'i.ibb.co', protocol: 'https' }],
-    domains: ['assets.skool.com'],
+    remotePatterns: [
+      { hostname: 'i.ibb.co', protocol: 'https' },
+      { hostname: 'assets.skool.com', protocol: 'https' }
+    ],
   },
 };
 

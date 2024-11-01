@@ -1,4 +1,5 @@
 /** @format */
+'use client';
 
 import Link from 'next/link';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
@@ -7,13 +8,22 @@ import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 import SaveIcon from '@/icons/SaveIcon';
 // import GoalsIcon from '@/icons/GoalsIcon';
 import GameIcon from '@/icons/GameIcon';
-import BusinessIcon from '@/icons/BusinessIcon';
-import PigIcon from '@/icons/PigIcon';
+// import BusinessIcon from '@/icons/BusinessIcon';
+// import PigIcon from '@/icons/PigIcon';
 // import NewPostIcon from '@/icons/NewPostIcon';
 import LogOutButton from './LogOutButton';
 import Image from 'next/image';
+import { useUserProfile } from '@/hooks/userProfileHook';
+import { useEffect } from 'react';
 
 export default function AsideProfile() {
+
+  const { userProfile, loadUserProfile } = useUserProfile();
+
+  useEffect(() => {
+    loadUserProfile();
+  }, []);
+  // console.log('userProfile', userProfile);
   const asideProfileLinks = [
     // { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },
     // { to: '/messages', title: 'Mensajes', icon: MessagesIcon },
@@ -33,15 +43,16 @@ export default function AsideProfile() {
           />
           <AvatarUser
             alt='Foto de perfil'
-            src='https://i.ibb.co/s5smtmL/profile-pic.jpg'
+            src={userProfile?.miniAvatar || ''}
             size='user'
             status='entrepeneur'
           />
-          <h4>Héctor Guerra</h4>
+          <h4>{`${userProfile?.firstName} ${userProfile?.lastName}`}</h4>
         </Link>
+        <p>{userProfile?.bio}</p>
         <hr />
         <div id='profile-info'>
-          <div>
+          {/* <div>
             <BusinessIcon />
             <h6>
               Negocio &#8227;
@@ -54,12 +65,12 @@ export default function AsideProfile() {
               Fianza &#8227;
               <span> Activada &#183; 50€</span>
             </h6>
-          </div>
+          </div> */}
           <div>
             <GameIcon />
             <h6>
               Nivel &#8227;
-              <span> 4 &#183; 400 pts</span>
+              <span> {userProfile?.score.lv} &#183; {userProfile?.score.pts} pts</span>
             </h6>
           </div>
         </div>

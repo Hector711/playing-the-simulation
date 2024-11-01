@@ -2,7 +2,6 @@
 
 import { doc, collection, setDoc, getDoc } from 'firebase/firestore';
 import { auth, db } from '@/app/_firebase/clientConfig';
-import { getAuth } from 'firebase-admin/auth';
 
 interface UserData {
   username: string;
@@ -52,9 +51,6 @@ export const getUserWithID = async (id: string) => {
       ...userData,
       id: userSnapshot.id,
     };
-  } else {
-    // console.log('No se encontraron datos para este documento.');
   }
   return null;
 };
-

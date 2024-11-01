@@ -10,6 +10,7 @@ import { useUserProfile } from '@/hooks/userProfileHook';
 export default function SignUpPage() {
   const { signUpPhase, setSignUpPhase } = useSignUpPhase();
   const { userProfile } = useUserProfile();
+  
   return (
     <UnprotectedDiv id='signup-page'>
       <header>

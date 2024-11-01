@@ -2,6 +2,7 @@
 
 import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 import { useUserProfile } from '@/hooks/userProfileHook';
+import Image from 'next/image';
 
 export function ShowUserProfile() {
   const { setSignUpPhase } = useSignUpPhase();
@@ -10,7 +11,12 @@ export function ShowUserProfile() {
     <>
       <p>Es este tu usuario?</p>
       <div>
-        <img src={userProfile?.avatar} alt='' />
+        <Image
+          src={userProfile?.avatar || ''}
+          alt=''
+          width={100}
+          height={100}
+        />
         <p>Username: {userProfile?.username}</p>
         <p>Email: {userProfile?.email} </p>
       </div>

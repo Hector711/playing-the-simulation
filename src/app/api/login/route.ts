@@ -3,6 +3,7 @@
 import { auth } from '@/app/_firebase/_adminConfig';
 import { cookies, headers } from 'next/headers';
 import { getUserWithID } from '@/app/_firebase/users';
+import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 export async function POST() {
@@ -40,36 +41,35 @@ export async function POST() {
   }
 }
 
-export async function GET(response: Response) {
+export async function GET(response: NextResponse) {
   try {
-    const header = await headers();
 
     const cookie = await cookies();
     const session = cookie.get('__session')?.value || '';
 
     // Validate if the cookie exist in the request
     if (!session) {
-      return Response.json({ isLogged: false }, { status: 401 });
+      return NextResponse.json({ isLogged: false }, { status: 401 });
     }
 
     const verified = await auth.verifySessionCookie(session, true);
 
     if (!verified) {
       console.log('no verified');
-      return Response.json({ isLogged: false }, { status: 401 });
+      return NextResponse.json({ isLogged: false }, { status: 401 });
     }
     const userID = verified.user_id;
     const user = await getUserWithID(userID);
 
     if (!user) {
       console.log('No se ha podido obtener el usuario');
-      return Response.json({ isLogged: false }, { status: 401 });
+      return NextResponse.json({ isLogged: false }, { status: 401 });
     }
 
     console.log('cookie verified with user');
-    return Response.json({ isLogged: true }, { status: 200 });
+    return NextResponse.json({ isLogged: true }, { status: 200 });
   } catch (error) {
     console.error(error);
-    return Response.json({ isLogged: false }, { status: 500 });
+    return NextResponse.json({ isLogged: false }, { status: 500 });
   }
 }

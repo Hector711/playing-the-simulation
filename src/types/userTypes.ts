@@ -27,4 +27,3 @@ export interface UserProfileTypes {
     createdAt: Timestamp;
   };
 }
-

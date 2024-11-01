@@ -41,9 +41,8 @@ export async function POST() {
   }
 }
 
-export async function GET(response: NextResponse) {
+export async function GET() {
   try {
-
     const cookie = await cookies();
     const session = cookie.get('__session')?.value || '';
 

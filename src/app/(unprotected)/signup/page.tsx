@@ -6,11 +6,10 @@ import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 import { UsernameForm } from './UsernameForm';
 import { CreateSkoolUser } from './CreateSkoolUser';
 import { ShowUserProfile } from './ShowUserProfile';
-import { useUserProfile } from '@/hooks/userProfileHook';
+
 export default function SignUpPage() {
   const { signUpPhase, setSignUpPhase } = useSignUpPhase();
-  const { userProfile } = useUserProfile();
-  
+
   return (
     <UnprotectedDiv id='signup-page'>
       <header>

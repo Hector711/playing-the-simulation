@@ -1,15 +1,17 @@
 /** @format */
 
+'use client';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/app/_firebase/_clientConfig';
 import { useUserProfile } from '@/hooks/userProfileHook';
 import { UserProfileTypes } from '@/types/userTypes';
-import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
+import { useRouter } from 'next/navigation';
 
 // @hector-luengo-guerra-1936
 export function UsernameForm() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -19,7 +21,6 @@ export function UsernameForm() {
   const [isLoading, setIsLoading] = useState(false);
   const { setUserProfile } = useUserProfile();
 
-  const { setSignUpPhase } = useSignUpPhase();
 
   const findSkoolUser = async (data: any) => {
     setIsLoading(true);
@@ -33,7 +34,7 @@ export function UsernameForm() {
           const data = doc.data() as UserProfileTypes;
           setUserProfile(data);
           console.log('data -->', data);
-          setSignUpPhase(2);
+          router.push('/signup/show-user-profile');
         });
       }
       if (querySnapshot.empty) {
@@ -50,20 +51,23 @@ export function UsernameForm() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(findSkoolUser)} id='skool-form'>
-        <p>Introduce tu username de Skool</p>
+      <form onSubmit={handleSubmit(findSkoolUser)} id='skool-form' className='space-y-4'>
+        <p className='text-lg font-semibold'>Introduce tu username de Skool</p>
 
         <input
           type='text'
           placeholder='Username'
-          className='text-black'
+          className='w-full p-2 border border-gray-300 rounded text-black focus:outline-none focus:ring-2 focus:ring-blue-500'
           {...register('username', { required: 'El username es obligatorio' })}
         />
         {errors.username && (
-          <p className='errors'>{String(errors.username.message)}</p>
+          <p className='text-red-500 text-sm'>{String(errors.username.message)}</p>
         )}
 
-        <button type='submit'>
+        <button
+          type='submit'
+          className='w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300'
+        >
           {isLoading ? <p>Cargando...</p> : 'Continuar'}
         </button>
       </form>

@@ -8,7 +8,15 @@ export async function middleware(request: NextRequest) {
   // console.log('request', request);
 
   // 1. Check if route is protected
-  const authenticationPaths = ['/', '/login', '/signup'];
+  const authenticationPaths = [
+    '/',
+    '/login',
+    '/signup',
+    '/signup/username-form',
+    '/signup/complete-user-profile',
+    '/signup/show-user-profile',
+    '/signup/new-account'
+  ];
   const currentPath = request.nextUrl.pathname;
   const isAuthenticationPath = authenticationPaths.includes(currentPath);
 

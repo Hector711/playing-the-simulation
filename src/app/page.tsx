@@ -9,7 +9,7 @@
 import { MainTitle } from '@/components/Maintitle';
 import Link from 'next/link';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
-import GuestLink from '@/app/(unprotected)/_components/GuestLink';
+import GuestLink from '@/app/(unprotected)/login/_components/GuestLink';
 
 export default function WellcomePage() {
   return (

@@ -1,5 +1,5 @@
-import { useSignUpPhase } from '@/hooks/useSignUpPhase';
-import { useUserProfile } from '@/hooks/useUserProfile';
+import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
+import { useUserProfile } from '@/hooks/userProfileHook';
 
 export function ShowUserProfile() {
   const { setSignUpPhase } = useSignUpPhase();

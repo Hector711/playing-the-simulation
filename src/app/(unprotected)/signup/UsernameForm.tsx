@@ -3,9 +3,9 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '@/app/_firebase/_clientConfig';
-import { useUserProfile } from '@/hooks/useUserProfile';
+import { useUserProfile } from '@/hooks/userProfileHook';
 import { UserProfileTypes } from '@/types';
-import { useSignUpPhase } from '@/hooks/useSignUpPhase';
+import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 
 // @hector-luengo-guerra-1936
 export  function UsernameForm() {

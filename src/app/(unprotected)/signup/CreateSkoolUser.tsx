@@ -1,6 +1,6 @@
 import { useRouter } from 'next/navigation';
-import { useSignUpPhase } from '@/hooks/useSignUpPhase';
-import { useUserProfile } from '@/hooks/useUserProfile';
+import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
+import { useUserProfile } from '@/hooks/userProfileHook';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 

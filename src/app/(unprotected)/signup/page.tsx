@@ -2,11 +2,11 @@
 
 'use client';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
-import { useSignUpPhase } from '@/hooks/useSignUpPhase';
+import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 import { UsernameForm } from './UsernameForm';
 import { CreateSkoolUser } from './CreateSkoolUser';
 import { ShowUserProfile } from './ShowUserProfile';
-import { useUserProfile } from '@/hooks/useUserProfile';
+import { useUserProfile } from '@/hooks/userProfileHook';
 export default function SignUpPage() {
   const { signUpPhase, setSignUpPhase } = useSignUpPhase();
   const { userProfile } = useUserProfile();

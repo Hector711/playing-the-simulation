@@ -46,7 +46,6 @@ export const logoutUser = async () => {
     method: 'POST',
   });
 
-
   return null;
 };
 

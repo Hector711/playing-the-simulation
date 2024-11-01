@@ -2,11 +2,10 @@
 
 import { auth } from '@/app/_firebase/_adminConfig';
 import { cookies, headers } from 'next/headers';
-import { NextRequest } from 'next/server';
 import { getUserWithID } from '@/app/_firebase/users';
 export const dynamic = 'force-dynamic';
 
-export async function POST(request: NextRequest) {
+export async function POST() {
   try {
     const header = await headers();
     const authorization = header.get('Authorization');
@@ -41,7 +40,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET(request: NextRequest, response: Response) {
+export async function GET(response: Response) {
   try {
     const header = await headers();
 

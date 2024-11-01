@@ -9,8 +9,8 @@ type UserProfileStore = {
   clearUserProfile: () => void;
 };
 
-export const useUserProfile = create<UserProfileStore>((set) => ({
+export const useUserProfile = create<UserProfileStore>(set => ({
   userProfile: null,
-  setUserProfile: (profile) => set({ userProfile: profile }),
+  setUserProfile: profile => set({ userProfile: profile }),
   clearUserProfile: () => set({ userProfile: null }),
 }));

@@ -1,3 +1,4 @@
+/** @format */
 
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
@@ -8,8 +9,13 @@ import { UserProfileTypes } from '@/types';
 import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 
 // @hector-luengo-guerra-1936
-export  function UsernameForm() {
-  const { register, handleSubmit, formState: { errors }, setError } = useForm();
+export function UsernameForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError,
+  } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const { setUserProfile } = useUserProfile();
 
@@ -23,15 +29,17 @@ export  function UsernameForm() {
       const querySnapshot = await getDocs(q);
 
       if (!querySnapshot.empty) {
-        querySnapshot.forEach((doc) => {
+        querySnapshot.forEach(doc => {
           const data = doc.data() as UserProfileTypes;
           setUserProfile(data);
           console.log('data -->', data);
           setSignUpPhase(2);
         });
-      } 
-      if(querySnapshot.empty) {
-        setError('username', { message: 'No se encontró ningún usuario con ese username.' });
+      }
+      if (querySnapshot.empty) {
+        setError('username', {
+          message: 'No se encontró ningún usuario con ese username.',
+        });
       }
     } catch (error: any) {
       console.error(error);
@@ -44,7 +52,7 @@ export  function UsernameForm() {
     <>
       <form onSubmit={handleSubmit(findSkoolUser)} id='skool-form'>
         <p>Introduce tu username de Skool</p>
-        
+
         <input
           type='text'
           placeholder='Username'
@@ -55,7 +63,9 @@ export  function UsernameForm() {
           <p className='errors'>{String(errors.username.message)}</p>
         )}
 
-        <button type='submit'>{isLoading ? <p>Cargando...</p> : 'Continuar'}</button>
+        <button type='submit'>
+          {isLoading ? <p>Cargando...</p> : 'Continuar'}
+        </button>
       </form>
     </>
   );

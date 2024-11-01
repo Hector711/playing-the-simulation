@@ -1,3 +1,5 @@
+/** @format */
+
 import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 import { useUserProfile } from '@/hooks/userProfileHook';
 
@@ -20,4 +22,3 @@ export function ShowUserProfile() {
     </>
   );
 }
-

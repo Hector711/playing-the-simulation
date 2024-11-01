@@ -41,7 +41,6 @@ export const getUser = async () => {
 
 // LLamamos esta funcion desde el middleware para obtener el usuario a partir de la cookie
 export const getUserWithID = async (id: string) => {
-
   const userSnapshot = await getDoc(doc(db, 'users', id));
   const userData = userSnapshot.data();
   if (userData) {

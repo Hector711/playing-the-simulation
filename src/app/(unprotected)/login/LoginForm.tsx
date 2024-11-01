@@ -37,16 +37,12 @@ export default function LoginForm() {
       if (!token) {
         throw new Error('No se ha podido obtener el token');
       }
-      await axios.post(
-        '/api/login',
-        null,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          },
+      await axios.post('/api/login', null, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
         },
-      );
+      });
 
       router.replace('/home');
     } catch (error: any) {
@@ -66,7 +62,9 @@ export default function LoginForm() {
           placeholder='Email'
           {...register('email', { required: true })}
         />
-        {errors.email && <p className='errors'>{String(errors.email.message)}</p>}
+        {errors.email && (
+          <p className='errors'>{String(errors.email.message)}</p>
+        )}
         <input
           type='password'
           placeholder='Password'

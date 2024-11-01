@@ -1,3 +1,5 @@
+/** @format */
+
 import { useRouter } from 'next/navigation';
 import { useSignUpPhase } from '@/hooks/signUpPhaseHook';
 import { useUserProfile } from '@/hooks/userProfileHook';
@@ -8,7 +10,11 @@ export function CreateSkoolUser() {
   const router = useRouter();
   const { setSignUpPhase } = useSignUpPhase();
   const { userProfile } = useUserProfile();
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = async (data: any) => {
     if (userProfile?.id && userProfile?.email) {
@@ -31,7 +37,7 @@ export function CreateSkoolUser() {
         console.error('Error en la solicitud:', error);
       }
     } else {
-      console.error("El perfil de usuario no está completo.");
+      console.error('El perfil de usuario no está completo.');
     }
   };
 
@@ -39,12 +45,22 @@ export function CreateSkoolUser() {
     <>
       <p>Termina de crear tu usuario en Playing The Simulation 2.0</p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="email" placeholder="Email" disabled value={userProfile?.email} />
-        <input type="password" placeholder="Contraseña" className="text-black" {...register('password', { required: true })} />
+        <input
+          type='email'
+          placeholder='Email'
+          disabled
+          value={userProfile?.email}
+        />
+        <input
+          type='password'
+          placeholder='Contraseña'
+          className='text-black'
+          {...register('password', { required: true })}
+        />
         {errors.password && (
           <p className='errors'>{String(errors.password.message)}</p>
         )}
-        <button type="submit">Crear usuario</button>
+        <button type='submit'>Crear usuario</button>
       </form>
     </>
   );

@@ -18,11 +18,11 @@ import { useEffect } from 'react';
 
 export default function AsideProfile() {
   const { userProfile, loadUserProfile } = useUserProfile();
-
+  console.log('userProfile', userProfile);
   useEffect(() => {
     loadUserProfile();
   }, []);
-  // console.log('userProfile', userProfile);
+
   const asideProfileLinks = [
     // { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },
     // { to: '/messages', title: 'Mensajes', icon: MessagesIcon },
@@ -71,7 +71,7 @@ export default function AsideProfile() {
               Nivel &#8227;
               <span>
                 {' '}
-                {userProfile?.score.lv} &#183; {userProfile?.score.pts} pts
+                {userProfile?.score?.lv} &#183; {userProfile?.score?.pts} pts
               </span>
             </h6>
           </div>

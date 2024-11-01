@@ -5,7 +5,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from 'firebase/auth';
-import { auth, db } from '@/app/_firebase/clientConfig';
+import { auth, db } from '@/app/_firebase/_clientConfig';
 import {
   collection,
   doc,

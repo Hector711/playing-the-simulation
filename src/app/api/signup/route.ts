@@ -2,7 +2,7 @@
 
 import { NextRequest } from 'next/server';
 import { getAuth } from 'firebase-admin/auth';
-import { app } from '@/app/_firebase/adminConfig';
+import { app } from '@/app/_firebase/_adminConfig';
 
 export async function POST(req: NextRequest, res: Response) {
   if (req.method === 'POST') {

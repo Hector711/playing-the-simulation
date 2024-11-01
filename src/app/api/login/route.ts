@@ -1,6 +1,6 @@
 /** @format */
 
-import { auth } from '@/app/_firebase/adminConfig';
+import { auth } from '@/app/_firebase/_adminConfig';
 import { cookies, headers } from 'next/headers';
 import { NextRequest } from 'next/server';
 import { getUserWithID } from '@/app/_firebase/users';

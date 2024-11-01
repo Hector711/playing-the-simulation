@@ -3,7 +3,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { auth, db } from '@/app/_firebase/clientConfig';
+import { auth, db } from '@/app/_firebase/_clientConfig';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import axios from 'axios';
 import { doc, getDoc } from 'firebase/firestore';

@@ -2,7 +2,7 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/app/_firebase/clientConfig';
+import { db } from '@/app/_firebase/_clientConfig';
 import { useUserProfile } from '@/hooks/useUserProfile';
 import { UserProfileTypes } from '@/types';
 import { useSignUpPhase } from '@/hooks/useSignUpPhase';

@@ -1,7 +1,7 @@
 /** @format */
 
 import { collection } from 'firebase/firestore';
-import { db } from '@/app/_firebase/clientConfig';
+import { db } from '@/app/_firebase/_clientConfig';
 
 export default async function getCollection(collectionName: string) {
   const dataCollection = collection(db, collectionName);

@@ -1,7 +1,7 @@
 /** @format */
 
 import { doc, collection, setDoc, getDoc } from 'firebase/firestore';
-import { auth, db } from '@/app/_firebase/clientConfig';
+import { auth, db } from '@/app/_firebase/_clientConfig';
 
 interface UserData {
   username: string;
@@ -36,7 +36,6 @@ export const getUser = async () => {
       id: userQuerySnapshot.id,
     };
   }
-
   return null;
 };
 

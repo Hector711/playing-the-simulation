@@ -3,7 +3,7 @@
 'use client';
 import { useState } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/_firebase/clientConfig';
+import { auth } from '@/app/_firebase/_clientConfig';
 import { EventType } from '@/types';
 import { useForm } from 'react-hook-form';
 import { createUserDocWithUid } from '@/app/_firebase/users';

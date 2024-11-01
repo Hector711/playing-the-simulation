@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth } from '@/app/_firebase/clientConfig';
+import { auth } from '@/app/_firebase/_clientConfig';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import Link from 'next/link';

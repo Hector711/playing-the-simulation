@@ -48,9 +48,9 @@ export default function AsideProfile() {
           />
           <h4>{`${userProfile?.firstName} ${userProfile?.lastName}`}</h4>
         </Link>
-        <p>{userProfile?.bio}</p>
+        <p id='bio'>{userProfile?.bio}</p>
         <hr />
-        <div id='profile-info'>
+        <div id='score'>
           {/* <div>
             <BusinessIcon />
             <h6>

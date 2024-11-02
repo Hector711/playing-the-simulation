@@ -30,10 +30,14 @@ header#profile {
     text-decoration: underline;
     background-color: #7e7e7e21;
   }
+
+  p#bio {
+    padding-bottom: 10px;
+  }
   hr {
     width: 100%;
   }
-  div#profile-info {
+  div#score {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

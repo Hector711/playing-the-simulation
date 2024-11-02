@@ -3,14 +3,17 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { auth, db } from '@/app/_firebase/_clientConfig';
+import { auth } from '@/app/_firebase/_clientConfig';
 import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import axios from 'axios';
-import { doc, getDoc } from 'firebase/firestore';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
+import { getUserWithID } from '@/app/_firebase/users';
+import { useUserProfile } from '@/hooks/userProfileHook';
+import { UserProfileTypes } from '@/types/userTypes';
 
 export default function LoginForm() {
+  const { setUserProfile } = useUserProfile();
   const router = useRouter();
   const {
     register,
@@ -27,24 +30,26 @@ export default function LoginForm() {
         data.email,
         data.password,
       );
-      const userRef = doc(db, 'users', credentials.user.uid);
-      const userDoc = await getDoc(userRef);
-      if (!userDoc) {
-        throw new Error('No se ha podido obtener el usuario');
-      }
+      const userId = credentials.user.uid;
+      const user = await getUserWithID(userId);
       const token = await credentials.user.getIdToken();
 
       if (!token) {
         throw new Error('No se ha podido obtener el token');
       }
-      await axios.post('/api/login', null, {
+      const res = await axios.post('/api/login', null, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
-
-      router.replace('/home');
+      if (!user) {
+        throw new Error('No se ha podido obtener el usuario');
+      }
+      if (res.status === 200) {
+        setUserProfile(user as UserProfileTypes);
+        router.replace('/home');
+      }
     } catch (error: any) {
       console.error(error);
       signOut(auth);

@@ -43,13 +43,11 @@ export const getUser = async () => {
 export const getUserWithID = async (id: string) => {
   const userSnapshot = await getDoc(doc(db, 'users', id));
   const userData = userSnapshot.data();
-
+  
   if (userData) {
     console.log('Datos del usuario:', userData);
-    return {
-      ...userData,
-      id: userSnapshot.id,
-    };
+    return userData
   }
   return null;
 };
+

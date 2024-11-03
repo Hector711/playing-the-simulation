@@ -47,7 +47,3 @@ export default function Timeline() {
     </div>
   );
 }
-
-{
-  /* <pre className='text-xs w-20'>{JSON.stringify(item, null, 2)}</pre> */
-}

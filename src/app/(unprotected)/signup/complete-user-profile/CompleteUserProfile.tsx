@@ -13,7 +13,7 @@ export function CompleteUserProfile() {
 
   useEffect(() => {
     loadUserProfile();
-  }, []);
+  }, [loadUserProfile]);
   const {
     register,
     handleSubmit,

@@ -21,7 +21,7 @@ export default function AsideProfile() {
   console.log('userProfile', userProfile);
   useEffect(() => {
     loadUserProfile();
-  }, []);
+  }, [loadUserProfile]);
 
   const asideProfileLinks = [
     // { to: '/notifications', title: 'Notificaciones', icon: NotificationsIcon },

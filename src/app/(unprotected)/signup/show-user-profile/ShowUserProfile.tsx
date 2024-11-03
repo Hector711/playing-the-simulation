@@ -11,7 +11,7 @@ export function ShowUserProfile() {
 
   useEffect(() => {
     loadUserProfile();
-  }, []);
+  }, [loadUserProfile]);
 
   console.log(userProfile);
   return (

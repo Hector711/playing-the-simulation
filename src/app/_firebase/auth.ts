@@ -1,114 +1,45 @@
 /** @format */
 
-import {
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
-} from 'firebase/auth';
-import { auth, db } from '@/app/_firebase/_clientConfig';
-import {
-  collection,
-  doc,
-  getCountFromServer,
-  limit,
-  query,
-  setDoc,
-  where,
-} from 'firebase/firestore';
-import { FirebaseError } from 'firebase/app';
-import axios from 'axios';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '@/app/_firebase/_clientConfig';
+import { getUserDoc } from './users';
 
-export const loginUser = async (email: string, password: string) => {
+export const googleAuth = async () => {
+  const provider = new GoogleAuthProvider();
   try {
-    const credentials = await signInWithEmailAndPassword(auth, email, password);
+    const result = await signInWithPopup(auth, provider);
+    GoogleAuthProvider.credentialFromResult(result);
 
-    const response = await axios.post(
-      '/api/login',
-      {},
-      {
+    const user = result.user;
+    const token = await user.getIdToken();
+
+    const userDoc = await getUserDoc(user.uid);
+    if (!userDoc) {
+      console.log('No user doc found, creating new user...');
+      const res = await fetch('/api/signup', {
+        method: 'POST',
         headers: {
-          Authorization: `Bearer ${await credentials.user.getIdToken()}`,
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
         },
+        body: JSON.stringify({
+          uid: user.uid,
+          email: user.email,
+        }),
+      });
+      return res;
+    }
+    // console.log('User doc found, logging in...');
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
-    return response;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-};
-
-export const logoutUser = async () => {
-  await signOut(auth);
-
-  await fetch('/api/logout', {
-    method: 'POST',
-  });
-
-  return null;
-};
-
-export const validateDBUserExistence = async (email: string) => {
-  const userCollectionRef = collection(db, 'users');
-  const queryRef = query(
-    userCollectionRef,
-    where('email', '==', email),
-    limit(1),
-  );
-  const querySnapshot = await getCountFromServer(queryRef);
-  return querySnapshot.data().count > 0;
-};
-
-export const signUpUser = async (registerData: any) => {
-  try {
-    if (registerData.password !== registerData.confirmPassword) {
-      throw new Error('Las contraseñas no coinciden');
-    }
-
-    const emailExists = await validateDBUserExistence(registerData.email);
-    if (emailExists) {
-      throw new Error('Email Invalido');
-    }
-
-    const credentials = await createUserWithEmailAndPassword(
-      auth,
-      registerData.email,
-      registerData.password,
-    );
-
-    if (!credentials?.user) {
-      throw new Error('No se pudo registrar el usuario');
-    }
-
-    const userRef = doc(db, 'users', credentials?.user?.uid);
-    const { email, firstName, lastName } = registerData;
-
-    setDoc(userRef, {
-      email,
-      name: firstName,
-      firstName,
-      lastName,
     });
 
-    await axios.post(
-      '/api/login',
-      {},
-      {
-        headers: {
-          Authorization: `Bearer ${await credentials.user.getIdToken()}`,
-          'Content-Type': 'application/json',
-        },
-      },
-    );
-
-    return registerData;
+    return response;
   } catch (error) {
-    signOut(auth);
-    if (error instanceof FirebaseError) {
-      console.error(error);
-      throw new Error('El correo ya esta en uso.');
-    }
+    console.error('Error during Google sign-in:', error);
     throw error;
   }
 };

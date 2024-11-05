@@ -8,7 +8,7 @@ import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import axios from 'axios';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-import { getUserWithID } from '@/app/_firebase/users';
+import { getUserDoc } from '@/app/_firebase/users';
 import { useUserProfile } from '@/hooks/userProfileHook';
 import { UserProfileTypes } from '@/types/userTypes';
 
@@ -31,7 +31,7 @@ export default function LoginForm() {
         data.password,
       );
       const userId = credentials.user.uid;
-      const user = await getUserWithID(userId);
+      const user = await getUserDoc(userId);
       const token = await credentials.user.getIdToken();
 
       if (!token) {

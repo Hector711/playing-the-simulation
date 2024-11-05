@@ -2,18 +2,64 @@
 
 import { auth } from '@/app/_firebase/_adminConfig';
 import { cookies, headers } from 'next/headers';
-import { getUserWithID } from '@/app/_firebase/users';
+import { getUserDoc } from '@/app/_firebase/users';
 import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
+
+/**
+ * CALLED FROM MIDDLEWARE
+ * */
+export async function GET() {
+  console.log('No verified');
+
+  try {
+    const header = await headers();
+    const session = header.get('Session');
+
+    if (!session) {
+      return NextResponse.json(
+        { isLogged: false, error: 'No se ha encontrado sesion' },
+        { status: 401 },
+      );
+    }
+
+    const verified = await auth.verifySessionCookie(session, true);
+    if (!verified) {
+      return NextResponse.json(
+        { isLogged: false, error: 'No se ha podido verificar la sesión' },
+        { status: 401 },
+      );
+    }
+    console.log('No verified');
+
+
+    const userID = verified.user_id;
+    const user = await getUserDoc(userID);
+    if (!user) {
+      return NextResponse.json(
+        {
+          isLogged: false,
+          error:
+            'Se ha verificado la sesion pero no se han encontrado los datos del usuario',
+        },
+        { status: 401 },
+      );
+    }
+
+    console.log('cookie verified with user');
+    return NextResponse.json({ isLogged: true }, { status: 200 });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ isLogged: false }, { status: 500 });
+  }
+}
 
 export async function POST() {
   try {
     const header = await headers();
     const authorization = header.get('Authorization');
-
     if (authorization?.startsWith('Bearer ')) {
       const idToken = authorization.split('Bearer ')[1];
-
       const decodedToken = await auth.verifyIdToken(idToken);
       if (decodedToken) {
         // Generate session cookie
@@ -29,46 +75,23 @@ export async function POST() {
           secure: true,
         });
 
-        return Response.json('', { status: 200 });
+        return Response.json(
+          { message: 'Inicio de sesión exitoso' },
+          { status: 200 },
+        );
       }
-      return Response.json('', { status: 401 });
+      return Response.json(
+        { error: 'Error al iniciar sesión' },
+        { status: 401 },
+      );
     }
 
-    return Response.json('', { status: 401 });
+    return Response.json(
+      { error: 'No se ha proporcionado un token de autenticación' },
+      { status: 401 },
+    );
   } catch (error) {
     console.error(error);
-    return Response.json('', { status: 401 });
-  }
-}
-
-export async function GET() {
-  try {
-    const cookie = await cookies();
-    const session = cookie.get('__session')?.value || '';
-
-    // Validate if the cookie exist in the request
-    if (!session) {
-      return NextResponse.json({ isLogged: false }, { status: 401 });
-    }
-
-    const verified = await auth.verifySessionCookie(session, true);
-
-    if (!verified) {
-      console.log('no verified');
-      return NextResponse.json({ isLogged: false }, { status: 401 });
-    }
-    const userID = verified.user_id;
-    const user = await getUserWithID(userID);
-
-    if (!user) {
-      console.log('No se ha podido obtener el usuario');
-      return NextResponse.json({ isLogged: false }, { status: 401 });
-    }
-
-    console.log('cookie verified with user');
-    return NextResponse.json({ isLogged: true }, { status: 200 });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ isLogged: false }, { status: 500 });
+    return Response.json({ error: 'Error al iniciar sesión' }, { status: 401 });
   }
 }

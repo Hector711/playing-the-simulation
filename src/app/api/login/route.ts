@@ -32,7 +32,6 @@ export async function GET() {
     }
     console.log('No verified');
 
-
     const userID = verified.user_id;
     const user = await getUserDoc(userID);
     if (!user) {

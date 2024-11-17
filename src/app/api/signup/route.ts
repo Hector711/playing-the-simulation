@@ -51,7 +51,6 @@ async function verifyToken(authorization: string) {
       httpOnly: true,
       secure: true,
     });
-
   } catch (error) {
     console.error(error);
     return Response.json(

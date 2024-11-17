@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
   const router = useRouter();
-  
+
   const handleGoogleSignIn = async () => {
     const res = await googleAuth();
     if (res.status === 200) {

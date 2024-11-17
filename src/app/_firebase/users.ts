@@ -19,9 +19,6 @@ export async function createUserDocWithUid(
   return userDoc;
 }
 
-
-
-
 // export const getUser = async () => {
 //   const userId = auth.currentUser?.uid;
 
@@ -63,15 +60,6 @@ export const createNewUserDoc = async (user: any) => {
   const userDoc = await setDoc(userRef, user);
   return userDoc;
 };
-
-
-
-
-
-
-
-
-
 
 export const createUserFromSkoolData = async (skoolUser: any) => {
   const { id, firstName, lastName, email, username, avatar, bio } = skoolUser;

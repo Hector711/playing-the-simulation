@@ -8,13 +8,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write \"src/**/*\""
+    "format": "prettier --write \"src/**/*\"",
+    "analyse": "ANALYZE=true next build"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^6.1.6",
     "@mui/styled-engine-sc": "^6.1.6",
+    "@next/bundle-analyzer": "^15.0.3",
     "axios": "^1.7.7",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",

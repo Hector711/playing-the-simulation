@@ -20,7 +20,7 @@ const nextConfig = {
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'src')],
-    additionalData: `@use "@/styles/_variables.scss" as *;`,
+    additionalData: `@use "@/styles/_variables.scss" as *; @use "@/styles/_mixins.scss" as *;`,
   },
   images: {
     remotePatterns: [

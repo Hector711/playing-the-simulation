@@ -35,22 +35,8 @@ section.wellcome {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   min-width: max-content;
   width: 100%;
   max-width: 35vw;
   gap: 2rem;
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
-  a.link {
-    @include button-link;
-  }
-  a#guest-link {
-    background-color: $white-1;
-    color: $black-1;
-  }
 }

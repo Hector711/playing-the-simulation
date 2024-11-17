@@ -6,6 +6,8 @@ import { getUserDoc } from '@/app/_firebase/users';
 import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
+const expiresIn = 60 * 60 * 24 * 5 * 1000;
+
 /**
  * CALLED FROM MIDDLEWARE
  * */
@@ -22,7 +24,7 @@ export async function GET() {
         { status: 401 },
       );
     }
-
+    
     const verified = await auth.verifySessionCookie(session, true);
     if (!verified) {
       return NextResponse.json(
@@ -62,7 +64,7 @@ export async function POST() {
       const decodedToken = await auth.verifyIdToken(idToken);
       if (decodedToken) {
         // Generate session cookie
-        const expiresIn = 60 * 60 * 24 * 5 * 1000;
+        
         const sessionCookie = await auth.createSessionCookie(idToken, {
           expiresIn,
         });

@@ -190,3 +190,10 @@ div.unprotected {
     border: 3px solid $blue-0;
   }
 }
+
+.button-a {
+  @include button-a;
+}
+.link-button-a {
+  @include link-button-a;
+}

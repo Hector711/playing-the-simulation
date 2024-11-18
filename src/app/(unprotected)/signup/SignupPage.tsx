@@ -10,7 +10,7 @@ import { UserProfileTypes } from '@/types/userTypes';
 import { useRouter } from 'next/navigation';
 
 // @hector-luengo-guerra-1936
-export function UsernameForm() {
+export default function SignupPage() {
   const router = useRouter();
   const {
     register,
@@ -24,23 +24,20 @@ export function UsernameForm() {
   const findSkoolUser = async (data: any) => {
     setIsLoading(true);
     try {
-      const usersRef = collection(db, 'users');
-      const q = query(usersRef, where('username', '==', data.username));
-      const querySnapshot = await getDocs(q);
-
-      if (!querySnapshot.empty) {
-        querySnapshot.forEach(doc => {
-          const data = doc.data() as UserProfileTypes;
-          setUserProfile(data);
-          console.log('data -->', data);
-          router.push('/signup/show-user-profile');
-        });
-      }
-      if (querySnapshot.empty) {
-        setError('username', {
-          message: 'No se encontró ningún usuario con ese username.',
-        });
-      }
+      // console.log('No user doc found, creating new user...');
+      // const res = await fetch('/api/signup', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      //   body: JSON.stringify({
+      //     uid: user.uid,
+      //     email: user.email,
+      //   }),
+      // });
+      // return res;
+      
     } catch (error: any) {
       console.error(error);
     } finally {

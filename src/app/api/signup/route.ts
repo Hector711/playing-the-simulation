@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 import { auth } from '@/app/_firebase/_adminConfig';
 import { cookies, headers } from 'next/headers';
 import { getUserSkool } from '@/app/_firebase/skoolUsers';
-import { createUserFromSkoolData } from '@/app/_firebase/users';
+import { createUserFromSkoolData } from '@/app/_firebase/_admin/users';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,9 +22,9 @@ export async function POST(req: NextRequest) {
   }
   await verifyToken(authorization);
 
-  const { uid, email } = await req.json();
-
-  const response = await createUser(uid, email);
+  const { uid, email, username } = await req.json();
+  
+  const response = await createUser(uid, email, username);
 
   return response;
 }
@@ -60,11 +60,12 @@ async function verifyToken(authorization: string) {
   }
 }
 
-async function createUser(uid: string, email: string) {
+async function createUser(uid: string, email: string, username: string) {
   console.log({ uid, email });
 
   try {
-    const skoolUser = await getUserSkool('hector-luengo-guerra-1936');
+    // 'hector-luengo-guerra-1936'
+    const skoolUser = await getUserSkool(username);
     await createUserFromSkoolData(skoolUser);
 
     return Response.json(

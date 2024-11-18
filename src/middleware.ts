@@ -23,12 +23,15 @@ export async function middleware(request: NextRequest) {
   const session = cookie.get('__session');
 
   try {
+    // Ruta protegida
     if (!isAuthenticationPath) {
       console.log('Is protected route');
       if (!session) {
-        return NextResponse.redirect(new URL('/login', request.url));
+        return NextResponse.redirect(new URL('/', request.url));
       }
     }
+
+    // Authentication routes
     if (isAuthenticationPath) {
       console.log('Is authentication route');
       if (!session) {
@@ -38,9 +41,9 @@ export async function middleware(request: NextRequest) {
       console.log('Has session');
     }
 
-    console.log('Login api call...');
+    console.log('Verify API call...');
     const domain = new URL(request.url);
-    const responseAPI = await fetch(`${domain.origin}/api/login`, {
+    const responseAPI = await fetch(`${domain.origin}/api/verify`, {
       method: 'GET',
       headers: {
         Session: `${session?.value}`,
@@ -49,8 +52,8 @@ export async function middleware(request: NextRequest) {
 
     if (!isAuthenticationPath) {
       if (responseAPI.status !== 200) {
-        console.log('redirect to login');
-        return NextResponse.redirect(new URL('/login', request.url));
+        console.log('redirect to wellcome page');
+        return NextResponse.redirect(new URL('/', request.url));
       }
     }
 

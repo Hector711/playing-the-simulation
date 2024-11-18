@@ -5,8 +5,9 @@ import {
   cert,
   getApps,
   getApp,
-  AppOptions,
+  AppOptions
 } from 'firebase-admin/app';
+import { getFirestore } from 'firebase-admin/firestore';
 import { getAuth } from 'firebase-admin/auth';
 
 // Asegúrate de que las variables de entorno estén disponibles
@@ -19,6 +20,8 @@ const firebaseAdminConfig: AppOptions = {
   serviceAccountId: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
 };
 
+
 export const app =
-  getApps().length > 0 ? getApp() : initializeApp(firebaseAdminConfig);
+getApps().length > 0 ? getApp() : initializeApp(firebaseAdminConfig);
+export const db = getFirestore();
 export const auth = getAuth(app);

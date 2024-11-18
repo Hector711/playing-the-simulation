@@ -1,21 +1,20 @@
 /** @format */
 
-import { getDocs, query, orderBy, limit, startAfter } from 'firebase/firestore';
-import getCollection from '@/app/_firebase/getCollection';
-
+import { getDocs, query, orderBy, limit, startAfter, collection } from 'firebase/firestore';
+import { db } from '@/app/_firebase/_client/_clientConfig';
 const PAGE_SIZE = 10;
 
 export async function countPages(): Promise<number> {
-  const collectionRef = await getCollection('posts');
+  const collectionRef = collection(db, 'posts');
   const snapshot = await getDocs(collectionRef);
   const totalPages = Math.ceil(snapshot.size / PAGE_SIZE);
   return totalPages;
 }
 
 export async function fetchPosts() {
-  const postsCollection = await getCollection('posts');
+  const collectionRef = collection(db, 'posts');
   const q = query(
-    postsCollection,
+    collectionRef,
     orderBy('createdAt', 'desc'),
     limit(PAGE_SIZE),
   );
@@ -26,18 +25,18 @@ export async function fetchPosts() {
 
 export async function getPostsPerPage(pageNumber: number = 1) {
   try {
-    const postsCollection = await getCollection('posts');
+    const collectionRef =  collection(db, 'posts');
     const offset = (pageNumber - 1) * PAGE_SIZE;
 
     let q = query(
-      postsCollection,
+      collectionRef,
       orderBy('createdAt', 'desc'),
       limit(PAGE_SIZE),
     );
 
     if (offset > 0) {
       const initialQuery = query(
-        postsCollection,
+        collectionRef,
         orderBy('createdAt', 'desc'),
         limit(offset),
       );
@@ -46,7 +45,7 @@ export async function getPostsPerPage(pageNumber: number = 1) {
         initialSnapshot.docs[initialSnapshot.docs.length - 1];
 
       q = query(
-        postsCollection,
+        collectionRef,
         orderBy('createdAt', 'desc'),
         startAfter(lastVisibleDoc),
         limit(PAGE_SIZE),

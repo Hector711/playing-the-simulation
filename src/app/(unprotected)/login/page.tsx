@@ -1,11 +1,11 @@
 /** @format */
 
-import SignupPage from './SignupPage';
+import LoginPage from './LoginPage';
 
 export default function page() {
   return (
     <>
-      <SignupPage />
+      <LoginPage />
     </>
   );
 }

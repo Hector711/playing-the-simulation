@@ -2,7 +2,7 @@
 
 import { MainTitle } from '@/components/Maintitle';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
-import GoogleAuthButton from '@/app/(unprotected)/signup/_components/GoogleAuthButton';
+import LoginGoogle from '@/app/(unprotected)/_components/LoginGoogle';
 
 export default function WellcomePage() {
   return (
@@ -11,7 +11,7 @@ export default function WellcomePage() {
         <MainTitle />
       </header>
       <section className='wellcome'>
-          <GoogleAuthButton />
+          <LoginGoogle />
       </section>
     </UnprotectedDiv>
   );

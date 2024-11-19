@@ -1,6 +1,13 @@
 /** @format */
 
-import { getDocs, query, orderBy, limit, startAfter, collection } from 'firebase/firestore';
+import {
+  getDocs,
+  query,
+  orderBy,
+  limit,
+  startAfter,
+  collection,
+} from 'firebase/firestore';
 import { db } from '@/app/_firebase/_client/_clientConfig';
 const PAGE_SIZE = 10;
 
@@ -15,7 +22,7 @@ export async function fetchPosts() {
   const collectionRef = collection(db, 'posts');
   const q = query(
     collectionRef,
-    orderBy('createdAt', 'desc'),
+    orderBy('metadata.createdAt', 'asc'),
     limit(PAGE_SIZE),
   );
   const querySnapshot = await getDocs(q);
@@ -25,12 +32,12 @@ export async function fetchPosts() {
 
 export async function getPostsPerPage(pageNumber: number = 1) {
   try {
-    const collectionRef =  collection(db, 'posts');
+    const collectionRef = collection(db, 'posts');
     const offset = (pageNumber - 1) * PAGE_SIZE;
 
     let q = query(
       collectionRef,
-      orderBy('createdAt', 'desc'),
+      orderBy('metadata.createdAt', 'desc'),
       limit(PAGE_SIZE),
     );
 

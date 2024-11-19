@@ -11,8 +11,8 @@ export default function WellcomePage() {
         <MainTitle />
       </header>
       <section className='wellcome'>
-          <LogInGoogleButton />
-          <LinkButton href='/signup'>Registrate</LinkButton>
+        <LogInGoogleButton />
+        <LinkButton href='/signup'>Registrarse</LinkButton>
       </section>
     </UnprotectedDiv>
   );

@@ -18,7 +18,7 @@ export function ShowSkoolProfile() {
   return (
     <section className=''>
       <p className='text-lg mb-4'>Es este tu usuario?</p>
-      <div className='flex flex-col gap-1 main-background rounded-lg p-6 mb-4 '>
+      <div className='flex flex-col gap-1 main-background rounded-lg p-6 mb-4  '>
         {userProfile?.avatar && (
           <Image
             src={userProfile.avatar}
@@ -28,12 +28,12 @@ export function ShowSkoolProfile() {
             className='rounded-full mx-auto mb-4'
           />
         )}
-        <p className='text-gray-800'>
+        <p>
           Nombre: {userProfile?.firstName} {userProfile?.lastName}
         </p>
-        <p className='text-gray-800'>Username: @{userProfile?.username}</p>
-        <p className='text-gray-800'>Nivel: {userProfile?.score.lv}</p>
-        <p className='text-gray-800'>Puntos: {userProfile?.score.pts}</p>
+        <p>Username: @{userProfile?.username}</p>
+        <p>Nivel: {userProfile?.score.lv}</p>
+        <p>Puntos: {userProfile?.score.pts}</p>
       </div>
       <div className='flex flex-col gap-3 justify-between mt-6'>
         {userProfile && (

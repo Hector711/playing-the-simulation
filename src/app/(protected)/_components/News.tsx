@@ -9,7 +9,7 @@ export default async function News() {
   const news = await fetchNews();
 
   return (
-    < >
+    <>
       <header id='header-news' className='aside-header blurr'>
         <NewspaperIcon />
         <h2 className='impact'>Noticias</h2>

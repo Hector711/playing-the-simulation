@@ -8,11 +8,7 @@ interface LinkButtonProps {
   children: React.ReactNode;
 }
 
-export default function LinkButton({
-  href,
-  children,
-  id,
-}: LinkButtonProps) {
+export default function LinkButton({ href, children, id }: LinkButtonProps) {
   return (
     <Link href={href} id={id} className='link-button-a'>
       {children}

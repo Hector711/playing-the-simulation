@@ -6,11 +6,7 @@ interface ButtonAProps {
   children: React.ReactNode;
 }
 
-export default function ButtonA({
-  onClick,
-  children,
-  id,
-}: ButtonAProps) {
+export default function ButtonA({ onClick, children, id }: ButtonAProps) {
   return (
     <button onClick={onClick} id={id} className='button-a'>
       {children}

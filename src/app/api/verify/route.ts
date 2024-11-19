@@ -20,7 +20,7 @@ export async function GET() {
         { status: 401 },
       );
     }
-    
+
     const verified = await auth.verifySessionCookie(session, true);
     if (!verified) {
       return NextResponse.json(

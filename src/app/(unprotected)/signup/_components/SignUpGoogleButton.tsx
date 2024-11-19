@@ -8,7 +8,13 @@ import googleIcon from '@/assets/google.png';
 import Image from 'next/image';
 import ButtonA from '@/components/ButtonA';
 
-export default function SignUpGoogleButton({ children, username }: { children: React.ReactNode, username: string }) {
+export default function SignUpGoogleButton({
+  children,
+  username,
+}: {
+  children: React.ReactNode;
+  username: string;
+}) {
   const router = useRouter();
 
   const handleGoogleSignIn = async () => {

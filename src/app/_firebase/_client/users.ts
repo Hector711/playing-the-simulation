@@ -1,3 +1,5 @@
+/** @format */
+
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from './_clientConfig';
 
@@ -14,7 +16,7 @@ export const getUserDoc = async (uid: string) => {
       console.log('Datos del usuario:', userData);
       return userData;
     }
-    
+
     console.log('Usuario no encontrado');
     return null;
   } catch (error) {
@@ -22,5 +24,3 @@ export const getUserDoc = async (uid: string) => {
     throw new Error('No se pudo obtener el documento');
   }
 };
-
-

@@ -21,16 +21,20 @@ export const logInWithGoogle = async () => {
       return null;
     }
     console.log('User doc found, logging in...');
-    const response = await axios.post('/api/login', {}, {
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const response = await axios.post(
+      '/api/login',
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
       },
-    });
+    );
 
     const responseObject = {
       userDoc: userDoc,
       apiResponse: response,
-    }
+    };
 
     return responseObject;
   } catch (error) {
@@ -38,7 +42,6 @@ export const logInWithGoogle = async () => {
     throw error;
   }
 };
-
 
 export const signUpWithGoogle = async (username: string) => {
   const provider = new GoogleAuthProvider();
@@ -50,14 +53,18 @@ export const signUpWithGoogle = async (username: string) => {
     const token = await user.getIdToken();
     const uid = user.uid;
 
-    const response = await axios.post('/api/signup', {
-      uid: uid,
-      username: username,
-    }, {
-      headers: {
-        Authorization: `Bearer ${token}`,
+    const response = await axios.post(
+      '/api/signup',
+      {
+        uid: uid,
+        username: username,
       },
-    });
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      },
+    );
 
     return response;
   } catch (error) {

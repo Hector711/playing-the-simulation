@@ -21,20 +21,16 @@ section.news-container {
   flex-direction: column;
   gap: 0.5rem;
   // background-color: $orange-0;
-
 }
 
 article.news-post {
-  border: 0.5px solid $white-3;
-  background-color: $blue-1;
+  // border: 0.5px solid $white-3;
+  @include main-background-style;
   border-radius: $border-m;
   padding: 10px 19px;
   display: flex;
   flex-direction: column;
-
-  * {
-    // border: 1px solid $white-3;
-  }
+  gap: 1rem;
 
   header {
     display: flex;

@@ -31,11 +31,10 @@ export default function LogInGoogleButton() {
     }
   };
 
-    return (
-      <ButtonA onClick={handleGoogleLogIn} id='google-auth-button'>
-        <Image src={googleIcon} alt='Google' width={20} height={20} />
-        Inicia sesión con Google
-      </ButtonA>
-    );
-  
+  return (
+    <ButtonA onClick={handleGoogleLogIn} id='google-auth-button'>
+      <Image src={googleIcon} alt='Google' width={20} height={20} />
+      Iniciar sesión con Google
+    </ButtonA>
+  );
 }

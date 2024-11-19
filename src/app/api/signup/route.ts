@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     );
   }
   await verifyToken(authorization);
-  
+
   const response = await createUser(uid, username);
   return response;
 }
@@ -55,7 +55,6 @@ async function verifyToken(authorization: string) {
       httpOnly: true,
       secure: true,
     });
-
   } catch (error) {
     console.error(error);
     return Response.json(
@@ -64,8 +63,6 @@ async function verifyToken(authorization: string) {
     );
   }
 }
-
-
 
 async function createUser(uid: string, username: string) {
   try {

@@ -11,7 +11,6 @@ import { ShowSkoolProfile } from '@/app/(unprotected)/signup/_components/ShowSko
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 // @hector-luengo-guerra-1936
 export default function SignupPage() {
-
   const {
     register,
     handleSubmit,

@@ -12,6 +12,7 @@ import News from '@/app/(protected)/_components/News';
 import Timeline from '@/app/(protected)/_components/Timeline';
 import ProtectedDiv from '@/app/(protected)/_components/ProtectedDiv';
 import Pagination from '@/app/(protected)/_components/Pagination';
+// import Tiptap from '@/components/TipTap';
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       </ModelLeft>
 
       <ModelMain id='timeline' className='home'>
+        {/* <Tiptap /> */}
         {/* <Accordion className='accordions' id='new-post-accordion'>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon className='arrow-icons' />}

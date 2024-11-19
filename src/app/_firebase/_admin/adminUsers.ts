@@ -1,3 +1,5 @@
+/** @format */
+
 import { db } from './_adminConfig';
 
 /**
@@ -12,7 +14,7 @@ export const adminGetUserDoc = async (uid: string) => {
       console.log(`👤 ${userData.username}`);
       return userData;
     }
-    
+
     console.log('Usuario no encontrado');
     return null;
   } catch (error) {
@@ -20,8 +22,6 @@ export const adminGetUserDoc = async (uid: string) => {
     throw new Error('No se pudo obtener el documento');
   }
 };
-
-
 
 interface UserData {
   username: string;
@@ -33,10 +33,7 @@ interface UserData {
 /**
  * Create user doc with uid
  * */
-export async function adminCreateUserDoc(
-  uid: string,
-  userData: UserData,
-) {
+export async function adminCreateUserDoc(uid: string, userData: UserData) {
   try {
     const userRef = db.collection('users').doc(uid);
     await userRef.set(userData);
@@ -51,7 +48,19 @@ export async function adminCreateUserDoc(
  * Create user doc with uid and skool user data
  * */
 export const createUserFromSkoolData = async (uid: string, skoolUser: any) => {
-  const { id, firstName, lastName, email, username, avatar, bio, location, role, score, miniAvatar } = skoolUser;
+  const {
+    id,
+    firstName,
+    lastName,
+    email,
+    username,
+    avatar,
+    bio,
+    location,
+    role,
+    score,
+    miniAvatar,
+  } = skoolUser;
 
   const userData = {
     username,

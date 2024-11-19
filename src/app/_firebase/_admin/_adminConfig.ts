@@ -5,7 +5,7 @@ import {
   cert,
   getApps,
   getApp,
-  AppOptions
+  AppOptions,
 } from 'firebase-admin/app';
 import { Firestore, getFirestore } from 'firebase-admin/firestore';
 import { Auth, getAuth } from 'firebase-admin/auth';
@@ -20,8 +20,7 @@ const firebaseAdminConfig: AppOptions = {
   serviceAccountId: process.env.FIREBASE_ADMIN_CLIENT_EMAIL,
 };
 
-
 export const app =
-getApps().length > 0 ? getApp() : initializeApp(firebaseAdminConfig);
+  getApps().length > 0 ? getApp() : initializeApp(firebaseAdminConfig);
 export const db: Firestore = getFirestore();
 export const auth: Auth = getAuth(app);

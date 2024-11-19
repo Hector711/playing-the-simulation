@@ -12,10 +12,7 @@ export const logInWithGoogle = async () => {
     GoogleAuthProvider.credentialFromResult(result);
 
     const user = result.user;
-    console.log('user -->', user);
     const token = await user.getIdToken();
-    // const email = user.email;
-    // const uid = user.uid;
 
     const userDoc = await getUserDoc(user.uid);
 

@@ -8,9 +8,6 @@
 }
 body {
   min-height: 100vh;
-  background-image: url('../../public/background.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
   position: relative;
   margin: 0;
   min-width: 320px;
@@ -18,6 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-inline: $pad-inline-general;
+
 }
 
 /* TITULO PRINCIPAL */
@@ -143,8 +141,9 @@ div.unprotected {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 90dvh;
+  height: 100dvh;
   padding-inline: $pad-inline-general;
+  @include background-image;
 }
 #pagination-container {
   background-color: $blue-1;

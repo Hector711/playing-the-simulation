@@ -2,17 +2,17 @@
 'use client';
 import Link from 'next/link';
 
-interface LinkButtonAProps {
+interface LinkButtonProps {
   href: string;
   id?: string;
   children: React.ReactNode;
 }
 
-export default function LinkButtonA({
+export default function LinkButton({
   href,
   children,
   id,
-}: LinkButtonAProps) {
+}: LinkButtonProps) {
   return (
     <Link href={href} id={id} className='link-button-a'>
       {children}

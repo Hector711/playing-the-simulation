@@ -8,7 +8,6 @@ export const dynamic = 'force-dynamic';
 
 const expiresIn = 60 * 60 * 24 * 5 * 1000;
 
-
 /* *
  * CALLED FROM GOOGLE AUTH BUTTON ???
  * */

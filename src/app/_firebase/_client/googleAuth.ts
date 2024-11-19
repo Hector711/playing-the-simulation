@@ -4,7 +4,7 @@ import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '@/app/_firebase/_client/_clientConfig';
 import { getUserDoc } from './users';
 
-export const loginGoogle = async () => {
+export const logInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   try {
     const result = await signInWithPopup(auth, provider);
@@ -13,15 +13,16 @@ export const loginGoogle = async () => {
     const user = result.user;
     console.log('user -->', user);
     const token = await user.getIdToken();
-    const email = user.email;
-    const uid = user.uid;
+    // const email = user.email;
+    // const uid = user.uid;
 
     const userDoc = await getUserDoc(user.uid);
 
     if (!userDoc) {
-      return { uid, email };
+      console.log('User doc not found');
+      return null;
     }
-    // console.log('User doc found, logging in...');
+    console.log('User doc found, logging in...');
     const response = await fetch('/api/login', {
       method: 'POST',
       headers: {
@@ -37,7 +38,7 @@ export const loginGoogle = async () => {
 };
 
 
-export const signupGoogle = async () => {
+export const signUpWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
   try {
     const result = await signInWithPopup(auth, provider);

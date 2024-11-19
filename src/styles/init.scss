@@ -197,3 +197,7 @@ div.unprotected {
 .link-button-a {
   @include link-button-a;
 }
+
+.main-background {
+  @include main-background-style;
+}

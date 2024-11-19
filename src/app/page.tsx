@@ -2,8 +2,8 @@
 
 import { MainTitle } from '@/components/Maintitle';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
-import LoginGoogle from '@/app/(unprotected)/_components/LoginGoogle';
-
+import LogInGoogleButton from '@/app/(unprotected)/_components/LogInGoogleButton';
+import LinkButton from '@/components/LinkButton';
 export default function WellcomePage() {
   return (
     <UnprotectedDiv id='wellcome-page'>
@@ -11,7 +11,8 @@ export default function WellcomePage() {
         <MainTitle />
       </header>
       <section className='wellcome'>
-          <LoginGoogle />
+          <LogInGoogleButton />
+          <LinkButton href='/signup'>Registrate</LinkButton>
       </section>
     </UnprotectedDiv>
   );

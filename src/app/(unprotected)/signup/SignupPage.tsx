@@ -3,15 +3,16 @@
 'use client';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/app/_firebase/_clientConfig';
 import { useUserProfile } from '@/hooks/userProfileHook';
-import { UserProfileTypes } from '@/types/userTypes';
-import { useRouter } from 'next/navigation';
 
+import { getUserSkool } from '@/app/_firebase/_client/skoolProfiles';
+import { UserProfileTypes } from '@/types/userTypes';
+import { ShowSkoolProfile } from '@/app/(unprotected)/signup/_components/ShowSkoolProfile';
+import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 // @hector-luengo-guerra-1936
 export default function SignupPage() {
-  const router = useRouter();
+  const [showProfile, setShowProfile] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -24,20 +25,12 @@ export default function SignupPage() {
   const findSkoolUser = async (data: any) => {
     setIsLoading(true);
     try {
-      // console.log('No user doc found, creating new user...');
-      // const res = await fetch('/api/signup', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //     Authorization: `Bearer ${token}`,
-      //   },
-      //   body: JSON.stringify({
-      //     uid: user.uid,
-      //     email: user.email,
-      //   }),
-      // });
-      // return res;
-      
+      const user = await getUserSkool(data.username);
+      console.log('user -->', user);
+      if (user) {
+        setUserProfile(user as UserProfileTypes);
+        setShowProfile(true);
+      }
     } catch (error: any) {
       console.error(error);
     } finally {
@@ -46,13 +39,15 @@ export default function SignupPage() {
   };
 
   return (
-    <>
+    <UnprotectedDiv>
       <form
         onSubmit={handleSubmit(findSkoolUser)}
         id='skool-form'
         className='space-y-4'
       >
-        <p className='text-lg font-semibold'>Introduce tu username de Skool</p>
+        <p className='text-lg font-semibold'>
+          Introduce tu username de Skool registrado en Playing the Simulation
+        </p>
 
         <input
           type='text'
@@ -68,11 +63,24 @@ export default function SignupPage() {
 
         <button
           type='submit'
-          className='w-full py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300'
+          className='w-full py-2 bg-blue-500 text-white hover:bg-blue-600 transition duration-300 rounded-[10px]'
         >
           {isLoading ? <p>Cargando...</p> : 'Continuar'}
         </button>
+        <a
+          href='https://skool.com'
+          target='_blank'
+          rel='noopener noreferrer'
+          className=' hover:text-gray-300 transition duration-300'
+        >
+          No tengo cuenta de Skool
+        </a>
       </form>
-    </>
+      {showProfile && (
+        <>
+          <ShowSkoolProfile />
+        </>
+      )}
+    </UnprotectedDiv>
   );
 }

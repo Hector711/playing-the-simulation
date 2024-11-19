@@ -7,7 +7,6 @@ import '@/styles/init.scss';
 // LAYOUT
 import '@/styles/layout_navbar.scss';
 import '@/styles/layout_model.scss';
-import '@/styles/layout_models.scss';
 // PAGES
 import '@/styles/page_wellcome.scss';
 import '@/styles/page_home.scss';

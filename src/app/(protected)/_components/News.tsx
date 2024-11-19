@@ -9,8 +9,8 @@ export default async function News() {
   const news = await fetchNews();
 
   return (
-    <ModelRight id='news' className='blurr'>
-      <header id='header-news' className='aside-header'>
+    < >
+      <header id='header-news' className='aside-header blurr'>
         <NewspaperIcon />
         <h2 className='impact'>Noticias</h2>
       </header>
@@ -19,6 +19,6 @@ export default async function News() {
           return <NewsCard {...item} key={index} />;
         })}
       </section>
-    </ModelRight>
+    </>
   );
 }

@@ -1,24 +1,19 @@
 /** @format */
-
 'use client';
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-// import { auth } from '@/app/_firebase/_clientConfig';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { useUserProfile } from '@/hooks/userProfileHook';
 
 export default function LogOutButton() {
-  // const [user] = useAuthState(auth);
-  // const router = useRouter();
+  const router = useRouter();
   const { clearUserProfile } = useUserProfile();
   const handleLogOut = async () => {
-    // await axios.post('/api/logout');
-    // if (user) {
-    //   clearUserProfile();
-    //   auth.signOut();
-    //   router.push('/');
-    // }
+    const res = await axios.post('/api/logout');
+    if (res.status === 200) {
+      router.push('/');
+      clearUserProfile();
+    }
   };
 
   return (

@@ -30,7 +30,12 @@ export const logInWithGoogle = async () => {
       },
     });
 
-    return response;
+    const responseObject = {
+      user: user,
+      apiResponse: response,
+    }
+
+    return responseObject;
   } catch (error) {
     console.error('Error during Google sign-in:', error);
     throw error;

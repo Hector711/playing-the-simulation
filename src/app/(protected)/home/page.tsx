@@ -57,7 +57,7 @@ export default function HomePage() {
         <Timeline />
         <Pagination />
       </ModelMain>
-      <ModelRight>
+      <ModelRight id='news'>
         <News />
       </ModelRight>
     </ProtectedDiv>

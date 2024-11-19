@@ -8,17 +8,24 @@ import { useRouter } from 'next/navigation';
 import googleIcon from '@/assets/google.png';
 import Image from 'next/image';
 import ButtonA from '@/components/ButtonA';
-
+import { useUserProfile } from '@/hooks/userProfileHook';
+import { UserProfileTypes } from '@/types/userTypes';
 export default function LogInGoogleButton() {
+  const { setUserProfile } = useUserProfile();
   const router = useRouter();
   const handleGoogleLogIn = async () => {
-    const response = await logInWithGoogle();
-    console.log('response -->', response);
-    if (response === null) {
+    const result = await logInWithGoogle();
+    if (result === null) {
+      alert('Error en la autenticación');
+      return;
+    }
+    const { apiResponse, user } = result;
+    if (user === null) {
       alert('Primero debes registrarte y crear tu cuenta');
       router.push('/signup');
     }
-    if (response?.status === 200) {
+    if (apiResponse?.status === 200) {
+      setUserProfile(user as unknown as UserProfileTypes);
       router.push('/home');
     }
   };

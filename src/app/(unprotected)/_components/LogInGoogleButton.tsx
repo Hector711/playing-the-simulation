@@ -19,13 +19,14 @@ export default function LogInGoogleButton() {
       alert('Error en la autenticación');
       return;
     }
-    const { apiResponse, user } = result;
-    if (user === null) {
+    const { apiResponse, userDoc } = result;
+    if (userDoc === null) {
       alert('Primero debes registrarte y crear tu cuenta');
       router.push('/signup');
     }
     if (apiResponse?.status === 200) {
-      setUserProfile(user as unknown as UserProfileTypes);
+      console.log('user -->', userDoc);
+      setUserProfile(userDoc as unknown as UserProfileTypes);
       router.push('/home');
     }
   };

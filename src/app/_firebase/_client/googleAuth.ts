@@ -31,7 +31,7 @@ export const logInWithGoogle = async () => {
     });
 
     const responseObject = {
-      user: user,
+      userDoc: userDoc,
       apiResponse: response,
     }
 

@@ -15,7 +15,6 @@ export default function SignupPage() {
     register,
     handleSubmit,
     formState: { errors },
-    setError,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
   const { userProfile, setUserProfile } = useUserProfile();

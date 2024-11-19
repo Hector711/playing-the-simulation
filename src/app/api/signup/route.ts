@@ -76,6 +76,7 @@ async function createUser(uid: string, username: string) {
       { status: 200 },
     );
   } catch (error) {
+    console.error(error);
     return Response.json(
       { error: 'Error al crear el usuario' },
       { status: 500 },

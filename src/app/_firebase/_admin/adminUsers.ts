@@ -49,7 +49,6 @@ export async function adminCreateUserDoc(uid: string, userData: UserData) {
  * */
 export const createUserFromSkoolData = async (uid: string, skoolUser: any) => {
   const {
-    id,
     firstName,
     lastName,
     email,

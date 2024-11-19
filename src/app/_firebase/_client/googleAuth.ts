@@ -3,6 +3,7 @@
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '@/app/_firebase/_client/_clientConfig';
 import { getUserDoc } from './users';
+import axios from 'axios';
 
 export const logInWithGoogle = async () => {
   const provider = new GoogleAuthProvider();
@@ -23,8 +24,7 @@ export const logInWithGoogle = async () => {
       return null;
     }
     console.log('User doc found, logging in...');
-    const response = await fetch('/api/login', {
-      method: 'POST',
+    const response = await axios.post('/api/login', {}, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -38,26 +38,20 @@ export const logInWithGoogle = async () => {
 };
 
 
-export const signUpWithGoogle = async () => {
+export const signUpWithGoogle = async (username: string) => {
   const provider = new GoogleAuthProvider();
   try {
     const result = await signInWithPopup(auth, provider);
     GoogleAuthProvider.credentialFromResult(result);
 
     const user = result.user;
-    console.log('user -->', user);
     const token = await user.getIdToken();
-    const email = user.email;
     const uid = user.uid;
 
-    const userDoc = await getUserDoc(user.uid);
-
-    if (!userDoc) {
-      return { uid, email };
-    }
-    // console.log('User doc found, logging in...');
-    const response = await fetch('/api/login', {
-      method: 'POST',
+    const response = await axios.post('/api/signup', {
+      uid: uid,
+      username: username,
+    }, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

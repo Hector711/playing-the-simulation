@@ -7,8 +7,8 @@ import {
   getApp,
   AppOptions
 } from 'firebase-admin/app';
-import { getFirestore } from 'firebase-admin/firestore';
-import { getAuth } from 'firebase-admin/auth';
+import { Firestore, getFirestore } from 'firebase-admin/firestore';
+import { Auth, getAuth } from 'firebase-admin/auth';
 
 // Asegúrate de que las variables de entorno estén disponibles
 const firebaseAdminConfig: AppOptions = {
@@ -23,5 +23,5 @@ const firebaseAdminConfig: AppOptions = {
 
 export const app =
 getApps().length > 0 ? getApp() : initializeApp(firebaseAdminConfig);
-export const db = getFirestore();
-export const auth = getAuth(app);
+export const db: Firestore = getFirestore();
+export const auth: Auth = getAuth(app);

@@ -41,7 +41,7 @@ export async function middleware(request: NextRequest) {
       console.log('Has session');
     }
 
-    console.log('Verify API call...');
+    console.log('📡 API / verify...');
     const domain = new URL(request.url);
     const responseAPI = await fetch(`${domain.origin}/api/verify`, {
       method: 'GET',

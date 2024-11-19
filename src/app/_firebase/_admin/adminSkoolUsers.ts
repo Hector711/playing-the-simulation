@@ -1,7 +1,7 @@
 /** @format */
 
-import { collection, query, where, getDocs } from 'firebase/firestore';
-import { db } from '@/app/_firebase/_clientConfig';
+import { db } from './_adminConfig';
+
 
 /**
  * Obtiene los datos de un usuario de la colección 'skoolProfiles'
@@ -9,13 +9,11 @@ import { db } from '@/app/_firebase/_clientConfig';
  * @returns {Promise<Object | null>} - Devuelve un objeto que representa los datos del usuario si se encuentra, o null si no se encuentra ningún usuario.
  */
 export const getUserSkool = async (username: string) => {
-  const usersRef = collection(db, 'skoolProfiles');
-  const q = query(usersRef, where('username', '==', username));
-  const querySnapshot = await getDocs(q);
-
+  const usersRef = db.collection('skoolProfiles'); 
+  const q = usersRef.where('username', '==', username);
+  const querySnapshot = await q.get();
   if (!querySnapshot.empty) {
     const userData = querySnapshot.docs[0].data();
-    console.log('userData -->', userData);
     return userData;
   }
 

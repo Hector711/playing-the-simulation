@@ -2,7 +2,7 @@
 
 import ModelRight from '@/layouts/ModelRight';
 import NewspaperIcon from '@/icons/NewspaperIcon';
-import { fetchNews } from '@/app/_firebase/getDocuments';
+import { fetchNews } from '@/app/_firebase/_client/news';
 import NewsCard from './NewsCard';
 
 export default async function News() {

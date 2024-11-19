@@ -7,14 +7,17 @@ import { useRouter } from 'next/navigation';
 import googleIcon from '@/assets/google.png';
 import Image from 'next/image';
 import ButtonA from '@/components/ButtonA';
-import { useState } from 'react';
 
-export default function SignUpGoogleButton({ children }: { children: React.ReactNode }) {
+export default function SignUpGoogleButton({ children, username }: { children: React.ReactNode, username: string }) {
   const router = useRouter();
 
   const handleGoogleSignIn = async () => {
-    const res = await signUpWithGoogle();
+    const res = await signUpWithGoogle(username);
 
+    if (res.status !== 200) {
+      alert('Error al asociar tu cuenta de Google');
+    }
+    router.push('/');
   };
 
   return (

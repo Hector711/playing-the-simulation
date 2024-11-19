@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import * as React from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { countPages } from '@/app/_firebase/getPosts';
+import { countPages } from '@/app/_firebase/_client/posts';
 
 export default function PaginationOutlined() {
   const router = useRouter();

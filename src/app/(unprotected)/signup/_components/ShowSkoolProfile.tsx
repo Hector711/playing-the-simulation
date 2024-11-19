@@ -28,22 +28,27 @@ export function ShowSkoolProfile() {
             className='rounded-full mx-auto mb-4'
           />
         )}
-        <p className='text-gray-800'>Nombre: {userProfile?.firstName} {userProfile?.lastName}</p>
+        <p className='text-gray-800'>
+          Nombre: {userProfile?.firstName} {userProfile?.lastName}
+        </p>
         <p className='text-gray-800'>Username: @{userProfile?.username}</p>
         <p className='text-gray-800'>Nivel: {userProfile?.score.lv}</p>
         <p className='text-gray-800'>Puntos: {userProfile?.score.pts}</p>
       </div>
       <div className='flex flex-col gap-3 justify-between mt-6'>
-        <Link
-          href='/'
-          className='px-4 py-2 bg-red-800 text-white rounded hover:bg-red-600 transition duration-300 rounded-xl'
-        >
-          No
-        </Link>
-        <SignUpGoogleButton
-        >
-          Si, asociarlo a mi cuenta de Google.
-        </SignUpGoogleButton>
+        {userProfile && (
+          <>
+            <Link
+              href='/'
+              className='px-4 py-2 bg-red-800 text-white hover:bg-red-600 transition duration-300 rounded-xl'
+            >
+              No
+            </Link>
+            <SignUpGoogleButton username={userProfile.username}>
+              Si, asociarlo a mi cuenta de Google.
+            </SignUpGoogleButton>
+          </>
+        )}
       </div>
     </section>
   );

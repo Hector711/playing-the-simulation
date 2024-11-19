@@ -11,7 +11,6 @@ import { ShowSkoolProfile } from '@/app/(unprotected)/signup/_components/ShowSko
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 // @hector-luengo-guerra-1936
 export default function SignupPage() {
-  const [showProfile, setShowProfile] = useState(false);
 
   const {
     register,
@@ -20,7 +19,7 @@ export default function SignupPage() {
     setError,
   } = useForm();
   const [isLoading, setIsLoading] = useState(false);
-  const { setUserProfile } = useUserProfile();
+  const { userProfile, setUserProfile } = useUserProfile();
 
   const findSkoolUser = async (data: any) => {
     setIsLoading(true);
@@ -29,7 +28,6 @@ export default function SignupPage() {
       console.log('user -->', user);
       if (user) {
         setUserProfile(user as UserProfileTypes);
-        setShowProfile(true);
       }
     } catch (error: any) {
       console.error(error);
@@ -76,7 +74,7 @@ export default function SignupPage() {
           No tengo cuenta de Skool
         </a>
       </form>
-      {showProfile && (
+      {userProfile && (
         <>
           <ShowSkoolProfile />
         </>

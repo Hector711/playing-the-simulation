@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { DocumentData } from 'firebase/firestore';
 import Post from './Post';
 import { useSearchParams } from 'next/navigation';
-import { getPostsPerPage } from '@/app/_firebase/getPosts';
+import { getPostsPerPage } from '@/app/_firebase/_client/posts';
 
 export default function Timeline() {
   const [timelinePosts, setTimelinePosts] = useState<DocumentData[]>([]);

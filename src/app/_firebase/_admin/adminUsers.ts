@@ -1,4 +1,3 @@
-import { doc, getDoc } from 'firebase/firestore';
 import { db } from './_adminConfig';
 
 /**
@@ -10,7 +9,7 @@ export const adminGetUserDoc = async (uid: string) => {
     const userData = userSnapshot.data();
 
     if (userData) {
-      console.log('Datos del usuario:', userData);
+      console.log(`👤 ${userData.username}`);
       return userData;
     }
     
@@ -51,7 +50,7 @@ export async function adminCreateUserDoc(
 /**
  * Create user doc with uid and skool user data
  * */
-export const createUserFromSkoolData = async (skoolUser: any) => {
+export const createUserFromSkoolData = async (uid: string, skoolUser: any) => {
   const { id, firstName, lastName, email, username, avatar, bio, location, role, score, miniAvatar } = skoolUser;
 
   const userData = {
@@ -68,7 +67,7 @@ export const createUserFromSkoolData = async (skoolUser: any) => {
   };
 
   try {
-    await adminCreateUserDoc(id, userData);
+    await adminCreateUserDoc(uid, userData);
     console.log('Usuario creado exitosamente en la colección users');
   } catch (error) {
     console.error('Error al crear el usuario:', error);

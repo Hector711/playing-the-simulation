@@ -4,22 +4,29 @@ import type { Metadata } from 'next';
 // INIT
 import '@/styles/reset/reset.scss';
 import '@/styles/init.scss';
-// LAYOUT
-import '@/styles/layout_navbar.scss';
-import '@/styles/layout_model.scss';
-// PAGES
-import '@/styles/page_wellcome.scss';
-import '@/styles/page_home.scss';
-import '@/styles/page_signup.scss';
 // COMPONENTS
-import '@/styles/comp_aside_profile.scss';
-import '@/styles/comp_news.scss';
-import '@/styles/comp_avatar.scss';
-import '@/styles/comp_login.scss';
-import '@/styles/comp_post.scss';
-import '@/styles/comp_new_post.scss';
-import '@/styles/comp_first_form.scss';
 import '@/styles/comp_spinner.scss';
+
+/*
+* PROTECTED
+**/
+// PAGES
+import '@/app/(protected)/_styles/page_home.scss';
+// COMPONENTS
+import '@/app/(protected)/_styles/comp_news.scss';
+import '@/app/(protected)/_styles/comp_aside_profile.scss';
+import '@/app/(protected)/_styles/comp_avatar.scss';
+import '@/app/(protected)/_styles/comp_post.scss';
+import '@/app/(protected)/_styles/comp_new_post.scss';
+// LAYOUT
+import '@/app/(protected)/_styles/layout_navbar.scss';
+import '@/app/(protected)/_styles/layout_model.scss';
+
+/*
+* UNPROTECTED
+**/
+import '@/app/(unprotected)/_styles/page_wellcome.scss';
+import '@/app/(unprotected)/_styles/page_signup.scss';
 
 export const metadata: Metadata = {
   title: 'Playing The Simulation',

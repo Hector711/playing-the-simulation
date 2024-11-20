@@ -30,18 +30,19 @@
   font-weight: 500;
 }
 
-@mixin main-background-style {
+@mixin main-style {
   border-radius: 10px;
   // padding: 0.5rem 0.8rem;
   // background-color: rgba(35, 35, 35, 0.5);
   // color: $white-0;
 
   box-shadow: 0px 0px 4px 1px $blue-1;
-  background-color: #121417c1;
+  // background-color: #121417c1;
+  background-color: #19191ac1;
   backdrop-filter: blur(3px);
-  // border: 0.5px solid $white-3;
   -webkit-backdrop-filter: blur(5px);
   border-radius: $border-m;
+  border: 0.5px solid $lines-color;
 }
 
 @mixin background-image {

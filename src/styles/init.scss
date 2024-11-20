@@ -122,8 +122,9 @@ button.submit:hover {
   border-bottom: 0.5px solid $white-3;
   -webkit-backdrop-filter: blur(5px);
 }
+
 .blurr {
-  @include main-background-style;
+  @include main-style;
 }
 .shadoww {
   box-shadow: 2px 2px 1px 0px #282828;
@@ -139,6 +140,7 @@ div.unprotected {
   padding-inline: $pad-inline-general;
   @include background-image;
 }
+
 #pagination-container {
   background-color: $blue-1;
   border-radius: $border-m;
@@ -192,5 +194,5 @@ div.unprotected {
 }
 
 .main-background {
-  @include main-background-style;
+  @include main-style;
 }

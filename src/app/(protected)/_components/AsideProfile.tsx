@@ -30,8 +30,8 @@ export default function AsideProfile() {
   ];
 
   return (
-    <>
-      <header id='profile' className='blurr'>
+    <div id='aside-profile'>
+      <header id='profile' >
         <Link href='/profile' id='profile-link'>
           <Image
             id='cover'
@@ -91,11 +91,8 @@ export default function AsideProfile() {
           );
         })}
       </section>
-      <footer id='logout'>
-        <LogOutButton />
-        {/* <NewPostLink /> */}
-      </footer>
-    </>
+     
+    </div>
   );
 }
 

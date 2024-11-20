@@ -1,0 +1,32 @@
+/** @format */
+
+main.home {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  h2.impact {
+    padding: 15px 5px;
+  }
+}
+
+aside.aside-right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  header.aside-header {
+    padding: 0.5rem;
+    h3 {
+      color: $white-2;
+    }
+  }
+  section.aside-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1.5rem 1rem;
+  }
+}
+
+

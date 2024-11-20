@@ -1,4 +1,10 @@
 /** @format */
+div#aside-profile {
+  // border: 1px solid red;
+  height: 100%;
+  width: 100%;
+  min-width: 200px;
+}
 
 header#profile {
   height: auto;
@@ -6,6 +12,7 @@ header#profile {
   flex-direction: column;
   display: flex;
   overflow: hidden;
+  @include main-style;
   #profile-link {
     display: flex;
     flex-direction: column;
@@ -107,8 +114,7 @@ section#profile-links {
 }
 
 footer#logout {
-  position: absolute;
-  bottom: 0;
+
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -13,6 +13,7 @@ export type PropsTypes = {
   title?: string;
   id?: string;
   nav?: { page: string; slug: string; title: string }[];
+  tailwind?: string;
 };
 export interface ErrorProps {
   error: Error;

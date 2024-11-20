@@ -1,9 +1,6 @@
 /** @format */
 
-div.unprotected#wellcome-page {
-  gap: 2rem;
-  justify-content: center;
-}
+
 header.wellcome {
   flex-direction: column;
   gap: 1.7rem;
@@ -31,13 +28,3 @@ header.wellcome {
   }
 }
 
-section.wellcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-width: max-content;
-  width: 100%;
-  max-width: 35vw;
-  gap: 2rem;
-}

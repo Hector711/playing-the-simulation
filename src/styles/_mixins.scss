@@ -2,6 +2,12 @@
 
 @use '@/styles/_variables.scss' as *;
 
+@mixin background-image {
+  background-image: url('../../public/background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 @mixin button-a {
   display: flex;
   align-items: center;
@@ -45,8 +51,4 @@
   border: 0.5px solid $lines-color;
 }
 
-@mixin background-image {
-  background-image: url('../../public/background.png');
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
+

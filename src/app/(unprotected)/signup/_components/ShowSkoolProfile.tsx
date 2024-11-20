@@ -8,7 +8,7 @@ import Link from 'next/link';
 import SignUpGoogleButton from './SignUpGoogleButton';
 
 export function ShowSkoolProfile() {
-  const { userProfile, loadUserProfile } = useUserProfile();
+  const { userProfile, loadUserProfile, clearUserProfile } = useUserProfile();
 
   useEffect(() => {
     loadUserProfile();
@@ -17,7 +17,7 @@ export function ShowSkoolProfile() {
   console.log(userProfile);
   return (
     <section className=''>
-      <p className='text-lg mb-4'>Es este tu usuario?</p>
+      <p className='text-lg mb-4'>Este es tu usuario?</p>
       <div className='flex flex-col gap-1 main-background rounded-lg p-6 mb-4  '>
         {userProfile?.avatar && (
           <Image
@@ -32,18 +32,19 @@ export function ShowSkoolProfile() {
           Nombre: {userProfile?.firstName} {userProfile?.lastName}
         </p>
         <p>Username: @{userProfile?.username}</p>
+        <p>Bio: {userProfile?.bio}</p>
         <p>Nivel: {userProfile?.score.lv}</p>
         <p>Puntos: {userProfile?.score.pts}</p>
       </div>
       <div className='flex flex-col gap-3 justify-between mt-6'>
         {userProfile && (
           <>
-            <Link
-              href='/'
+            <button
+              onClick={clearUserProfile}
               className='px-4 py-2 bg-red-800 text-white hover:bg-red-600 transition duration-300 rounded-xl'
             >
               No
-            </Link>
+            </button>
             <SignUpGoogleButton username={userProfile.username}>
               Si, asociarlo a mi cuenta de Google.
             </SignUpGoogleButton>

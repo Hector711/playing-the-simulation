@@ -1,7 +1,5 @@
 /** @format */
-
 'use client';
-
 import GameIcon from '@/icons/GameIcon';
 
 export function MainTitle() {

@@ -26,7 +26,6 @@ import '@/app/(protected)/_styles/layout_model.scss';
 * UNPROTECTED
 **/
 import '@/app/(unprotected)/_styles/page_wellcome.scss';
-import '@/app/(unprotected)/_styles/page_signup.scss';
 
 export const metadata: Metadata = {
   title: 'Playing The Simulation',

@@ -2,9 +2,9 @@
 
 import { PropsTypes } from '@/types';
 
-export default function UnprotectedDiv({ children, id }: PropsTypes) {
+export default function UnprotectedDiv({ children, id, className }: PropsTypes) {
   return (
-    <div className='unprotected' id={id}>
+    <div className={`unprotected ${className}`} id={id}>
       {children}
     </div>
   );

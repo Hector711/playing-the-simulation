@@ -1,5 +1,3 @@
-/** @format */
-
 import { getDocs, query, orderBy, limit, collection } from 'firebase/firestore';
 import { db } from '@/app/_firebase/_client/_clientConfig';
 

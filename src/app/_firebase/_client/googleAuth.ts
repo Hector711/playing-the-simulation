@@ -1,5 +1,3 @@
-/** @format */
-
 import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth } from '@/app/_firebase/_client/_clientConfig';
 import { getUserDoc } from './users';

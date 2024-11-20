@@ -1,5 +1,3 @@
-/** @format */
-
 'use client';
 import { useEffect } from 'react';
 import { useUserProfile } from '@/hooks/userProfileHook';

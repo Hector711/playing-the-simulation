@@ -1,5 +1,3 @@
-/** @format */
-
 import { Timestamp, Score } from './index';
 
 export interface AvatarTypes {

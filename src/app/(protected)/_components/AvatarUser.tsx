@@ -1,5 +1,3 @@
-/** @format */
-
 import Avatar from '@mui/material/Avatar';
 import { AvatarTypes } from '@/types/userTypes';
 

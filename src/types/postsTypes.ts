@@ -1,5 +1,3 @@
-/** @format */
-
 import { Score, Metadata } from './index';
 
 export interface CreatorUser {

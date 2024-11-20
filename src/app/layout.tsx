@@ -1,5 +1,3 @@
-/** @format */
-
 import type { Metadata } from 'next';
 // INIT
 import '@/styles/reset/reset.scss';
@@ -8,8 +6,8 @@ import '@/styles/init.scss';
 import '@/styles/comp_spinner.scss';
 
 /*
-* PROTECTED
-**/
+ * PROTECTED
+ **/
 // PAGES
 import '@/app/(protected)/_styles/page_home.scss';
 // COMPONENTS
@@ -23,8 +21,8 @@ import '@/app/(protected)/_styles/layout_navbar.scss';
 import '@/app/(protected)/_styles/layout_model.scss';
 
 /*
-* UNPROTECTED
-**/
+ * UNPROTECTED
+ **/
 import '@/app/(unprotected)/_styles/page_wellcome.scss';
 
 export const metadata: Metadata = {

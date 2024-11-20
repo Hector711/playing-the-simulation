@@ -1,5 +1,3 @@
-/** @format */
-
 import { type NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 

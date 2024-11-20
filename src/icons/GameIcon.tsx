@@ -1,5 +1,3 @@
-/** @format */
-
 import type { IconProps } from '@/types';
 
 export default function GameIcon(props: IconProps) {

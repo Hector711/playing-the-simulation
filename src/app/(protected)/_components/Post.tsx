@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 // import Link from 'next/link';

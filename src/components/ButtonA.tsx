@@ -1,5 +1,3 @@
-/** @format */
-
 interface ButtonAProps {
   onClick: () => void;
   id: string;

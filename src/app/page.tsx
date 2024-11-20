@@ -1,5 +1,3 @@
-/** @format */
-
 import { MainTitle } from '@/components/Maintitle';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
 import LogInGoogleButton from '@/app/(unprotected)/_components/LogInGoogleButton';

@@ -1,5 +1,3 @@
-/** @format */
-
 import { IconProps } from '@/types';
 
 export default function GifIcon(props: IconProps) {

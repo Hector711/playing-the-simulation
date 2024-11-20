@@ -1,4 +1,3 @@
-/** @format */
 'use client';
 
 import Link from 'next/link';
@@ -31,7 +30,7 @@ export default function AsideProfile() {
 
   return (
     <div id='aside-profile'>
-      <header id='profile' >
+      <header id='profile'>
         <Link href='/profile' id='profile-link'>
           <Image
             id='cover'
@@ -91,7 +90,6 @@ export default function AsideProfile() {
           );
         })}
       </section>
-     
     </div>
   );
 }

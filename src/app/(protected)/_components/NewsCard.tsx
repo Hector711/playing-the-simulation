@@ -1,5 +1,3 @@
-/** @format */
-
 import Link from 'next/link';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 import { NewsCardTypes } from '@/types/postsTypes';

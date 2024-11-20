@@ -1,5 +1,3 @@
-/** @format */
-
 import { auth } from '@/app/_firebase/_admin/_adminConfig';
 import { adminGetUserDoc } from '@/app/_firebase/_admin/adminUsers';
 import { headers } from 'next/headers';

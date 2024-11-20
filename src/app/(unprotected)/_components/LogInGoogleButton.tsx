@@ -1,5 +1,3 @@
-/** @format */
-
 'use client';
 import React from 'react';
 import { logInWithGoogle } from '@/app/_firebase/_client/googleAuth';

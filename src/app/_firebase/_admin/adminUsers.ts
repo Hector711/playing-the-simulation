@@ -1,5 +1,3 @@
-/** @format */
-
 import { db } from './_adminConfig';
 
 /**

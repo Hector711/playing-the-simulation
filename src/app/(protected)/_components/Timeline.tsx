@@ -1,5 +1,3 @@
-/** @format */
-
 'use client';
 import { useEffect, useState } from 'react';
 import { DocumentData } from 'firebase/firestore';

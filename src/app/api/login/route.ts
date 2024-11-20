@@ -1,5 +1,3 @@
-/** @format */
-
 import { cookies, headers } from 'next/headers';
 import { auth } from '@/app/_firebase/_admin/_adminConfig';
 export const dynamic = 'force-dynamic';

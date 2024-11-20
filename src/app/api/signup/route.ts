@@ -1,5 +1,3 @@
-/** @format */
-
 import { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { auth } from '@/app/_firebase/_admin/_adminConfig';

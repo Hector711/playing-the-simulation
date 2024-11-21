@@ -25,7 +25,7 @@ export default function SignUpGoogleButton({
   };
 
   return (
-    <Button onClick={handleGoogleSignIn} >
+    <Button onClick={handleGoogleSignIn}>
       <Image src={googleIcon} alt='Google' width={20} height={20} />
       {children}
     </Button>

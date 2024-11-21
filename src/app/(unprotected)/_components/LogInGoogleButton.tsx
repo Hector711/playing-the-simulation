@@ -34,7 +34,11 @@ export default function LogInGoogleButton() {
   };
 
   return (
-    <Button onClick={handleGoogleLogIn} id='google-auth-button' className='flex items-center gap-2'>
+    <Button
+      onClick={handleGoogleLogIn}
+      id='google-auth-button'
+      className='flex items-center gap-2'
+    >
       <Image src={googleIcon} alt='Google' width={20} height={20} />
       {isLoading ? <p>Cargando...</p> : 'Iniciar sesión con Google'}
     </Button>

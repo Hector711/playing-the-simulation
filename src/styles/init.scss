@@ -85,20 +85,15 @@ a {
   color: $orange-0;
 }
 
-
 hr {
   border: 0.5px solid $white-3;
 }
-
-
 
 .github-icon {
   stroke: white;
   width: 18px;
   height: 18px;
 }
-
-
 
 div.unprotected {
   display: flex;
@@ -156,7 +151,6 @@ div.unprotected {
     border: 3px solid $blue-0;
   }
 }
-
 
 .main-background {
   @include main-style;

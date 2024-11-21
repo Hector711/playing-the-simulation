@@ -9,7 +9,8 @@ interface LinkButtonProps {
   onClick?: () => void;
   type?: 'submit' | 'reset';
 }
-const tailwindStyles = 'bg-white hover:bg-gray-400 transition duration-600 text-black font-medium py-2 px-4 rounded-xl flex gap-2';
+const tailwindStyles =
+  'bg-white hover:bg-gray-400 transition duration-600 text-black font-medium py-2 px-4 rounded-xl flex gap-2';
 
 export default function Button({
   onClick,

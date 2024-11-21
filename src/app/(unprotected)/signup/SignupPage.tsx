@@ -65,10 +65,8 @@ export default function SignupPage() {
                 {String(errors.username.message)}
               </p>
             )}
-            <Button
-              type='submit'
-            >
-             {isLoading ? <p>Cargando...</p> : 'Continuar'}
+            <Button type='submit'>
+              {isLoading ? <p>Cargando...</p> : 'Continuar'}
             </Button>
             <a
               href='https://skool.com'

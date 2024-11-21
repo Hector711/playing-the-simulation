@@ -46,8 +46,6 @@ export default function AsideProfile() {
   );
 }
 
-
-
 // function NewPostLink() {
 //   return (
 //     <Link

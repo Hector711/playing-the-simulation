@@ -7,13 +7,7 @@ import { useUserProfile } from '@/hooks/userProfileHook';
 import { useEffect } from 'react';
 // import MessagesIcon from '@/icons/MessagesIcon';
 // import NotificationsIcon from '@/icons/NotificationsIcon';
-import AvatarUser from '@/app/(protected)/_components/AvatarUser';
-import GameIcon from '@/icons/GameIcon';
-import BusinessIcon from '@/icons/BusinessIcon';
-import PigIcon from '@/icons/PigIcon';
 // import NewPostIcon from '@/icons/NewPostIcon';
-import Image from 'next/image';
-import type { UserProfileTypes } from '@/types/userTypes';
 
 export default function AsideProfile() {
   const { userProfile, loadUserProfile } = useUserProfile();

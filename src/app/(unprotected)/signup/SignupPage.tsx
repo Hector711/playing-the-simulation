@@ -7,6 +7,8 @@ import { getUserSkool } from '@/app/_firebase/_client/skoolProfiles';
 import { UserProfileTypes } from '@/types/userTypes';
 import { ShowSkoolProfile } from '@/app/(unprotected)/signup/_components/ShowSkoolProfile';
 import UnprotectedDiv from '@/app/(unprotected)/_components/UnprotectedDiv';
+import Button from '@/components/Button';
+
 // hector-luengo-guerra-1936
 export default function SignupPage() {
   const {
@@ -33,7 +35,7 @@ export default function SignupPage() {
   };
 
   return (
-    <UnprotectedDiv id='signup-page' className='py-28'>
+    <UnprotectedDiv id='signup-page' className='py-28 flex gap-8'>
       <header>
         <h3 className='text-3xl font-bold text-center'>Registrate en PTS</h3>
       </header>
@@ -63,13 +65,11 @@ export default function SignupPage() {
                 {String(errors.username.message)}
               </p>
             )}
-
-            <button
+            <Button
               type='submit'
-              className='w-full py-2 bg-blue-500 text-white hover:bg-blue-600 transition duration-300 rounded-[10px]'
             >
-              {isLoading ? <p>Cargando...</p> : 'Continuar'}
-            </button>
+             {isLoading ? <p>Cargando...</p> : 'Continuar'}
+            </Button>
             <a
               href='https://skool.com'
               target='_blank'

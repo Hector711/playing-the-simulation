@@ -6,34 +6,6 @@
   background-repeat: no-repeat;
 }
 
-@mixin button-a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  border-radius: 10px;
-  padding: 0.5rem 0.8rem;
-  background-color: #232323;
-}
-
-@mixin link-button-a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  border-radius: 10px;
-  padding: 0.4rem 1.3rem;
-  background-color: #363535;
-}
-
-@mixin button-link {
-  background-color: $orange-0;
-  color: $black-1;
-  border-radius: $border-l;
-  padding: 0.2rem 1.3rem;
-  font-weight: 500;
-}
-
 @mixin main-style {
   border-radius: 10px;
   // padding: 0.5rem 0.8rem;

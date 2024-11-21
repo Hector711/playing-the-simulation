@@ -5,13 +5,17 @@ import { logInWithGoogle } from '@/app/_firebase/_client/googleAuth';
 import { useRouter } from 'next/navigation';
 import googleIcon from '@/assets/google.png';
 import Image from 'next/image';
-import ButtonA from '@/components/ButtonA';
+import Button from '@/components/Button';
 import { useUserProfile } from '@/hooks/userProfileHook';
 import { UserProfileTypes } from '@/types/userTypes';
+import { useState } from 'react';
+
 export default function LogInGoogleButton() {
   const { setUserProfile } = useUserProfile();
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const handleGoogleLogIn = async () => {
+    setIsLoading(true);
     const result = await logInWithGoogle();
     if (result === null) {
       alert('Error en la autenticación');
@@ -30,9 +34,9 @@ export default function LogInGoogleButton() {
   };
 
   return (
-    <ButtonA onClick={handleGoogleLogIn} id='google-auth-button'>
+    <Button onClick={handleGoogleLogIn} id='google-auth-button' className='flex items-center gap-2'>
       <Image src={googleIcon} alt='Google' width={20} height={20} />
-      Iniciar sesión con Google
-    </ButtonA>
+      {isLoading ? <p>Cargando...</p> : 'Iniciar sesión con Google'}
+    </Button>
   );
 }

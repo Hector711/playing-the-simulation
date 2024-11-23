@@ -1,57 +1,54 @@
-div#aside-profile {
-  // border: 1px solid red;
-  height: 100%;
-  width: 100%;
-  min-width: 200px;
-}
-
-header#profile {
-  height: auto;
+header#header-profile {
+  display: flex;
   align-items: center;
   flex-direction: column;
-  display: flex;
-  overflow: hidden;
-  @include main-style;
+  gap: $gap-m;
+  padding-block: $gap-s;
+  // border: 0.5px solid $lines-color;
+  width: 100%;
   #profile-link {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    position: relative;
-    width: 100%;
-    height: max-content;
     gap: $gap-s;
-    padding-block: 35px 10px;
-    #cover {
-      position: absolute;
-      top: 0;
-      z-index: 0;
-      width: 100%;
-      height: 70px;
+    border-radius: $border-m;
+    padding: 0px 16px;
+    &:hover {
+      // text-decoration: underline;
       background-color: $orange-0;
-      object-fit: cover;
-      overflow: hidden;
+      color: $blue-1 !important;
+      h4 {
+        color: $blue-1 !important;
+      }
+    }
+    div#name-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: max-content !important;
     }
   }
-  #profile-link:hover {
-    text-decoration: underline;
-    background-color: #7e7e7e21;
-  }
-
   p#bio {
-    padding-bottom: 10px;
-  }
-  hr {
     width: 100%;
+    padding: 0 16px;
+  }
+  
+  hr {
+    width: 90% !important;
   }
   div#score {
+    // * {
+    //   border: 0.5px solid rgb(242, 120, 120);
+    // }
+    // border: 0.5px solid rgb(242, 120, 120);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: $gap-s;
     height: max-content;
-    width: max-content;
-    padding-block: 12px;
+    width: 100%;
+    padding: 0 16px;
+
     div {
       display: flex;
       svg.icons {
@@ -81,18 +78,18 @@ header#profile {
     }
   }
 }
-
 section#profile-links {
   display: flex;
   flex-direction: column;
   gap: $gap-s;
-  margin-top: $gap-s;
+  width: 100%;
   .aside-link {
     gap: $gap-m;
     padding: 10px 16px;
     align-items: center;
     display: flex;
   }
+  height: 100%;
   svg#goals-icon {
     width: 30px;
     height: 30px;

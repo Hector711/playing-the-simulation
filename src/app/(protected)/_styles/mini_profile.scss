@@ -1,0 +1,77 @@
+header#profile {
+  display: flex;
+  height: auto;
+  align-items: center;
+  flex-direction: column;
+
+  @include main-style;
+  #profile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: max-content;
+    gap: $gap-s;
+    padding-block: 35px 3px;
+    // border: 1px solid red;
+    #cover {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      width: 100%;
+      height: 70px;
+      background-color: $orange-0;
+      object-fit: cover;
+      overflow: hidden;
+    }
+  }
+  #profile-link:hover {
+    text-decoration: underline;
+    background-color: #7e7e7e21;
+  }
+
+  p#bio {
+    padding-block: 10px;
+  }
+  hr {
+    width: 100%;
+  }
+  div#score {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $gap-s;
+    height: max-content;
+    width: max-content;
+    padding-block: 12px;
+    div {
+      display: flex;
+      svg.icons {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        color: $orange-0;
+      }
+      span {
+        color: $white-1;
+      }
+    }
+  }
+
+  #goals-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background-color: $orange-0;
+    width: 100%;
+    color: $blue-1;
+    h2 {
+      font-weight: 750;
+      text-align: center;
+      font-size: 1.2rem !important;
+    }
+  }
+}

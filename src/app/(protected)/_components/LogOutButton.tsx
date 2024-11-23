@@ -16,8 +16,8 @@ export default function LogOutButton() {
   };
 
   return (
-    <button className='aside-link orange-hover blurr' onClick={handleLogOut}>
-      <span className='impact'>Cerrar sesión</span>
+    <button className='orange-hover' onClick={handleLogOut}>
+      Cerrar sesión
     </button>
   );
 }

@@ -25,6 +25,7 @@ export default function AvatarComponent({
         className={AVATAR_SIZE[size]}
         alt={alt || 'Foto de perfil'}
         src={src || ''}
+        id='avatar'
       />
     </div>
   );

@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useUserProfile } from '@/hooks/userProfileHook';
 import SignUpGoogleButton from './SignUpGoogleButton';
-import HeaderProfile from '@/components/HeaderProfile';
+import MiniProfile from '@/components/MiniProfile';
 export function ShowSkoolProfile() {
   const { userProfile, loadUserProfile, clearUserProfile } = useUserProfile();
 
@@ -14,7 +14,7 @@ export function ShowSkoolProfile() {
   return (
     <section className=''>
       <p className='text-lg mb-4 text-center'>Este es tu usuario?</p>
-      {userProfile && <HeaderProfile userProfile={userProfile} />}
+      {userProfile && <MiniProfile userProfile={userProfile} />}
       <div className='flex flex-col gap-3 justify-between mt-6'>
         {userProfile && (
           <>

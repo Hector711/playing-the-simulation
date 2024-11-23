@@ -16,10 +16,11 @@ import '@/app/(protected)/_styles/comp_aside_profile.scss';
 import '@/app/(protected)/_styles/comp_avatar.scss';
 import '@/app/(protected)/_styles/comp_post.scss';
 import '@/app/(protected)/_styles/comp_new_post.scss';
+import '@/app/(protected)/_styles/mini_profile.scss';
+
 // LAYOUT
 import '@/app/(protected)/_styles/layout_navbar.scss';
 import '@/app/(protected)/_styles/layout_model.scss';
-
 /*
  * UNPROTECTED
  **/

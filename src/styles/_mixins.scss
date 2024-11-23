@@ -8,15 +8,43 @@
 
 @mixin main-style {
   border-radius: 10px;
-  // padding: 0.5rem 0.8rem;
-  // background-color: rgba(35, 35, 35, 0.5);
-  // color: $white-0;
-
-  box-shadow: 0px 0px 4px 1px $blue-1;
-  // background-color: #121417c1;
-  background-color: #19191ac1;
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(5px);
   border-radius: $border-m;
-  border: 0.5px solid $lines-color;
+  border: 0.5px solid $lines-color; 
+  @include background-components;
+}
+
+@mixin background-components {
+  // box-shadow: 0px 0px 3px 0px  #3e3e3f;
+  position: relative;
+  // background-color: #de0f0f00 !important;
+  overflow: hidden;
+  z-index: 1 !important;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: #1c1c1c70;
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+    border: 5px solid #222224;
+    z-index: -2 !important;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #10101066;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1 !important;
+  }
 }

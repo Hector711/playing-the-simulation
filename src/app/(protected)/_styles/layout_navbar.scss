@@ -14,24 +14,30 @@ div.protected {
 }
 
 nav#nav {
+  * {
+    // border: 0.5px solid rgb(242, 120, 120);
+  }
+  h1 {
+    font-size: 28px;
+    text-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
   grid-area: nav;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: fixed;
-  padding: 1rem 1.5rem 2rem;
-  gap: 1rem;
+  padding: 1rem 0 2rem;
+  gap: 0.7rem;
   top: 0;
-  width: 300px;
+  // width: 300px;
   height: 100dvh;
   z-index: 999;
   border-right: 0.5px solid $lines-color;
-
-  h1 {
-    font-size: 28px;
-    text-wrap: nowrap;
-    height: 100%;
-    width: 300px;
-    text-align: center;
+  hr {
+    width: 100%;
+    border: 0.5px solid $lines-color;
   }
 }

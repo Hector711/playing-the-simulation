@@ -1,29 +1,33 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import AvatarUser from '@/app/(protected)/_components/AvatarUser';
 import BusinessIcon from '@/icons/BusinessIcon';
 import PigIcon from '@/icons/PigIcon';
 import GameIcon from '@/icons/GameIcon';
 import type { UserProfileTypes } from '@/types/userTypes';
 
-export default function MiniProfile({
+export default function HeaderProfile({
   userProfile,
 }: {
   userProfile: UserProfileTypes;
 }) {
   return (
-    <header id='header-profile'>
+    <header id='profile'>
       <Link href='/profile' id='profile-link'>
+        <Image
+          id='cover'
+          src='https://i.ibb.co/frmtYRP/Angel-Caido-5-MB.jpg'
+          alt={`Foto de ${userProfile?.firstName} ${userProfile?.lastName}`}
+          width={800}
+          height={600}
+        />
         <AvatarUser
           alt='Foto de perfil'
           src={userProfile?.miniAvatar || ''}
           size='user'
           status='entrepeneur'
         />
-        <div id='name-container'>
-
-          <h4 id='name'>{`${userProfile?.firstName} ${userProfile?.lastName}`}</h4>
-          <span id='username'>@{userProfile?.username}</span>
-        </div>
+        <h4>{`${userProfile?.firstName} ${userProfile?.lastName}`}</h4>
       </Link>
       <p id='bio'>{userProfile?.bio}</p>
       <hr />

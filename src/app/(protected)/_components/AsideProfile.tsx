@@ -3,7 +3,6 @@ import HeaderProfile from '@/components/HeaderProfile';
 import { useUserProfile } from '@/hooks/userProfileHook';
 import { useEffect } from 'react';
 
-
 export default function AsideProfile() {
   const { userProfile, loadUserProfile } = useUserProfile();
   console.log('userProfile', userProfile);
@@ -11,12 +10,7 @@ export default function AsideProfile() {
     loadUserProfile();
   }, [loadUserProfile]);
 
-
-  return (
-    <>
-      {userProfile && <HeaderProfile userProfile={userProfile} />}      
-    </>
-  );
+  return <>{userProfile && <HeaderProfile userProfile={userProfile} />}</>;
 }
 
 // function NewPostLink() {

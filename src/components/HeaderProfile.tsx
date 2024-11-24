@@ -20,7 +20,6 @@ export default function MiniProfile({
           status='entrepeneur'
         />
         <div id='name-container'>
-
           <h4 id='name'>{`${userProfile?.firstName} ${userProfile?.lastName}`}</h4>
           <span id='username'>@{userProfile?.username}</span>
         </div>

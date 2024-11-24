@@ -11,10 +11,7 @@ body {
   min-width: 320px;
   display: flex;
   flex-direction: column;
-
-
 }
-
 
 /* TITULO PRINCIPAL */
 h1.main-title {
@@ -42,7 +39,6 @@ h4 {
   font-size: 1.1rem;
   font-weight: 700;
   color: $white-0;
-
 }
 h5 {
   font-size: 0.95rem;
@@ -179,14 +175,11 @@ button.button {
   padding: 0.5em 1em;
 }
 
-
 .blurr {
   @include main-style;
 }
-
 
 .shadoww {
   box-shadow: 2px 2px 1px 0px #282828;
   border: 0.5px solid $white-3;
 }
-

@@ -9,7 +9,7 @@
 @mixin main-style {
   border-radius: 10px;
   border-radius: $border-m;
-  border: 0.5px solid $lines-color; 
+  border: 0.5px solid $lines-color;
   @include background-components;
 }
 

@@ -4,9 +4,7 @@ import Button from '@/components/Button';
 export default function NotAvailable() {
   return (
     <div className='p-20 flex flex-col gap-10'>
-      <h3 className='text-red-500 text-center text-2xl'>
-        UPS!
-      </h3>
+      <h3 className='text-red-500 text-center text-2xl'>UPS!</h3>
       <p className='text-center text-lg'>
         Esta sección no está disponible en este momento.
       </p>

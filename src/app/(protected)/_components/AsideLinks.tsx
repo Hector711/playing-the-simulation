@@ -15,15 +15,15 @@ export default function AsideLinks() {
 
   return (
     <section id='profile-links'>
-        {asideProfileLinks.map(({ to, title, icon: Icon }, i) => {
-          return (
-            <Link className='aside-link orange-hover' href={to} key={i}>
-              <Icon />
-              <h2>{title}</h2>
-            </Link>
-          );
-        })}
-        <footer id='logout' className='mt-auto'>
+      {asideProfileLinks.map(({ to, title, icon: Icon }, i) => {
+        return (
+          <Link className='aside-link orange-hover' href={to} key={i}>
+            <Icon />
+            <h2>{title}</h2>
+          </Link>
+        );
+      })}
+      <footer id='logout' className='mt-auto'>
         <LogOutButton />
       </footer>
     </section>

@@ -7,7 +7,6 @@ export default function NotAvailable() {
       <h3 className='text-red-500 text-center text-2xl'>
         UPS!
       </h3>
-
       <p className='text-center text-lg'>
         Esta sección no está disponible en este momento.
       </p>

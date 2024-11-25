@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Sidebar from '@/components/Sidebar';
 import Navbar from '@/components/Navbar';
 import ProtectedDiv from './_components/ProtectedDiv';
 
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <>
       <ProtectedDiv>
+        <Sidebar />
         <Navbar />
         {children}
       </ProtectedDiv>

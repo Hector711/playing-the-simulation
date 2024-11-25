@@ -3,7 +3,7 @@ import Link from 'next/link';
 import SaveIcon from '@/icons/SaveIcon';
 import MessagesIcon from '@/icons/MessagesIcon';
 import NotificationsIcon from '@/icons/NotificationsIcon';
-import NewPostIcon from '@/icons/NewPostIcon';
+// import NewPostIcon from '@/icons/NewPostIcon';
 import LogOutButton from '@/app/(protected)/_components/LogOutButton';
 
 export default function AsideLinks() {
@@ -29,3 +29,4 @@ export default function AsideLinks() {
     </section>
   );
 }
+

@@ -12,7 +12,6 @@ import '@/styles/comp_spinner.scss';
 import '@/app/(protected)/_styles/page_home.scss';
 // COMPONENTS
 import '@/app/(protected)/_styles/comp_news.scss';
-import '@/app/(protected)/_styles/comp_aside_profile.scss';
 import '@/app/(protected)/_styles/comp_avatar.scss';
 import '@/app/(protected)/_styles/comp_post.scss';
 import '@/app/(protected)/_styles/comp_new_post.scss';

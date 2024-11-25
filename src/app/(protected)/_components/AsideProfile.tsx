@@ -12,16 +12,3 @@ export default function AsideProfile() {
 
   return <>{userProfile && <HeaderProfile userProfile={userProfile} />}</>;
 }
-
-// function NewPostLink() {
-//   return (
-//     <Link
-//       href='/home/new-post'
-//       className='aside-link orange-hover blurr'
-//       id='new-post-link'
-//     >
-//       <NewPostIcon />
-//       <span className='impact'>Nuevo Post</span>
-//     </Link>
-//   );
-// }

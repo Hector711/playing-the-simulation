@@ -25,7 +25,7 @@ export default function MiniProfile({
         </div>
       </Link>
       <p id='bio'>{userProfile?.bio}</p>
-      <hr />
+
       <div id='score'>
         <div>
           <BusinessIcon />

@@ -1,45 +1,185 @@
 div.protected {
   display: grid;
   grid-template-areas:
-    'nav main right'
-    'nav main right';
-  grid-template-columns: $left-aside 1fr $right-aside;
-  grid-template-rows: auto auto 1000px;
-  gap: $gap-l;
-  justify-content: center;
-  max-width: $width;
+    'sidebar navbar navbar'
+    'sidebar children children';
+  grid-template-columns: $width-sidebar 1fr $width-right-aside;
+  grid-template-rows: $height-navbar auto;
   width: 100%;
-  // margin-block: calc($height-navbar + $gap-l) 150px;
-  // margin-inline: auto;
-  // border: 1px solid red;
 }
 
-nav#nav {
-  background-color: $black-1;
+nav#sidebar {
   * {
     // border: 0.5px solid rgb(242, 120, 120);
   }
-  h1 {
-    font-size: 24px;
-    text-wrap: nowrap;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-  }
+  header#home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height-navbar;
+    h1 {
+      font-size: 24px;
+      text-wrap: nowrap;
+      width: 100%;
+      text-align: center;
 
+    }
+  }
+  grid-area: sidebar;
+  background-color: $black-1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: fixed;
-  padding: 1rem 0 2rem;
-  gap: 0.7rem;
-  top: 0;
-  // width: 300px;
+  align-items: stretch;
   height: 100dvh;
-  z-index: 999;
+  gap: $gap-s;
   border-right: 0.5px solid $lines-color;
   hr {
     width: 100%;
     border: 0.5px solid $lines-color;
+  }
+}
+
+nav#navbar {
+  grid-area: navbar;
+  background-color: $black-1;
+  border-bottom: 0.5px solid $lines-color;
+}
+
+
+/*
+ * ASIDE PROFILE
+*/
+header#header-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $gap-m;
+  padding-block: $gap-s;
+
+  width: 100%;
+  #profile-link {
+    display: flex;
+    align-items: center;
+    gap: $gap-s;
+    border-radius: $border-m;
+    padding: 0px 16px;
+    &:hover {
+      // text-decoration: underline;
+      background-color: $orange-0;
+      color: $blue-1 !important;
+      h4 {
+        color: $blue-1 !important;
+      }
+    }
+    div#name-container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: max-content !important;
+    }
+  }
+  p#bio {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  hr {
+    width: 90% !important;
+  }
+  div#score {
+    // * {
+    //   border: 0.5px solid rgb(242, 120, 120);
+    // }
+    // border: 0.5px solid rgb(242, 120, 120);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: $gap-s;
+    height: max-content;
+    width: 100%;
+    padding: 0 16px;
+    div {
+      display: flex;
+      svg.icons {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        color: $orange-0;
+      }
+      span {
+        color: $white-1;
+      }
+    }
+  }
+
+  #goals-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background-color: $orange-0;
+    width: 100%;
+    color: $blue-1;
+    h2 {
+      font-weight: 750;
+      text-align: center;
+      font-size: 1.2rem !important;
+    }
+  }
+}
+
+/*
+ * ASIDE BUTTONS
+*/
+section#profile-links {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: $gap-s;
+  width: 100%;
+  .aside-link {
+    gap: $gap-m;
+    padding: 10px 16px;
+    align-items: center;
+    display: flex;
+  }
+  height: max-content;
+  svg#goals-icon {
+    width: 25px;
+    height: 25px;
+  }
+  svg.icons {
+    width: 20px;
+    height: 20px;
+  }
+}
+#new-post-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  color: $white-1;
+  margin-bottom: 0.8rem;
+}
+
+footer#logout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-s;
+  #logout {
+    display: flex;
+    justify-content: center;
+    border-radius: $border-m;
+    border: 0.5px solid $white-3;
+    padding: 10px;
+    width: 100%;
+  }
+  svg.icons {
+    width: 20px;
+    height: 20px;
+    color: $white-2;
   }
 }

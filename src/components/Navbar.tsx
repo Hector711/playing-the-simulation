@@ -1,16 +1,12 @@
-import HomeButton from './HomeButton';
-import AsideProfile from '@/app/(protected)/_components/AsideProfile';
-import LogOutButton from '@/app/(protected)/_components/LogOutButton';
-import AsideLinks from '@/app/(protected)/_components/AsideLinks';
+'use client';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav id='nav'>
-      <HomeButton />
-      <hr />
-      <AsideProfile />
-      <hr />
-      <AsideLinks />
+    <nav id='navbar'>
+      <div id='nav-container'>
+
+      </div>
     </nav>
   );
 }

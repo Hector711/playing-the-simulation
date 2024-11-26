@@ -1,12 +1,21 @@
-hr.home {
-  border: 0.9px solid var(--white-3);
-  margin-top: 10px;
+main#home-page {
+  display: grid;
+  grid-template-areas: 'timeline news';
+  grid-template-columns: 750px 1fr;
+
 }
-main#timeline {
-  gap: var(--gap-s);
-}
+
 div#timeline {
+  grid-area: timeline;
   display: flex;
   flex-direction: column;
-  gap: $gap-m;
+  gap: 50px;
+  border-right: 1px solid $lines-color;
+  padding: 30px;
+}
+
+div#news {
+  grid-area: news;
+  padding: 20px;
+  
 }

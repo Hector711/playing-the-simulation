@@ -1,5 +1,5 @@
 article.post {
-  padding: 18px;
+  // padding: 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -8,7 +8,7 @@ article.post {
     width: 22px;
     height: 22px;
   }
-  @include main-style;
+
 }
 
 header.post {

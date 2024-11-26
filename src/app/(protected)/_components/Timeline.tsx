@@ -4,6 +4,7 @@ import { DocumentData } from 'firebase/firestore';
 import Post from './Post';
 import { useSearchParams } from 'next/navigation';
 import { getPostsPerPage } from '@/app/_firebase/_client/posts';
+import Pagination from './Pagination';
 
 export default function Timeline() {
   const [timelinePosts, setTimelinePosts] = useState<DocumentData[]>([]);
@@ -42,6 +43,7 @@ export default function Timeline() {
           post={item.post}
         />
       ))}
+      <Pagination />
     </div>
   );
 }

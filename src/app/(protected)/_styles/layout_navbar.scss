@@ -1,48 +1,54 @@
 div.protected {
   display: grid;
   grid-template-areas:
-    'sidebar navbar navbar'
-    'sidebar children children';
-  grid-template-columns: $width-sidebar 1fr $width-right-aside;
+    'navbar navbar'
+    'sidebar children';
   grid-template-rows: $height-navbar auto;
+  grid-template-columns: $width-sidebar 1fr;
   width: 100%;
-}
-
-nav#sidebar {
-  * {
-    // border: 0.5px solid rgb(242, 120, 120);
-  }
-  header#home-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: $height-navbar;
-    h1 {
-      font-size: 24px;
-      text-wrap: nowrap;
-      width: 100%;
-      text-align: center;
-
-    }
-  }
-  grid-area: sidebar;
-  background-color: $black-1;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  height: 100dvh;
-  gap: $gap-s;
-  border-right: 0.5px solid $lines-color;
-  hr {
-    width: 100%;
-    border: 0.5px solid $lines-color;
-  }
 }
 
 nav#navbar {
   grid-area: navbar;
   background-color: $black-1;
   border-bottom: 0.5px solid $lines-color;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: $height-navbar;
+  z-index: 99;
+  header#home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height-navbar;
+    width: $width-sidebar;
+    h1 {
+      font-size: 24px;
+      text-wrap: nowrap;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+nav#sidebar {
+
+  z-index: 98;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  height: 100dvh;
+  border-right: 0.5px solid $lines-color;
+  top: 0;
+  padding-top: $height-navbar;
+  width: $width-sidebar;
+  background-color: $black-1;
+  hr {
+    width: 100%;
+    border: 0.5px solid $lines-color;
+  }
 }
 
 
@@ -55,7 +61,6 @@ header#header-profile {
   flex-direction: column;
   gap: $gap-m;
   padding-block: $gap-s;
-
   width: 100%;
   #profile-link {
     display: flex;
@@ -154,32 +159,21 @@ section#profile-links {
     height: 20px;
   }
 }
-#new-post-link {
+
+#logout {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 16px;
-  gap: 10px;
-  color: $white-1;
-  margin-bottom: 0.8rem;
+  justify-content: center;
+  border-radius: $border-m;
+  border: 0.5px solid $white-3;
+  padding: 10px;
+  width: 100%;
+}
+svg.icons {
+  width: 20px;
+  height: 20px;
+  color: $white-2;
 }
 
-footer#logout {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: $gap-s;
-  #logout {
-    display: flex;
-    justify-content: center;
-    border-radius: $border-m;
-    border: 0.5px solid $white-3;
-    padding: 10px;
-    width: 100%;
-  }
-  svg.icons {
-    width: 20px;
-    height: 20px;
-    color: $white-2;
-  }
+#home-page {
+  grid-area: children;
 }

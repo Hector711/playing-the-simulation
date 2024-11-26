@@ -1,4 +1,3 @@
-'use client';
 import Link from 'next/link';
 import SaveIcon from '@/icons/SaveIcon';
 import MessagesIcon from '@/icons/MessagesIcon';
@@ -23,9 +22,7 @@ export default function AsideLinks() {
           </Link>
         );
       })}
-      <footer id='logout' className='mt-auto'>
         <LogOutButton />
-      </footer>
     </section>
   );
 }

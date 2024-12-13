@@ -14,12 +14,9 @@
 }
 
 @mixin background-components {
-  // box-shadow: 0px 0px 3px 0px  #3e3e3f;
   position: relative;
-  // background-color: #de0f0f00 !important;
   overflow: hidden;
   z-index: 1 !important;
-
   &::before {
     content: '';
     position: absolute;
